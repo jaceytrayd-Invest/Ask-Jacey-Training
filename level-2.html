@@ -5,21 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Level 2 — Accounting | Ask Jacey IB Masterclass</title>
 <link rel="stylesheet" href="style.css">
-<style>
-.coming-wrap {
-  display: flex;flex-direction:column;align-items:center;justify-content:center;
-  min-height:60vh;text-align:center;padding:3rem 2rem;
-}
-.coming-num {
-  font-family:var(--serif);font-size:8rem;font-weight:700;
-  color:rgba(201,168,76,0.1);line-height:1;margin-bottom:1rem;
-}
-.coming-wrap h2 {
-  font-family:var(--serif);font-size:2rem;font-weight:300;color:var(--white);margin-bottom:0.8rem;
-}
-.coming-wrap h2 em{color:var(--gold-light);font-style:italic}
-.coming-wrap p{font-family:var(--slab);font-size:0.84rem;color:var(--ash);line-height:1.75;max-width:440px;margin-bottom:1.5rem}
-</style>
 </head>
 <body>
 <div id="eco-hdr"></div>
@@ -27,26 +12,270 @@
 <div id="app">
   <div id="sb"></div>
   <div id="content">
+
     <div class="breadcrumb">
       <a href="index.html">Home</a><span class="sep">›</span>
+      <a href="level-1.html">Level 01</a><span class="sep">›</span>
       <span class="current">Level 02 — Accounting</span>
     </div>
-    <div class="coming-wrap">
-      <div class="coming-num">02</div>
-      <h2>Accounting <em>Essentials</em></h2>
-      <p>Income statement, balance sheet, cash flow statement, three-statement linkage, working capital, and EBITDA adjustments. Coming next in the build sequence.</p>
-      <div style="display:flex;gap:0.8rem;flex-wrap:wrap;justify-content:center">
-        <a href="level-1.html" class="btn btn-gold">← Back to Level 01</a>
-        <a href="index.html" class="btn btn-outline">Home</a>
+
+    <div class="level-banner" data-level-num="2">
+      <div class="level-tag">Level 02 · Accounting Essentials</div>
+      <h1>Reading the <em>Financial Statements</em></h1>
+      <p>Every model, every valuation, every deal starts here. The income statement, balance sheet, and cash flow statement are the language of corporate finance — fluency is not optional.</p>
+      <div class="level-meta">
+        <span><i>📚</i> 7 Lessons</span>
+        <span><i>🧪</i> 15 Quiz Questions</span>
+        <span><i>⚙</i> 4 Solvers</span>
+        <span><i>🎯</i> 12 Interview Q&A</span>
+        <span><i>⏱</i> ~2 hrs</span>
       </div>
     </div>
+
+    <div class="hub-tabs">
+      <button class="hub-tab active" onclick="switchTab('learn')">📘 Learn</button>
+      <button class="hub-tab" onclick="switchTab('practice')">🧪 Practice</button>
+      <button class="hub-tab" onclick="switchTab('solver')">⚙ Problem Solver</button>
+      <button class="hub-tab" onclick="switchTab('interview')">🎯 Interview Prep</button>
+    </div>
+
+    <!-- LEARN -->
+    <div class="tab-panel active" id="tab-learn">
+      <div class="sec-head">
+        <h2>Lessons — <em>Accounting Essentials</em></h2>
+        <div class="sec-line"></div>
+      </div>
+      <div class="lesson-grid">
+        <a href="l2-income-statement.html" class="lesson-card">
+          <div class="lc-num">L2.01</div>
+          <div class="lc-title">The Income Statement</div>
+          <div class="lc-desc">Revenue to net income — line by line. Gross profit, EBITDA, EBIT, and why each margin tells a different story about the business.</div>
+          <div class="lc-meta"><span class="lc-tag core">Core</span><span class="lc-tag int">~12 min</span></div>
+        </a>
+        <a href="l2-balance-sheet.html" class="lesson-card">
+          <div class="lc-num">L2.02</div>
+          <div class="lc-title">The Balance Sheet</div>
+          <div class="lc-desc">Assets, liabilities, equity — and the golden rule that must always hold. What analysts look for when they open a balance sheet on a deal.</div>
+          <div class="lc-meta"><span class="lc-tag core">Core</span><span class="lc-tag int">~12 min</span></div>
+        </a>
+        <a href="l2-cash-flow.html" class="lesson-card">
+          <div class="lc-num">L2.03</div>
+          <div class="lc-title">The Cash Flow Statement</div>
+          <div class="lc-desc">Why cash is different from profit, and why the CFS is the hardest statement to manipulate. CFO, CFI, CFF — and free cash flow.</div>
+          <div class="lc-meta"><span class="lc-tag core">Core</span><span class="lc-tag int">~10 min</span></div>
+        </a>
+        <a href="l2-linkage.html" class="lesson-card">
+          <div class="lc-num">L2.04</div>
+          <div class="lc-title">Three-Statement Linkage</div>
+          <div class="lc-desc">How the three statements connect. The interview question every IB analyst faces on day one. Understand the mechanics cold.</div>
+          <div class="lc-meta"><span class="lc-tag core">Core</span><span class="lc-tag int">~10 min</span></div>
+        </a>
+        <a href="l2-working-capital.html" class="lesson-card">
+          <div class="lc-num">L2.05</div>
+          <div class="lc-title">Working Capital</div>
+          <div class="lc-desc">Receivables, payables, inventory — and why working capital changes eat cash. The hidden lever in every cash flow model.</div>
+          <div class="lc-meta"><span class="lc-tag adv">Advanced</span><span class="lc-tag int">~10 min</span></div>
+        </a>
+        <a href="l2-ebitda.html" class="lesson-card">
+          <div class="lc-num">L2.06</div>
+          <div class="lc-title">EBITDA — Adjustments &amp; Quality</div>
+          <div class="lc-desc">Reported EBITDA vs. adjusted EBITDA. How management and banks adjust earnings, when it is legitimate, and when it is misleading.</div>
+          <div class="lc-meta"><span class="lc-tag adv">Advanced</span><span class="lc-tag int">~10 min</span></div>
+        </a>
+        <a href="l2-ratios.html" class="lesson-card">
+          <div class="lc-num">L2.07</div>
+          <div class="lc-title">Key Accounting Ratios</div>
+          <div class="lc-desc">Profitability, liquidity, leverage, and efficiency ratios — what they measure, how to calculate them, and how banks use them in credit and valuation analysis.</div>
+          <div class="lc-meta"><span class="lc-tag adv">Advanced</span><span class="lc-tag int">~12 min</span></div>
+        </a>
+      </div>
+
+      <!-- FEATURED INLINE LESSON -->
+      <div class="sec-head" style="margin-top:2rem">
+        <h2>Featured Lesson — <em>Three-Statement Linkage</em></h2>
+        <div class="sec-line"></div>
+      </div>
+      <div class="lesson-page" style="padding:0;max-width:none">
+        <div class="deal-badge">📍 Accounting · Three-Statement Linkage · L2.04</div>
+        <p class="lesson-intro">The most-tested accounting question in IB interviews is: "Walk me through the three financial statements and how they connect." Most candidates know what each statement is. Very few can explain the precise mechanical links. Here they are.</p>
+
+        <h2>The Three Statements — <em>at a glance</em></h2>
+        <table class="lesson-table">
+          <thead><tr><th>Statement</th><th>Question it answers</th><th>Time dimension</th><th>Key output</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Income Statement</strong></td><td>How profitable was the business?</td><td>Over a period (quarter/year)</td><td>Net Income</td></tr>
+            <tr><td><strong>Balance Sheet</strong></td><td>What does the business own and owe?</td><td>At a point in time (snapshot)</td><td>Equity (Assets − Liabilities)</td></tr>
+            <tr><td><strong>Cash Flow Statement</strong></td><td>How much cash did the business generate?</td><td>Over a period</td><td>Net change in cash</td></tr>
+          </tbody>
+        </table>
+
+        <h2>The <em>exact links</em> between them</h2>
+
+        <h3>Link 1 — Net Income flows into the Cash Flow Statement</h3>
+        <p>The CFS begins with Net Income from the P&amp;L. From there, non-cash items (D&amp;A) are added back, and working capital changes are adjusted.</p>
+        <div class="formula-block">
+          <span class="fv">Cash Flow from Operations starts with:</span><br/>
+          Net Income (from P&amp;L)<br/>
+          + Depreciation &amp; Amortisation (non-cash — added back)<br/>
+          ± Changes in Working Capital (AR, AP, Inventory)<br/>
+          = Cash from Operations
+        </div>
+
+        <h3>Link 2 — Net Income flows into Retained Earnings on the Balance Sheet</h3>
+        <p>At period end, net income (less dividends) is added to <strong>Retained Earnings</strong> in Shareholders' Equity. This is how the P&amp;L accumulates in equity over time.</p>
+        <div class="formula-block">
+          Retained Earnings (end) = Retained Earnings (start) + Net Income − Dividends Paid
+        </div>
+
+        <h3>Link 3 — Net change in cash ties the CFS to the Balance Sheet</h3>
+        <p>The bottom line of the CFS is the net increase or decrease in cash — this <strong>exactly equals the change in the Cash line on the Balance Sheet</strong> between opening and closing periods.</p>
+        <div class="formula-block">
+          Cash (BS, end) = Cash (BS, start) + Net Change in Cash (CFS)
+        </div>
+
+        <h3>Link 4 — Capex flows from CFS to PP&amp;E on the Balance Sheet</h3>
+        <p>Capital expenditure appears as a cash outflow in CFI and simultaneously <strong>increases PP&amp;E on the Balance Sheet</strong>. Depreciation then reduces PP&amp;E and flows back through the P&amp;L over time.</p>
+
+        <h3>Link 5 — Debt changes connect CFS financing to the Balance Sheet</h3>
+        <p>Debt raised or repaid appears in Cash Flow from Financing and simultaneously changes the debt balance on the Balance Sheet. Interest paid flows through the P&amp;L as an expense, reducing net income.</p>
+
+        <div class="callout">
+          <div class="c-label">Why this matters in IB</div>
+          <p>When you build a 3-statement model in Excel, these linkages are the formulas. If your balance sheet doesn't balance (Assets ≠ Liabilities + Equity), one of these five links is broken. <strong>The balance sheet balancing is your error-check on everything else.</strong></p>
+        </div>
+        <div class="mistake-box">
+          <div class="m-label">Most Common Interview Mistake</div>
+          <p>Candidates say "net income goes to retained earnings" — correct — but forget it also feeds the CFS as the starting line. Both flows happen simultaneously. Missing the CFS link is the tell that separates genuine understanding from memorisation.</p>
+        </div>
+        <div class="bank-box">
+          <div class="b-label">In a Real Bank</div>
+          <p>When an MD asks you to "quickly pull the financials," you open all three statements simultaneously. First check: does the cash on the balance sheet match what the CFS implies? Does the retained earnings roll forward correctly? A model that doesn't pass these checks doesn't go to the client.</p>
+        </div>
+        <div class="lender-box">
+          <div class="l-label">🔑 Lender's Perspective — JaceyTrayd</div>
+          <p>From a credit perspective, we focus on the Cash Flow Statement above all — specifically free cash flow. P&amp;L profit can be managed through accruals; cash cannot be faked as easily. Our covenants are built around <strong>cash flow metrics</strong> — interest cover, FCF / debt service — not accounting profit. Strong net income with negative FCF is a red flag we investigate before any lending decision.</p>
+        </div>
+        <a href="l2-linkage.html" class="btn btn-gold" style="margin-top:1.2rem">Read Full Lesson → Three-Statement Linkage</a>
+      </div>
+    </div>
+
+    <!-- PRACTICE -->
+    <div class="tab-panel" id="tab-practice">
+      <div class="sec-head"><h2>Quiz — <em>Accounting Essentials</em></h2><div class="sec-line"></div></div>
+      <p style="font-family:var(--slab);font-size:0.8rem;color:var(--ash);margin-bottom:1.5rem;line-height:1.7">
+        15 questions across all three statements, EBITDA adjustments, working capital, and ratios. These appear verbatim in first and second round IB interviews.
+      </p>
+      <div id="quiz-container"></div>
+    </div>
+
+    <!-- SOLVER -->
+    <div class="tab-panel" id="tab-solver">
+      <div class="sec-head"><h2>Problem Solver — <em>Accounting</em></h2><div class="sec-line"></div></div>
+      <p style="font-family:var(--slab);font-size:0.8rem;color:var(--ash);margin-bottom:1.5rem;line-height:1.7">
+        Four worked problems — from building a P&amp;L to tracing the three-statement impact of a single transaction.
+      </p>
+      <div style="display:flex;gap:0.6rem;margin-bottom:1.5rem;flex-wrap:wrap" id="solver-btns">
+        <button class="btn btn-gold"    onclick="loadProblem(0)">P1: Build the P&amp;L</button>
+        <button class="btn btn-outline" onclick="loadProblem(1)">P2: FCF from Net Income</button>
+        <button class="btn btn-outline" onclick="loadProblem(2)">P3: D&amp;A Impact (3 Stmts)</button>
+        <button class="btn btn-outline" onclick="loadProblem(3)">P4: Working Capital Drain</button>
+      </div>
+      <div id="solver-container"></div>
+    </div>
+
+    <!-- INTERVIEW -->
+    <div class="tab-panel" id="tab-interview">
+      <div class="sec-head"><h2>Interview Prep — <em>Accounting Q&amp;A</em></h2><div class="sec-line"></div></div>
+      <p style="font-family:var(--slab);font-size:0.8rem;color:var(--ash);margin-bottom:1.2rem;line-height:1.7">
+        12 accounting questions with structured model answers and banker tips. From introductory to advanced.
+      </p>
+      <div class="iq-filter">
+        <button class="iq-filter-btn active" onclick="filterIQ('all')">All</button>
+        <button class="iq-filter-btn" onclick="filterIQ('tech')">Technical</button>
+        <button class="iq-filter-btn" onclick="filterIQ('deal')">Deal Context</button>
+        <button class="iq-filter-btn" onclick="filterIQ('beh')">Conceptual</button>
+      </div>
+      <div class="interview-wrapper" id="interview-container"></div>
+    </div>
+
+    <div class="page-nav">
+      <a href="level-1.html" class="btn btn-ghost">← Level 01: Foundations</a>
+      <div class="pn-context">Level <span>02</span> of 11 · Accounting</div>
+      <a href="level-3.html" class="btn btn-gold">Next: Level 03 — Valuation →</a>
+    </div>
+
   </div>
 </div>
 <script src="shared.js"></script>
 <script>
 document.getElementById('eco-hdr').outerHTML = buildEcoHeader();
-document.getElementById('hdr').outerHTML = buildHeader();
-document.getElementById('sb').outerHTML = buildSidebar(2);
+document.getElementById('hdr').outerHTML   = buildHeader();
+document.getElementById('sb').outerHTML    = buildSidebar(2);
+
+function switchTab(name) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.hub-tab').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + name).classList.add('active');
+  event.target.classList.add('active');
+  if (name==='practice' && !window._qL) { initQuiz();      window._qL=true; }
+  if (name==='solver'   && !window._sL) { loadProblem(0);  window._sL=true; }
+  if (name==='interview'&& !window._iL) { initInterview(); window._iL=true; }
+}
+
+/* ── QUIZ ── */
+const quizQuestions=[
+  {question:'On the income statement, Gross Profit is defined as:',options:['Revenue minus all operating expenses including SG&A and D&A','Revenue minus Cost of Goods Sold — the direct cost of producing goods or services','Revenue minus interest expense and taxes','Net income before extraordinary items'],correct:1,explanation:'<strong>Gross Profit = Revenue − COGS.</strong> COGS includes only direct production costs — raw materials, direct labour, manufacturing overhead. SG&A, D&A, interest, and taxes are excluded. Gross margin measures pricing power and production efficiency.'},
+  {question:'EBITDA is best described as:',options:['Cash flow from operations as reported on the cash flow statement','Net income plus depreciation and amortisation','Operating profit before depreciation, amortisation, interest, and taxes — a proxy for operating cash generation','Gross profit minus selling and administrative expenses'],correct:2,explanation:'<strong>EBITDA = Earnings Before Interest, Taxes, Depreciation & Amortisation.</strong> Derived by starting at EBIT and adding back D&A. Used as a proxy for operating cash generation and as the denominator in EV/EBITDA multiples. Important: EBITDA ≠ free cash flow. It ignores capex, working capital movements, and cash taxes.'},
+  {question:'A company reports net income of £40m but operating cash flow of £10m. Which could explain the gap?',options:['A large dividend paid to shareholders during the period','A large build-up of receivables — revenue booked but cash not yet collected','Repayment of £30m of debt during the year','A rights issue raising equity capital'],correct:1,explanation:'<strong>A receivables build-up is a classic cause of profit exceeding cash flow.</strong> Under accrual accounting, revenue is recognised when earned — not when collected. If £30m of revenue is recognised but uncollected, net income looks high but cash has not arrived. Dividends, debt repayment, and equity raises appear in CFF, not CFO.'},
+  {question:'The fundamental balance sheet equation is:',options:['Assets = Revenue − Expenses','Assets = Liabilities + Shareholders\' Equity','Cash = Net Income + Depreciation','Equity = Assets − Revenue'],correct:1,explanation:'<strong>Assets = Liabilities + Shareholders\' Equity.</strong> This must always balance. Assets are funded by either creditors (liabilities) or owners (equity). Buy an asset with debt: assets up £X, liabilities up £X — balanced. Issue equity to buy an asset: assets and equity both rise — balanced.'},
+  {question:'Depreciation is added back in Cash Flow from Operations because:',options:['It represents a cash payment to the government','It is a non-cash expense that reduced net income but involved no actual cash outflow','It offsets the capex spend from the prior year','It increases the value of fixed assets on the balance sheet'],correct:1,explanation:'<strong>Depreciation is a non-cash charge — no cash leaves the business in the period.</strong> It reduces net income (through the P&L) but there is no cash outflow. The CFS starts with net income and adds back non-cash charges (D&A) to arrive at operating cash flow. The actual cash outflow related to fixed assets was captured as capex in Cash Flow from Investing.'},
+  {question:'Which is a use of cash that would reduce operating cash flow?',options:['An increase in accounts payable','A decrease in inventory','An increase in accounts receivable','A decrease in accounts receivable'],correct:2,explanation:'<strong>Rising receivables = cash owed but not yet received = use of cash (negative CFO impact).</strong> Working capital rule: current asset increase = use of cash; current asset decrease = source. Current liability increase (AP) = source of cash (supplier funding); current liability decrease = use. Inventory decrease = source (stock sold for cash).'},
+  {question:'How does a £10m depreciation charge flow through all three financial statements?',options:['P&L: −£10m; Balance Sheet: −£10m PP&E; CFS: +£10m add-back in CFO','P&L: no effect; Balance Sheet: −£10m PP&E; CFS: −£10m capex outflow','P&L: −£10m; Balance Sheet: no effect; CFS: −£10m cash outflow','P&L: −£10m; Balance Sheet: −£10m cash; CFS: +£10m add-back'],correct:0,explanation:'<strong>The classic three-statement linkage question.</strong> P&L: D&A reduces EBIT and net income (pre-tax: −£10m). Balance Sheet: PP&E falls −£10m; retained earnings falls by after-tax amount; both sides fall equally — balanced. CFS: starts with lower net income, adds back D&A (+£10m non-cash) → net CFO impact from D&A alone = the tax shield only. Cash is not reduced by D&A.'},
+  {question:'Free cash flow (FCF) in investment banking is most precisely defined as:',options:['Net income minus dividends paid','EBITDA minus interest and taxes','Cash flow from operations minus capital expenditure','Gross profit minus operating expenses'],correct:2,explanation:'<strong>FCF = Cash Flow from Operations − Capex.</strong> Represents cash generated after maintaining and investing in the asset base. FCF is the numerator in a DCF model. A company can have positive EBITDA and net income but negative FCF if capex requirements are very high — common in oil & gas, telecoms, and capital-intensive manufacturing.'},
+  {question:'Days Sales Outstanding (DSO) increases from 35 to 55 days year-on-year. This indicates:',options:['The company is collecting cash from customers faster','The company is taking longer to collect cash — receivables building relative to revenue','The company has reduced credit terms to customers','Revenue has grown faster than receivables'],correct:1,explanation:'<strong>DSO = (Receivables / Revenue) × 365. Rising DSO = cash collection slowing.</strong> In deal context, rising DSO is a red flag: are customers struggling to pay? Has the company extended credit terms to boost reported revenue? Is there a bad debt risk? Analysts normalise working capital for DSO trends in modelling.'},
+  {question:'What is the difference between EBIT and EBITDA?',options:['EBIT excludes interest and taxes; EBITDA excludes only taxes','EBITDA adds back D&A to EBIT — removing the impact of non-cash accounting charges','EBIT is always higher than EBITDA because it excludes more items','They are the same metric reported on different lines'],correct:1,explanation:'<strong>EBITDA = EBIT + D&A.</strong> EBIT already excludes interest and taxes but includes the D&A charge. Adding D&A back gives EBITDA. Since D&A is non-cash, EBITDA ≥ EBIT always. EBITDA is preferred in leveraged finance because it approximates cash operating profit and allows comparison across companies with different asset ages and depreciation policies.'},
+  {question:'Net income is £80m. D&A is £20m. Capex is £35m. Working capital increased by £15m. What is free cash flow?',options:['£100m','£65m','£50m','£45m'],correct:2,explanation:'<strong>FCF = Net Income + D&A − Capex − Increase in WC = £80m + £20m − £35m − £15m = £50m.</strong> The WC increase is a use of cash (business tying up more in receivables/inventory). This calculation should be automatic — practise it until it takes under 30 seconds.'},
+  {question:'A company\'s interest cover ratio is 1.2×. What does this tell a lender?',options:['The company generates 20% more EBITDA than required — healthy','The company barely covers interest expense — thin buffer that would breach typical lender covenants','The company has 1.2× more equity than debt on its balance sheet','The company\'s interest rate is 20% above benchmark'],correct:1,explanation:'<strong>Interest Cover = EBITDA / Interest. At 1.2×, only a 17% EBITDA decline breaks even on interest.</strong> Most lenders require 2.0–2.5× minimum as a covenant floor. At 1.2×, the company is over-leveraged relative to earnings capacity. From a JaceyTrayd perspective, this triggers covenant breach analysis and a downside stress test before any credit decision.'},
+  {question:'A PE firm asks about "quality of earnings." What are they investigating?',options:['Whether auditors have signed off on the accounts','Whether EBITDA is genuine, recurring, and representative of normalised business performance — vs. inflated by one-off items or management adjustments','Whether the company pays its taxes on time','Whether revenue has grown consistently over three years'],correct:1,explanation:'<strong>Quality of Earnings (QoE) is the most important due diligence exercise in M&A.</strong> Is reported EBITDA achievable post-acquisition? Common adjustments reversed: management fees, one-off restructuring costs, revenue from discontinued contracts, aggressive capitalisation. QoE work is typically done by a Big 4 firm in vendor due diligence or buy-side financial DD.'},
+  {question:'What does "negative working capital" mean, and is it always bad?',options:['The company is technically insolvent','Current liabilities exceed current assets — the business is funded by suppliers and customers, often a sign of operational strength','The company has more long-term debt than short-term assets','The company\'s cash balance is below zero'],correct:1,explanation:'<strong>Negative WC (CL > CA) is not inherently bad — in certain business models it is a sign of strength.</strong> Retailers like Amazon collect cash immediately but pay suppliers 30–90 days later. As they grow, WC becomes more negative — generating cash. A growing positive WC (AR and inventory building faster than AP) is the cash drain to watch.'},
+  {question:'A company capitalises £5m of R&D costs rather than expensing them. Compared to expensing, the immediate effect is:',options:['Lower net income and lower assets','Higher net income and higher assets — capitalising defers the expense via future amortisation','No effect on net income; lower assets','Higher net income but no change in assets'],correct:1,explanation:'<strong>Capitalising = putting costs on the balance sheet as an asset rather than running through the P&L as an expense.</strong> Effect: net income is higher (no expense hit this year) and assets are higher (intangible asset created). Amortised over future periods. Analysts scrutinise capitalisation policies — aggressive capitalisation flatters near-term earnings. QoE work often reclassifies capitalised costs to expenses to get true normalised EBITDA.'}
+];
+
+function initQuiz() { new QuizEngine(quizQuestions,'quiz-container'); }
+
+/* ── SOLVERS ── */
+const problems=[
+  {problem:{title:'Build the Income Statement from raw data.',given:'Revenue:                     £180,000,000\nCost of Goods Sold (COGS):   £72,000,000\nSG&A expenses:               £28,000,000\nR&D expenses:                £14,000,000\nDepreciation & Amortisation: £12,000,000\nInterest expense:            £8,000,000\nTax rate:                    25%\nQuestion: Build the full P&L and calculate all key margin metrics.'},steps:[{title:'Calculate Gross Profit',body:'Gross Profit = Revenue minus the direct cost of producing goods/services (COGS). This is the first and most important margin line.',formula:'Gross Profit  = £180m − £72m = £108m\nGross Margin  = £108m / £180m = 60.0%'},{title:'Calculate EBITDA',body:'Subtract SG&A and R&D from Gross Profit. Do NOT subtract D&A yet — EBITDA sits above the D&A line.',formula:'EBITDA        = £108m − £28m − £14m = £66m\nEBITDA Margin = £66m / £180m = 36.7%'},{title:'Calculate EBIT (Operating Profit)',body:'Now subtract D&A from EBITDA. EBIT includes the non-cash accounting charge for asset wear.',formula:'EBIT         = £66m − £12m = £54m\nEBIT Margin  = £54m / £180m = 30.0%'},{title:'Calculate Pre-tax Profit (EBT)',body:'Subtract interest expense to reach Earnings Before Tax.',formula:'EBT          = £54m − £8m = £46m\nEBT Margin   = £46m / £180m = 25.6%'},{title:'Calculate Net Income',body:'Apply the tax rate to EBT. The residual belongs to shareholders.',formula:'Tax          = £46m × 25% = £11.5m\nNet Income   = £46m − £11.5m = £34.5m\nNet Margin   = £34.5m / £180m = 19.2%'}],answer:{value:'Net Income = £34.5m | EBITDA = £66m',note:'Revenue £180m → Gross Profit £108m (60%) → EBITDA £66m (36.7%) → EBIT £54m (30%) → Net Income £34.5m (19.2%). These margins are strong — typical of a software or high-margin services business.'}},
+  {problem:{title:'Calculate Free Cash Flow starting from Net Income.',given:'Net Income:                   £34,500,000\nDepreciation & Amortisation:  £12,000,000\nCapital Expenditure (Capex):  £18,000,000\nIncrease in Accounts Rec.:    £6,000,000\nIncrease in Inventory:        £2,000,000\nIncrease in Accounts Pay.:    £4,000,000\nQuestion: What is FCF? Is the company converting profit to cash efficiently?'},steps:[{title:'Start with Net Income, add back D&A',body:'The CFS indirect method starts with net income, then adds back non-cash charges. D&A reduced net income but no cash left the business.',formula:'Net Income:          £34,500,000\n+ D&A add-back:      £12,000,000\n= Subtotal:          £46,500,000'},{title:'Adjust for working capital changes',body:'WC changes are invisible to the P&L. Receivables up = cash owed but not received. Inventory up = cash spent. Payables up = supplier funded you (cash in).',formula:'− Increase in Receivables:  (£6,000,000)\n− Increase in Inventory:    (£2,000,000)\n+ Increase in Payables:      £4,000,000\nNet WC impact:              (£4,000,000)\n\nCash Flow from Operations = £46,500,000 − £4,000,000 = £42,500,000'},{title:'Subtract Capital Expenditure',body:'Capex is the cash spent on fixed assets — captured in Cash Flow from Investing. FCF = CFO minus Capex.',formula:'FCF = CFO − Capex\n    = £42,500,000 − £18,000,000\n    = £24,500,000'},{title:'Assess cash conversion quality',body:'Cash conversion = FCF / Net Income. Above 70% is healthy. Below 50% warrants investigation.',formula:'Cash Conversion = £24.5m / £34.5m = 71.0%\nFCF / Revenue   = £24.5m / £180m = 13.6%\n→ Strong cash conversion for this business'}],answer:{value:'Free Cash Flow = £24,500,000',note:'71% cash conversion — healthy. Main drag is capex (£18m vs £12m D&A — the company is investing above its depreciation run-rate, i.e., growing its asset base). Working capital is a modest £4m drag. In a DCF, this FCF would be discounted at WACC to find present value.'}},
+  {problem:{title:'Trace a £10m D&A charge through all three financial statements.',given:'Scenario: D&A increases by £10m. Tax rate: 30%. All other items unchanged.\nQuestion: Walk through the exact impact on P&L, Balance Sheet, and Cash Flow Statement.'},steps:[{title:'Income Statement impact',body:'D&A is an operating expense. EBIT falls by £10m. After the 30% tax rate, net income falls by £7m (the tax shield partially offsets).',formula:'EBIT impact:        −£10,000,000\nTax savings (30%):  +£3,000,000\nNet Income impact:  −£7,000,000'},{title:'Balance Sheet impact',body:'PP&E falls by £10m (accumulated depreciation rises). Retained earnings falls by £7m (lower net income). Tax payable falls by £3m.',formula:'Assets:\n  PP&E (net):          −£10,000,000\n  Tax payable / DTA:   +£3,000,000\n  Net asset change:    −£7,000,000\n\nEquity:\n  Retained Earnings:   −£7,000,000\n\nBoth sides −£7m → balance sheet balances ✓'},{title:'Cash Flow Statement impact',body:'CFS starts with lower net income (−£7m), then adds back full D&A (+£10m, non-cash). Net CFO impact = +£3m — equal to the tax shield.',formula:'CFO:\n  Net Income:          −£7,000,000\n  + D&A add-back:      +£10,000,000\n  Net CFO change:      +£3,000,000\n\nNet cash impact = +£3m (the tax shield, received as cash)'},{title:'Confirm the three-statement reconciliation',body:'Balance sheet cash rises +£3m (matching CFS). PP&E fell £10m and retained earnings fell £7m — the £3m difference is the tax shield captured in cash. All statements reconcile.',formula:'Summary:\n  P&L net income:        −£7m\n  Balance Sheet equity:  −£7m  ✓\n  CFS operating CF:      +£3m\n  Balance Sheet cash:    +£3m  ✓\n  Three statements balance ✓'}],answer:{value:'Cash +£3m | Net Income −£7m | PP&E −£10m',note:'The key insight: D&A is non-cash. It reduces accounting profit but not cash. The only cash impact is the tax shield (+£3m). This is why banks add D&A back to net income when calculating EBITDA — and why EBITDA is a better cash proxy than net income for leveraged businesses.'}},
+  {problem:{title:'Analyse whether working capital is a source or drain of cash, and calculate DSO.',given:'Year 1 → Year 2 changes:\nAccounts Receivable:  £45m → £68m\nInventory:            £30m → £27m\nAccounts Payable:     £22m → £35m\nAccrued Liabilities:  £12m → £10m\nRevenue Year 2:       £220m  (Year 1: £190m)\nQuestion: Net WC cash impact? DSO trend? What does it signal?'},steps:[{title:'Calculate change in each working capital line',body:'Current asset up = cash out. Current asset down = cash in. Current liability up = cash in. Current liability down = cash out.',formula:'AR change:      +£23m increase → use of cash:    (£23m)\nInventory:      −£3m decrease  → source of cash:   +£3m\nAP change:      +£13m increase → source of cash:  +£13m\nAccruals:       −£2m decrease  → use of cash:      (£2m)'},{title:'Calculate net working capital cash impact',body:'Sum all individual movements to find the total cash impact from WC changes in the year.',formula:'Net WC impact = −£23m + £3m + £13m − £2m\n              = −£9,000,000\n\nWorking capital is a £9m cash drain this year.'},{title:'Calculate Days Sales Outstanding (DSO)',body:'DSO measures how long it takes to collect cash from customers. Formula: (AR / Revenue) × 365.',formula:'DSO Year 1: (£45m / £190m) × 365 = 86.4 days\nDSO Year 2: (£68m / £220m) × 365 = 112.8 days\n\nDeterioration: +26.4 days year-on-year'},{title:'Interpret and flag risk',body:'AR grew 51% but revenue grew only 16%. Cash collection is materially slower than revenue growth. This signals looser credit terms, customers struggling to pay, or possible revenue recognition pull-forward.',formula:'AR growth:       +51%\nRevenue growth:  +16%\nRatio expanding: AR/Revenue 23.7% → 30.9%\n\nRisk flags:\n  → Investigate debtor ageing analysis\n  → Check top-10 customers payment terms\n  → Stress-test bad debt assumptions\n  → Consider AR pledge as collateral'}],answer:{value:'WC cash drain: £9m | DSO: 86 → 113 days (+26 days)',note:'The AR build is the dominant issue. In buy-side DD, this triggers a deep dive into the debtor book: ageing analysis, top-10 customers, credit terms, bad debt history. From a JaceyTrayd lending perspective, we would ask for a debtors pledge and monitor DSO as a maintenance covenant metric throughout the loan term.'}}
+];
+
+function loadProblem(idx){
+  new SolverEngine(problems[idx].problem,problems[idx].steps,problems[idx].answer,'solver-container');
+  document.querySelectorAll('#solver-btns .btn').forEach((b,i)=>{b.className=i===idx?'btn btn-gold':'btn btn-outline';});
+}
+
+/* ── INTERVIEW ── */
+const interviewItems=[
+  {type:'tech',question:'Walk me through the three financial statements.',answer:`<strong>Deliver this in under 90 seconds with precision.</strong><br><br><em>"There are three statements. The Income Statement covers profitability over a period — Revenue down to Net Income, passing through Gross Profit, EBITDA, EBIT, and EBT.<br><br>The Balance Sheet is a snapshot at a point in time: what the company owns (Assets) and what it owes (Liabilities), with the difference being Shareholders' Equity. Golden rule: Assets always equal Liabilities plus Equity.<br><br>The Cash Flow Statement reconciles net income to actual cash generated. Three sections: Operating (cash from the business), Investing (capex, acquisitions), Financing (debt, equity, dividends). The bottom line — net change in cash — ties directly to the cash movement on the Balance Sheet."</em><br><br>Then add the links: net income feeds both the CFS starting line and retained earnings on the BS; ending cash on the CFS equals the cash movement on the BS.`,tip:'Do not rush. Interviewers are testing whether you can explain this to a client, not just whether you know the answer. Pause between each statement. Use plain language.'},
+  {type:'tech',question:'If depreciation increases by £10m, walk me through the impact on all three statements.',answer:`<strong>Structure it statement by statement.</strong><br><br><em>Income Statement:</em> D&A is an operating expense — EBIT falls £10m. Tax falls by £10m × 30% = £3m. Net income falls £7m.<br><br><em>Balance Sheet:</em> PP&E (assets) falls £10m. Retained earnings (equity) falls £7m. Tax payable (liability) falls £3m. Both sides of the BS fall by £7m net — balance maintained.<br><br><em>Cash Flow Statement:</em> CFO starts with net income (−£7m) then adds back D&A (+£10m, non-cash). Net CFO impact: +£3m — the tax shield. Cash on the BS rises £3m.<br><br><strong>Summary:</strong> Net income −£7m. PP&E −£10m. Cash +£3m. Equity −£7m. Balance sheet balances.`,tip:'"What if capex increases £10m?" PP&E up, cash down, no P&L impact in the purchase year — D&A flows through over subsequent years. Master the D&A version first — it covers all the conceptual ground.'},
+  {type:'tech',question:'What is the difference between EBITDA and free cash flow?',answer:`<strong>EBITDA and FCF are not the same — the gap is critical in credit and valuation work.</strong><br><br><strong>EBITDA</strong> approximates operating cash generation before capex, working capital, and cash taxes. Useful for comparing operating performance across companies with different capital structures.<br><br><strong>FCF = CFO − Capex.</strong> Reflects what cash the business actually generates after maintaining its asset base. Accounts for capex, working capital movements, and taxes paid.<br><br>The gap matters:<br>• A capex-heavy business (airlines, telcos) may show £100m EBITDA but only £20m FCF<br>• Working capital can swing FCF dramatically year-to-year<br>• EBITDA ignores cash taxes; FCF captures them<br><br><strong>In debt structuring, lenders focus on FCF — that is what services debt.</strong>`,tip:'"Can a company have positive EBITDA and negative FCF?" Yes — easily. High capex, working capital build, or both. Common in growth companies investing heavily. The question is whether capex is maintenance (bad if FCF negative) or growth (acceptable if returns justify it).'},
+  {type:'tech',question:'What does it mean for working capital to be "positive" versus "negative"?',answer:`<strong>Working Capital = Current Assets − Current Liabilities.</strong><br><br><strong>Positive WC</strong> (CA > CL): More short-term assets than short-term obligations. Typical for companies that hold inventory or extend credit. WC is a cash requirement — you must fund it.<br><br><strong>Negative WC</strong> (CL > CA): Can be a sign of strength. Retailers collect cash immediately but pay suppliers 30–90 days later. As they grow, negative WC generates more cash — effectively interest-free supplier financing.<br><br><strong>In modelling:</strong> Model WC as a % of revenue and track the trend. As the business grows, does WC grow proportionally — and does it consume or generate cash?`,tip:'In M&A, "normalised working capital" is negotiated as part of deal terms — the WC level required to run the business at closing. Buyer and seller negotiate who pays for any shortfall or surplus vs. this peg. A common source of post-close disputes.'},
+  {type:'deal',question:'You are reviewing a target\'s financials. EBITDA has grown 20% per year for three years. What specifically do you investigate to assess whether this growth is real?',answer:`<strong>Revenue quality, cost quality, and accounting policy — three lenses.</strong><br><br><em>1. Revenue quality:</em> Recurring vs. one-off? Long-term contracts or spot sales? Has the company pulled forward revenue? Is revenue growing in line with cash collected (check DSO trend)?<br><br><em>2. Cost quality:</em> Are any costs excluded as "non-recurring" that actually recur? Restructuring charges, legal settlements, management fees — if they repeat, they belong in EBITDA.<br><br><em>3. Accounting policy:</em> Changed capitalisation policy? Different depreciation assumptions? Any restatements?<br><br><em>4. Cash conversion:</em> Has FCF grown in line with EBITDA? If EBITDA grew 20% but FCF grew 5%, WC or capex is absorbing earnings.<br><br><em>5. Auditor changes or qualifications:</em> Immediate flag.`,tip:'This is a QoE framing. In practice, buy-side advisors commission a Big 4 firm to run this analysis. As an analyst, you support it by building a bridge from reported to adjusted EBITDA, line by line — every adjustment justified with source evidence from the data room.'},
+  {type:'tech',question:'Why do analysts add back D&A to get EBITDA — doesn\'t D&A represent a real economic cost?',answer:`<strong>Yes, D&A is a real economic cost — and this is the most important nuance about EBITDA.</strong><br><br>D&A is added back because it is a <em>non-cash accounting charge</em>. No cash leaves the business in the period. The cash was spent when the asset was purchased (Capex). D&A allocates that historical cost over the asset's useful life.<br><br><strong>Why EBITDA is useful:</strong> Allows comparison across companies with different asset ages, depreciation methods, and acquisition histories (which create amortisation of intangibles). Two companies with identical operations but different asset ages show very different EBIT — EBITDA normalises this.<br><br><strong>Why EBITDA is imperfect:</strong> Capex is a real cash cost. A company with £100m EBITDA and £90m capex is not worth the same as one with £100m EBITDA and £10m capex.`,tip:'In leveraged finance, analysts use EBITDA − Capex (unlevered FCF) as the primary debt serviceability metric — keeping capital structure neutrality while avoiding the EBITDA shortcut.'},
+  {type:'tech',question:'What is the difference between accounts receivable, accounts payable, and accrued liabilities?',answer:`<strong>All three are working capital items — each reflects a different timing mismatch.</strong><br><br><strong>Accounts Receivable (AR):</strong> Money owed <em>to</em> the company by customers. Revenue recognised on P&L, cash not yet collected. Current asset. Rising AR = cash you haven't received.<br><br><strong>Accounts Payable (AP):</strong> Money owed <em>by</em> the company to suppliers. Goods received, not yet paid for. Current liability. Rising AP = interest-free supplier financing — a source of cash.<br><br><strong>Accrued Liabilities:</strong> Expenses incurred but not yet invoiced or paid — wages at month-end, utility bills not yet received. Like AP: current liability, source of short-term financing.`,tip:'IB shorthand: "AR and inventory are uses of cash when they grow; AP and accruals are sources of cash when they grow." Build a WC sensitivity table in any model — show revenue growth scenarios and the cash impact of WC changes.'},
+  {type:'beh',question:'Why is cash flow from operations more informative than net income when evaluating financial health?',answer:`<strong>Net income is an accounting construct; CFO is closer to economic reality.</strong><br><br>Net income can be managed through:<br>• Revenue recognition timing<br>• Capitalisation vs. expensing decisions<br>• Depreciation method and useful life assumptions<br>• Provisions and reserves<br><br>CFO is harder to manipulate because:<br>• Cash is binary — it either moved or it didn't<br>• WC movements are visible and auditable<br>• Cash taxes paid vs. tax provision differences surface in the CFS<br><br><strong>In practice:</strong> Consistently high net income with weak CFO is a red flag — revenue recognised faster than cash arrives, costs capitalised rather than expensed, or non-cash gains inflating profit.`,tip:'Warren Buffett focuses on "owner earnings" (adjusted FCF) for exactly this reason. In IB, the divergence is sharpest in high-growth companies — beautiful P&Ls, enormous cash consumption for working capital as they scale.'},
+  {type:'deal',question:'A seller claims £50m "adjusted EBITDA" vs £32m reported. What adjustments might bridge the gap, and how should a buyer approach this?',answer:`<strong>An £18m adjustment bridge (56% of reported EBITDA) is large and demands scrutiny.</strong><br><br><em>Legitimate adjustments:</em><br>• One-time restructuring or redundancy (genuinely non-recurring)<br>• Management fees to PE sponsor (cease post-acquisition)<br>• Isolated legal settlements<br>• Owner/founder perks run through the business<br><br><em>Suspect adjustments:</em><br>• "Recurring" restructuring (happens every year — clearly not one-off)<br>• Revenue from contracts not yet started<br>• Cost synergies not yet achieved<br>• Normalised revenues based on management projections<br><br><strong>Buyer's approach:</strong> Commission a QoE report. Build a bridge from reported to adjusted EBITDA — every line evidenced from source documents. Challenge every adjustment without auditable support. Renegotiate price if significant adjustments are rejected.`,tip:'Reported-to-adjusted ratio matters: 10–15% adjustment is normal in M&A. 30%+ is a yellow flag. 50%+ (this example) is a red flag requiring rigorous third-party verification before any offer is made.'},
+  {type:'tech',question:'What is the difference between maintenance capex and growth capex? Why does it matter in valuation?',answer:`<strong>The capex split is one of the most important — and most underanalysed — inputs in a DCF or LBO model.</strong><br><br><strong>Maintenance Capex:</strong> Spending to keep the existing asset base operational — replacing equipment, basic IT refreshes, routine facility maintenance. Unavoidable cash cost of sustaining current EBITDA.<br><br><strong>Growth Capex:</strong> Discretionary spending that expands capacity or builds new capabilities. Generates future EBITDA growth.<br><br><em>Why it matters:</em><br>• In a DCF, FCF should net out maintenance capex (unavoidable) but treat growth capex separately<br>• In LBO, high maintenance capex = less true FCF for debt service<br>• In credit analysis, lenders focus on FCF after maintenance capex — growth capex is discretionary and can be cut<br><br><em>Heuristic: maintenance capex ≈ D&A. If total capex is 2× D&A, roughly half is growth.</em>`,tip:'If capex < D&A, the business may be under-investing — inflating near-term FCF at the cost of future competitiveness. PE firms sometimes exploit this before exit ("capex holiday"). Analysts flag this in due diligence by comparing capex intensity vs. industry peers.'},
+  {type:'deal',question:'How does a lender use the three financial statements to assess whether to provide a loan?',answer:`<strong>Lenders analyse all three statements — but weight them differently from equity investors.</strong><br><br><em>Income Statement:</em> EBITDA trend stable or improving? Interest cover (EBITDA / interest) ≥ 2.0–2.5×? Can the borrower service interest at peak leverage in a downside scenario?<br><br><em>Balance Sheet:</em> Leverage ratio (Net Debt / EBITDA)? Assets available as collateral (AR, inventory, fixed assets, IP)? Prior-ranking creditors? Equity cushion below the lender's position?<br><br><em>Cash Flow Statement:</em> Is FCF positive and stable? FCF / Debt Service coverage including principal? Is CFO growing in line with EBITDA, or is WC absorbing cash?<br><br><strong>JaceyTrayd framing:</strong> We lend against FCF, not EBITDA. Covenants are set at FCF levels giving 6–12 months warning before default. We stress-test EBITDA down 20–30% to ensure debt service in a downside scenario.`,tip:'"Equity investors hope for upside; lenders plan for downside." Every financial statement analysis from a credit perspective is oriented around: what is the worst realistic scenario, and can the borrower still service the debt?'},
+  {type:'tech',question:'Company A has 60% gross margin and 35% EBITDA margin. Company B has 40% gross margin and 35% EBITDA margin. What does this tell you?',answer:`<strong>Same EBITDA margin, very different gross margin — the gap reveals different cost structures and business models.</strong><br><br><strong>Company A</strong> (60% gross → 35% EBITDA): 25% spread consumed by operating expenses — typical of high-gross-margin, high-overhead businesses. Software companies, professional services, brand-heavy FMCG with heavy marketing spend.<br><br><strong>Company B</strong> (40% gross → 35% EBITDA): 5% spread — lean operating structure. Costs are mostly in COGS. Typical of capital-intensive manufacturers or distributors with high direct costs but minimal overhead.<br><br><em>In deal analysis:</em><br>• Company A has more operating leverage — revenue growth expands EBITDA margin (overhead mostly fixed)<br>• Company B's EBITDA margin degrades faster in a revenue decline<br>• Cost synergy opportunities differ: A's costs are in OpEx (SG&A consolidation); B's are in COGS (procurement, supply chain)`,tip:'Always decompose margin analysis to understand the nature of costs — not just the quantum. A 35% EBITDA margin is not the same quality in different places on the P&L. This distinction drives sector-specific valuation multiple differences.'}
+];
+
+function initInterview(){
+  document.getElementById('interview-container').innerHTML=
+    interviewItems.map((item,i)=>buildInterviewItem(item,i)).join('');
+}
 </script>
 </body>
 </html>

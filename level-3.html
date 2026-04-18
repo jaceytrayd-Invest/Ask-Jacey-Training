@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Coming Soon | Ask Jacey IB Masterclass</title>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Level 3 — Valuation | Ask Jacey IB Masterclass</title>
 <link rel="stylesheet" href="style.css">
 <style>
 .coming-wrap{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:60vh;text-align:center;padding:3rem 2rem}
@@ -14,33 +13,23 @@
 </style>
 </head>
 <body>
-<div id="eco-hdr"></div>
-<div id="hdr"></div>
-<div id="app">
-<div id="sb"></div>
-<div id="content">
-<div class="breadcrumb"><a href="index.html">Home</a><span class="sep">›</span><span class="current" id="bc-title">Level — Coming Soon</span></div>
+<div id="eco-hdr"></div><div id="hdr"></div>
+<div id="app"><div id="sb"></div><div id="content">
+<div class="breadcrumb"><a href="index.html">Home</a><span class="sep">›</span><span class="current">Level 03 — Valuation</span></div>
 <div class="coming-wrap">
-<div class="coming-num" id="cn-num">—</div>
-<h2 id="cn-title">Coming <em>Soon</em></h2>
-<p>This level is in the build queue. Complete Levels 00 and 01 first — the foundations carry through every module above.</p>
-<div style="display:flex;gap:0.8rem;flex-wrap:wrap;justify-content:center">
-<a href="level-1.html" class="btn btn-gold">← Back to Level 01</a>
-<a href="index.html" class="btn btn-outline">Home</a>
+  <div class="coming-num">03</div>
+  <h2>Valuation — <em>Coming Next</em></h2>
+  <p>Trading comparables, precedent transactions, DCF, WACC, terminal value, and sensitivity analysis. Type "build Level 3 — Valuation" to continue the build.</p>
+  <div style="display:flex;gap:0.8rem;flex-wrap:wrap;justify-content:center">
+    <a href="level-2.html" class="btn btn-gold">← Back to Level 02</a>
+    <a href="index.html" class="btn btn-outline">Home</a>
+  </div>
 </div>
-</div>
-</div>
-</div>
+</div></div>
 <script src="shared.js"></script>
 <script>
-var lvl = parseInt(window.location.pathname.match(/level-(\d+)/)?.[1] || '0');
-document.getElementById('eco-hdr').outerHTML = buildEcoHeader();
-document.getElementById('hdr').outerHTML = buildHeader();
-document.getElementById('sb').outerHTML = buildSidebar(lvl);
-var names = ['','','','Valuation','Modelling','M&A','Capital Markets','Derivatives','Private Markets','Deal Execution','Careers','Advanced'];
-document.getElementById('cn-num').textContent = String(lvl).padStart(2,'0');
-document.getElementById('cn-title').innerHTML = (names[lvl]||'Level '+lvl) + ' <em>— Coming Soon</em>';
-document.getElementById('bc-title').textContent = 'Level ' + String(lvl).padStart(2,'0') + ' — ' + (names[lvl]||'');
+document.getElementById('eco-hdr').outerHTML=buildEcoHeader();
+document.getElementById('hdr').outerHTML=buildHeader();
+document.getElementById('sb').outerHTML=buildSidebar(3);
 </script>
-</body>
-</html>
+</body></html>

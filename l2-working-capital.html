@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L2.05 — Working Capital | Ask Jacey</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="eco-hdr"></div><div id="hdr"></div>
+<div id="app"><div id="sb"></div><div id="content">
+<div class="breadcrumb"><a href="index.html">Home</a><span class="sep">&#8250;</span><a href="level-2.html">Level 02</a><span class="sep">&#8250;</span><span class="current">L2.05 — Working Capital</span></div>
+<div class="lesson-page">
+<div class="deal-badge">&#128204; Level 02 &middot; Accounting &middot; L2.05 — Working Capital</div>
+<p class="lesson-intro">Working capital is the cash tied up in day-to-day operations. It is invisible on the income statement but has an enormous impact on cash flow, deal value, and debt serviceability. Understanding it is essential before you touch a model.</p>
+
+<h2>Definition and <em>Components</em></h2>
+<div class="formula-block">Net Working Capital = Current Operating Assets - Current Operating Liabilities
+
+  + Accounts Receivable       (money owed to you)
+  + Inventory                 (stock held)
+  - Accounts Payable          (money you owe suppliers)
+  - Accrued Liabilities       (expenses incurred, not yet paid)
+  - Deferred Revenue          (cash received before revenue earned)</div>
+<h2>Cash Impact of <em>WC Changes</em></h2>
+<table class="lesson-table">
+<thead><tr><th>What happens</th><th>Cash impact</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td>AR increases (customers pay slower)</td><td>Use of cash (negative)</td><td>Revenue recognised; cash not yet received</td></tr>
+<tr><td>Inventory increases</td><td>Use of cash (negative)</td><td>Cash spent to build stock before sale</td></tr>
+<tr><td>AP increases (pay suppliers slower)</td><td>Source of cash (positive)</td><td>Supplier extending you interest-free credit</td></tr>
+<tr><td>AR decreases</td><td>Source of cash (positive)</td><td>Cash collected; receivable eliminated</td></tr>
+</tbody>
+</table>
+<h2>Working Capital in <em>Deal Context</em></h2>
+<p>In M&amp;A, working capital is negotiated as part of deal terms. A "normalised working capital peg" is the WC level required to run the business at closing. Completion accounts adjust the price for any deviation — WC shortfall reduces price, surplus increases it.</p>
+<div class="callout"><div class="c-label">Modelling WC</div><p>Model each WC line as days of the relevant P&amp;L line: DSO (AR/Revenue x 365), DIO (Inventory/COGS x 365), DPO (AP/COGS x 365). Track the 5-year trend and apply consistent assumptions in the forecast. Changes in the WC cycle affect FCF every year — small assumption changes compound significantly over a 5-year model.</p></div>
+<div class="lender-box"><div class="l-label">&#128273; Lender's Perspective — JaceyTrayd</div><p>We monitor DSO and DPO quarterly. Rising DSO compresses FCF and signals collection risk. We sometimes take a pledge over the debtor book — a priority claim over receivables in default. This is the basis of asset-based lending, where the borrowing base is sized against eligible receivables and inventory, marked down by advance rates reflecting their realisable value.</p></div>
+
+<div class="page-nav">
+  <a href="l2-linkage.html" class="btn btn-ghost">&larr; Previous</a>
+  <div class="pn-context">Level <span>02</span> &middot; Accounting</div>
+  <a href="l2-ebitda.html" class="btn btn-gold">Next &rarr;</a>
+</div>
+</div>
+</div></div>
+<script src="shared.js"></script>
+<script>
+document.getElementById('eco-hdr').outerHTML=buildEcoHeader();
+document.getElementById('hdr').outerHTML=buildHeader();
+document.getElementById('sb').outerHTML=buildSidebar(2);
+</script>
+</body></html>
