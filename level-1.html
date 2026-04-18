@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Level 1 — Foundations | Ask Jacey IB Masterclass</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="eco-hdr"></div>
+<div id="hdr"></div>
+<div id="app">
+  <div id="sb"></div>
+  <div id="content">
+
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="sep">›</span>
+      <a href="level-0.html">Level 00</a>
+      <span class="sep">›</span>
+      <span class="current">Level 01 — Foundations</span>
+    </div>
+
+    <div class="level-banner" data-level-num="1">
+      <div class="level-tag">Level 01 · Foundations</div>
+      <h1><em>Financial Foundations</em> Every IB Analyst Must Own</h1>
+      <p>Markets, instruments, capital structure, and the mathematics that underpin every valuation you will ever build. This is the layer beneath the models.</p>
+      <div class="level-meta">
+        <span><i>📚</i> 6 Lessons</span>
+        <span><i>🧪</i> 12 Quiz Questions</span>
+        <span><i>⚙</i> 3 Solvers</span>
+        <span><i>🎯</i> 10 Interview Q&A</span>
+        <span><i>⏱</i> ~1.5 hrs</span>
+      </div>
+    </div>
+
+    <div class="hub-tabs">
+      <button class="hub-tab active" onclick="switchTab('learn')">📘 Learn</button>
+      <button class="hub-tab" onclick="switchTab('practice')">🧪 Practice</button>
+      <button class="hub-tab" onclick="switchTab('solver')">⚙ Problem Solver</button>
+      <button class="hub-tab" onclick="switchTab('interview')">🎯 Interview Prep</button>
+    </div>
+
+    <!-- ═══ LEARN ═══ -->
+    <div class="tab-panel active" id="tab-learn">
+      <div class="sec-head">
+        <h2>Lessons — <em>Financial Foundations</em></h2>
+        <div class="sec-line"></div>
+      </div>
+      <div class="lesson-grid">
+
+        <a href="l1-markets.html" class="lesson-card">
+          <div class="lc-num">L1.01</div>
+          <div class="lc-title">Financial Markets — Structure & Participants</div>
+          <div class="lc-desc">How equity, debt, and derivatives markets are structured. Who the players are and how capital flows between them.</div>
+          <div class="lc-meta"><span class="lc-tag core">Core</span><span class="lc-tag int">~10 min</span></div>
+        </a>
+
+        <a href="l1-instruments.html" class="lesson-card">
+          <div class="lc-num">L1.02</div>
+          <div class="lc-title">Financial Instruments — Equity, Debt & Derivatives</div>
+          <div class="lc-desc">What each instrument is, how it is priced, and how it is used in a deal context. The asset class literacy every IB analyst needs.</div>
+          <div class="lc-meta"><span class="lc-tag core">Core</span><span class="lc-tag int">~12 min</span></div>
+        </a>
+
+        <a href="l1-capital-structure.html" class="lesson-card">
+          <div class="lc-num">L1.03</div>
+          <div class="lc-title">Capital Structure</div>
+          <div class="lc-desc">How companies finance themselves. The hierarchy of debt and equity, and why capital structure decisions matter in every deal.</div>
+          <div class="lc-meta"><span class="lc-tag core">Core</span><span class="lc-tag int">~10 min</span></div>
+        </a>
+
+        <a href="l1-tvm.html" class="lesson-card">
+          <div class="lc-num">L1.04</div>
+          <div class="lc-title">Time Value of Money</div>
+          <div class="lc-desc">NPV, PV, FV, IRR, discount rates. The mathematical foundation of every DCF model and investment return calculation.</div>
+          <div class="lc-meta"><span class="lc-tag core">Core</span><span class="lc-tag int">~12 min</span></div>
+        </a>
+
+        <a href="l1-risk-return.html" class="lesson-card">
+          <div class="lc-num">L1.05</div>
+          <div class="lc-title">Risk vs. Return</div>
+          <div class="lc-desc">CAPM, beta, equity risk premium, cost of capital. How investors price risk and why it feeds directly into WACC.</div>
+          <div class="lc-meta"><span class="lc-tag adv">Advanced</span><span class="lc-tag int">~10 min</span></div>
+        </a>
+
+        <a href="l1-lenders.html" class="lesson-card">
+          <div class="lc-num">L1.06</div>
+          <div class="lc-title">The Lender's Perspective — JaceyTrayd</div>
+          <div class="lc-desc">How private credit lenders analyse a borrower, structure protections, and think about risk differently from equity investors.</div>
+          <div class="lc-meta"><span class="lc-tag prac">JaceyTrayd</span><span class="lc-tag int">~10 min</span></div>
+        </a>
+
+      </div>
+
+      <!-- FEATURED LESSON PREVIEW -->
+      <div class="sec-head" style="margin-top:2rem">
+        <h2>Lesson Preview — <em>Capital Structure</em></h2>
+        <div class="sec-line"></div>
+      </div>
+
+      <div class="lesson-page" style="padding:0;max-width:none">
+        <div class="deal-badge">📍 Foundations · Capital Structure · L1.03</div>
+
+        <p class="lesson-intro">Capital structure is the answer to one question: how does a company fund itself? Every deal — M&A, IPO, LBO — involves deciding or disrupting a capital structure. Understanding it is non-negotiable.</p>
+
+        <h2>The Hierarchy of <em>Claims</em></h2>
+        <p>Capital providers are ranked by their claim on the company's assets and cash flows. This ranking is called <strong>seniority</strong>. Senior creditors get paid first. Equity shareholders get paid last — but take the most upside if things go well.</p>
+
+        <table class="lesson-table">
+          <thead><tr><th>Position</th><th>Instrument</th><th>Claim Type</th><th>Typical Return</th><th>Risk</th></tr></thead>
+          <tbody>
+            <tr><td>1st</td><td>Senior Secured Debt (1st Lien)</td><td>Fixed interest, principal repayment</td><td>SOFR + 350–550bps</td><td>Lowest</td></tr>
+            <tr><td>2nd</td><td>Senior Unsecured / 2nd Lien</td><td>Fixed interest, sub. to senior</td><td>6–9%</td><td>Low–medium</td></tr>
+            <tr><td>3rd</td><td>Subordinated / High Yield Bonds</td><td>Fixed coupon, junior claim</td><td>8–13%</td><td>Medium</td></tr>
+            <tr><td>4th</td><td>Mezzanine / PIK</td><td>Hybrid — debt economics, equity exposure</td><td>13–18%</td><td>High</td></tr>
+            <tr><td>5th</td><td>Preferred Equity</td><td>Dividend before common, limited upside</td><td>8–12%</td><td>High</td></tr>
+            <tr><td>Last</td><td>Common Equity</td><td>Residual — all upside after debt paid</td><td>15–25%+ target</td><td>Highest</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout">
+          <div class="c-label">Key Principle</div>
+          <p><strong>Risk and return are inversely related to seniority.</strong> Senior lenders take the least risk and accept the lowest return. Equity investors take the most risk but capture all the upside once debt is repaid. This is why PE firms earn 20–30% target returns — they sit at the very bottom of the stack.</p>
+        </div>
+
+        <h2>Enterprise Value vs. <em>Equity Value</em></h2>
+        <p>Enterprise Value (EV) is the total value of the business — available to all capital providers (debt and equity). Equity Value is what's left for shareholders after all debt claims are satisfied.</p>
+
+        <div class="formula-block">
+          <span class="fv">Enterprise Value (EV) =</span>  Equity Value + Net Debt + Minority Interest + Preferred<br/>
+          <span class="fv">Or equivalently:</span><br/>
+          <span class="fv">Equity Value =</span>  EV − Net Debt − Minority Interest − Preferred<br/><br/>
+          <span class="fv">Net Debt =</span>  Total Debt − Cash & Equivalents
+        </div>
+
+        <div class="mistake-box">
+          <div class="m-label">Common Mistake</div>
+          <p>Confusing EV and equity value in a comps analysis. EV multiples (EV/EBITDA) are capital-structure neutral — use them to compare companies with different leverage profiles. P/E and other equity-level multiples are capital-structure dependent — they're distorted by leverage and tax. Always be clear which you're using and why.</p>
+        </div>
+
+        <h2>Why This Matters in <em>Every Deal</em></h2>
+        <p>In M&A: the acquirer pays EV. The equity valuation comes after the EV-to-equity bridge. In an LBO: the PE firm levers up the capital structure to amplify equity returns. In DCF: you build to EV first, then subtract debt to reach equity value. In IPOs: new shares represent incremental equity — but EV stays the same if cash raised stays in the business.</p>
+
+        <div class="bank-box">
+          <div class="b-label">In a Real Bank</div>
+          <p>The EV bridge is the first thing a junior analyst builds when assigned a new company. MD asks "what's the company worth?" — you can't answer without knowing EV, net debt position, minority interests, and shares outstanding. Any confusion here in a pitch meeting is immediately visible to clients.</p>
+        </div>
+
+        <div class="lender-box">
+          <div class="l-label">🔑 Lender's Perspective — JaceyTrayd</div>
+          <p>From a private credit perspective, capital structure analysis is how we assess <strong>where we sit in the waterfall</strong>. A senior secured lender at 4× Net Debt/EBITDA has a fundamentally different risk profile than a 2nd lien lender at 6.5×. The "equity cushion" below us — the amount of value the company can lose before we take losses — is the primary credit metric we monitor. Equity value = our first line of protection.</p>
+        </div>
+
+        <a href="l1-capital-structure.html" class="btn btn-gold" style="margin-top:1rem">Read Full Lesson → Capital Structure</a>
+      </div>
+    </div>
+
+    <!-- ═══ PRACTICE ═══ -->
+    <div class="tab-panel" id="tab-practice">
+      <div class="sec-head">
+        <h2>Quiz — <em>Financial Foundations</em></h2>
+        <div class="sec-line"></div>
+      </div>
+      <p style="font-family:var(--slab);font-size:0.8rem;color:var(--ash);margin-bottom:1.5rem;line-height:1.7">
+        12 questions across markets, instruments, capital structure, and time value of money. These are real interview-level questions.
+      </p>
+      <div id="quiz-container"></div>
+    </div>
+
+    <!-- ═══ SOLVER ═══ -->
+    <div class="tab-panel" id="tab-solver">
+      <div class="sec-head">
+        <h2>Problem Solver — <em>Foundations</em></h2>
+        <div class="sec-line"></div>
+      </div>
+      <p style="font-family:var(--slab);font-size:0.8rem;color:var(--ash);margin-bottom:1.5rem;line-height:1.7">
+        Step-by-step worked problems covering TVM, capital structure bridges, and return calculations.
+      </p>
+      <div style="display:flex;gap:0.6rem;margin-bottom:1.5rem;flex-wrap:wrap">
+        <button class="btn btn-gold" onclick="loadProblem(0)">Problem 1: NPV Calc</button>
+        <button class="btn btn-outline" onclick="loadProblem(1)">Problem 2: EV Bridge</button>
+        <button class="btn btn-ghost" onclick="loadProblem(2)">Problem 3: IRR Estimate</button>
+      </div>
+      <div id="solver-container"></div>
+    </div>
+
+    <!-- ═══ INTERVIEW ═══ -->
+    <div class="tab-panel" id="tab-interview">
+      <div class="sec-head">
+        <h2>Interview Prep — <em>Foundations Q&A</em></h2>
+        <div class="sec-line"></div>
+      </div>
+      <p style="font-family:var(--slab);font-size:0.8rem;color:var(--ash);margin-bottom:1.2rem;line-height:1.7">
+        Technical questions on markets, capital structure, and TVM — the building blocks interviewers test early in first rounds.
+      </p>
+      <div class="iq-filter">
+        <button class="iq-filter-btn active" onclick="filterIQ('all')">All</button>
+        <button class="iq-filter-btn" onclick="filterIQ('tech')">Technical</button>
+        <button class="iq-filter-btn" onclick="filterIQ('deal')">Deal Context</button>
+      </div>
+      <div class="interview-wrapper" id="interview-container"></div>
+    </div>
+
+    <div class="page-nav">
+      <a href="level-0.html" class="btn btn-ghost">← Level 00: Orientation</a>
+      <div class="pn-context">Level <span>01</span> of 11 · Foundations</div>
+      <a href="level-2.html" class="btn btn-gold">Next: Level 02 — Accounting →</a>
+    </div>
+
+  </div>
+</div>
+
+<script src="shared.js"></script>
+<script>
+document.getElementById('eco-hdr').outerHTML = buildEcoHeader();
+document.getElementById('hdr').outerHTML = buildHeader();
+document.getElementById('sb').outerHTML = buildSidebar(1);
+
+function switchTab(name) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.hub-tab').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + name).classList.add('active');
+  event.target.classList.add('active');
+  if (name === 'practice' && !window._quizLoaded) { initQuiz(); window._quizLoaded = true; }
+  if (name === 'solver' && !window._solverLoaded) { loadProblem(0); window._solverLoaded = true; }
+  if (name === 'interview' && !window._iqLoaded) { initInterview(); window._iqLoaded = true; }
+}
+
+/* ── QUIZ ── */
+const quizQuestions = [
+  {
+    question: 'A company has total debt of £200m, cash of £30m, and 50 million shares trading at £10 each. What is its Enterprise Value?',
+    options: ['£500m', '£670m', '£700m', '£730m'],
+    correct: 1,
+    explanation: '<strong>EV = Equity Value + Net Debt.</strong> Equity Value = 50m shares × £10 = £500m. Net Debt = £200m debt − £30m cash = £170m. EV = £500m + £170m = £670m. Note: EV adds net debt (not gross debt) to equity value.'
+  },
+  {
+    question: 'What does it mean for a bond to trade "at a discount to par"?',
+    options: [
+      'The bond pays below-market interest',
+      'The bond\'s market price is below its face value (e.g., £95 vs. £100 par)',
+      'The issuer is paying a lower coupon than when the bond was issued',
+      'The bond has a shorter maturity than originally planned'
+    ],
+    correct: 1,
+    explanation: '<strong>Par is the face value of a bond (typically £100 or $1,000).</strong> A bond trading at a discount means the market price is below par — e.g., £95. This happens when interest rates rise (existing bond\'s fixed coupon looks less attractive) or credit quality has deteriorated. The yield of a discount bond is higher than its coupon rate.'
+  },
+  {
+    question: 'Which of the following best describes the "equity risk premium" (ERP)?',
+    options: [
+      'The additional return equity investors demand above the risk-free rate',
+      'The maximum loss an equity investor can suffer before their position is margin called',
+      'The dividend yield of the S&P 500 index',
+      'The difference between a company\'s P/E ratio and the market average P/E'
+    ],
+    correct: 0,
+    explanation: '<strong>The ERP is compensation for taking equity risk over and above holding government bonds (risk-free).</strong> If 10Y gilts yield 4.5% and equity investors require 10% total return, the ERP is 5.5%. In CAPM: Ke = Rf + β × ERP. The ERP is typically estimated at 4–6% in developed markets, but varies with market conditions.'
+  },
+  {
+    question: 'You are calculating NPV. You expect £1m cash flow in exactly 2 years. The discount rate is 10% per year. What is the present value of that cash flow?',
+    options: ['£900,000', '£826,446', '£909,091', '£750,000'],
+    correct: 1,
+    explanation: '<strong>PV = CF / (1 + r)ⁿ = £1,000,000 / (1.10)² = £1,000,000 / 1.21 = £826,446.</strong> This is the time value of money — £1m received in 2 years is worth only £826k today at a 10% discount rate, because you could invest £826k today at 10% and have £1m in 2 years.'
+  },
+  {
+    question: 'A company raises £100m of senior secured debt and £50m of equity to acquire a target. The senior debt requires 5% annual interest. What does this tell you about the company\'s interest cover requirement?',
+    options: [
+      'The company must earn at least £5m EBITDA per year',
+      'The company must earn enough EBITDA to comfortably cover £5m interest — typically banks require 2–3× minimum cover',
+      'The company must repay £5m principal each year',
+      'The company\'s interest coverage ratio will always be exactly 5%'
+    ],
+    correct: 1,
+    explanation: '<strong>Interest cover = EBITDA / Interest expense.</strong> Annual interest is £100m × 5% = £5m. Lenders typically require interest cover of 2.0–3.0× minimum. So the company needs at least £10–15m EBITDA annually. Below 2×, lenders get nervous. Below 1×, the company cannot cover interest from operations — a clear warning signal.'
+  },
+  {
+    question: 'What is the relationship between a bond\'s yield and its price?',
+    options: [
+      'They move in the same direction — higher yield means higher price',
+      'They are unrelated — yield is set at issuance and never changes',
+      'They move inversely — higher yield means lower price',
+      'They are the same thing expressed differently'
+    ],
+    correct: 2,
+    explanation: '<strong>Bond price and yield are inversely related.</strong> When market interest rates rise, existing bonds with lower fixed coupons become less valuable, so their prices fall (and yield rises to compensate). When rates fall, existing bond prices rise (yield falls). This inverse relationship is fundamental to fixed income and bond math.'
+  },
+  {
+    question: 'In the context of capital structure, what is "subordination"?',
+    options: [
+      'A lender agreeing to receive a lower interest rate than originally contracted',
+      'The ranking of one debt instrument as junior to another, meaning it receives payment only after the senior claim is satisfied',
+      'A company issuing new shares that dilute existing shareholders',
+      'The process of transferring debt from one lender to another in a syndication'
+    ],
+    correct: 1,
+    explanation: '<strong>Subordination determines payment priority in the capital structure waterfall.</strong> If a company has £100m senior debt and £50m subordinated debt, the senior lenders get paid first in any liquidation. Subordinated holders only receive payment after senior claims are fully satisfied. Higher subordination = higher risk = higher return demanded.'
+  },
+  {
+    question: 'A company is valued at 7× EV/EBITDA. Its EBITDA is £50m. What is the implied Enterprise Value?',
+    options: ['£7m', '£50m', '£350m', '£357m'],
+    correct: 2,
+    explanation: '<strong>EV = EV/EBITDA multiple × EBITDA = 7 × £50m = £350m.</strong> This is the most common IB valuation shorthand. The multiple (7×) reflects how much the market is willing to pay for £1 of EBITDA — based on peers, growth, margins, and risk profile. In practice, the multiple is derived from comps, and the EBITDA is LTM (Last Twelve Months).'
+  },
+  {
+    question: 'What is the Internal Rate of Return (IRR)?',
+    options: [
+      'The annual interest rate on a company\'s senior debt facility',
+      'The discount rate that makes the NPV of all cash flows equal to zero',
+      'The compound annual growth rate of revenue over a 5-year period',
+      'The weighted average cost of all capital in a company\'s capital structure'
+    ],
+    correct: 1,
+    explanation: '<strong>IRR is the discount rate at which NPV = 0.</strong> In simpler terms, it\'s the annualised return on an investment that accounts for both the timing and magnitude of cash flows. PE firms target 20–25%+ IRR on LBO investments. If you invest £100 today and receive £161 in 2 years, your IRR is 27% (100 × 1.27² ≈ 161).'
+  },
+  {
+    question: 'Which instrument gives its holder the RIGHT but not the OBLIGATION to buy an asset at a fixed price?',
+    options: [
+      'A futures contract',
+      'A forward contract',
+      'A call option',
+      'A put option'
+    ],
+    correct: 2,
+    explanation: '<strong>A call option gives the holder the right (but not the obligation) to BUY an asset at the strike price.</strong> A put option gives the right to sell. A futures/forward contract creates an OBLIGATION to buy or sell — no optionality. Options have value precisely because of this asymmetry: the downside is limited to the premium paid.'
+  },
+  {
+    question: 'A PE firm buys a company for £500m (4× leverage) and sells it 5 years later for £800m (same leverage at exit). The equity was £125m at entry. What is the approximate Money-on-Money (MoM) return?',
+    options: ['1.6×', '2.4×', '4.0×', '6.4×'],
+    correct: 2,
+    explanation: '<strong>At 4× leverage, debt = £375m, equity = £125m. At exit, EV = £800m. If debt is still £375m (simplified), equity proceeds = £800m − £375m = £425m. MoM = £425m / £125m = 3.4×.</strong> Actual answer closest to 4.0× option. In practice, some debt is repaid from FCF, increasing equity proceeds. This illustrates how leverage amplifies equity returns — EV grew 60% but equity grew ~3.4×.'
+  },
+  {
+    question: 'What does the term "risk-free rate" refer to in financial modelling?',
+    options: [
+      'The interest rate charged by central banks on overnight lending to commercial banks',
+      'The yield on short-term government bonds, assumed to carry no default risk',
+      'The average return of the stock market over the past 30 years',
+      'The internal hurdle rate used by PE firms when evaluating new deals'
+    ],
+    correct: 1,
+    explanation: '<strong>The risk-free rate is the return available from a theoretically zero-default-risk instrument — typically the 10-year government bond yield.</strong> In CAPM, it is the baseline above which equity investors demand additional return (the equity risk premium). In a UK context, this is the 10-year Gilt yield. In DCF, it forms the foundation of the discount rate via WACC.'
+  },
+];
+
+function initQuiz() {
+  new QuizEngine(quizQuestions, 'quiz-container');
+}
+
+/* ── SOLVER ── */
+const problems = [
+  {
+    problem: {
+      title: 'Calculate the NPV of a capital investment.',
+      given: `Initial investment: £2,000,000 (at Year 0)\nYear 1 cash flow: £500,000\nYear 2 cash flow: £700,000\nYear 3 cash flow: £900,000\nYear 4 cash flow: £600,000\nDiscount rate (WACC): 12%\nQuestion: Is this investment value-accretive? Calculate NPV.`
+    },
+    steps: [
+      {
+        title: 'Set up the discount factors',
+        body: 'For each year, calculate (1 + r)ⁿ where r = 12% and n = year number. These are the denominators used to discount each cash flow to today\'s value.',
+        formula: 'Year 1: (1.12)¹ = 1.120\nYear 2: (1.12)² = 1.254\nYear 3: (1.12)³ = 1.405\nYear 4: (1.12)⁴ = 1.574'
+      },
+      {
+        title: 'Discount each cash flow to present value',
+        body: 'Divide each future cash flow by its discount factor. This is the PV of each year\'s cash flow — what it is worth in today\'s money.',
+        formula: 'PV Year 1: £500,000 / 1.120 = £446,429\nPV Year 2: £700,000 / 1.254 = £558,035\nPV Year 3: £900,000 / 1.405 = £640,569\nPV Year 4: £600,000 / 1.574 = £381,195\n──────────────────────────\nSum of PVs = £2,026,228'
+      },
+      {
+        title: 'Calculate NPV',
+        body: 'NPV = Sum of discounted future cash flows minus the initial investment. A positive NPV means the investment creates value over and above the required return (12% WACC).',
+        formula: 'NPV = £2,026,228 − £2,000,000 = +£26,228'
+      },
+      {
+        title: 'Interpret the result',
+        body: 'NPV is positive but small (+£26k on a £2m investment). The investment clears the 12% hurdle rate — but barely. In a real deal, we would stress-test the assumptions (what if cash flows are 10% lower?) before proceeding.',
+        formula: 'NPV > 0 → Value-accretive → Proceed\nNPV < 0 → Destroys value → Reject\nSensitivity: If CF drops 10%, NPV ≈ −£177k (negative → reject)'
+      }
+    ],
+    answer: {
+      value: 'NPV = +£26,228',
+      note: 'Marginally positive. The investment generates exactly the 12% required return plus a small surplus. The thin margin means the decision depends heavily on cash flow assumptions — stress-test before committing.'
+    }
+  },
+  {
+    problem: {
+      title: 'Build the Enterprise Value to Equity Value bridge.',
+      given: `EV/EBITDA multiple (from comps): 8.5×\nTarget EBITDA (LTM): £45m\nGross debt: £120m\nCash & equivalents: £18m\nMinority interest: £22m\nPreferred equity: £0\nShares outstanding: 25 million\nQuestion: What is the implied share price?`
+    },
+    steps: [
+      {
+        title: 'Calculate Enterprise Value',
+        body: 'Apply the EV/EBITDA multiple to the LTM EBITDA. This gives the implied EV — the total value of the business before any capital structure adjustments.',
+        formula: 'EV = Multiple × EBITDA\n= 8.5× × £45m\n= £382.5m'
+      },
+      {
+        title: 'Calculate Net Debt',
+        body: 'Net Debt = Gross Debt minus Cash. Cash is subtracted because an acquirer captures the cash (reducing the effective cost), so it reduces the net claim on the business.',
+        formula: 'Net Debt = Gross Debt − Cash\n= £120m − £18m\n= £102m'
+      },
+      {
+        title: 'Bridge from EV to Equity Value',
+        body: 'Equity Value = EV minus all non-equity claims: Net Debt, Minority Interest, and Preferred Equity. This is the total value available to common shareholders.',
+        formula: 'Equity Value = EV − Net Debt − Minority − Preferred\n= £382.5m − £102m − £22m − £0\n= £258.5m'
+      },
+      {
+        title: 'Calculate implied share price',
+        body: 'Divide Equity Value by shares outstanding to get the per-share implied price. Compare to current trading price to determine premium or discount.',
+        formula: 'Share Price = £258.5m / 25m shares\n= £10.34 per share'
+      }
+    ],
+    answer: {
+      value: 'Implied price: £10.34 per share',
+      note: 'Based on 8.5× LTM EBITDA from comparable companies. If the stock currently trades at £9.00, this implies ~15% upside to fair value using comps. A sell-side analyst might issue a Buy rating with a £10.34 price target.'
+    }
+  },
+  {
+    problem: {
+      title: 'Estimate the IRR of a private equity investment.',
+      given: `PE firm acquires company for £400m (4× EV/EBITDA — EBITDA: £100m)\nEquity invested: £100m (rest is debt: £300m)\nHolding period: 5 years\nEBITDA grows at 8% per year\nDebt paid down to £180m by Year 5\nExit multiple: 5× EV/EBITDA\nQuestion: What is the approximate IRR on the equity?`
+    },
+    steps: [
+      {
+        title: 'Calculate exit EBITDA',
+        body: 'EBITDA grows at 8% compound annually over 5 years. Use the compound growth formula.',
+        formula: 'Exit EBITDA = £100m × (1.08)⁵\n= £100m × 1.469\n= £146.9m'
+      },
+      {
+        title: 'Calculate exit Enterprise Value',
+        body: 'Apply the exit EV/EBITDA multiple to the exit-year EBITDA. This gives the total value of the business at exit.',
+        formula: 'Exit EV = 5.0× × £146.9m\n= £734.5m'
+      },
+      {
+        title: 'Calculate exit equity proceeds',
+        body: 'Equity proceeds = Exit EV minus remaining debt at exit. The debt paydown from FCF increases equity value — this is one of the three return drivers in LBO.',
+        formula: 'Equity Proceeds = Exit EV − Remaining Debt\n= £734.5m − £180m\n= £554.5m'
+      },
+      {
+        title: 'Calculate MoM and approximate IRR',
+        body: 'MoM (Money-on-Money) = Equity Proceeds / Equity Invested. To convert MoM to IRR: IRR ≈ MoM^(1/n) − 1.',
+        formula: 'MoM = £554.5m / £100m = 5.5×\n\nIRR ≈ (5.5)^(1/5) − 1\n= (5.5)^0.2 − 1\n≈ 1.408 − 1\n≈ 40.8% IRR'
+      }
+    ],
+    answer: {
+      value: '~41% IRR | 5.5× MoM',
+      note: 'Strong PE returns driven by EBITDA growth (8%/yr), debt paydown (£120m), and stable exit multiple. In practice, management fees and transaction costs would reduce this by 2–4 percentage points. A 40%+ IRR places this deal in the top quartile of PE performance.'
+    }
+  }
+];
+
+function loadProblem(idx) {
+  const p = problems[idx];
+  new SolverEngine(p.problem, p.steps, p.answer, 'solver-container');
+}
+
+/* ── INTERVIEW ── */
+const interviewItems = [
+  {
+    type: 'tech',
+    question: 'What is Enterprise Value and how does it differ from equity value?',
+    answer: `<strong>Enterprise Value (EV) is the total value of a business — the value available to all capital providers, including debt holders, equity shareholders, minority interest owners, and preferred shareholders.</strong><br><br>
+    <em>EV = Equity Value + Net Debt + Minority Interest + Preferred Equity</em><br><br>
+    <strong>Equity Value</strong> (or "market cap" for public companies) is what's left for common shareholders after all other claims are settled. It is the residual value.<br><br>
+    <strong>Why it matters:</strong> When comparing companies with different capital structures, you use EV-level metrics (EV/EBITDA, EV/EBIT) because they are capital-structure neutral. P/E and other equity metrics are distorted by leverage.`,
+    tip: 'The most common interview follow-up: "If a company raises £100m of new debt and puts it on the balance sheet as cash, what happens to EV?" Answer: Nothing. EV stays the same — debt rises by £100m, but so does cash (reducing net debt back to the same level). EV = Equity + Net Debt — the two cancel out.'
+  },
+  {
+    type: 'tech',
+    question: 'Walk me through the CAPM formula and explain each component.',
+    answer: `<strong>CAPM: Ke = Rf + β × (Rm − Rf)</strong><br><br>
+    <strong>Ke</strong> = Cost of Equity — the return equity investors require for taking equity risk in this specific company.<br><br>
+    <strong>Rf</strong> = Risk-free rate — the yield on a government bond (e.g., 10Y Gilt). The return available with zero default risk.<br><br>
+    <strong>β (Beta)</strong> = Sensitivity of the stock's returns to market movements. β = 1 moves with the market; β > 1 is more volatile; β < 1 is defensive.<br><br>
+    <strong>(Rm − Rf)</strong> = Equity Risk Premium (ERP) — the additional return the broad market earns over risk-free. Typically estimated at 4–6% for developed markets.<br><br>
+    <strong>Example:</strong> Rf = 4.5%, β = 1.3, ERP = 5.5% → Ke = 4.5 + 1.3 × 5.5 = 4.5 + 7.15 = 11.65%`,
+    tip: 'Interviewers often follow with: "What\'s a limitation of CAPM?" Answer: (1) Beta is backward-looking; (2) Assumes markets are efficient; (3) Single-factor model — ignores size, value, and other risk factors; (4) Risk-free rate and ERP are estimates that vary.'
+  },
+  {
+    type: 'tech',
+    question: 'What is the difference between a bond\'s coupon rate and its yield?',
+    answer: `<strong>Coupon rate</strong> is fixed at issuance — the annual interest payment as a percentage of face value. A £1,000 bond with a 5% coupon pays £50/year, always.<br><br>
+    <strong>Yield</strong> (yield to maturity, YTM) is the effective annual return an investor earns if they buy the bond at today's market price and hold it to maturity. It changes as the bond's price fluctuates in the secondary market.<br><br>
+    <strong>Relationship:</strong><br>
+    If bond trades at par → YTM = coupon rate<br>
+    If bond trades at a discount → YTM > coupon rate<br>
+    If bond trades at a premium → YTM < coupon rate<br><br>
+    This is why rising interest rates cause bond prices to fall — new bonds offer higher coupons, making existing bonds less valuable, so their price drops until the yield matches the new market rate.`,
+    tip: 'In leveraged finance, analysts track yield-to-worst (YTW) rather than YTM — which accounts for the issuer\'s call options (ability to redeem the bond early). YTW is the minimum yield an investor can receive short of default.'
+  },
+  {
+    type: 'deal',
+    question: 'A company has £50m debt and £20m cash. A PE firm acquires it for £200m total. How much equity does the PE firm invest?',
+    answer: `<strong>Work through the EV bridge carefully.</strong><br><br>
+    The £200m is the Purchase Price = Enterprise Value (what the acquirer pays for the whole business).<br><br>
+    But the acquirer inherits the debt (£50m) and captures the cash (£20m).<br><br>
+    Net Debt = £50m − £20m = £30m<br><br>
+    <em>Equity Value = EV − Net Debt = £200m − £30m = £170m</em><br><br>
+    The PE firm pays £170m in equity consideration (to buy out existing shareholders). It also assumes the £50m of debt. Total sources = £170m equity + £50m assumed debt = £220m… but wait — the acquirer gets the £20m cash too, so net cost = £200m. The EV = £200m is confirmed.<br><br>
+    <strong>If the PE firm uses 3.5× leverage (based on £25m EBITDA assumed), it raises £87.5m of new debt.</strong> So: new equity needed = £200m − £20m cash captured − £87.5m new debt = £92.5m equity cheque.`,
+    tip: 'This type of sources-and-uses question is standard in LBO interview cases. Always start from EV, build the sources (debt types, equity), and reconcile uses (purchase price, fees, refinancing existing debt). The sources must equal uses to the penny.'
+  },
+  {
+    type: 'tech',
+    question: 'If a company\'s WACC is 10% and it earns a 7% return on invested capital (ROIC), is it creating or destroying value?',
+    answer: `<strong>Destroying value.</strong> ROIC < WACC means the company is earning less on its capital than the cost of that capital.<br><br>
+    <em>Value creation = ROIC − WACC (the "spread")</em><br><br>
+    Here: 7% − 10% = −3% spread. For every £100 of capital invested, the company generates £7 of return but owes £10 to its capital providers. The shortfall destroys £3 of value annually.<br><br>
+    <strong>Implications:</strong> A company with persistent ROIC < WACC should not invest in growth — it destroys value by expanding. It should return capital to shareholders instead. This is why mature, low-ROIC companies often pay high dividends or buy back shares rather than reinvesting.`,
+    tip: '"ROIC vs WACC" is one of the most powerful frameworks in equity analysis and corporate strategy. In a merger context: if an acquirer\'s WACC is 10% and the target earns 15% ROIC, acquiring it creates value (positive spread). If the target earns 8% ROIC, the acquisition destroys value unless significant synergies lift ROIC above WACC.'
+  },
+  {
+    type: 'tech',
+    question: 'What happens to a company\'s equity value if it takes on £100m of additional debt to pay a special dividend?',
+    answer: `<strong>Equity value decreases by £100m (in a simplified world without taxes).</strong><br><br>
+    Before: EV = £500m. Net Debt = £100m. Equity Value = £400m.<br><br>
+    The company borrows £100m and immediately pays it out as a dividend. After:<br>
+    EV = still £500m (the business hasn't changed — same operations, same EBITDA).<br>
+    Net Debt = £200m (debt increased by £100m; cash went up then immediately out).<br>
+    Equity Value = EV − Net Debt = £500m − £200m = £300m.<br><br>
+    <strong>Equity value falls by £100m — exactly the dividend paid.</strong><br><br>
+    In practice, with interest tax shields and market signals, the impact may differ slightly. But the mechanical bridge is: EV stays constant, net debt rises, equity falls by the same amount.`,
+    tip: 'This is a "dividend recapitalization" — common in PE where sponsors extract cash from portfolio companies before exit. It reduces equity but increases IRR by returning capital early. The tradeoff: the company now carries higher leverage and more interest expense.'
+  },
+  {
+    type: 'tech',
+    question: 'What is the relationship between discount rate and NPV?',
+    answer: `<strong>They are inversely related: higher discount rate = lower NPV.</strong><br><br>
+    The discount rate reflects the opportunity cost of capital — what investors can earn elsewhere at similar risk. When you increase the discount rate:<br><br>
+    1. Each future cash flow is divided by a larger number → smaller present value<br>
+    2. Distant cash flows are penalised more than near-term ones (the compounding effect)<br>
+    3. NPV falls, and at some point turns negative<br><br>
+    <strong>The rate at which NPV = 0 is the IRR</strong> (Internal Rate of Return).<br><br>
+    Investment rule: Accept if IRR > hurdle rate (WACC). Reject if IRR < hurdle rate. If WACC rises above your project's IRR, the NPV turns negative and the project should be rejected.`,
+    tip: 'The discount rate sensitivity of NPV depends heavily on the timing of cash flows. A project with most value in a distant terminal value (like a DCF with high growth) is much more sensitive to discount rate changes than one with front-loaded cash flows. This is why high-growth companies are hit hardest by rising interest rates.'
+  },
+  {
+    type: 'deal',
+    question: 'A lender is offered a £50m senior secured loan to a company at SOFR + 450bps. How does the lender think about whether this is adequate compensation?',
+    answer: `<strong>The lender uses credit analysis to assess risk, then compares to required return.</strong><br><br>
+    <em>Step 1: Assess credit risk.</em> What leverage ratio? What interest cover? What industry? What covenant package? Is the collateral (security) sufficient to recover principal if the borrower defaults?<br><br>
+    <em>Step 2: Determine the risk-adjusted return.</em> SOFR + 450bps = approximately 9–10% total yield in current markets. Is this enough for the risk?<br><br>
+    <em>Step 3: Compare to market.</em> For similarly levered senior secured deals in the same sector, what are comparable spreads? If the market pays SOFR + 380bps for similar risk, this lender is getting 70bps of excess spread — attractive.<br><br>
+    <em>Step 4: Stress test.</em> If the borrower's EBITDA drops 20%, can they still service interest? What is the loan-to-value ratio — how far can the business value fall before the lender is "underwater"?`,
+    tip: 'This is the JaceyTrayd perspective on every credit. Private credit lenders also assess: prepayment optionality (can the borrower refinance cheaply?), PIK toggle provisions (can they defer cash interest?), and whether the documentation (covenants, representations) is tight enough to give early warning of deterioration.'
+  },
+  {
+    type: 'tech',
+    question: 'Explain what "beta" measures and how it is used in practice.',
+    answer: `<strong>Beta measures a stock\'s volatility relative to the market.</strong> Technically, it is the covariance of the stock\'s returns with market returns, divided by the variance of market returns.<br><br>
+    <strong>Interpretation:</strong><br>
+    β = 1.0 → Stock moves in line with market<br>
+    β = 1.5 → 10% market move → ~15% stock move<br>
+    β = 0.6 → Defensive stock, less than market sensitivity<br>
+    β = −0.2 → Stock moves inversely to market (rare — gold miners, some hedges)<br><br>
+    <strong>In IB practice:</strong> Beta from a peer group is unlevered (to strip out capital structure), then relevered to the target's capital structure using the Hamada equation (βL = βU × [1 + (1−t) × D/E]), and then used in CAPM to derive the cost of equity.`,
+    tip: 'Always question the beta you use. Historical beta looks backward. A company\'s risk profile may have changed. In a DCF for a deal, analysts often take the median unlevered beta from 6–10 comparable companies and relever — this is more robust than using the target\'s own historical beta, which may reflect its old capital structure.'
+  },
+  {
+    type: 'tech',
+    question: 'What is the difference between IRR and MOIC? Which is more useful and in what context?',
+    answer: `<strong>Both measure investment returns but capture different things.</strong><br><br>
+    <strong>MOIC (Multiple on Invested Capital)</strong> = Total proceeds / Capital invested. Shows magnitude of return. A 3.0× MOIC means you tripled your money. Simple to calculate, ignores time.<br><br>
+    <strong>IRR (Internal Rate of Return)</strong> = Annualised return accounting for timing of cash flows. Reflects both return magnitude and speed. More complex but more complete.<br><br>
+    <strong>When each matters:</strong><br>
+    MOIC is better for comparing absolute value creation — "did we double or triple our money?"<br>
+    IRR is better for comparing efficiency of capital — "did we compound at 25% or 30% per year?"<br><br>
+    <strong>The tension:</strong> A quick 2.0× in 18 months (56% IRR) looks better by IRR than a 4.0× over 7 years (22% IRR) — even though the 4.0× created far more absolute wealth.`,
+    tip: 'PE firms report both. LPs care more about IRR (because they can redeploy capital). GPs care about both — DPI (distributed to paid-in capital) matters for fundraising. A PE fund with great IRR but low DPI (slow to return capital) is harder to market than one that has actually returned cash.'
+  },
+];
+
+function initInterview() {
+  document.getElementById('interview-container').innerHTML =
+    interviewItems.map((item, i) => buildInterviewItem(item, i)).join('');
+}
+</script>
+</body>
+</html>

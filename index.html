@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ask Jacey — IB Masterclass</title>
+<link rel="stylesheet" href="style.css">
+<style>
+/* ── HOME-SPECIFIC STYLES ── */
+.home-hero {
+  background: var(--ink);
+  padding: 4rem 3rem 3rem;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(201,168,76,0.12);
+}
+.home-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(201,168,76,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201,168,76,0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+.home-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 50% at 30% 60%, rgba(201,168,76,0.06) 0%, transparent 70%);
+}
+.hero-inner { position: relative; z-index: 2; max-width: 740px; }
+.hero-tag {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.hero-tag::before { content: ''; width: 24px; height: 1px; background: var(--gold); }
+.home-hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--white);
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.02em;
+}
+.home-hero h1 em { font-style: italic; color: var(--gold-light); }
+.home-hero p {
+  font-family: var(--slab);
+  font-size: 0.92rem;
+  color: var(--ash);
+  line-height: 1.75;
+  max-width: 560px;
+  margin-bottom: 1.8rem;
+}
+.hero-stats {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.8rem;
+}
+.hero-stat { display: flex; flex-direction: column; }
+.hs-num {
+  font-family: var(--serif);
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--gold-light);
+  line-height: 1;
+}
+.hs-label {
+  font-family: var(--mono);
+  font-size: 0.56rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ash);
+  margin-top: 0.2rem;
+}
+.hero-cta { display: flex; gap: 0.9rem; flex-wrap: wrap; }
+
+/* LEVELS GRID */
+.levels-section { padding: 2.5rem 2.5rem; }
+.levels-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0.9rem;
+}
+.level-card {
+  background: var(--ink-3);
+  border: 1px solid rgba(201,168,76,0.12);
+  border-radius: var(--radius-lg);
+  padding: 1.3rem;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  transition: all 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.level-card.available:hover {
+  border-color: var(--gold-dim);
+  background: var(--ink-4);
+  transform: translateY(-2px);
+}
+.level-card.available:hover .lv-arrow { color: var(--gold-light); transform: translateX(3px); }
+.level-card.coming {
+  opacity: 0.55;
+  cursor: default;
+}
+.lv-num {
+  font-family: var(--mono);
+  font-size: 0.56rem;
+  color: var(--gold-dim);
+  letter-spacing: 0.12em;
+}
+.lv-title {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--white);
+  line-height: 1.2;
+}
+.lv-topics {
+  font-family: var(--slab);
+  font-size: 0.68rem;
+  color: var(--ash);
+  line-height: 1.55;
+  flex: 1;
+}
+.lv-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+.lv-status {
+  font-family: var(--mono);
+  font-size: 0.52rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.14rem 0.5rem;
+  border-radius: 3px;
+}
+.lv-status.live { background: rgba(46,139,122,0.15); color: #3EBBA4; border: 1px solid rgba(46,139,122,0.25); }
+.lv-status.soon { background: rgba(138,138,149,0.1); color: var(--ash); border: 1px solid rgba(138,138,149,0.2); }
+.lv-arrow { font-size: 0.75rem; color: var(--gold-dim); transition: all 0.18s; }
+
+/* HOW IT WORKS */
+.how-section {
+  background: var(--ink-2);
+  padding: 2.5rem;
+  border-top: 1px solid rgba(201,168,76,0.1);
+  border-bottom: 1px solid rgba(201,168,76,0.1);
+}
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+.how-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.how-num {
+  font-family: var(--serif);
+  font-size: 2rem;
+  font-weight: 600;
+  color: rgba(201,168,76,0.3);
+  line-height: 1;
+}
+.how-item h4 {
+  font-family: var(--slab);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--white);
+}
+.how-item p {
+  font-family: var(--slab);
+  font-size: 0.74rem;
+  color: var(--ash);
+  line-height: 1.65;
+}
+
+/* PEDAGOGY PROMISE */
+.promise-section {
+  padding: 2rem 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+.promise-card {
+  border: 1px solid rgba(201,168,76,0.12);
+  border-radius: var(--radius-lg);
+  padding: 1.3rem;
+}
+.promise-card .pc-label {
+  font-family: var(--mono);
+  font-size: 0.57rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.6rem;
+}
+.promise-card h3 {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+.promise-card p {
+  font-family: var(--slab);
+  font-size: 0.76rem;
+  color: var(--ash);
+  line-height: 1.7;
+}
+
+@media (max-width: 760px) {
+  .home-hero { padding: 2.5rem 1.2rem 2rem; }
+  .levels-section, .how-section, .promise-section { padding: 2rem 1.2rem; }
+  .promise-section { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<div id="eco-hdr"></div>
+<div id="hdr"></div>
+<div id="app">
+  <div id="sb"></div>
+  <div id="content">
+
+    <!-- HERO -->
+    <section class="home-hero">
+      <div class="hero-inner">
+        <div class="hero-tag">Ask Jacey · IB Training Division · Bengaluru</div>
+        <h1>The <em>Investment Banking</em><br>Masterclass</h1>
+        <p>A structured, end-to-end training system covering investment banking, capital markets, deal execution, and private credit — taught from the perspective of someone who will use it at a bank tomorrow.</p>
+        <div class="hero-stats">
+          <div class="hero-stat"><span class="hs-num">12</span><span class="hs-label">Levels</span></div>
+          <div class="hero-stat"><span class="hs-num">60+</span><span class="hs-label">Lessons</span></div>
+          <div class="hero-stat"><span class="hs-num">200+</span><span class="hs-label">Practice Questions</span></div>
+          <div class="hero-stat"><span class="hs-num">∞</span><span class="hs-label">Interview Q&A</span></div>
+        </div>
+        <div class="hero-cta">
+          <a href="level-0.html" class="btn btn-gold">Start from Level 0 →</a>
+          <a href="level-1.html" class="btn btn-outline">Jump to Foundations</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how-section">
+      <div class="sec-head">
+        <h2>How the platform <em>works</em></h2>
+        <div class="sec-line"></div>
+      </div>
+      <div class="how-grid">
+        <div class="how-item">
+          <div class="how-num">01</div>
+          <h4>Learn</h4>
+          <p>Each level contains structured lesson pages — concept, why it matters, step-by-step logic, real-bank insight, and common mistakes.</p>
+        </div>
+        <div class="how-item">
+          <div class="how-num">02</div>
+          <h4>Practice</h4>
+          <p>Quizzes with instant feedback, and step-by-step problem solvers that reveal working line by line — so you understand the process, not just the answer.</p>
+        </div>
+        <div class="how-item">
+          <div class="how-num">03</div>
+          <h4>Prepare</h4>
+          <p>Dedicated interview Q&A covering technical and behavioral questions, with model answers and banker tips for each.</p>
+        </div>
+        <div class="how-item">
+          <div class="how-num">04</div>
+          <h4>Progress</h4>
+          <p>Every page shows where you are, what comes next, and where the topic fits in the deal lifecycle — so you always have context.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEVELS GRID -->
+    <section class="levels-section">
+      <div class="sec-head">
+        <h2>All <em>levels</em></h2>
+        <div class="sec-line"></div>
+      </div>
+      <div class="levels-grid" id="levels-grid"></div>
+    </section>
+
+    <!-- PROMISE -->
+    <section class="promise-section">
+      <div class="promise-card">
+        <div class="pc-label">Pedagogy</div>
+        <h3>Taught like you join the bank tomorrow</h3>
+        <p>No academic theory overload. No unnecessary jargon. Every concept is framed around practical application — what you would actually do with it as a first-year analyst on a live deal.</p>
+      </div>
+      <div class="promise-card">
+        <div class="pc-label">JaceyTrayd Integration</div>
+        <h3>The lender's perspective, inside every deal</h3>
+        <p>Private credit is now central to deal financing. Each relevant level includes a "Lender's Perspective" section — drawing from JaceyTrayd's capital management experience to show how debt providers think about every transaction.</p>
+      </div>
+    </section>
+
+    <!-- PAGE NAV -->
+    <div class="page-nav">
+      <a href="level-0.html" class="btn btn-gold">Begin: Level 0 — Orientation →</a>
+    </div>
+
+  </div><!-- /content -->
+</div><!-- /app -->
+
+<script src="shared.js"></script>
+<script>
+document.getElementById('eco-hdr').outerHTML = buildEcoHeader();
+document.getElementById('hdr').outerHTML = buildHeader();
+document.getElementById('sb').outerHTML = buildSidebar(-1);
+
+const levelData = [
+  { id:0, title:'Orientation', topics:'What IB is · Buy vs sell side · Deal lifecycle · How to use this platform', file:'level-0.html', live:true },
+  { id:1, title:'Foundations', topics:'Financial markets · Capital structure · Time value of money · Risk vs return', file:'level-1.html', live:true },
+  { id:2, title:'Accounting', topics:'Income statement · Balance sheet · Cash flow · 3-statement linkage · EBITDA adjustments', file:'level-2.html', live:false },
+  { id:3, title:'Valuation', topics:'Trading comps · Precedent transactions · DCF · WACC · Terminal value', file:'level-3.html', live:false },
+  { id:4, title:'Modelling', topics:'3-statement models · Forecasting · Revenue drivers · Debt schedules', file:'level-4.html', live:false },
+  { id:5, title:'M&A', topics:'Deal lifecycle · Strategic rationale · Accretion/dilution · Synergies · PPA', file:'level-5.html', live:false },
+  { id:6, title:'Capital Markets', topics:'IPOs · Equity issuance · Bonds · Loans · Credit ratings · Bookbuilding', file:'level-6.html', live:false },
+  { id:7, title:'Derivatives & Structuring', topics:'Options · Futures · Swaps (intuition) · Convertible bonds · Hedging', file:'level-7.html', live:false },
+  { id:8, title:'Private Markets', topics:'LBO structure · IRR/MOIC · Direct lending · Private credit · Covenants', file:'level-8.html', live:false },
+  { id:9, title:'Deal Execution', topics:'Pitchbooks · Due diligence · Data rooms · Client interaction · Deal timelines', file:'level-9.html', live:false },
+  { id:10, title:'Careers', topics:'Resume · Technical interviews · Behavioral · Networking · Case prep', file:'level-10.html', live:false },
+  { id:11, title:'Advanced', topics:'Restructuring · Distressed M&A · Advanced LBO · Industry modelling · Real deals', file:'level-11.html', live:false },
+];
+
+document.getElementById('levels-grid').innerHTML = levelData.map(l => `
+  <a href="${l.live ? l.file : '#'}" class="level-card ${l.live ? 'available' : 'coming'}">
+    <div class="lv-num">Level ${String(l.id).padStart(2,'0')}</div>
+    <div class="lv-title">${l.title}</div>
+    <div class="lv-topics">${l.topics}</div>
+    <div class="lv-footer">
+      <span class="lv-status ${l.live ? 'live' : 'soon'}">${l.live ? 'Live' : 'Coming Soon'}</span>
+      ${l.live ? '<span class="lv-arrow">→</span>' : ''}
+    </div>
+  </a>`).join('');
+</script>
+</body>
+</html>

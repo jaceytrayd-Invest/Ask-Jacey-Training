@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Level 0 — Orientation | Ask Jacey IB Masterclass</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="eco-hdr"></div>
+<div id="hdr"></div>
+<div id="app">
+  <div id="sb"></div>
+  <div id="content">
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="sep">›</span>
+      <span class="current">Level 00 — Orientation</span>
+    </div>
+
+    <!-- LEVEL BANNER -->
+    <div class="level-banner" data-level-num="0">
+      <div class="level-tag">Level 00 · Orientation</div>
+      <h1>What is <em>Investment Banking</em>?</h1>
+      <p>Before models, before multiples, before anything — understand the game you are entering. This level covers what IB actually is, how deals move, and what your first year will look like.</p>
+      <div class="level-meta">
+        <span><i>📚</i> 5 Lessons</span>
+        <span><i>🧪</i> 10 Quiz Questions</span>
+        <span><i>🎯</i> 8 Interview Q&A</span>
+        <span><i>⏱</i> ~45 min</span>
+      </div>
+    </div>
+
+    <!-- TABS -->
+    <div class="hub-tabs">
+      <button class="hub-tab active" onclick="switchTab('learn')">📘 Learn</button>
+      <button class="hub-tab" onclick="switchTab('practice')">🧪 Practice</button>
+      <button class="hub-tab" onclick="switchTab('solver')">⚙ Problem Solver</button>
+      <button class="hub-tab" onclick="switchTab('interview')">🎯 Interview Prep</button>
+    </div>
+
+    <!-- ═══ TAB: LEARN ═══ -->
+    <div class="tab-panel active" id="tab-learn">
+      <div class="sec-head">
+        <h2>Lessons in this <em>level</em></h2>
+        <div class="sec-line"></div>
+      </div>
+      <div class="lesson-grid">
+
+        <a href="l0-lesson1.html" class="lesson-card">
+          <div class="lc-num">L0.01</div>
+          <div class="lc-title">What Investment Banking Actually Is</div>
+          <div class="lc-desc">Strip away the mystique. Understand what banks do, why they exist, and why companies pay them hundreds of millions in fees.</div>
+          <div class="lc-meta">
+            <span class="lc-tag core">Core</span>
+            <span class="lc-tag int">~8 min</span>
+          </div>
+        </a>
+
+        <a href="l0-lesson2.html" class="lesson-card">
+          <div class="lc-num">L0.02</div>
+          <div class="lc-title">Buy Side vs. Sell Side</div>
+          <div class="lc-desc">The most fundamental distinction in finance. Who creates capital, who deploys it, and where banks sit in the middle.</div>
+          <div class="lc-meta">
+            <span class="lc-tag core">Core</span>
+            <span class="lc-tag int">~6 min</span>
+          </div>
+        </a>
+
+        <a href="l0-lesson3.html" class="lesson-card">
+          <div class="lc-num">L0.03</div>
+          <div class="lc-title">The Deal Lifecycle</div>
+          <div class="lc-desc">From mandate to close. Walk through the stages of a live M&A or capital markets transaction — and see exactly where you fit as an analyst.</div>
+          <div class="lc-meta">
+            <span class="lc-tag core">Core</span>
+            <span class="lc-tag int">~10 min</span>
+          </div>
+        </a>
+
+        <a href="l0-lesson4.html" class="lesson-card">
+          <div class="lc-num">L0.04</div>
+          <div class="lc-title">The Analyst's Workflow</div>
+          <div class="lc-desc">What does a first-year analyst actually do all day? Pitchbooks, models, comps, VDRs, and 2am formatting sessions — decoded.</div>
+          <div class="lc-meta">
+            <span class="lc-tag core">Core</span>
+            <span class="lc-tag int">~8 min</span>
+          </div>
+        </a>
+
+        <a href="l0-lesson5.html" class="lesson-card">
+          <div class="lc-num">L0.05</div>
+          <div class="lc-title">IB Divisions — Where Do You Fit?</div>
+          <div class="lc-desc">M&A, ECM, DCM, Leveraged Finance, Restructuring, Coverage — what each does, how they interact, and how to choose.</div>
+          <div class="lc-meta">
+            <span class="lc-tag adv">Advanced</span>
+            <span class="lc-tag int">~8 min</span>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- DEAL LIFECYCLE CONTEXT -->
+      <div class="sec-head" style="margin-top:1.5rem">
+        <h2>Where this fits in the <em>deal lifecycle</em></h2>
+        <div class="sec-line"></div>
+      </div>
+      <div style="display:flex;gap:0.6rem;flex-wrap:wrap;margin-bottom:1.5rem">
+        <span class="deal-badge" style="background:rgba(201,168,76,0.18);border-color:var(--gold)">◆ Orientation</span>
+        <span style="font-family:var(--mono);font-size:0.6rem;color:var(--ash-light);align-self:center">→ Mandate → Preparation → Bidding → Due Diligence → Negotiation → Close</span>
+      </div>
+      <p style="font-family:var(--slab);font-size:0.8rem;color:var(--ash);line-height:1.75;max-width:600px">
+        This level is pre-deal. Before you touch a model or run a comp, you need to understand the arena. Orientation sets the mental map that every subsequent level builds on.
+      </p>
+    </div>
+
+    <!-- ═══ TAB: PRACTICE ═══ -->
+    <div class="tab-panel" id="tab-practice">
+      <div class="sec-head">
+        <h2>Quiz — <em>Orientation</em></h2>
+        <div class="sec-line"></div>
+      </div>
+      <p style="font-family:var(--slab);font-size:0.8rem;color:var(--ash);margin-bottom:1.5rem;line-height:1.7">
+        10 questions covering IB fundamentals, market structure, and deal lifecycle. Instant feedback on every answer.
+      </p>
+      <div id="quiz-container"></div>
+    </div>
+
+    <!-- ═══ TAB: SOLVER ═══ -->
+    <div class="tab-panel" id="tab-solver">
+      <div class="sec-head">
+        <h2>Problem Solver — <em>Deal Economics</em></h2>
+        <div class="sec-line"></div>
+      </div>
+      <p style="font-family:var(--slab);font-size:0.8rem;color:var(--ash);margin-bottom:1.5rem;line-height:1.7">
+        Work through a real IB fee and deal economics problem. Reveal each step one by one.
+      </p>
+
+      <!-- PROBLEM SELECTOR -->
+      <div style="display:flex;gap:0.6rem;margin-bottom:1.5rem;flex-wrap:wrap">
+        <button class="btn btn-gold" onclick="loadProblem(0)">Problem 1: IB Fee Calc</button>
+        <button class="btn btn-outline" onclick="loadProblem(1)">Problem 2: Deal Economics</button>
+        <button class="btn btn-ghost" onclick="loadProblem(2)">Problem 3: Analyst Hours</button>
+      </div>
+      <div id="solver-container"></div>
+    </div>
+
+    <!-- ═══ TAB: INTERVIEW ═══ -->
+    <div class="tab-panel" id="tab-interview">
+      <div class="sec-head">
+        <h2>Interview Prep — <em>Orientation Q&A</em></h2>
+        <div class="sec-line"></div>
+      </div>
+      <p style="font-family:var(--slab);font-size:0.8rem;color:var(--ash);margin-bottom:1.2rem;line-height:1.7">
+        These are the opening questions of every IB interview. Get these right and you earn credibility for the technical questions that follow.
+      </p>
+      <div class="iq-filter">
+        <button class="iq-filter-btn active" onclick="filterIQ('all')">All</button>
+        <button class="iq-filter-btn" onclick="filterIQ('tech')">Technical</button>
+        <button class="iq-filter-btn" onclick="filterIQ('beh')">Behavioral</button>
+        <button class="iq-filter-btn" onclick="filterIQ('deal')">Deal</button>
+      </div>
+      <div class="interview-wrapper" id="interview-container"></div>
+    </div>
+
+    <!-- PAGE NAV -->
+    <div class="page-nav">
+      <a href="index.html" class="btn btn-ghost">← Home</a>
+      <div class="pn-context">Level <span>00</span> of 11 · Orientation</div>
+      <a href="level-1.html" class="btn btn-gold">Next: Level 01 →</a>
+    </div>
+
+  </div><!-- /content -->
+</div><!-- /app -->
+
+<script src="shared.js"></script>
+<script>
+document.getElementById('eco-hdr').outerHTML = buildEcoHeader();
+document.getElementById('hdr').outerHTML = buildHeader();
+document.getElementById('sb').outerHTML = buildSidebar(0);
+
+/* ── TABS ── */
+function switchTab(name) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.hub-tab').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + name).classList.add('active');
+  event.target.classList.add('active');
+  if (name === 'practice' && !window._quizLoaded) { initQuiz(); window._quizLoaded = true; }
+  if (name === 'solver' && !window._solverLoaded) { loadProblem(0); window._solverLoaded = true; }
+  if (name === 'interview' && !window._iqLoaded) { initInterview(); window._iqLoaded = true; }
+}
+
+/* ── QUIZ DATA ── */
+const quizQuestions = [
+  {
+    question: 'Which of the following best describes the primary role of an investment bank?',
+    options: [
+      'To hold customer deposits and issue mortgages to the public',
+      'To facilitate capital raising and advisory for corporations, governments, and institutions',
+      'To manage retail investment portfolios on behalf of individual savers',
+      'To operate clearinghouses between buyers and sellers of listed securities'
+    ],
+    correct: 1,
+    explanation: '<strong>Investment banks are intermediaries between capital needers and capital providers.</strong> They advise corporations on M&A, help raise equity (ECM) and debt (DCM), and provide strategic advice. Retail deposits and mortgages are commercial banking. Portfolio management is buy-side / asset management.'
+  },
+  {
+    question: 'A private equity firm acquires companies using debt and equity with the goal of selling at a profit after 3–7 years. This firm is best described as:',
+    options: [
+      'Sell side — it sells companies to strategic buyers',
+      'Buy side — it deploys capital to invest',
+      'Sell side — it sells equity in its portfolio companies',
+      'Neither — PE firms operate outside the buy/sell framework'
+    ],
+    correct: 1,
+    explanation: '<strong>Private equity is buy side.</strong> The buy side is any entity that deploys capital: PE firms, hedge funds, asset managers, pension funds, sovereign wealth funds. They are the clients of investment banks, not competitors. "Sell side" refers to banks and broker-dealers who facilitate transactions.'
+  },
+  {
+    question: 'In a sell-side M&A process, who does the investment bank represent?',
+    options: [
+      'The acquirer (buyer)',
+      'The target company (vendor/seller)',
+      'Both buyer and seller simultaneously',
+      'The regulator overseeing the transaction'
+    ],
+    correct: 1,
+    explanation: '<strong>In a sell-side mandate, the IB represents the vendor.</strong> The bank\'s job is to maximise sale price and run a competitive process that attracts multiple bidders. The acquirer typically has its own advisors. Representing both sides simultaneously (dual mandate) creates a conflict of interest and is very uncommon.'
+  },
+  {
+    question: 'Which document does an investment bank typically prepare to market a company for sale to potential buyers?',
+    options: [
+      'A prospectus (filed with the regulator)',
+      'A Confidential Information Memorandum (CIM)',
+      'A term sheet for debt financing',
+      'A shareholder agreement'
+    ],
+    correct: 1,
+    explanation: '<strong>The CIM (or "Information Memorandum" / "the book") is the marketing document for a sale process.</strong> It describes the business, its financials, market position, and investment highlights — sent under NDA to shortlisted potential buyers. A prospectus is for public market issuances. Term sheets are for debt deals.'
+  },
+  {
+    question: 'A first-year IB analyst is building a comparable company analysis. What is the most likely source of financial data they would use?',
+    options: [
+      'The company\'s annual report and quarterly filings only',
+      'A Bloomberg terminal or CapitalIQ (financial data platform)',
+      'The company\'s internal management accounts',
+      'Industry reports from the bank\'s research team'
+    ],
+    correct: 1,
+    explanation: '<strong>Bloomberg and CapIQ (S&P Capital IQ) are the standard data platforms in IB.</strong> They aggregate public filings and normalise financials across thousands of companies — essential for efficient comps work. Annual reports are the primary source, but platforms like CapIQ make data collection 10× faster. Internal accounts are only accessible in a due diligence context.'
+  },
+  {
+    question: 'The "deal lifecycle" in M&A typically begins with which stage?',
+    options: [
+      'Due diligence',
+      'Signing the SPA (Share Purchase Agreement)',
+      'Receiving a strategic mandate from the client',
+      'Filing for regulatory approval'
+    ],
+    correct: 2,
+    explanation: '<strong>Every deal starts with a mandate — the client formally engaging the bank.</strong> Before any process runs, a bank must win the pitch (the competitive presentation). After the mandate is received, the bank prepares the marketing materials, runs the process, manages due diligence, and eventually gets to signing and closing.'
+  },
+  {
+    question: 'Which of the following is NOT a typical product group within an investment bank\'s corporate finance division?',
+    options: [
+      'Mergers & Acquisitions (M&A)',
+      'Equity Capital Markets (ECM)',
+      'Equity Research',
+      'Leveraged Finance'
+    ],
+    correct: 2,
+    explanation: '<strong>Equity Research sits within Sales & Trading / Markets, not Corporate Finance (IBD).</strong> Research analysts publish reports for institutional clients and are separated from IBD by a "Chinese wall" to prevent conflicts of interest. M&A, ECM, DCM, and Leveraged Finance are all core IBD product groups.'
+  },
+  {
+    question: 'A company wants to raise £500m by selling new shares to institutional investors without going through a full IPO. What transaction type would this be?',
+    options: [
+      'A block trade',
+      'A rights issue',
+      'An accelerated bookbuild (ABB)',
+      'A tender offer'
+    ],
+    correct: 2,
+    explanation: '<strong>An accelerated bookbuild (ABB) raises new capital from institutions rapidly</strong> — often overnight — without the weeks-long roadshow of an IPO. It\'s common for companies that are already public and need capital quickly. A rights issue offers shares to existing shareholders. A block trade involves selling an existing shareholder\'s stake.'
+  },
+  {
+    question: 'What is the primary reason companies pay investment banks large advisory fees rather than handling transactions themselves?',
+    options: [
+      'Regulatory requirements mandate the use of investment bank advisors',
+      'Banks provide access to buyer/investor networks, pricing expertise, and process management that would take years to replicate internally',
+      'Companies are legally prohibited from negotiating their own M&A transactions',
+      'Internal finance teams are not allowed to work on acquisitions'
+    ],
+    correct: 1,
+    explanation: '<strong>Banks earn fees through three things: network, expertise, and capacity.</strong> They know the universe of buyers, have run hundreds of similar deals, and can dedicate 20+ people to a transaction. A company\'s internal M&A team — however skilled — typically can\'t replicate the deal network or bandwidth. The fee (0.5–2% of deal value) is justified by the price premium and speed the bank delivers.'
+  },
+  {
+    question: 'An analyst receives feedback: "Your pitchbook tells me facts, not a story." What should they change?',
+    options: [
+      'Remove all data and financial analysis from the deck',
+      'Reframe all data around a clear thesis — why this deal, why now, why this price, why the buyer',
+      'Reduce the number of slides and add more graphs',
+      'Write the pitch in narrative essay form without charts'
+    ],
+    correct: 1,
+    explanation: '<strong>"Story" in IB means having a clear, logical investment thesis running through the pitch.</strong> Every slide should answer an unspoken question the client has. Data without narrative is just a data dump. The best pitch books have a clear arc: situation → complication → resolution → recommendation. Each slide advances that argument.'
+  },
+];
+
+function initQuiz() {
+  new QuizEngine(quizQuestions, 'quiz-container');
+}
+
+/* ── SOLVER DATA ── */
+const problems = [
+  {
+    problem: {
+      title: 'Calculate the investment bank\'s advisory fee on a leveraged buyout.',
+      given: `Transaction value: £850m\nFee structure: 0.75% of deal value (standard M&A retainer)\nSuccess fee: payable on close only\nOut-of-pocket expenses (cap): £250,000\nQuestion: What does the bank earn on this mandate, total?`
+    },
+    steps: [
+      {
+        title: 'Identify the fee basis',
+        body: 'The bank is paid a percentage of transaction value. In M&A advisory, this is typically 0.5%–2%, sliding downward for larger deals (the Lehman / Double Lehman scale). Here we use 0.75%.',
+        formula: 'Fee Basis = Transaction Value × Fee %\n= £850,000,000 × 0.75%'
+      },
+      {
+        title: 'Calculate the base advisory fee',
+        body: 'Multiply transaction value by the agreed percentage. This is the success fee — payable only when the deal closes. If the deal falls through, the bank typically earns only a smaller retainer.',
+        formula: '£850,000,000 × 0.0075 = £6,375,000'
+      },
+      {
+        title: 'Add out-of-pocket expenses',
+        body: 'Banks charge out-of-pockets (OOPs) — travel, data room costs, legal review, printing. These are capped in the engagement letter and charged regardless of deal outcome.',
+        formula: 'Total = Advisory Fee + OOP Cap\n= £6,375,000 + £250,000'
+      },
+      {
+        title: 'Apply revenue split (indicative)',
+        body: 'In a typical execution: deal team keeps ~35% as a team pool (split among MD, Director, Associate, Analyst). The remainder goes to the bank\'s P&L. Individual analyst bonus depends on bank performance, not just one deal.',
+        formula: 'Bank revenue: £6,625,000\nDeal team pool (indicative): ~£2.3m\nAnalyst comp impact: indirect via annual bonus'
+      }
+    ],
+    answer: {
+      value: '£6,625,000 total fee',
+      note: 'Comprising £6.375m advisory success fee + £250k out-of-pocket expenses. This single transaction generates more revenue than most FTSE 350 companies earn in a year from their core operations.'
+    }
+  },
+  {
+    problem: {
+      title: 'Estimate the economics of a sell-side M&A mandate from announcement to close.',
+      given: `Company: Manufacturing business, £300m EV\nProcess: 18-week competitive auction\nAdvisor fee: 1.25% of consideration\nBank team: 1 MD, 1 Director, 1 VP, 2 Associates, 3 Analysts\nAnalyst billing rate (implied): £150/hour\nQuestion: What is the fee per person-hour of work deployed?`
+    },
+    steps: [
+      {
+        title: 'Calculate total fee',
+        body: 'At 1.25% on a £300m deal, the bank earns a headline fee. Note: 1.25% is high for this size — justified by the competitive process management and full auction execution.',
+        formula: '£300,000,000 × 1.25% = £3,750,000'
+      },
+      {
+        title: 'Estimate total person-hours',
+        body: 'An 18-week process is brutal. MDs bill 25hrs/wk on this deal; juniors bill 70–80hrs/wk (with peaks at 100+). We use conservative estimates.',
+        formula: 'MD (1): 25 × 18 = 450hrs\nDir/VP (2): 45 × 18 = 810hrs × 2 = 1,620hrs\nAssociates (2): 65 × 18 = 1,170hrs × 2 = 2,340hrs\nAnalysts (3): 75 × 18 = 1,350hrs × 3 = 4,050hrs\n──────────────────\nTotal: ~8,460 person-hours'
+      },
+      {
+        title: 'Calculate fee per person-hour',
+        body: 'Divide total fee by total person-hours. This gives the revenue generated per hour of work deployed across the deal team.',
+        formula: '£3,750,000 ÷ 8,460 hours = £443 per person-hour'
+      },
+      {
+        title: 'Compare to analyst cost',
+        body: 'A first-year analyst in London earns ~£80k base + £20–40k bonus = £100–120k all-in. At 2,800 hrs/year, their cost is £35–42/hr fully loaded (including NI, benefits). The bank charges the deal £443/hr per person — a significant multiple.',
+        formula: 'Revenue per analyst-hour: £443\nCost per analyst-hour: ~£40\nContribution multiple: ~11×'
+      }
+    ],
+    answer: {
+      value: '£443 fee per person-hour',
+      note: 'Against an all-in analyst cost of ~£40/hour. This is why banks are profitable despite the intense resourcing of deals — and why the analyst role is a training programme rather than a permanent career for most.'
+    }
+  },
+  {
+    problem: {
+      title: 'Work out whether a new analyst should prioritise M&A or ECM as their first rotation.',
+      given: `Analyst background: Accounting degree, strong Excel, enjoys long-form analysis\nGoal: Move to buy-side PE in 2 years\nM&A rotation: Deep modelling, longer hours, slower deal pace\nECM rotation: Faster execution, market-facing, less modelling depth\nQuestion: Walk through the logical decision framework.`
+    },
+    steps: [
+      {
+        title: 'Define the exit goal',
+        body: 'The destination shapes the path. PE firms look for analysts with LBO modelling skills, M&A deal experience, and the ability to run due diligence. They typically recruit from M&A, Leveraged Finance, and Restructuring — not ECM.',
+        formula: 'PE target → IB skills needed:\n  LBO modelling ✓ (M&A/LevFin)\n  Deal structuring ✓ (M&A)\n  Market exposure ✓ (ECM — less relevant)'
+      },
+      {
+        title: 'Assess skill development',
+        body: 'M&A provides foundational modelling depth — 3-statement models, DCF, comps, pitchbooks, due diligence. ECM is faster-paced and relationship-driven but builds less technical modelling rigour in the early years.',
+        formula: 'Technical modelling depth: M&A > ECM\nDeal exposure breadth: ECM > M&A (more deals)\nHours: M&A ≈ ECM (both brutal)\nNetwork: ECM (more client-facing early)'
+      },
+      {
+        title: 'Factor in personal profile',
+        body: 'An accounting background with strong Excel is a natural fit for M&A modelling. The long-form analysis suits a methodical thinker. ECM suits analysts who are faster, more comfortable in market environments, and less attached to deep model work.',
+        formula: 'Profile fit score (illustrative):\nM&A: 8/10\nECM: 6/10'
+      },
+      {
+        title: 'Final recommendation framework',
+        body: 'Weight each factor by importance to the goal. PE exit in 2 years is the deciding criterion. M&A is the clearer path. ECM is better if the goal is staying in capital markets or moving to a hedge fund with a markets focus.',
+        formula: 'Score = (Modelling depth × 0.4) + (PE relevance × 0.4) + (Profile fit × 0.2)\nM&A: (9×0.4) + (9×0.4) + (8×0.2) = 3.6 + 3.6 + 1.6 = 8.8\nECM: (5×0.4) + (4×0.4) + (6×0.2) = 2.0 + 1.6 + 1.2 = 4.8'
+      }
+    ],
+    answer: {
+      value: 'Recommend M&A rotation',
+      note: 'Given a PE exit goal and accounting background, M&A provides the superior skills pathway. Score: 8.8 vs 4.8. Revisit if goal changes to asset management or hedge funds — ECM scores better for those destinations.'
+    }
+  }
+];
+
+function loadProblem(idx) {
+  const p = problems[idx];
+  new SolverEngine(p.problem, p.steps, p.answer, 'solver-container');
+  // Update button states
+  document.querySelectorAll('.btn').forEach((b, i) => {
+    if (b.textContent.includes('Problem')) {
+      b.className = i === idx ? 'btn btn-gold' : 'btn btn-outline';
+    }
+  });
+}
+
+/* ── INTERVIEW DATA ── */
+const interviewItems = [
+  {
+    type: 'beh',
+    question: 'Why investment banking?',
+    answer: `<strong>This is the most important question in any IB interview.</strong> A weak answer here undermines everything that follows.<br><br>
+    Structure your answer around three genuine reasons: (1) the <em>intellectual challenge</em> of valuation and deal mechanics, (2) the <em>career capital</em> — two years of IB builds skills that transfer anywhere in finance, and (3) the <em>specific bank / group</em> you are interviewing with.<br><br>
+    What to avoid: "I want to make money" (everyone knows, never say it), "I like finance and maths" (too generic), vague statements about "wanting to work on big deals."<br><br>
+    <strong>Model structure:</strong> "I want IB because [specific intellectual reason] — which I discovered when [concrete experience]. I specifically want [this bank/group] because [something specific you researched about them]."`,
+    tip: 'Interviewers have heard 200 generic answers. The candidate who references a specific deal the bank worked on, or an article by an MD at the firm, immediately stands out.'
+  },
+  {
+    type: 'beh',
+    question: 'Walk me through your CV / resume.',
+    answer: `<strong>This is not a recitation of your CV — it is a three-minute pitch.</strong><br><br>
+    Structure: (1) Where you started and why it matters, (2) what you did that is relevant to IB (internships, projects, skills), (3) why IB now — the logical conclusion of the journey.<br><br>
+    Every item should serve the narrative. If a role doesn't connect to IB or show a relevant skill (analytical, commercial, leadership, resilience), cut it or make the connection explicit.<br><br>
+    <strong>Length:</strong> 2.5–3 minutes. Practice until you can do it without looking at your CV. Interviewers find it jarring when candidates read off a sheet they wrote themselves.`,
+    tip: 'End your CV walk with a forward-looking statement: "Which is why this role at [bank] in [group] is the logical next step." It takes control of the conversation.'
+  },
+  {
+    type: 'tech',
+    question: 'What does an investment bank actually do?',
+    answer: `<strong>This sounds easy. Most candidates give a circular, vague answer.</strong><br><br>
+    A clean answer: <em>"Investment banks have two primary functions: advisory and capital raising."</em><br><br>
+    <strong>Advisory</strong> — M&A, restructuring, strategic advice. The bank advises buyers or sellers on deal structure, valuation, and process. Fee: typically 0.5–2% of deal value.<br><br>
+    <strong>Capital raising</strong> — ECM (IPOs, equity issuances) and DCM (bonds, loans). The bank connects companies that need capital with institutions that have capital. Fee: 3–7% for equity, 50–200bps for debt.<br><br>
+    You can also mention the sales & trading division (market-making) and research, but focus first on IBD (the corporate finance arm) since that's what you're interviewing for.`,
+    tip: 'Follow up with: "The bank earns advisory fees by reducing information asymmetry between buyers and sellers — they know who the buyers are, what price the market will bear, and how to structure deals efficiently."'
+  },
+  {
+    type: 'tech',
+    question: 'What is the difference between buy side and sell side?',
+    answer: `<strong>Simple distinction, frequently confused.</strong><br><br>
+    <strong>Sell side</strong> = investment banks, broker-dealers, research firms. They facilitate transactions and raise capital on behalf of clients. They "sell" securities to investors. Revenue comes from fees and commissions.<br><br>
+    <strong>Buy side</strong> = asset managers, hedge funds, PE firms, pension funds, sovereign wealth funds. They deploy capital by buying assets. Revenue comes from investment returns and management fees (typically 2% AUM + 20% carry for hedge/PE).<br><br>
+    The relationship: banks (sell side) serve institutional investors (buy side) who are their largest clients. When a bank raises equity in an IPO, the buy side buys those shares.`,
+    tip: 'Add: "The terms refer to which side of the transaction you sit on — are you selling securities (sell side) or buying them (buy side)? Both sides work on the same deals, but from opposite perspectives."'
+  },
+  {
+    type: 'deal',
+    question: 'Walk me through the stages of an M&A process from start to finish.',
+    answer: `<strong>This demonstrates deal process knowledge — often the first technical question after CVs.</strong><br><br>
+    <em>Stage 1 — Mandate:</em> Client engages bank. Engagement letter signed. Fees agreed.<br><br>
+    <em>Stage 2 — Preparation:</em> Bank prepares CIM, management presentation, financial model, data room. Process letter sent to bidders. NDAs executed.<br><br>
+    <em>Stage 3 — First round:</em> Broad outreach. IOIs (Indications of Interest) received. Shortlist selected for second round.<br><br>
+    <em>Stage 4 — Due diligence:</em> Shortlisted bidders given VDR access. Management Q&A sessions. Legal, financial, tax, commercial DD conducted.<br><br>
+    <em>Stage 5 — Final bids:</em> Binding offers submitted. Negotiation on price, structure, conditions. Exclusivity agreed with preferred bidder.<br><br>
+    <em>Stage 6 — Sign & close:</em> SPA negotiated and signed. Regulatory/shareholder approvals. Conditions satisfied. Completion.`,
+    tip: 'Timing: typical mid-market process is 5–7 months. Large/complex deals with regulatory requirements can take 12–18 months. Exclusive negotiation processes (no auction) are faster but may yield lower prices.'
+  },
+  {
+    type: 'tech',
+    question: 'What are the main IB divisions and which interests you most?',
+    answer: `<strong>Know the landscape. Have a genuine answer to the second part.</strong><br><br>
+    <strong>Product groups</strong> (cross-industry): M&A, ECM, DCM, Leveraged Finance, Restructuring, Structured Finance.<br><br>
+    <strong>Coverage groups</strong> (sector-specific): TMT, Healthcare, Consumer & Retail, Industrials, FIG (Financial Institutions), Energy & Infrastructure, Real Estate.<br><br>
+    In most banks, analysts rotate between 1–2 groups before specialising. Coverage groups originate deals and manage client relationships; product groups execute them.<br><br>
+    <em>For "which interests you":</em> be specific. "M&A because I enjoy the analytical depth of valuation and deal structuring — I find the game theory of auction processes particularly interesting" is better than "I like doing deals."`,
+    tip: 'Research the bank\'s dominant franchise before your interview. If you\'re interviewing at a bank known for its LevFin business, saying you want M&A is fine — but knowing how the two groups interact on PE-backed deals will impress.'
+  },
+  {
+    type: 'beh',
+    question: 'Tell me about a time you worked under significant pressure or to a tight deadline.',
+    answer: `<strong>IB interviewers ask this because the job is defined by deadlines.</strong> They want to see composure, not just that you finished.<br><br>
+    STAR format: <em>Situation → Task → Action → Result.</em><br><br>
+    What they look for: (1) You remained calm and didn't panic, (2) you prioritised effectively under pressure, (3) the output was high quality, (4) you learned something.<br><br>
+    <strong>Common mistake:</strong> Describing a situation where you worked hard but the result was poor. Make sure the story has a good ending — or if it didn't, make the learning the result.<br><br>
+    IB-relevant examples: exam cramming, part-time job during exams, time-sensitive project at internship, sports competition preparation.`,
+    tip: 'IB interviewers are partly screening for culture fit — do you stay calm or do you spiral? A candidate who describes chaos with equanimity scores higher than one who describes a manageable situation in dramatic terms.'
+  },
+  {
+    type: 'deal',
+    question: 'Why do companies pay banks 1% of a deal value? That\'s millions for a few months\' work.',
+    answer: `<strong>This is a test of whether you can think commercially and defend the industry you want to join.</strong><br><br>
+    Banks earn those fees through three things: <em>network, expertise, and execution capacity.</em><br><br>
+    <strong>Network:</strong> The bank knows every potential buyer for a given asset — globally. Building that network takes decades. A seller alone might identify 5 buyers; a bank identifies 50, runs a competitive process, and drives up the price by 10–20%.<br><br>
+    <strong>Expertise:</strong> The bank has run 200 similar deals. They know what buyers will pay, where deals break down, and how to structure around problems before they become fatal.<br><br>
+    <strong>Execution:</strong> A full M&A process requires 8–12 people working 80hr weeks for 5–7 months. A company's internal team simply doesn't have this capacity without stopping their day jobs.<br><br>
+    The fee is typically <em>less than the premium the bank delivers</em> — if a bank achieves a 15% higher sale price on a £500m deal, that's £75m of incremental value vs. £5m of fees. The math works.`,
+    tip: 'End with: "The bank\'s incentive is also aligned — they only earn the full fee on close. A deal that falls apart after 6 months costs the bank significant resources with little compensation."'
+  },
+];
+
+function initInterview() {
+  document.getElementById('interview-container').innerHTML =
+    interviewItems.map((item, i) => buildInterviewItem(item, i)).join('');
+}
+</script>
+</body>
+</html>
