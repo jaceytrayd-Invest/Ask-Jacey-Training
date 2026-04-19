@@ -1,8 +1,8 @@
 /* ================================================================
-   ASK JACEY — IB MASTERCLASS · SHARED JS
+   ASK JACEY — IB MASTERCLASS · SHARED JS  v3
    ================================================================ */
 
-/* ── LOGO SVG ── */
+/* ── LOGO ── */
 const LOGO_SM = `<svg width="88" height="26" viewBox="0 0 88 26" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect x="1" y="13" width="14" height="10" rx="2" fill="none" stroke="#C9A84C" stroke-width="1.2"/>
   <path d="M3 13 L3 8 Q3 4 8 4 Q13 4 13 8" stroke="#C9A84C" stroke-width="1.2" fill="none" stroke-linecap="round"/>
@@ -19,10 +19,9 @@ const LOGO_SM = `<svg width="88" height="26" viewBox="0 0 88 26" fill="none" xml
   <line x1="47" y1="14.5" x2="87" y2="14.5" stroke="#C9A84C" stroke-width="0.5" opacity="0.4"/>
 </svg>`;
 
-/* ── SHARED HEADER + SIDEBAR HTML ── */
+/* ── SHARED HEADER HTML ── */
 function buildEcoHeader() {
-  return `
-  <div id="eco-header">
+  return `<div id="eco-header">
     <span class="eco-label">Jacey Ecosystem</span>
     <div class="eco-brands">
       <span class="eco-brand"><strong>JaceyTrayd</strong> · Private Credit · Debt Strategies · Capital Management</span>
@@ -33,8 +32,7 @@ function buildEcoHeader() {
 }
 
 function buildHeader() {
-  return `
-  <header id="main-header">
+  return `<header id="main-header">
     <a href="index.html" class="logo-area">
       ${LOGO_SM}
       <div class="brand-title">
@@ -48,19 +46,20 @@ function buildHeader() {
   </header>`;
 }
 
+/* ── SIDEBAR ── */
 const LEVELS = [
-  { id: 0, label: 'Orientation', file: 'level-0.html' },
-  { id: 1, label: 'Foundations', file: 'level-1.html' },
-  { id: 2, label: 'Accounting', file: 'level-2.html' },
-  { id: 3, label: 'Valuation', file: 'level-3.html' },
-  { id: 4, label: 'Modelling', file: 'level-4.html' },
-  { id: 5, label: 'M&A', file: 'level-5.html' },
-  { id: 6, label: 'Capital Markets', file: 'level-6.html' },
-  { id: 7, label: 'Derivatives', file: 'level-7.html' },
-  { id: 8, label: 'Private Markets', file: 'level-8.html' },
-  { id: 9, label: 'Deal Execution', file: 'level-9.html' },
-  { id: 10, label: 'Careers', file: 'level-10.html' },
-  { id: 11, label: 'Advanced', file: 'level-11.html' },
+  { id:0,  label:'Orientation',          file:'level-0.html',  live:true  },
+  { id:1,  label:'Foundations',          file:'level-1.html',  live:true  },
+  { id:2,  label:'Accounting',           file:'level-2.html',  live:true  },
+  { id:3,  label:'Valuation',            file:'level-3.html',  live:true  },
+  { id:4,  label:'Modelling',            file:'level-4.html',  live:true  },
+  { id:5,  label:'M&A',                  file:'level-5.html',  live:false },
+  { id:6,  label:'Capital Markets',      file:'level-6.html',  live:false },
+  { id:7,  label:'Derivatives',          file:'level-7.html',  live:false },
+  { id:8,  label:'Private Markets',      file:'level-8.html',  live:false },
+  { id:9,  label:'Deal Execution',       file:'level-9.html',  live:false },
+  { id:10, label:'Careers',             file:'level-10.html', live:false },
+  { id:11, label:'Advanced',            file:'level-11.html', live:false },
 ];
 
 function buildSidebar(activeLevelId) {
@@ -68,10 +67,9 @@ function buildSidebar(activeLevelId) {
     <a href="${l.file}" class="${l.id === activeLevelId ? 'active' : ''}">
       <span class="sb-num">${String(l.id).padStart(2,'0')}</span>
       ${l.label}
-      ${l.id <= 1 ? '' : '<span class="sb-badge">Soon</span>'}
+      ${!l.live ? '<span class="sb-badge">Soon</span>' : ''}
     </a>`).join('');
-  return `
-  <nav id="sidebar">
+  return `<nav id="sidebar">
     <div class="sb-section">
       <div class="sb-section-label">Platform</div>
       <a href="index.html" ${activeLevelId === -1 ? 'class="active"' : ''}>
@@ -92,7 +90,9 @@ function toggleSidebar() {
   document.getElementById('sidebar-overlay').classList.toggle('show');
 }
 
-/* ── QUIZ ENGINE ── */
+/* ================================================================
+   QUIZ ENGINE
+   ================================================================ */
 class QuizEngine {
   constructor(questions, containerId) {
     this.questions = questions;
@@ -106,8 +106,7 @@ class QuizEngine {
   render() {
     if (!this.container) return;
     const q = this.questions[this.current];
-    const pct = ((this.current) / this.questions.length * 100).toFixed(0);
-
+    const pct = (this.current / this.questions.length * 100).toFixed(0);
     this.container.innerHTML = `
       <div class="quiz-wrapper">
         <div class="quiz-progress">
@@ -131,14 +130,12 @@ class QuizEngine {
           </div>
         </div>
         <div class="quiz-nav">
-          <button class="btn btn-ghost" onclick="window._quiz.prev()" ${this.current === 0 ? 'disabled' : ''}>← Back</button>
+          <button class="btn btn-ghost" onclick="window._quiz.prev()" ${this.current===0?'disabled':''}>← Back</button>
           <button class="btn btn-outline" id="qnext" onclick="window._quiz.next()" style="display:none">
-            ${this.current === this.questions.length - 1 ? 'See Results →' : 'Next Question →'}
+            ${this.current===this.questions.length-1 ? 'See Results →' : 'Next Question →'}
           </button>
         </div>
-        <div class="quiz-result" id="qresult"></div>
       </div>`;
-
     window._quiz = this;
   }
 
@@ -157,136 +154,171 @@ class QuizEngine {
   }
 
   next() {
-    if (this.current === this.questions.length - 1) {
-      this.showResult();
-    } else {
-      this.current++;
-      this.render();
-    }
+    if (this.current === this.questions.length - 1) { this.showResult(); }
+    else { this.current++; this.render(); }
   }
-
-  prev() {
-    if (this.current > 0) { this.current--; this.render(); }
-  }
+  prev() { if (this.current > 0) { this.current--; this.render(); } }
 
   showResult() {
     const pct = Math.round(this.score / this.questions.length * 100);
-    let msg = pct >= 80
-      ? 'Excellent — you have a solid grasp of this material. Proceed to the next level.'
-      : pct >= 60
-        ? 'Good foundation. Review the explanations for any questions you missed.'
-        : 'Keep building. Re-read the lesson content, then retry the quiz.';
+    const msg = pct>=80 ? 'Excellent — solid grasp of this material. Proceed to the next level.'
+              : pct>=60 ? 'Good foundation. Review explanations for any missed questions.'
+                        : 'Keep building. Re-read the lesson content, then retry.';
     this.container.innerHTML = `
       <div class="quiz-wrapper">
-        <div class="quiz-progress">
-          <div class="quiz-bar"><div class="quiz-bar-fill" style="width:100%"></div></div>
-          <span class="quiz-counter">Complete</span>
-          <span class="quiz-score-badge">Final: ${this.score}/${this.questions.length}</span>
-        </div>
         <div class="quiz-result show">
           <div class="score-num">${pct}%</div>
           <div class="score-label">${this.score} of ${this.questions.length} correct</div>
           <p class="score-msg">${msg}</p>
           <div style="display:flex;gap:0.8rem;justify-content:center;flex-wrap:wrap">
             <button class="btn btn-outline" onclick="window._quiz.restart()">Restart Quiz</button>
-            <a href="#" class="btn btn-gold" id="next-level-btn">Next Level →</a>
           </div>
         </div>
       </div>`;
   }
 
   restart() {
-    this.current = 0;
-    this.score = 0;
+    this.current = 0; this.score = 0;
     this.answered = new Array(this.questions.length).fill(false);
     this.render();
   }
 }
 
-/* ── SOLVER ENGINE ── */
+/* ================================================================
+   SOLVER ENGINE  — fully rewritten, step-by-step reveal
+   ================================================================ */
 class SolverEngine {
   constructor(problem, steps, answer, containerId) {
-    this.problem = problem;
-    this.steps = steps;
-    this.answer = answer;
-    this.container = document.getElementById(containerId);
-    this.revealed = 0;
-    this.render();
+    this.problem   = problem;
+    this.steps     = steps;
+    this.answer    = answer;
+    this.cid       = containerId;
+    this.revealed  = 0;          // how many steps currently shown
+    this._render();
   }
 
-  render() {
-    this.container.innerHTML = `
+  _render() {
+    const el = document.getElementById(this.cid);
+    if (!el) return;
+
+    /* Build step HTML — all hidden by default via inline style */
+    const stepsHtml = this.steps.map((s, i) => `
+      <div class="step-item" id="si-${i}" style="display:none;opacity:0;transform:translateY(10px);transition:opacity 0.3s ease,transform 0.3s ease;">
+        <div class="step-dot">${i+1}</div>
+        <div class="step-body">
+          <div class="step-label">Step ${i+1} of ${this.steps.length}</div>
+          <h4>${s.title}</h4>
+          <p>${s.body}</p>
+          ${s.formula ? `<div class="step-formula">${s.formula.replace(/\n/g,'<br/>')}</div>` : ''}
+        </div>
+      </div>`).join('');
+
+    el.innerHTML = `
       <div class="solver-wrapper">
         <div class="solver-problem">
           <div class="sp-label">Problem</div>
           <h3>${this.problem.title}</h3>
-          <div class="sp-given">${this.problem.given}</div>
+          <div class="sp-given">${this.problem.given.replace(/\n/g,'<br/>')}</div>
         </div>
-        <div class="steps-track" id="steps-track">
-          ${this.steps.map((s, i) => `
-            <div class="step-item" id="step-${i}">
-              <div class="step-dot">${i+1}</div>
-              <div class="step-body">
-                <div class="step-label">Step ${i+1}</div>
-                <h4>${s.title}</h4>
-                <p>${s.body}</p>
-                ${s.formula ? `<div class="step-formula">${s.formula}</div>` : ''}
-              </div>
-            </div>`).join('')}
+
+        <div class="solver-hint-bar" id="hint-bar" style="margin:1rem 0 0.5rem;">
+          <span style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ash);">
+            ${this.steps.length} steps hidden — click <strong style="color:var(--gold-light)">Reveal Next Step</strong> to work through the solution
+          </span>
         </div>
-        <div class="final-answer" id="final-answer">
-          <div class="fa-label">Final Answer</div>
+
+        <div class="steps-track" id="steps-track" style="margin-top:0.5rem;">
+          ${stepsHtml}
+        </div>
+
+        <div class="final-answer" id="fa-box" style="display:none;opacity:0;transition:opacity 0.35s ease;">
+          <div class="fa-label">✓ Final Answer</div>
           <div class="fa-value">${this.answer.value}</div>
           <p class="fa-note">${this.answer.note}</p>
         </div>
-        <div class="solver-controls">
-          <button class="btn btn-outline" id="reveal-btn" onclick="window._solver.revealNext()">
-            Reveal Step ${this.revealed + 1} →
+
+        <div class="solver-controls" style="margin-top:1.2rem;">
+          <button class="btn btn-gold" id="rev-btn" onclick="window['_sv_${this.cid}'].revealNext()">
+            Reveal Step 1 of ${this.steps.length} →
           </button>
-          <button class="btn btn-ghost" onclick="window._solver.reset()">Reset</button>
+          <button class="btn btn-ghost" onclick="window['_sv_${this.cid}'].reset()" style="margin-left:0.5rem">↺ Reset</button>
+          <button class="btn btn-ghost" onclick="window['_sv_${this.cid}'].revealAll()" style="margin-left:0.5rem">Show All</button>
         </div>
       </div>`;
-    window._solver = this;
-    // show already-revealed steps
-    for (let i = 0; i < this.revealed; i++) {
-      const el = document.getElementById(`step-${i}`);
-      if (el) el.classList.add('revealed');
-    }
-    if (this.revealed >= this.steps.length) {
-      document.getElementById('final-answer').classList.add('show');
-      document.getElementById('reveal-btn').textContent = 'All Steps Revealed ✓';
-      document.getElementById('reveal-btn').disabled = true;
+
+    window[`_sv_${this.cid}`] = this;
+
+    /* Re-show any already-revealed steps immediately (no animation) */
+    for (let i = 0; i < this.revealed; i++) this._show(i, false);
+    if (this.revealed >= this.steps.length) this._finalize();
+  }
+
+  _show(idx, animate = true) {
+    const el = document.getElementById(`si-${idx}`);
+    if (!el) return;
+    el.style.display = 'flex';
+    if (animate) {
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          el.style.opacity  = '1';
+          el.style.transform = 'translateY(0)';
+        });
+      });
+    } else {
+      el.style.opacity  = '1';
+      el.style.transform = 'translateY(0)';
     }
   }
 
+  _finalize() {
+    const fa = document.getElementById('fa-box');
+    if (fa) { fa.style.display = 'block'; requestAnimationFrame(() => { fa.style.opacity = '1'; }); }
+    const btn = document.getElementById('rev-btn');
+    if (btn) { btn.textContent = '✓ All Steps Revealed'; btn.disabled = true; btn.className = 'btn btn-ghost'; }
+    const hb = document.getElementById('hint-bar');
+    if (hb) hb.style.display = 'none';
+  }
+
   revealNext() {
-    if (this.revealed < this.steps.length) {
-      const el = document.getElementById(`step-${this.revealed}`);
-      if (el) el.classList.add('revealed');
-      this.revealed++;
-    }
+    if (this.revealed >= this.steps.length) return;
+    this._show(this.revealed, true);
+    this.revealed++;
+    const btn = document.getElementById('rev-btn');
     if (this.revealed >= this.steps.length) {
-      document.getElementById('final-answer').classList.add('show');
-      document.getElementById('reveal-btn').textContent = 'All Steps Revealed ✓';
-      document.getElementById('reveal-btn').disabled = true;
+      /* small delay so the last step animates before the answer appears */
+      setTimeout(() => this._finalize(), 350);
     } else {
-      document.getElementById('reveal-btn').textContent = `Reveal Step ${this.revealed + 1} →`;
+      if (btn) btn.textContent = `Reveal Step ${this.revealed + 1} of ${this.steps.length} →`;
+      /* scroll the new step into view */
+      setTimeout(() => {
+        const el = document.getElementById(`si-${this.revealed - 1}`);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 100);
     }
+  }
+
+  revealAll() {
+    for (let i = this.revealed; i < this.steps.length; i++) this._show(i, false);
+    this.revealed = this.steps.length;
+    this._finalize();
   }
 
   reset() {
     this.revealed = 0;
-    this.render();
+    this._render();
   }
 }
 
-/* ── INTERVIEW ACCORDION ── */
+/* ================================================================
+   INTERVIEW ACCORDION
+   ================================================================ */
 function buildInterviewItem(item, idx) {
+  const typeLabel = { tech:'Technical', beh:'Behavioral', deal:'Deal Context' };
   return `
     <div class="iq-item" id="iq-${idx}" data-type="${item.type}">
       <div class="iq-header" onclick="toggleIQ(${idx})">
         <span class="iq-q">${item.question}</span>
-        <span class="iq-type ${item.type}">${item.type === 'tech' ? 'Technical' : item.type === 'beh' ? 'Behavioral' : 'Deal'}</span>
+        <span class="iq-type ${item.type}">${typeLabel[item.type] || item.type}</span>
         <span class="iq-arrow">▾</span>
       </div>
       <div class="iq-body">
@@ -297,8 +329,7 @@ function buildInterviewItem(item, idx) {
 }
 
 function toggleIQ(idx) {
-  const item = document.getElementById(`iq-${idx}`);
-  item.classList.toggle('open');
+  document.getElementById(`iq-${idx}`).classList.toggle('open');
 }
 
 function filterIQ(type) {

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L3.05 — WACC — Cost of Capital | Ask Jacey</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="eco-hdr"></div><div id="hdr"></div>
+<div id="app"><div id="sb"></div><div id="content">
+<div class="breadcrumb">
+  <a href="index.html">Home</a><span class="sep">&#8250;</span>
+  <a href="level-3.html">Level 03</a><span class="sep">&#8250;</span>
+  <span class="current">L3.05 — WACC — Cost of Capital</span>
+</div>
+<div class="lesson-page">
+<div class="deal-badge">&#128204; Level 03 &middot; Valuation &middot; L3.05 — WACC — Cost of Capital</div>
+<p class="lesson-intro">WACC is the discount rate in a DCF — and therefore one of the two inputs that most moves valuation. Building it properly requires CAPM, beta analysis, and the Hamada relevering equation. Get this right; the DCF follows.</p>
+
+<h2>The Formula</h2>
+<div class="formula-block">WACC = (E/V) × Ke  +  (D/V) × Kd × (1 - t)
+
+Where:
+  E   = Market value of equity
+  D   = Market value of debt
+  V   = E + D (total capital)
+  Ke  = Cost of equity (via CAPM)
+  Kd  = Pre-tax cost of debt (yield on debt)
+  t   = Marginal corporate tax rate</div>
+
+<h2>Cost of Equity — <em>CAPM</em></h2>
+<div class="formula-block">Ke = Rf + βL × ERP
+
+  Rf  = Risk-free rate (10-year government bond yield)
+        UK: 10Y Gilt yield | US: 10Y Treasury yield
+  βL  = Levered beta of the company (vs. market)
+  ERP = Equity Risk Premium (typically 5.0-6.5% for developed markets)</div>
+
+<h2>Beta — <em>Unlever and Relever (Hamada)</em></h2>
+<p>Beta measures how much the stock moves relative to the market. But in valuation, you should not use the target company's own historical beta — it reflects the wrong capital structure (which changes post-transaction). Instead:</p>
+<ol style="font-family:var(--slab);font-size:0.82rem;color:var(--ash-light);line-height:1.85;padding-left:1.5rem;margin-bottom:1rem">
+<li>Collect betas for 6–10 comparable companies from Bloomberg</li>
+<li>Unlever each peer's beta using Hamada: βU = βL / [1 + (1−t) × D/E]</li>
+<li>Take the median unlevered beta from the peer set</li>
+<li>Relever to the target's capital structure: βL = βU × [1 + (1−t) × D/E]</li>
+</ol>
+<div class="formula-block">Hamada Equations:
+  Unlever:  βU = βL / [1 + (1 - t) × (D/E)]
+  Relever:  βL = βU × [1 + (1 - t) × (D/E)]
+
+Example:
+  Peer levered beta: 1.4, D/E = 0.5, t = 25%
+  βU = 1.4 / [1 + 0.75 × 0.5] = 1.4 / 1.375 = 1.018
+
+  Target D/E = 1.0 (60% debt / 40% equity)
+  βL = 1.018 × [1 + 0.75 × 1.0] = 1.018 × 1.75 = 1.781</div>
+
+<h2>Cost of Debt</h2>
+<p>Use the yield on the company's existing debt — the market rate at which they can borrow, not the coupon rate on old bonds. For private companies, estimate from the credit rating implied by their leverage ratios and compare to public debt markets. Then apply the tax shield:</p>
+<div class="formula-block">After-tax Kd = Pre-tax yield × (1 - tax rate)
+Example: 7.0% yield × (1 - 0.25) = 5.25% after-tax cost of debt</div>
+
+<h2>Weights — <em>Market Value vs. Book Value</em></h2>
+<p>Always use <strong>market value weights</strong> — not book value. For equity: market cap (shares × price). For debt: market value of debt (which equals face value for investment-grade companies; may differ for distressed). Book value weights produce a WACC that doesn't reflect economic reality.</p>
+
+<div class="callout">
+<div class="c-label">WACC Sensitivity Check</div>
+<p>For most businesses, a 1% change in WACC moves EV by 10–20%. For high-growth businesses with long cash flow tails, the sensitivity is even greater. Before finalising your DCF, stress-test WACC ±1.5% and present the EV impact. This immediately shows the client how sensitive the valuation is to the discount rate assumption.</p>
+</div>
+<div class="mistake-box">
+<div class="m-label">Common WACC Mistakes</div>
+<p><strong>Using book value equity or debt weights.</strong> Book value is an accounting construct — market values are what matter economically.<br><br>
+<strong>Using the short-term risk-free rate.</strong> DCF values long-term cash flows, so use the 10-year government bond — not the 3-month T-bill rate.<br><br>
+<strong>Forgetting the tax shield on debt.</strong> Interest is tax-deductible. If you use pre-tax cost of debt in WACC without applying (1−t), you are overstating the cost of debt and overstating WACC.</p>
+</div>
+<div class="bank-box">
+<div class="b-label">In a Real Bank</div>
+<p>WACC is often debated within the deal team. The MD may have a view on the appropriate ERP or risk-free rate. Leverage banks' own published WACC benchmarks by sector where available. In a fairness opinion, the WACC range used (not a single point estimate) must be justifiable to a court — document every input with a source.</p>
+</div>
+
+<div class="page-nav">
+  <a href="l3-dcf.html" class="btn btn-ghost">&larr; Previous</a>
+  <div class="pn-context">Level <span>03</span> &middot; Valuation</div>
+  <a href="l3-sensitivity.html" class="btn btn-gold">Next &rarr;</a>
+</div>
+</div>
+</div></div>
+<script src="shared.js"></script>
+<script>
+document.getElementById('eco-hdr').outerHTML=buildEcoHeader();
+document.getElementById('hdr').outerHTML=buildHeader();
+document.getElementById('sb').outerHTML=buildSidebar(3);
+</script>
+</body></html>

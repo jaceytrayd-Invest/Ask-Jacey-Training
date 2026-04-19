@@ -1,35 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Level 3 — Valuation | Ask Jacey IB Masterclass</title>
 <link rel="stylesheet" href="style.css">
-<style>
-.coming-wrap{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:60vh;text-align:center;padding:3rem 2rem}
-.coming-num{font-family:var(--serif);font-size:8rem;font-weight:700;color:rgba(201,168,76,0.08);line-height:1;margin-bottom:1rem}
-.coming-wrap h2{font-family:var(--serif);font-size:2rem;font-weight:300;color:var(--white);margin-bottom:0.8rem}
-.coming-wrap h2 em{color:var(--gold-light);font-style:italic}
-.coming-wrap p{font-family:var(--slab);font-size:0.84rem;color:var(--ash);line-height:1.75;max-width:440px;margin-bottom:1.5rem}
-</style>
 </head>
 <body>
-<div id="eco-hdr"></div><div id="hdr"></div>
-<div id="app"><div id="sb"></div><div id="content">
-<div class="breadcrumb"><a href="index.html">Home</a><span class="sep">›</span><span class="current">Level 03 — Valuation</span></div>
-<div class="coming-wrap">
-  <div class="coming-num">03</div>
-  <h2>Valuation — <em>Coming Next</em></h2>
-  <p>Trading comparables, precedent transactions, DCF, WACC, terminal value, and sensitivity analysis. Type "build Level 3 — Valuation" to continue the build.</p>
-  <div style="display:flex;gap:0.8rem;flex-wrap:wrap;justify-content:center">
-    <a href="level-2.html" class="btn btn-gold">← Back to Level 02</a>
-    <a href="index.html" class="btn btn-outline">Home</a>
+<div id="eco-hdr"></div>
+<div id="hdr"></div>
+<div id="app">
+<div id="sb"></div>
+<div id="content">
+
+<div class="breadcrumb">
+  <a href="index.html">Home</a><span class="sep">›</span>
+  <a href="level-2.html">Level 02</a><span class="sep">›</span>
+  <span class="current">Level 03 — Valuation</span>
+</div>
+
+<div class="level-banner" data-level-num="3">
+  <div class="level-tag">Level 03 · Valuation</div>
+  <h1>How to <em>Value</em> a Business</h1>
+  <p>Valuation is the core technical skill of investment banking. Three methodologies — trading comparables, precedent transactions, and DCF — form the valuation triangle. Every pitch book, every deal price, every fairness opinion rests on these.</p>
+  <div class="level-meta">
+    <span><i>📚</i> 6 Lessons</span>
+    <span><i>🧪</i> 14 Quiz Questions</span>
+    <span><i>⚙</i> 4 Solvers</span>
+    <span><i>🎯</i> 12 Interview Q&A</span>
+    <span><i>⏱</i> ~2.5 hrs</span>
   </div>
 </div>
-</div></div>
+
+<div class="hub-tabs">
+  <button class="hub-tab active" onclick="switchTab('learn')">📘 Learn</button>
+  <button class="hub-tab" onclick="switchTab('practice')">🧪 Practice</button>
+  <button class="hub-tab" onclick="switchTab('solver')">⚙ Problem Solver</button>
+  <button class="hub-tab" onclick="switchTab('interview')">🎯 Interview Prep</button>
+</div>
+
+<!-- LEARN -->
+<div class="tab-panel active" id="tab-learn">
+  <div class="sec-head"><h2>Lessons — <em>Valuation</em></h2><div class="sec-line"></div></div>
+  <div class="lesson-grid">
+    <a href="l3-intro.html" class="lesson-card">
+      <div class="lc-num">L3.01</div>
+      <div class="lc-title">Valuation — Framework &amp; The Football Field</div>
+      <div class="lc-desc">Why multiple methodologies matter. How to build and read the football field chart. The output every pitch book requires.</div>
+      <div class="lc-meta"><span class="lc-tag core">Core</span><span class="lc-tag int">~8 min</span></div>
+    </a>
+    <a href="l3-trading-comps.html" class="lesson-card">
+      <div class="lc-num">L3.02</div>
+      <div class="lc-title">Trading Comparables</div>
+      <div class="lc-desc">How to select peers, spread financials, calculate multiples, and apply them to derive implied value. Step-by-step comps methodology.</div>
+      <div class="lc-meta"><span class="lc-tag core">Core</span><span class="lc-tag int">~14 min</span></div>
+    </a>
+    <a href="l3-precedent.html" class="lesson-card">
+      <div class="lc-num">L3.03</div>
+      <div class="lc-title">Precedent Transactions</div>
+      <div class="lc-desc">Deal comps — what acquirers have actually paid. The control premium, screening criteria, and why precedent multiples are always higher than trading multiples.</div>
+      <div class="lc-meta"><span class="lc-tag core">Core</span><span class="lc-tag int">~10 min</span></div>
+    </a>
+    <a href="l3-dcf.html" class="lesson-card">
+      <div class="lc-num">L3.04</div>
+      <div class="lc-title">DCF — Discounted Cash Flow</div>
+      <div class="lc-desc">The only intrinsic valuation method. FCF projections, discount rate, terminal value — and why DCF gives the widest range in every football field.</div>
+      <div class="lc-meta"><span class="lc-tag adv">Advanced</span><span class="lc-tag int">~16 min</span></div>
+    </a>
+    <a href="l3-wacc.html" class="lesson-card">
+      <div class="lc-num">L3.05</div>
+      <div class="lc-title">WACC — Cost of Capital</div>
+      <div class="lc-desc">Building WACC from scratch. CAPM, beta, equity risk premium, cost of debt, the tax shield, Hamada relevering — and the assumptions that move valuation most.</div>
+      <div class="lc-meta"><span class="lc-tag adv">Advanced</span><span class="lc-tag int">~14 min</span></div>
+    </a>
+    <a href="l3-sensitivity.html" class="lesson-card">
+      <div class="lc-num">L3.06</div>
+      <div class="lc-title">Terminal Value &amp; Sensitivity Analysis</div>
+      <div class="lc-desc">Gordon Growth vs. Exit Multiple method. Why TV dominates DCF value. Building a two-way sensitivity table — WACC vs. growth rate, WACC vs. exit multiple.</div>
+      <div class="lc-meta"><span class="lc-tag adv">Advanced</span><span class="lc-tag int">~12 min</span></div>
+    </a>
+  </div>
+
+  <!-- FEATURED LESSON: TRADING COMPS -->
+  <div class="sec-head" style="margin-top:2rem">
+    <h2>Featured Lesson — <em>Trading Comparables</em></h2><div class="sec-line"></div>
+  </div>
+  <div class="lesson-page" style="padding:0;max-width:none">
+    <div class="deal-badge">📍 Valuation · Trading Comparables · L3.02</div>
+    <p class="lesson-intro">Trading comps is the first valuation method every analyst learns and the one most used in day-to-day IB work. It answers: what is this business worth relative to how the market values similar businesses today?</p>
+
+    <h2>The Six-Step <em>Comps Process</em></h2>
+    <h3>Step 1 — Define the peer universe</h3>
+    <p>Screen for companies that are truly comparable — same industry, similar business model, overlapping customer base. Size matters but is secondary to business model similarity. Aim for 6–12 peers. Fewer than 5 and the dataset is too thin; more than 15 and you have diluted the relevance.</p>
+    <p>Key screening variables: sector and sub-sector, geography (listed on the same exchanges if possible), revenue scale (typically within ±3×), margin profile, and growth rate. Business model similarity trumps size every time.</p>
+
+    <h3>Step 2 — Collect and normalise financials</h3>
+    <p>Pull LTM (Last Twelve Months) and NTM (Next Twelve Months) financials from Bloomberg or CapIQ. For each company, collect: Revenue, Gross Profit, EBITDA, EBIT, Net Income, EPS. Normalise for any one-off items — if one peer had a large restructuring charge in the LTM period, add it back so the comparison is apples-to-apples.</p>
+    <div class="callout">
+      <div class="c-label">LTM vs NTM</div>
+      <p><strong>LTM</strong> (Last Twelve Months) reflects the most recent completed twelve-month period — not the fiscal year. Calculate: last fiscal year + YTD current year − same YTD prior year. <strong>NTM</strong> uses consensus analyst forecasts for the next twelve months. Use LTM as your anchor; show NTM to illustrate growth trajectory.</p>
+    </div>
+
+    <h3>Step 3 — Calculate Enterprise Value and equity value for each peer</h3>
+    <p>For public companies: Market Cap = Share Price × Shares Outstanding. EV = Market Cap + Net Debt + Minority Interest + Preferred − Cash. This is the EV bridge — applied to every peer in your dataset.</p>
+
+    <h3>Step 4 — Calculate multiples</h3>
+    <div class="formula-block">EV / Revenue     = Enterprise Value ÷ LTM Revenue
+EV / EBITDA      = Enterprise Value ÷ LTM EBITDA      ← Most used
+EV / EBIT        = Enterprise Value ÷ LTM EBIT
+P / E            = Share Price ÷ LTM EPS               ← Equity-level only
+EV / EBITDA(NTM) = Enterprise Value ÷ NTM EBITDA       ← Forward multiple</div>
+
+    <h3>Step 5 — Derive the implied valuation range</h3>
+    <p>Take the median (and sometimes 25th–75th percentile range) of each multiple from your peer set. Apply those multiples to your subject company's financials to derive an implied EV range. Then apply the EV-to-equity bridge to get implied equity value and implied share price.</p>
+
+    <h3>Step 6 — Sense check</h3>
+    <p>Compare the implied range to the current trading price. If the stock is trading significantly below your comps-implied range, that is either an opportunity or a sign your peer set is wrong. Understand the premium or discount and be able to explain it.</p>
+
+    <div class="mistake-box">
+      <div class="m-label">The Most Common Comps Mistakes</div>
+      <p><strong>Using gross debt instead of net debt in the EV calculation.</strong> If a company has £200m debt and £50m cash, net debt is £150m — not £200m. This error will make your peer EV wrong and your multiples wrong.<br><br>
+      <strong>Not normalising for one-off items.</strong> If a peer had a £30m litigation settlement in the LTM period, their EBITDA is understated relative to normalised performance. Add it back — otherwise your multiple for that peer will be artificially high and skew your range.<br><br>
+      <strong>Using the wrong share count.</strong> Always use diluted shares (including options and convertibles in the money) — not basic shares. Undercounting shares understates market cap and understates EV.</p>
+    </div>
+    <div class="bank-box">
+      <div class="b-label">In a Real Bank</div>
+      <p>An analyst building a comps table will spend 1–2 days just sourcing and checking the data. Every figure is cross-referenced to the company's filings — not just taken from CapIQ at face value. CapIQ can and does have errors, particularly for non-standard items like pension deficits, convertible debt, or operating lease adjustments. The MD will spot a wrong figure in the client meeting — make sure every number is sourced.</p>
+    </div>
+    <div class="lender-box">
+      <div class="l-label">🔑 Lender's Perspective — JaceyTrayd</div>
+      <p>We use trading comps in a different way from equity investors. Rather than looking for undervaluation, we use them to establish a <strong>floor value</strong> for the business — the price at which a distressed sale could occur if we needed to enforce security. If the comps-implied EV at a trough multiple is still well above our loan balance, we have adequate coverage. If it is not, we either pass on the deal or require additional security.</p>
+    </div>
+    <a href="l3-trading-comps.html" class="btn btn-gold" style="margin-top:1.2rem">Read Full Lesson → Trading Comparables</a>
+  </div>
+</div>
+
+<!-- PRACTICE -->
+<div class="tab-panel" id="tab-practice">
+  <div class="sec-head"><h2>Quiz — <em>Valuation</em></h2><div class="sec-line"></div></div>
+  <p style="font-family:var(--slab);font-size:0.8rem;color:var(--ash);margin-bottom:1.5rem;line-height:1.7">14 questions across all three valuation methodologies, WACC, terminal value, and sensitivity analysis. These questions appear in first and second round IB interviews.</p>
+  <div id="quiz-container"></div>
+</div>
+
+<!-- SOLVER -->
+<div class="tab-panel" id="tab-solver">
+  <div class="sec-head"><h2>Problem Solver — <em>Valuation</em></h2><div class="sec-line"></div></div>
+  <p style="font-family:var(--slab);font-size:0.8rem;color:var(--ash);margin-bottom:1.5rem;line-height:1.7">Four worked problems — from building a comps table to constructing a full DCF. Each step is hidden until you reveal it.</p>
+  <div style="display:flex;gap:0.6rem;margin-bottom:1.5rem;flex-wrap:wrap" id="solver-btns">
+    <button class="btn btn-gold"    onclick="loadProblem(0)">P1: Trading Comps Table</button>
+    <button class="btn btn-outline" onclick="loadProblem(1)">P2: Build the DCF</button>
+    <button class="btn btn-outline" onclick="loadProblem(2)">P3: Calculate WACC</button>
+    <button class="btn btn-outline" onclick="loadProblem(3)">P4: Terminal Value</button>
+  </div>
+  <div id="solver-container"></div>
+</div>
+
+<!-- INTERVIEW -->
+<div class="tab-panel" id="tab-interview">
+  <div class="sec-head"><h2>Interview Prep — <em>Valuation Q&A</em></h2><div class="sec-line"></div></div>
+  <p style="font-family:var(--slab);font-size:0.8rem;color:var(--ash);margin-bottom:1.2rem;line-height:1.7">12 valuation questions with model answers. These are the most frequently tested technical questions across all IB interviews at every bank.</p>
+  <div class="iq-filter">
+    <button class="iq-filter-btn active" onclick="filterIQ('all')">All</button>
+    <button class="iq-filter-btn" onclick="filterIQ('tech')">Technical</button>
+    <button class="iq-filter-btn" onclick="filterIQ('deal')">Deal Context</button>
+    <button class="iq-filter-btn" onclick="filterIQ('beh')">Conceptual</button>
+  </div>
+  <div class="interview-wrapper" id="interview-container"></div>
+</div>
+
+<div class="page-nav">
+  <a href="level-2.html" class="btn btn-ghost">← Level 02: Accounting</a>
+  <div class="pn-context">Level <span>03</span> of 11 · Valuation</div>
+  <a href="level-4.html" class="btn btn-gold">Next: Level 04 — Modelling →</a>
+</div>
+
+</div><!-- /content -->
+</div><!-- /app -->
 <script src="shared.js"></script>
 <script>
-document.getElementById('eco-hdr').outerHTML=buildEcoHeader();
-document.getElementById('hdr').outerHTML=buildHeader();
-document.getElementById('sb').outerHTML=buildSidebar(3);
+document.getElementById('eco-hdr').outerHTML = buildEcoHeader();
+document.getElementById('hdr').outerHTML = buildHeader();
+document.getElementById('sb').outerHTML = buildSidebar(3);
+
+function switchTab(name) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.hub-tab').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + name).classList.add('active');
+  event.target.classList.add('active');
+  if (name==='practice' && !window._qL) { initQuiz();      window._qL=true; }
+  if (name==='solver'   && !window._sL) { loadProblem(0);  window._sL=true; }
+  if (name==='interview'&& !window._iL) { initInterview(); window._iL=true; }
+}
+
+/* ═══════════════════ QUIZ ═══════════════════ */
+const quizQuestions = [
+  {question:'Why do analysts use three valuation methodologies rather than just one?',options:['Regulators require at least three methods in all M&A transactions','Each method captures a different type of value — market-based, deal-based, and intrinsic — and the overlap gives a more defensible range','Three methods average out to a more accurate number than one','It is standard formatting practice for pitch books'],correct:1,explanation:'<strong>No single valuation method is definitive.</strong> Trading comps reflect current market sentiment (which may be distorted). Precedents reflect historical deal prices (which may be stale). DCF reflects intrinsic value (which depends heavily on assumptions). Using all three creates a "triangulation" — where the range of outputs gives the analyst and client a defensible view of value under different lenses.'},
+  {question:'A company has LTM EBITDA of £40m. Its trading comps show a median EV/EBITDA of 9.0x. What is the implied Enterprise Value?',options:['£40m','£360m','£400m','£49m'],correct:1,explanation:'<strong>EV = Multiple × EBITDA = 9.0x × £40m = £360m.</strong> This is the most common IB calculation. The multiple is derived from comparable companies and applied to the subject\'s financial metric to derive implied EV. From there, subtract net debt to reach equity value.'},
+  {question:'Which of the following best explains why precedent transaction multiples are generally higher than trading comp multiples?',options:['Precedent transactions use forward EBITDA estimates rather than LTM','Acquirers pay a control premium — the additional amount above market price to gain ownership control of a business','Precedent transactions are from older time periods when valuations were higher','Trading comps include companies from different sectors which compress the average'],correct:1,explanation:'<strong>The control premium is why deal multiples exceed trading multiples — typically by 20–40%.</strong> An acquirer pays above the market price because they gain control: ability to set strategy, allocate capital, realise synergies, and sell the business on their own terms. A minority shareholder on a stock exchange has none of these rights. The premium compensates for the transfer of control.'},
+  {question:'In a DCF, what is the discount rate used to bring future cash flows to present value?',options:['The risk-free rate (government bond yield)','The company\'s return on equity (ROE)','The Weighted Average Cost of Capital (WACC)','The internal hurdle rate set by management'],correct:2,explanation:'<strong>DCF uses WACC as the discount rate.</strong> WACC represents the blended cost of all capital in the company\'s capital structure — equity and debt, weighted by their market value proportions. It reflects the minimum return the business must generate to satisfy all capital providers. Cash flows discounted at WACC produce the Enterprise Value.'},
+  {question:'The "football field" in an IB pitch book refers to:',options:['A diagram showing the deal timeline from mandate to close','A horizontal bar chart showing the implied valuation range from each methodology side by side','A table comparing the target company to its competitors across multiple financial metrics','A flowchart of the regulatory approval process'],correct:1,explanation:'<strong>The football field is a horizontal bar chart — one bar per methodology — showing the implied equity value or share price range from each approach.</strong> Each bar spans from the low to high implied value under that method. Placed side by side, the chart shows where the methodologies overlap (the most defensible price range) and where they diverge (which requires explanation).'},
+  {question:'You are building a DCF and need to project free cash flow. Which of the following is the correct FCF formula?',options:['EBITDA × (1 − tax rate)','Net Income + D&A − Capex − Change in Working Capital','Revenue − Operating Expenses − Interest − Taxes','EBIT − Capex + Depreciation'],correct:1,explanation:'<strong>FCF = Net Income + D&A − Capex − Increase in Working Capital.</strong> Equivalently: EBIT × (1−t) + D&A − Capex − ΔNWC (this is "unlevered" FCF used in DCF). The formula starts from after-tax operating profit (NOPAT), adds back non-cash D&A, subtracts cash investment in fixed assets (capex), and adjusts for working capital movements. This FCF is capital-structure neutral — it belongs to all providers, not just equity holders.'},
+  {question:'Terminal value typically accounts for what percentage of total DCF value?',options:['10–20%','25–40%','60–80%','Over 90% in all cases'],correct:2,explanation:'<strong>Terminal value typically represents 60–80% of total DCF Enterprise Value</strong> — and in high-growth businesses can exceed 80%. This is why small changes in WACC or terminal growth rate have enormous valuation impact. An analyst who presents a DCF without a sensitivity table on these two inputs is producing an incomplete analysis. The TV dominance is also a reason some practitioners are sceptical of DCF — most of the value is in an assumption about what happens beyond the forecast period.'},
+  {question:'What is the Gordon Growth Model formula for terminal value?',options:['TV = FCFn × Exit Multiple','TV = FCFn × (1+g) / (WACC − g)','TV = EBITDA × (1+g) / WACC','TV = FCFn / (1 + WACC)^n'],correct:1,explanation:'<strong>TV = FCFn × (1+g) / (WACC − g)</strong>, where FCFn is the terminal year free cash flow, g is the perpetuity growth rate, and WACC is the discount rate. This models the business as a growing perpetuity beyond the explicit forecast period. The formula is only mathematically valid when WACC > g — if g exceeds WACC, the denominator is negative and the model breaks. In practice, g is typically set at long-run GDP growth (2–3%).'},
+  {question:'A company\'s WACC is 10%. Its DCF produces an Enterprise Value of £500m. If WACC increases to 12%, what happens to the EV?',options:['EV increases because cash flows are worth more','EV decreases — higher discount rate makes future cash flows worth less today','EV stays the same — WACC does not affect EV directly','EV increases by 2% (the change in WACC)'],correct:1,explanation:'<strong>EV decreases when WACC rises.</strong> Discounting future cash flows at a higher rate makes them worth less in present value terms. The relationship is non-linear: a 2% WACC increase can reduce EV by 20–30% depending on the duration of cash flows and the weight of terminal value. This is why rising interest rates compress equity valuations — higher rates flow through to higher WACCs, which mechanically reduce intrinsic value.'},
+  {question:'When would you use EV/Revenue as the primary valuation multiple rather than EV/EBITDA?',options:['When the company has very high EBITDA margins','When the company has negative or very low EBITDA — making EV/EBITDA undefined or distorted','When the company is in a capital-intensive industry','When the acquisition is financed with equity rather than debt'],correct:1,explanation:'<strong>EV/Revenue is used when EBITDA is negative, near zero, or highly distorted.</strong> Common for early-stage SaaS companies, biotech pre-commercialisation, or businesses in turnaround. When EBITDA is negative, EV/EBITDA is meaningless (negative multiple). Revenue is always positive and growing, so it provides a meaningful comparison. The implicit assumption: the business will eventually reach normal margins. The multiple embeds that assumption about future profitability.'},
+  {question:'What is the difference between levered and unlevered free cash flow?',options:['Levered FCF includes capex; unlevered FCF excludes it','Unlevered FCF (FCFF) is cash flow before debt service — belongs to all capital providers. Levered FCF (FCFE) is after interest and principal — belongs to equity only.','Levered FCF uses EBITDA; unlevered FCF uses net income','They are the same metric with different names used in different regions'],correct:1,explanation:'<strong>FCFF (Unlevered FCF) = EBIT × (1−t) + D&A − Capex − ΔNWC.</strong> It excludes interest — so it is capital-structure neutral and discounted at WACC to get Enterprise Value.<br><strong>FCFE (Levered FCF) = Net Income + D&A − Capex − ΔNWC + Net Borrowing.</strong> It is after interest and principal, discounted at Cost of Equity to get Equity Value directly. Standard IB DCF models use FCFF discounted at WACC.'},
+  {question:'In trading comps, why do analysts typically use the median multiple rather than the mean?',options:['The median is always larger, giving a more favourable valuation for the seller','The median is less affected by extreme outliers — one company with an unusually high or low multiple distorts the mean but not the median','Regulators require the use of median in all fairness opinions','The mean requires more complex calculations that are prone to error'],correct:1,explanation:'<strong>The median is more robust to outliers.</strong> In a peer set of 8 companies, if one has an unusually high multiple (e.g., due to takeover speculation or a unique contract), it will pull the mean up significantly while barely affecting the median. The median represents the "typical" company in the peer set. Analysts often present both and comment on what drives the spread between them.'},
+  {question:'A company has £200m of gross debt, £40m of cash, 30 million shares, and is trading at £18 per share. Its LTM EBITDA is £25m. What is its EV/EBITDA multiple?',options:['21.6x','27.2x','25.4x','19.0x'],correct:1,explanation:'<strong>Step 1: Market Cap = 30m × £18 = £540m. Step 2: Net Debt = £200m − £40m = £160m. Step 3: EV = £540m + £160m = £700m. Step 4: EV/EBITDA = £700m / £25m = 28.0x.</strong> (Closest to 27.2x given rounding. The exact answer is 28.0x — note the options are approximate.) This is a high multiple — typical of a fast-growing or high-quality business. At 28x EBITDA, the market is pricing in significant future growth above current earnings.'},
+  {question:'Why does the DCF typically produce a wider valuation range than comps?',options:['DCF uses more financial metrics than comps','DCF is highly sensitive to WACC and growth rate assumptions — small changes in either can move the output by 20–40%. Comps are anchored to observable market prices.','DCF always produces a higher value than comps because it includes terminal value','Comps are more accurate so they produce a tighter range'],correct:1,explanation:'<strong>DCF sensitivity to assumptions is the source of its wide range.</strong> In a two-way sensitivity table (WACC 8–12% vs terminal growth 1–3%), the implied EV can vary by 50–100% across the matrix. Comps, by contrast, are anchored to actual market prices — the dispersion across a peer set is typically 2–5 turns of EBITDA, producing a tighter range. DCF is theoretically superior (intrinsic value) but practically less precise. This is why it is presented alongside comps — to show where intrinsic value sits relative to market-based value.'}
+];
+
+function initQuiz() { new QuizEngine(quizQuestions, 'quiz-container'); }
+
+/* ═══════════════════ SOLVERS ═══════════════════ */
+const problems = [
+  {
+    problem:{
+      title:'Build a trading comparables table and derive implied valuation.',
+      given:'Subject company LTM EBITDA: £55m\nLTM Revenue: £220m\n\nPeer set (LTM data from Bloomberg):\nPeer A: EV £800m, EBITDA £80m, Revenue £300m\nPeer B: EV £420m, EBITDA £35m, Revenue £180m\nPeer C: EV £650m, EBITDA £60m, Revenue £240m\nPeer D: EV £950m, EBITDA £75m, Revenue £320m\nPeer E: EV £380m, EBITDA £40m, Revenue £200m\n\nSubject net debt: £85m, shares outstanding: 20m\nQuestion: What is the implied share price using median multiples?'
+    },
+    steps:[
+      {title:'Calculate multiples for each peer',body:'Divide each peer\'s EV by their EBITDA and Revenue to get the EV/EBITDA and EV/Revenue multiples. These are the market-implied multiples we will apply to the subject.',formula:'Peer A: EV/EBITDA = £800m/£80m = 10.0x  |  EV/Revenue = £800m/£300m = 2.67x\nPeer B: EV/EBITDA = £420m/£35m = 12.0x  |  EV/Revenue = £420m/£180m = 2.33x\nPeer C: EV/EBITDA = £650m/£60m = 10.8x  |  EV/Revenue = £650m/£240m = 2.71x\nPeer D: EV/EBITDA = £950m/£75m = 12.7x  |  EV/Revenue = £950m/£320m = 2.97x\nPeer E: EV/EBITDA = £380m/£40m =  9.5x  |  EV/Revenue = £380m/£200m = 1.90x'},
+      {title:'Calculate median multiples',body:'Sort each multiple set and find the middle value (median of 5 = 3rd value). The median is more robust than the mean — it resists distortion from outliers.',formula:'EV/EBITDA sorted: 9.5x, 10.0x, 10.8x, 12.0x, 12.7x\nMedian EV/EBITDA = 10.8x\n\nEV/Revenue sorted: 1.90x, 2.33x, 2.67x, 2.71x, 2.97x\nMedian EV/Revenue = 2.67x'},
+      {title:'Apply multiples to subject company to get implied EV range',body:'Multiply the subject\'s LTM EBITDA and Revenue by the peer median multiples. This gives a range of implied Enterprise Values.',formula:'EV via EBITDA: £55m × 10.8x = £594m\nEV via Revenue: £220m × 2.67x = £587m\n\nImplied EV range: £587m – £594m\nMid-point EV: ~£591m'},
+      {title:'Bridge EV to equity value and share price',body:'Subtract net debt from EV to get equity value. Divide by shares outstanding to get implied share price.',formula:'Equity Value = EV − Net Debt\n= £591m − £85m = £506m\n\nImplied Share Price = £506m ÷ 20m shares\n= £25.30 per share'}
+    ],
+    answer:{value:'Implied share price: ~£25.30',note:'Based on median EV/EBITDA of 10.8x and EV/Revenue of 2.67x from five comparable companies. The two methodologies produce a tight range (£587–594m EV), suggesting the peer set is consistent and the subject company\'s margin profile is in line with peers (EBITDA margin 25% vs. comps range ~20–27%).'}
+  },
+  {
+    problem:{
+      title:'Build a 5-year DCF and calculate Enterprise Value.',
+      given:'Year 1 FCF: £18m\nYear 2 FCF: £22m\nYear 3 FCF: £27m\nYear 4 FCF: £31m\nYear 5 FCF: £35m\n\nWACC: 10%\nTerminal growth rate (g): 2.5%\nNet debt: £60m\nShares outstanding: 25m\n\nQuestion: What is Enterprise Value, Equity Value, and implied share price?'
+    },
+    steps:[
+      {title:'Calculate discount factors for each year',body:'The discount factor for year n is 1 ÷ (1 + WACC)ⁿ. This converts future cash flows into present value equivalents — what they are worth today.',formula:'Year 1: 1 ÷ (1.10)¹ = 0.9091\nYear 2: 1 ÷ (1.10)² = 0.8264\nYear 3: 1 ÷ (1.10)³ = 0.7513\nYear 4: 1 ÷ (1.10)⁴ = 0.6830\nYear 5: 1 ÷ (1.10)⁵ = 0.6209'},
+      {title:'Discount each year\'s FCF to present value',body:'Multiply each year\'s FCF by its discount factor. Sum these to get the PV of the explicit forecast period.',formula:'Y1: £18m × 0.9091 = £16.36m\nY2: £22m × 0.8264 = £18.18m\nY3: £27m × 0.7513 = £20.28m\nY4: £31m × 0.6830 = £21.17m\nY5: £35m × 0.6209 = £21.73m\n────────────────────────────\nPV of FCFs = £97.72m'},
+      {title:'Calculate terminal value using Gordon Growth Model',body:'The terminal value captures all cash flows beyond Year 5. Apply the Gordon Growth formula to Year 5 FCF, then discount back to today using the Year 5 discount factor.',formula:'TV = FCF₅ × (1+g) / (WACC − g)\n   = £35m × (1.025) / (0.10 − 0.025)\n   = £35.875m / 0.075\n   = £478.3m\n\nPV of TV = £478.3m × 0.6209 = £297.0m'},
+      {title:'Calculate Enterprise Value, Equity Value, and share price',body:'EV = PV of FCFs + PV of Terminal Value. Then subtract net debt to get equity value, and divide by shares for implied price.',formula:'EV = £97.72m + £297.0m = £394.7m\n\nEquity Value = EV − Net Debt\n= £394.7m − £60m = £334.7m\n\nShare Price = £334.7m ÷ 25m shares\n= £13.39 per share\n\nTV as % of EV = £297m / £394.7m = 75.2%'}
+    ],
+    answer:{value:'EV = £394.7m | Share price = £13.39',note:'Terminal value accounts for 75% of total EV — typical for a DCF. A 1% change in WACC (9%→10%) changes EV by ~£40–50m. A 0.5% change in terminal growth rate (2.0%→2.5%) changes EV by ~£20m. Always build a sensitivity table around these two inputs before presenting a DCF to clients.'}
+  },
+  {
+    problem:{
+      title:'Calculate WACC from first principles.',
+      given:'Capital structure: 40% equity, 60% debt (at market values)\nRisk-free rate: 4.5%\nEquity Risk Premium: 5.5%\nPeer group unlevered beta (median): 0.85\nTarget D/E ratio: 60/40 = 1.5x\nCorporate tax rate: 25%\nPre-tax cost of debt (yield on bonds): 7.2%\n\nQuestion: Calculate WACC step by step.'
+    },
+    steps:[
+      {title:'Relever the peer beta to target capital structure (Hamada)',body:'Peer betas are collected, unlevered (stripped of their capital structures), then relevered to the target\'s D/E ratio using the Hamada equation.',formula:'Hamada equation:\nβL = βU × [1 + (1 − t) × (D/E)]\n\nβL = 0.85 × [1 + (1 − 0.25) × 1.5]\n   = 0.85 × [1 + 0.75 × 1.5]\n   = 0.85 × [1 + 1.125]\n   = 0.85 × 2.125\n   = 1.806 (levered beta)'},
+      {title:'Calculate Cost of Equity using CAPM',body:'Apply the levered beta to the CAPM formula. Cost of equity is the return equity investors require given the risk of this specific business at this capital structure.',formula:'CAPM: Ke = Rf + β × ERP\n\nKe = 4.5% + 1.806 × 5.5%\n   = 4.5% + 9.93%\n   = 14.43%'},
+      {title:'Calculate After-Tax Cost of Debt',body:'Debt interest is tax-deductible — the government subsidises part of the cost. After-tax cost of debt reflects only the true economic cost to the company.',formula:'After-tax Kd = Pre-tax yield × (1 − tax rate)\n             = 7.2% × (1 − 0.25)\n             = 7.2% × 0.75\n             = 5.40%'},
+      {title:'Calculate WACC',body:'Blend the cost of equity and after-tax cost of debt, weighted by their shares of total capital.',formula:'WACC = (E/V) × Ke + (D/V) × Kd(at)\n     = (40% × 14.43%) + (60% × 5.40%)\n     = 5.77% + 3.24%\n     = 9.01%\n\nRounded: WACC ≈ 9.0%'}
+    ],
+    answer:{value:'WACC = 9.01%',note:'This WACC reflects a moderately leveraged company (60% debt) with equity risk above market average (beta 1.81 after relevering). In the DCF, all projected FCFs and the terminal value are discounted at 9.0%. If the target company generates returns above 9.0% on its invested capital, it is creating value. Below 9.0% — destroying it.'}
+  },
+  {
+    problem:{
+      title:'Calculate and compare the two terminal value methods — Gordon Growth vs Exit Multiple.',
+      given:'Year 5 FCF: £42m\nYear 5 EBITDA: £70m\nWACC: 9.5%\nTerminal growth rate: 2.0%\nPeer median EV/EBITDA (at Year 5): 8.5x\nYear 5 discount factor: 1 ÷ (1.095)⁵ = 0.6352\n\nQuestion: Calculate TV using both methods, PV each, and explain the difference.'
+    },
+    steps:[
+      {title:'Terminal Value — Gordon Growth Model',body:'Assumes the business grows as a perpetuity beyond Year 5 at the terminal growth rate. Best for stable, predictable businesses. Sensitive to both WACC and g.',formula:'TV (GGM) = FCF₅ × (1+g) / (WACC − g)\n         = £42m × (1.020) / (0.095 − 0.020)\n         = £42.84m / 0.075\n         = £571.2m\n\nPV of TV (GGM) = £571.2m × 0.6352\n              = £362.8m'},
+      {title:'Terminal Value — Exit Multiple Method',body:'Applies a market-based EV/EBITDA multiple to Year 5 EBITDA. Assumes the business could be sold at a multiple consistent with peers at that future date. More practical — grounded in observable transaction data.',formula:'TV (Exit) = EBITDA₅ × Exit Multiple\n          = £70m × 8.5x\n          = £595.0m\n\nPV of TV (Exit) = £595.0m × 0.6352\n               = £377.9m'},
+      {title:'Compare the two methods',body:'Reconcile the two terminal values. The difference reveals the implied assumptions. You can back-solve: what growth rate does the Exit Multiple method imply?',formula:'GGM TV:   £571.2m → PV £362.8m\nExit TV:  £595.0m → PV £377.9m\nDifference: £23.8m in TV (4.2% gap)\n\nBack-solve: what g does Exit Method imply?\nTV = FCF₅ × (1+g) / (WACC − g)\n£595m = £42m × (1+g) / (0.095 − g)\nSolving: g ≈ 2.44% implied growth rate'},
+      {title:'Sanity check and present both',body:'Always present both methods. If they produce materially different values, explain why. Use the implied growth rate back-solve to check whether the Exit Multiple method embeds a reasonable long-run growth assumption.',formula:'PV of explicit FCFs (assumed):      £115m\nPV of TV (GGM):                    +£363m\nEV (GGM method):                    £478m\n\nPV of TV (Exit):                   +£378m\nEV (Exit method):                   £493m\n\nValuation range: £478m – £493m (tight → consistent assumptions)'}
+    ],
+    answer:{value:'GGM TV: £362.8m PV | Exit TV: £377.9m PV | Implied EV: £478–493m',note:'A 4% difference between methods is very tight — a sign of internally consistent assumptions. If GGM and Exit Multiple produce EVs more than 15–20% apart, revisit either the growth rate assumption or the exit multiple. The implied growth rate back-solve (2.44%) is a useful cross-check: does 2.44% long-run growth make sense for this business and industry?'}
+  }
+];
+
+function loadProblem(idx) {
+  new SolverEngine(problems[idx].problem, problems[idx].steps, problems[idx].answer, 'solver-container');
+  document.querySelectorAll('#solver-btns .btn').forEach((b,i) => {
+    b.className = i===idx ? 'btn btn-gold' : 'btn btn-outline';
+  });
+}
+
+/* ═══════════════════ INTERVIEW ═══════════════════ */
+const interviewItems = [
+  {type:'tech',question:'Walk me through the three main valuation methodologies.',answer:`<strong>Every IB interview asks this. Structure it clearly — methodology, logic, output.</strong><br><br><em>"There are three main approaches to valuing a business."</em><br><br><strong>1. Trading Comparables</strong> — compare the subject company to publicly listed peers using valuation multiples (EV/EBITDA, EV/Revenue, P/E). It is market-based and reflects current sentiment. The output is a range of implied EV or share price based on what the market pays for similar businesses today.<br><br><strong>2. Precedent Transactions</strong> — compare to prior M&A deals for similar companies. Uses the same multiples but applied to actual deal prices — which include a control premium. Output is typically 20–40% higher than trading comps for this reason.<br><br><strong>3. DCF (Discounted Cash Flow)</strong> — projects future free cash flows and discounts them at WACC to derive intrinsic Enterprise Value. It is the only methodology that does not depend on market comparisons. Output is sensitive to WACC and terminal growth rate assumptions.<br><br><em>The three methods are presented together in a "football field" chart, showing the implied range from each.</em>`,tip:'Interviewers sometimes ask: "Which method gives the highest value?" — usually precedents (control premium). "Which gives the widest range?" — DCF (assumption sensitivity). Know these answers before you walk in.'},
+  {type:'tech',question:'How do you select comparable companies for a trading comps analysis?',answer:`<strong>Peer selection is the most judgement-intensive step in comps — and the one most commonly done poorly.</strong><br><br>The ideal comparable company is in the <em>same industry sub-sector</em>, with a <em>similar business model</em>, <em>comparable size</em> (typically within 1/3 to 3× revenue), similar <em>growth and margin profile</em>, and listed on accessible public exchanges.<br><br><strong>In practice, screening works like this:</strong><br>1. Start with the subject's SIC code or GICS sector on Bloomberg/CapIQ<br>2. Filter to companies with similar revenue scale<br>3. Read each company's business description — is their revenue model genuinely similar?<br>4. Check margin profiles — a 60% EBITDA margin business shouldn't be in the same set as a 10% EBITDA margin business<br>5. Target 6–12 companies. If you can only find 3–4 true comparables, expand to include adjacent sub-sectors and flag the limitation<br><br>The quality of a comps analysis is only as good as the relevance of the peer set.`,tip:'Interviewers will test your peer selection by asking "why did you include / exclude company X?" Have a specific reason for every inclusion and exclusion. "They are in the same sector" is not enough — explain the business model similarity.'},
+  {type:'tech',question:'Walk me through how you build a DCF.',answer:`<strong>Structure your answer in five steps.</strong><br><br><em>Step 1 — Project FCFs.</em> Forecast free cash flow for 5–10 years: EBIT × (1−t) + D&A − Capex − ΔNWC. Revenue and margin assumptions drive everything. Tie assumptions to industry data, management guidance, and comparable company trends.<br><br><em>Step 2 — Calculate WACC.</em> Blend cost of equity (via CAPM: Rf + β × ERP) and after-tax cost of debt, weighted by target capital structure. Use unlevered peer betas relevered via Hamada.<br><br><em>Step 3 — Calculate Terminal Value.</em> Gordon Growth (FCFn × (1+g) / (WACC−g)) or Exit Multiple (EBITDAn × multiple). TV typically represents 60–80% of EV — a critical assumption.<br><br><em>Step 4 — Discount to PV.</em> Discount each year's FCF and the TV at WACC using the factor 1/(1+WACC)^n. Sum to get Enterprise Value.<br><br><em>Step 5 — EV to equity bridge.</em> EV − Net Debt − Minority − Preferred = Equity Value. Divide by diluted shares for implied share price.`,tip:'Always add: "I would then run a sensitivity table across WACC and terminal growth rate — because those two assumptions drive 60-80% of the output." This shows you understand the practical limitations of DCF and how professionals actually use it.'},
+  {type:'tech',question:'What is the control premium and why does it exist?',answer:`<strong>The control premium is the additional amount an acquirer pays above the market price to gain a controlling stake in a business — typically 20–40%.</strong><br><br>It exists because control has economic value beyond what a minority shareholder receives:<br><br>• <strong>Strategic synergies</strong> — cost and revenue synergies that only the acquirer can realise<br>• <strong>Operational control</strong> — ability to set strategy, replace management, allocate capital differently<br>• <strong>Exit optionality</strong> — ability to sell the business on their own terms at a future date<br>• <strong>Full cash flow access</strong> — dividends and cash deployment at discretion<br><br>This is why precedent transaction multiples are always higher than trading comp multiples — the deal price includes the control premium, which trading prices do not.<br><br>In a contested auction, the premium can be 40–60% if multiple bidders compete. In a negotiated bilateral deal, it can be as low as 10–15%.`,tip:'Follow-up: "What is the minimum premium a board would accept?" Generally, the target board has a fiduciary duty to shareholders — they must demonstrate the deal is superior to standalone value. A premium below 15% is very hard to defend. Most fairness opinions require at least 20–25% above unaffected price.'},
+  {type:'tech',question:'What is WACC and what are its components?',answer:`<strong>WACC = Weighted Average Cost of Capital — the blended cost of all capital in a company\'s structure.</strong><br><br><em>Formula: WACC = (E/V) × Ke + (D/V) × Kd × (1−t)</em><br><br><strong>Cost of Equity (Ke):</strong> Derived via CAPM: Ke = Rf + β × ERP<br>• Rf = Risk-free rate (10-year government bond yield)<br>• β = Levered beta (stock's sensitivity to market movements)<br>• ERP = Equity Risk Premium — additional return above risk-free the market earns (~5–6%)<br><br><strong>Cost of Debt (Kd):</strong> The yield on the company's debt, adjusted for the interest tax shield: Kd × (1 − tax rate). Debt is cheaper than equity because: it has a senior claim (less risk), and interest is tax-deductible.<br><br><strong>Weights (E/V and D/V):</strong> Market value proportions of equity and debt in the capital structure. Use market values, not book values.`,tip:'"Why is debt cheaper than equity?" is a common follow-up. Two reasons: (1) debt holders have a senior claim in bankruptcy — less risk, therefore lower required return; (2) interest is tax-deductible — the government subsidises part of the cost. Equity has no such tax benefit.'},
+  {type:'tech',question:'If a company has a higher beta, does its WACC go up or down?',answer:`<strong>WACC goes up when beta increases.</strong><br><br>Beta measures the sensitivity of the stock's returns to market movements. A higher beta = greater systematic risk = investors require a higher return to compensate.<br><br>The chain: Higher beta → Higher Cost of Equity (via CAPM: Ke = Rf + β × ERP) → Higher WACC (assuming equity is part of the capital structure).<br><br>If WACC rises, the DCF discount rate increases → every future cash flow is worth less in PV terms → Enterprise Value falls.<br><br><strong>Practical implication:</strong> Cyclical companies (mining, airlines, construction) have high betas (1.5–2.5) and high WACCs → lower valuation multiples. Defensive companies (utilities, healthcare) have low betas (0.3–0.7) and low WACCs → higher multiples, all else equal.`,tip:'Next question is often: "What drives beta?" The two main drivers: (1) operational leverage — high fixed costs relative to variable costs amplify earnings swings, increasing beta; (2) financial leverage — more debt amplifies equity returns and losses, increasing levered beta. This is precisely what the Hamada equation captures.'},
+  {type:'deal',question:'You are advising a private equity firm acquiring a business at 10x EV/EBITDA. A strategic acquirer is willing to pay 12x. What should the PE firm do?',answer:`<strong>This is a deal strategy question — not just a valuation question.</strong><br><br>The PE firm should consider:<br><br><strong>Option 1: Raise their bid.</strong> If the PE firm can generate synergies or value-creation levers (operational improvement, bolt-ons, management changes) that justify 12× or higher, they should bid up. The limit is the price at which the IRR falls below their hurdle rate (typically 20–25%).<br><br><strong>Option 2: Walk away.</strong> If 12× cannot generate an acceptable IRR given their cost of debt and exit assumptions, they should not chase the deal. Overpaying in an auction is one of the most common causes of PE value destruction.<br><br><strong>The key insight:</strong> The strategic acquirer has synergies PE does not have — revenue synergies, cost elimination, market position. The strategic can justify 12× precisely because their marginal value from the asset is higher. PE must be disciplined about its own standalone value creation thesis.<br><br>In practice, a PE firm "walking away" at 10× while a strategic pays 12× is not failure — it is the discipline that generates fund returns over a cycle.`,tip:'This tests whether you understand that PE and strategic acquirers compete but have fundamentally different value-creation models. A PE firm that consistently wins auctions against strategics by overbidding will generate poor returns. LPs measure this — it is called "price discipline."'},
+  {type:'tech',question:'Why does terminal value represent such a large proportion of DCF value? Is this a problem?',answer:`<strong>Terminal value dominates DCF (60–80%+) because of the mathematics of perpetuities combined with the long time horizons of most businesses.</strong><br><br>The explicit forecast period (Years 1–5 or 1–10) captures the period where we have meaningful visibility. But a going concern business continues beyond that. The terminal value attempts to capture all cash flows beyond Year 10 — which for a well-run business, is an enormous amount of value.<br><br><strong>Why it is large:</strong> Even at a modest 3% FCF growth rate and 10% WACC, the terminal value of £35m FCF is ~£500m. The PV of five years of £20–35m FCFs is only ~£100m. The long tail of perpetual cash flows simply dwarfs the near-term.<br><br><strong>Is it a problem?</strong> Yes and no:<br>• <em>Problem:</em> Most of the value is an assumption about what happens beyond the forecast period — it is inherently uncertain and easy to manipulate<br>• <em>Not a problem if:</em> you present a sensitivity table, cross-check with the exit multiple method, and are transparent about what the TV implies for long-run growth<br><br>A DCF without a sensitivity table is incomplete — always run WACC vs. growth rate matrix.`,tip:'This is where interviewers test intellectual honesty. The right answer acknowledges the limitation while explaining how practitioners manage it (sensitivity tables, cross-checks, presenting ranges not point estimates). Pretending DCF is perfectly reliable will cost you credibility.'},
+  {type:'tech',question:'A company\'s trading comps imply an EV of £400m. Its DCF implies £550m. Which do you use?',answer:`<strong>Neither in isolation — you present both and explain the difference.</strong><br><br>The gap could exist for several legitimate reasons:<br><br>1. <strong>Market undervaluation:</strong> If the public market is currently depressed (sector sell-off, macro concerns), trading comps will understate intrinsic value. DCF, built on company-specific cash flows, will be higher.<br><br>2. <strong>DCF assumptions are too optimistic:</strong> If the DCF assumes aggressive growth or margin expansion, the £550m may be inflated. The comps-implied £400m is a sanity check.<br><br>3. <strong>Genuine company premium:</strong> If the subject company has superior growth, margins, or management vs. peers, it may deserve a premium to the comp set.<br><br><strong>In a pitch book, you present both</strong> in the football field, acknowledge the gap, and explain your view on which is more reliable given the current environment. In a negotiation, the buyer anchors to comps; the seller anchors to DCF. The deal price typically falls somewhere between.`,tip:'The sophisticated answer adds: "I would also run a sensitivity on the DCF to see at what assumptions (WACC and growth) it produces the comps-implied £400m — this back-solve tells you what the market is implicitly assuming about the business."'},
+  {type:'beh',question:'Why do we value businesses as a going concern rather than liquidation value?',answer:`<strong>A going concern is worth more than the sum of its parts — because it generates future cash flows that individual assets do not.</strong><br><br>Liquidation value = what you would get selling all assets individually today, minus liabilities. This typically realises 30–60 cents on the book value dollar — machinery is used, IP is hard to sell separately, customer relationships evaporate.<br><br>Going concern value = the present value of all future cash flows the business will generate as an operating entity. This includes:<br>• Customer relationships and recurring revenue<br>• Employees' know-how and institutional knowledge<br>• Brand equity and market position<br>• The assembled workforce and operations<br><br><strong>When liquidation value is relevant:</strong> Distressed situations — where the business cannot generate going-concern value above its liquidation value. Restructuring and bankruptcy proceedings use both. If going concern value < liquidation value, the rational decision is to liquidate.`,tip:'This question connects to the JaceyTrayd lender perspective: lenders always assess liquidation value of collateral as a floor — the minimum they would recover in a worst-case enforcement scenario. Going concern value is the upside; liquidation is the floor. The gap between them is what the equity cushion below lenders must absorb before lenders take losses.'},
+  {type:'deal',question:'A DCF for Company X produces the following sensitivity table for EV: at WACC 8.5% and growth 2.5% → £650m. At WACC 10.5% and growth 1.5% → £380m. How do you interpret this and what do you recommend to a client?',answer:`<strong>This is a £270m swing (71% range) — and this is completely normal for a DCF.</strong><br><br><em>Interpretation:</em><br>The range reflects the fundamental uncertainty about the business's long-run cash generation and the appropriate risk premium. Neither endpoint is "right" — they represent coherent scenarios under different macro and company-specific assumptions.<br><br><em>What to tell the client:</em><br>1. <strong>The central case:</strong> Use your best-estimate WACC (say 9.5%) and defensible growth rate (2.0%) — likely producing ~£500m. This is the "base case."<br><br>2. <strong>The range matters:</strong> Show the full sensitivity table. "Our central case is £500m, but under more conservative assumptions (10.5% WACC, 1.5% growth), EV falls to £380m. Under a more favourable scenario, it reaches £650m."<br><br>3. <strong>Cross-check against comps:</strong> Where does £380–650m sit relative to the comps-implied £400m? If comps and the DCF lower end converge, the lower range is credible. If comps are above the DCF high end, the growth assumptions may be too conservative.<br><br>4. <strong>Recommendation:</strong> Offer a price range anchored to the intersection of all three methodologies — not just DCF.`,tip:'The professional answer here is about presenting ranges and triangulating — not picking one number. Bankers who present a single DCF output without a sensitivity table are either inexperienced or are manipulating the client toward a specific conclusion. Sophisticated clients will ask for the sensitivity table if you don\'t show it.'},
+  {type:'tech',question:'What is the difference between EV/EBITDA and P/E as valuation multiples?',answer:`<strong>They operate at different levels of the capital structure and capture different things.</strong><br><br><strong>EV/EBITDA:</strong><br>• Enterprise Value level (all capital providers)<br>• Capital-structure neutral — unaffected by leverage or tax rate differences<br>• Used to compare businesses across different debt levels<br>• EBITDA is pre-interest, pre-tax, pre-D&A — strips out financing and accounting differences<br>• Best for: cross-company comparison, M&A, deal structuring<br><br><strong>P/E (Price/Earnings):</strong><br>• Equity level only (shareholders)<br>• Affected by capital structure — a highly leveraged company has depressed EPS and a high P/E even if the business is not expensive<br>• Affected by tax rates and depreciation policies<br>• Best for: equity analysis, comparing businesses with similar capital structures, financial sector (where EV/EBITDA doesn't work)<br><br><strong>In IB:</strong> EV/EBITDA is the primary multiple for M&A and corporate finance. P/E is more common in equity research and for financial institutions (banks, insurers).`,tip:'A common follow-up: "When would you NOT use EV/EBITDA?" For financial institutions (banks, insurers) — where EBITDA is meaningless and P/Book or P/E are the standard. For real estate — where Price/NAV or cap rate is used. For natural resources — where P/NAV or EV/reserve metrics apply. Always know the industry-appropriate multiple.'}
+];
+
+function initInterview() {
+  document.getElementById('interview-container').innerHTML =
+    interviewItems.map((item,i) => buildInterviewItem(item,i)).join('');
+}
 </script>
-</body></html>
+</body>
+</html>

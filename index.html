@@ -326,28 +326,28 @@ document.getElementById('hdr').outerHTML = buildHeader();
 document.getElementById('sb').outerHTML = buildSidebar(-1);
 
 const levelData = [
-  { id:0, title:'Orientation', topics:'What IB is · Buy vs sell side · Deal lifecycle · How to use this platform', file:'level-0.html', live:true },
-  { id:1, title:'Foundations', topics:'Financial markets · Capital structure · Time value of money · Risk vs return', file:'level-1.html', live:true },
-  { id:2, title:'Accounting', topics:'Income statement · Balance sheet · Cash flow · 3-statement linkage · EBITDA adjustments', file:'level-2.html', live:false },
-  { id:3, title:'Valuation', topics:'Trading comps · Precedent transactions · DCF · WACC · Terminal value', file:'level-3.html', live:false },
-  { id:4, title:'Modelling', topics:'3-statement models · Forecasting · Revenue drivers · Debt schedules', file:'level-4.html', live:false },
-  { id:5, title:'M&A', topics:'Deal lifecycle · Strategic rationale · Accretion/dilution · Synergies · PPA', file:'level-5.html', live:false },
-  { id:6, title:'Capital Markets', topics:'IPOs · Equity issuance · Bonds · Loans · Credit ratings · Bookbuilding', file:'level-6.html', live:false },
-  { id:7, title:'Derivatives & Structuring', topics:'Options · Futures · Swaps (intuition) · Convertible bonds · Hedging', file:'level-7.html', live:false },
-  { id:8, title:'Private Markets', topics:'LBO structure · IRR/MOIC · Direct lending · Private credit · Covenants', file:'level-8.html', live:false },
-  { id:9, title:'Deal Execution', topics:'Pitchbooks · Due diligence · Data rooms · Client interaction · Deal timelines', file:'level-9.html', live:false },
-  { id:10, title:'Careers', topics:'Resume · Technical interviews · Behavioral · Networking · Case prep', file:'level-10.html', live:false },
-  { id:11, title:'Advanced', topics:'Restructuring · Distressed M&A · Advanced LBO · Industry modelling · Real deals', file:'level-11.html', live:false },
+  { id:0,  title:'Orientation',         topics:'What IB is · Buy vs sell side · Deal lifecycle · Analyst workflow · IB divisions',            file:'level-0.html',  live:true  },
+  { id:1,  title:'Foundations',         topics:'Financial markets · Capital structure · Time value of money · Risk vs return · CAPM',          file:'level-1.html',  live:true  },
+  { id:2,  title:'Accounting',          topics:'Income statement · Balance sheet · Cash flow · 3-statement linkage · EBITDA · Ratios',         file:'level-2.html',  live:true  },
+  { id:3,  title:'Valuation',           topics:'Trading comps · Precedent transactions · DCF · WACC · Terminal value · Sensitivity',          file:'level-3.html',  live:true  },
+  { id:4,  title:'Modelling',           topics:'3-statement models · Forecasting · Revenue drivers · Debt schedules · Circularity',           file:'level-4.html',  live:false },
+  { id:5,  title:'M&A',                 topics:'Deal lifecycle · Strategic rationale · Accretion/dilution · Synergies · PPA',                 file:'level-5.html',  live:false },
+  { id:6,  title:'Capital Markets',     topics:'IPOs · Equity issuance · Bonds · Loans · Credit ratings · Bookbuilding · Pricing',           file:'level-6.html',  live:false },
+  { id:7,  title:'Derivatives',         topics:'Options · Futures · Swaps · Convertible bonds · Hedging strategies',                         file:'level-7.html',  live:false },
+  { id:8,  title:'Private Markets',     topics:'LBO structure · IRR/MOIC · Direct lending · Private credit · Covenants',                     file:'level-8.html',  live:false },
+  { id:9,  title:'Deal Execution',      topics:'Pitchbooks · Due diligence · Data rooms · Client interaction · Deal timelines',              file:'level-9.html',  live:false },
+  { id:10, title:'Careers',             topics:'Resume · Technical interviews · Behavioral · Networking · Case prep',                         file:'level-10.html', live:false },
+  { id:11, title:'Advanced',            topics:'Restructuring · Distressed M&A · Advanced LBO · Industry modelling · Real deals',            file:'level-11.html', live:false },
 ];
 
 document.getElementById('levels-grid').innerHTML = levelData.map(l => `
-  <a href="${l.live ? l.file : '#'}" class="level-card ${l.live ? 'available' : 'coming'}">
+  <a href="${l.file}" class="level-card ${l.live ? 'available' : 'coming'}">
     <div class="lv-num">Level ${String(l.id).padStart(2,'0')}</div>
     <div class="lv-title">${l.title}</div>
     <div class="lv-topics">${l.topics}</div>
     <div class="lv-footer">
       <span class="lv-status ${l.live ? 'live' : 'soon'}">${l.live ? 'Live' : 'Coming Soon'}</span>
-      ${l.live ? '<span class="lv-arrow">→</span>' : ''}
+      <span class="lv-arrow">→</span>
     </div>
   </a>`).join('');
 </script>

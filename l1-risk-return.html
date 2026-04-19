@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L1.05 — Risk vs. Return | Ask Jacey</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="eco-hdr"></div><div id="hdr"></div>
+<div id="app"><div id="sb"></div><div id="content">
+<div class="breadcrumb">
+  <a href="index.html">Home</a><span class="sep">&#8250;</span>
+  <a href="level-1.html">Level 01 — Foundations</a><span class="sep">&#8250;</span>
+  <span class="current">L1.05 — Risk vs. Return</span>
+</div>
+<div class="lesson-page">
+<div class="deal-badge">&#128204; Level 01 — Foundations &middot; L1.05 — Risk vs. Return</div>
+<p class="lesson-intro">In finance, return is the reward for bearing risk. The more risk an investor takes, the higher the return they require. This principle underpins CAPM, WACC, bond pricing, and every investment decision. Understanding it quantitatively is essential.</p>
+
+<h2>The <em>Risk-Return Framework</em></h2>
+<p>Investors can always choose to invest in the risk-free asset (government bonds) and earn Rf. To induce them to invest in anything riskier, you must offer a premium — additional expected return above Rf. The size of this premium reflects the quantum of risk being taken.</p>
+<div class="formula-block">Required Return = Risk-Free Rate + Risk Premium
+
+  For equities (CAPM):
+    Ke = Rf + β × ERP
+         = Risk-free + (market sensitivity × market premium)
+
+  For debt:
+    Kd = Rf + Credit Spread
+         = Risk-free + (spread for default risk and illiquidity)
+
+  For private equity:
+    Target IRR = Rf + Illiquidity Premium + Leverage Premium + Control Premium
+               ≈ 20-30% (vs Rf of ~4-5%)</div>
+
+<h2>Beta — <em>quantifying market risk</em></h2>
+<table class="lesson-table">
+<thead><tr><th>Beta range</th><th>What it means</th><th>Typical sectors</th></tr></thead>
+<tbody>
+<tr><td>β &lt; 0</td><td>Moves inversely to market (extremely rare)</td><td>Gold miners (sometimes); some hedges</td></tr>
+<tr><td>0 &lt; β &lt; 1</td><td>Less volatile than the market — defensive</td><td>Utilities, consumer staples, healthcare</td></tr>
+<tr><td>β = 1</td><td>Moves exactly with the market</td><td>Diversified index funds</td></tr>
+<tr><td>1 &lt; β &lt; 2</td><td>More volatile than the market — cyclical</td><td>Tech, industrials, banks</td></tr>
+<tr><td>β &gt; 2</td><td>Highly volatile — high systematic risk</td><td>Small-cap growth, early-stage biotech, airlines</td></tr>
+</tbody>
+</table>
+
+<h2>Systematic vs. <em>Unsystematic Risk</em></h2>
+<p><strong>Systematic risk</strong> is market-wide risk that cannot be diversified away — interest rate changes, recessions, inflation. Beta measures this. CAPM only compensates investors for systematic risk (because they can diversify away unsystematic risk for free).</p>
+<p><strong>Unsystematic risk</strong> is company-specific risk — a product recall, a key executive departure, a one-off legal liability. Diversified investors are not compensated for this — they should hold enough positions that these events wash out at the portfolio level.</p>
+<div class="callout">
+<div class="c-label">Risk-Return in Deal Structuring</div>
+<p>When structuring debt for an LBO, the capital structure is essentially a risk-return allocation across investors. Senior lenders take the least risk (priority claim, security) and accept the lowest return (SOFR + 400–500bps). Equity investors take the most risk (last claim, residual) and require the highest potential return (20%+ IRR). Mezzanine investors sit between. The job of the IB structuring team is to find the optimal allocation — maximising debt (and therefore equity returns) while not over-levering the business.</p>
+</div>
+
+<div class="page-nav">
+  <a href="l1-tvm.html" class="btn btn-ghost">&larr; Previous</a>
+  <div class="pn-context">Level 01 — Foundations &middot; L1.05 — Risk vs. Return</div>
+  <a href="l1-lenders.html" class="btn btn-gold">Next &rarr;</a>
+</div>
+</div>
+</div></div>
+<script src="shared.js"></script>
+<script>
+document.getElementById('eco-hdr').outerHTML=buildEcoHeader();
+document.getElementById('hdr').outerHTML=buildHeader();
+document.getElementById('sb').outerHTML=buildSidebar(1);
+</script>
+</body></html>

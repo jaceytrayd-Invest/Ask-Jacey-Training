@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L4.05 — Modelling Working Capital | Ask Jacey</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="eco-hdr"></div><div id="hdr"></div>
+<div id="app"><div id="sb"></div><div id="content">
+<div class="breadcrumb">
+  <a href="index.html">Home</a><span class="sep">&#8250;</span>
+  <a href="level-4.html">Level 04</a><span class="sep">&#8250;</span>
+  <span class="current">L4.05 — Modelling Working Capital</span>
+</div>
+<div class="lesson-page">
+<div class="deal-badge">&#128204; Level 04 &middot; Modelling &middot; L4.05 — Modelling Working Capital</div>
+<p class="lesson-intro">Working capital modelling is where many financial models are weakest. Getting the days-based mechanics right, and understanding how WC changes flow through the cash flow statement, is the difference between a model that correctly projects cash and one that systematically misrepresents liquidity.</p>
+
+<h2>The Days-Based <em>Framework</em></h2>
+<div class="formula-block">Accounts Receivable:
+  AR = Revenue × DSO / 365
+  DSO = Days Sales Outstanding (how many days to collect from customers)
+
+Inventory:
+  Inventory = COGS × DIO / 365
+  DIO = Days Inventory Outstanding (how many days to sell stock)
+
+Accounts Payable:
+  AP = COGS × DPO / 365
+  DPO = Days Payable Outstanding (how many days to pay suppliers)
+
+Why these drivers?
+  AR is driven by Revenue → customers owe you for sales made
+  Inventory is driven by COGS → stock is valued at cost
+  AP is driven by COGS → you owe suppliers for stock purchased
+
+DO NOT use Revenue as the driver for AP — this is a common error.
+AP should reference COGS, not Revenue.</div>
+
+<h2>WC Changes in the <em>Cash Flow Statement</em></h2>
+<div class="formula-block">CFS Working Capital Adjustments:
+  − Increase in AR      = −(AR_end − AR_start)
+  − Increase in Inventory = −(Inv_end − Inv_start)
+  + Increase in AP      = +(AP_end − AP_start)
+  + Increase in Accruals = +(Accr_end − Accr_start)
+
+Shorthand:
+  Current Operating Asset increases → subtract from CFO (use of cash)
+  Current Operating Liability increases → add to CFO (source of cash)
+
+Excel formula example for AR adjustment:
+  = −(BS_AR_end − BS_AR_start)
+  If AR goes from £40m to £52m: −(52−40) = −£12m (cash outflow)</div>
+
+<h2>Modelling <em>Seasonality</em></h2>
+<p>Annual models smooth over seasonal patterns that can be material. A retailer that builds inventory in Q3 (for Christmas) and collects cash in Q4 has very different monthly cash flows than an annual model suggests. For businesses with significant seasonality:</p>
+<ul style="font-family:var(--slab);font-size:0.82rem;color:var(--ash-light);line-height:1.85;padding-left:1.5rem;margin-bottom:1rem">
+<li>Build a monthly model, or at minimum a quarterly model</li>
+<li>Model DSO and DIO at their peak (Q3 inventory build) and trough (Q1 after Christmas sell-through)</li>
+<li>Show peak cash requirement (which determines revolver sizing)</li>
+<li>Show minimum cash balance (which determines covenant compliance)</li>
+</ul>
+
+<h2>The <em>WC Normalisation</em> Problem in M&A</h2>
+<p>Working capital at a deal closing is rarely "normal." The seller may have drawn down receivables aggressively before close (to look more cash-generative), deferred supplier payments (to inflate short-term cash), or built excessive inventory (which the buyer inherits). Normalised working capital is the WC the business needs to operate sustainably, not what it happens to have on the closing date.</p>
+<div class="formula-block">Normalised WC = calculated from long-run DSO, DIO, DPO assumptions
+  applied to LTM Revenue and COGS
+
+WC peg = Normalised WC agreed between buyer and seller
+WC at closing is compared to the peg:
+  WC at close > Peg → Seller gets extra payment
+  WC at close < Peg → Buyer deducts from purchase price
+
+Typical WC negotiation:
+  Seller incentivised to show high WC at close (collect AR, defer AP)
+  Buyer wants normalised WC — will scrutinise the last 3 months of BS</div>
+
+<div class="bank-box">
+<div class="b-label">In a Real Bank</div>
+<p>WC adjustments are one of the most contested elements of deal completion. The buyer's accountants and seller's accountants often disagree on what constitutes "normal" versus "managed" WC. Post-close WC disputes are common — the credit agreement will specify a mechanism (typically completion accounts or a locked-box approach) for resolving them. An analyst who models WC correctly — with proper days-based drivers and normalisation — helps the deal team negotiate from a position of knowledge rather than assumption.</p>
+</div>
+
+<div class="page-nav">
+  <a href="l4-debt-schedule.html" class="btn btn-ghost">&larr; Previous</a>
+  <div class="pn-context">Level <span>04</span> &middot; Financial Modelling</div>
+  <a href="l4-scenarios.html" class="btn btn-gold">Next &rarr;</a>
+</div>
+</div>
+</div></div>
+<script src="shared.js"></script>
+<script>
+document.getElementById('eco-hdr').outerHTML=buildEcoHeader();
+document.getElementById('hdr').outerHTML=buildHeader();
+document.getElementById('sb').outerHTML=buildSidebar(4);
+</script>
+</body></html>

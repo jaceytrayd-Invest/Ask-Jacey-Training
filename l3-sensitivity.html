@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L3.06 — Terminal Value & Sensitivity Analysis | Ask Jacey</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="eco-hdr"></div><div id="hdr"></div>
+<div id="app"><div id="sb"></div><div id="content">
+<div class="breadcrumb">
+  <a href="index.html">Home</a><span class="sep">&#8250;</span>
+  <a href="level-3.html">Level 03</a><span class="sep">&#8250;</span>
+  <span class="current">L3.06 — Terminal Value & Sensitivity Analysis</span>
+</div>
+<div class="lesson-page">
+<div class="deal-badge">&#128204; Level 03 &middot; Valuation &middot; L3.06 — Terminal Value & Sensitivity Analysis</div>
+<p class="lesson-intro">Terminal value is where most DCF value lives — and where most DCF error originates. Sensitivity analysis transforms a single-point DCF output into a defensible range. Both are mandatory before presenting a DCF to any client.</p>
+
+<h2>Terminal Value — <em>Two Methods</em></h2>
+<h3>Gordon Growth Model (Perpetuity Growth)</h3>
+<div class="formula-block">TV = FCFn × (1 + g) / (WACC - g)
+
+Inputs:
+  FCFn  = Free cash flow in the final forecast year
+  g     = Perpetuity growth rate (long-run sustainable growth)
+  WACC  = Discount rate
+
+Constraint: WACC must exceed g — otherwise the denominator is negative
+
+Typical g: 1.5-3.0% for developed market businesses
+  (anchored to long-run nominal GDP growth)
+  Higher for emerging markets or secular growth sectors</div>
+
+<h3>Exit Multiple Method</h3>
+<div class="formula-block">TV = EBITDAn × Exit EV/EBITDA Multiple
+
+Inputs:
+  EBITDAn = EBITDA in the final forecast year
+  Exit Multiple = EV/EBITDA at which you expect to sell the business
+
+Where the multiple comes from:
+  - Current peer trading multiples (assume mean reversion)
+  - Historical transaction multiples in the sector
+  - Conservative: apply a 10-20% discount to current multiples</div>
+
+<h2>Choosing Between the <em>Two Methods</em></h2>
+<table class="lesson-table">
+<thead><tr><th></th><th>Gordon Growth</th><th>Exit Multiple</th></tr></thead>
+<tbody>
+<tr><td><strong>Best for</strong></td><td>Stable, mature businesses with predictable cash flows</td><td>Most M&A contexts; businesses with active transaction markets</td></tr>
+<tr><td><strong>Advantage</strong></td><td>Theoretically pure; no assumption about future market prices</td><td>Grounded in observable market multiples; more intuitive</td></tr>
+<tr><td><strong>Risk</strong></td><td>Extremely sensitive to g — small changes cause large TV moves</td><td>Assumes current multiples persist; circular if market is mispriced</td></tr>
+<tr><td><strong>Cross-check</strong></td><td>Back-solve: what g does the Exit Multiple imply?</td><td>Back-solve: what multiple does the GGM imply?</td></tr>
+</tbody>
+</table>
+
+<h2>The Two-Way <em>Sensitivity Table</em></h2>
+<p>Always present a sensitivity table with WACC and terminal growth rate (or exit multiple) as the two axes. This converts a single-point estimate into a range of outcomes — and gives the client and reader a sense of how assumption changes move the valuation.</p>
+<div class="formula-block">Example: EV Sensitivity Table (£m)
+                    Terminal Growth Rate
+         WACC    1.0%    1.5%    2.0%    2.5%    3.0%
+         7.5%    542     578     620     671     734
+         8.0%    498     528     562     603     651
+         8.5%    459     486     515     549     590
+         9.0%    425     448     473     501     534   ← Base case
+         9.5%    394     414     436     460     488
+        10.0%    367     384     402     423     446
+
+Base case (9.0% WACC, 2.0% growth) = £473m
+Range (table extremes): £367m – £734m (nearly 2x spread)</div>
+
+<div class="callout">
+<div class="c-label">Present the Table, Not Just the Base Case</div>
+<p>A DCF that presents only one EV number is misleading — it implies a precision that does not exist. The sensitivity table is the honest version of the DCF. Clients should understand that the base case is not a prediction; it is the central estimate within a defensible range. The range is the output; the base case is just the midpoint.</p>
+</div>
+<div class="mistake-box">
+<div class="m-label">Terminal Value Warning Signs</div>
+<p><strong>TV as more than 90% of EV:</strong> Usually signals the explicit forecast period is too short, or FCFs in years 1–5 are too low (possibly incorrect). Extend the explicit forecast or review near-term assumptions.<br><br>
+<strong>Implied perpetuity growth back-solve above GDP:</strong> If your exit multiple method implies g of 5%+ in a mature industry, either the exit multiple is too high or the EBITDA is understated. No developed-market business can grow faster than the economy in perpetuity.<br><br>
+<strong>Not stress-testing the WACC:</strong> Every single DCF must show what happens at WACC ± 1.5%. If you do not have this table, do not present the DCF to an MD.</p>
+</div>
+<div class="bank-box">
+<div class="b-label">In a Real Bank</div>
+<p>In a fairness opinion for a public company acquisition, the financial advisor must justify the valuation range in writing. The sensitivity tables are the primary defence — they show that even under conservative assumptions, the deal price is within the range of fair value. Courts and regulators scrutinise these tables carefully. In one well-known case, a financial advisor faced regulatory action because their sensitivity table had "cherry-picked" WACC and growth assumptions that conveniently made the deal price look attractive.</p>
+</div>
+<div class="lender-box">
+<div class="l-label">&#128273; Lender's Perspective — JaceyTrayd</div>
+<p>We run our own sensitivity analysis before every credit — not on EV, but on FCF. We test: at what EBITDA decline does the borrower breach their interest cover covenant? At what level does FCF turn negative? Our "covenant headroom" analysis is essentially a sensitivity table showing how much room the borrower has before they breach. If headroom is less than 15% EBITDA decline, we treat the credit as high-watch from inception.</p>
+</div>
+
+<div class="page-nav">
+  <a href="l3-wacc.html" class="btn btn-ghost">&larr; Previous</a>
+  <div class="pn-context">Level <span>03</span> &middot; Valuation</div>
+  <a href="level-4.html" class="btn btn-gold">Next &rarr;</a>
+</div>
+</div>
+</div></div>
+<script src="shared.js"></script>
+<script>
+document.getElementById('eco-hdr').outerHTML=buildEcoHeader();
+document.getElementById('hdr').outerHTML=buildHeader();
+document.getElementById('sb').outerHTML=buildSidebar(3);
+</script>
+</body></html>

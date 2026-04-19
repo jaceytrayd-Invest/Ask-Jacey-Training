@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L3.04 — DCF — Discounted Cash Flow | Ask Jacey</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="eco-hdr"></div><div id="hdr"></div>
+<div id="app"><div id="sb"></div><div id="content">
+<div class="breadcrumb">
+  <a href="index.html">Home</a><span class="sep">&#8250;</span>
+  <a href="level-3.html">Level 03</a><span class="sep">&#8250;</span>
+  <span class="current">L3.04 — DCF — Discounted Cash Flow</span>
+</div>
+<div class="lesson-page">
+<div class="deal-badge">&#128204; Level 03 &middot; Valuation &middot; L3.04 — DCF — Discounted Cash Flow</div>
+<p class="lesson-intro">The DCF is the only valuation methodology that does not depend on market prices or comparable transactions. It asks: based purely on this company's own cash-generating ability, what is it worth today? The answer is powerful — and heavily assumption-dependent.</p>
+
+<h2>The <em>Architecture</em></h2>
+<div class="formula-block">Enterprise Value = PV of Explicit FCFs + PV of Terminal Value
+
+Where:
+PV of FCFt = FCFt / (1 + WACC)^t
+Terminal Value (Gordon Growth) = FCFn × (1+g) / (WACC - g)
+Terminal Value (Exit Multiple) = EBITDAn × Exit EV/EBITDA Multiple
+
+Then:
+Equity Value = EV - Net Debt - Minority Interest - Preferred
+Implied Share Price = Equity Value / Diluted Shares</div>
+
+<h2>Step 1 — <em>Project Free Cash Flow</em></h2>
+<p>FCF (unlevered) = EBIT × (1 − tax rate) + D&A − Capex − ΔNWC</p>
+<p>Start with revenue growth assumptions — driven by historical CAGR, management guidance, and industry data. Then build operating margins (EBITDA, EBIT). Apply a normalised tax rate. Add back non-cash D&A. Subtract maintenance and growth capex. Adjust for working capital movements.</p>
+<p>The explicit forecast period is typically 5 years for mature businesses, 10 years for high-growth businesses. Beyond the forecast period, you need a terminal value assumption.</p>
+
+<table class="lesson-table">
+<thead><tr><th>FCF Driver</th><th>Where it comes from</th><th>Key assumption risk</th></tr></thead>
+<tbody>
+<tr><td>Revenue growth</td><td>Historical CAGR, management guidance, market data</td><td>Overoptimism; cyclicality not reflected</td></tr>
+<tr><td>EBITDA margin</td><td>Historical margins + operating leverage + synergies</td><td>Margin expansion often assumed without operational evidence</td></tr>
+<tr><td>Capex</td><td>Management guidance, % of revenue for sector</td><td>Understating maintenance capex inflates FCF</td></tr>
+<tr><td>Working capital</td><td>Days ratios (DSO, DIO, DPO) from historical balance sheets</td><td>Ignoring WC build in fast-growing businesses</td></tr>
+<tr><td>Tax rate</td><td>Effective rate from financials; normalise for deferred taxes</td><td>Using statutory rate instead of effective rate</td></tr>
+</tbody>
+</table>
+
+<h2>Step 2 — <em>Calculate Terminal Value</em></h2>
+<p>Terminal value captures all cash flows beyond the explicit period. Two methods:</p>
+<p><strong>Gordon Growth Model:</strong> TV = FCFn × (1+g) / (WACC − g). Best for stable, mature businesses. g is typically set at long-run GDP growth (1.5–3.0% in developed markets). Only mathematically valid when WACC > g.</p>
+<p><strong>Exit Multiple:</strong> TV = EBITDAn × Exit EV/EBITDA. More practical — grounded in observable transaction multiples. The exit multiple should be consistent with where you expect the industry to trade in 5–10 years.</p>
+
+<h2>Step 3 — <em>Discount and sum</em></h2>
+<p>Apply discount factors 1/(1+WACC)^t to each FCF and the terminal value. Sum to get EV. Then subtract net debt to get equity value. Divide by diluted shares for implied price.</p>
+
+<div class="callout">
+<div class="c-label">Terminal Value Dominance</div>
+<p>Terminal value typically represents 60–80% of total EV in a DCF. This means most of the "value" you are discounting is an assumption about what happens after Year 5 or Year 10 — a period where forecasting accuracy is very low. This is why sensitivity analysis is mandatory and why DCF ranges are always wider than comps ranges.</p>
+</div>
+<div class="mistake-box">
+<div class="m-label">The Most Dangerous DCF Mistake</div>
+<p><strong>Setting the terminal growth rate above WACC.</strong> If g ≥ WACC, the Gordon Growth denominator becomes zero or negative — the model breaks and produces an infinitely large or nonsensical value. Always check: g must be meaningfully below WACC (at least 2–3% spread). If your "base case" requires g above WACC to produce a reasonable value, your other assumptions are wrong.</p>
+</div>
+<div class="bank-box">
+<div class="b-label">In a Real Bank</div>
+<p>DCF models in IB are typically 200–400 row Excel files. The FCF build usually has its own dedicated tab, fed by revenue and margin assumption tabs. The WACC calculation has its own tab with peer beta collection. The output tab shows the valuation summary and sensitivity tables. Building a clean, auditable DCF model that an MD can interrogate and a client can understand is a core first-year analyst skill — and takes months to do well.</p>
+</div>
+<div class="lender-box">
+<div class="l-label">&#128273; Lender's Perspective — JaceyTrayd</div>
+<p>We run our own DCF on every credit we consider — not to value the equity, but to stress-test FCF against debt service. We project FCF under three scenarios (base, downside -20%, severe downside -35%) and check whether the business can service interest and amortisation in each scenario. If FCF turns negative in the downside before we are repaid, we are taking credit risk we need to price into the margin.</p>
+</div>
+
+<div class="page-nav">
+  <a href="l3-precedent.html" class="btn btn-ghost">&larr; Previous</a>
+  <div class="pn-context">Level <span>03</span> &middot; Valuation</div>
+  <a href="l3-wacc.html" class="btn btn-gold">Next &rarr;</a>
+</div>
+</div>
+</div></div>
+<script src="shared.js"></script>
+<script>
+document.getElementById('eco-hdr').outerHTML=buildEcoHeader();
+document.getElementById('hdr').outerHTML=buildHeader();
+document.getElementById('sb').outerHTML=buildSidebar(3);
+</script>
+</body></html>

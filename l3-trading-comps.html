@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L3.02 — Trading Comparables | Ask Jacey</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="eco-hdr"></div><div id="hdr"></div>
+<div id="app"><div id="sb"></div><div id="content">
+<div class="breadcrumb">
+  <a href="index.html">Home</a><span class="sep">&#8250;</span>
+  <a href="level-3.html">Level 03</a><span class="sep">&#8250;</span>
+  <span class="current">L3.02 — Trading Comparables</span>
+</div>
+<div class="lesson-page">
+<div class="deal-badge">&#128204; Level 03 &middot; Valuation &middot; L3.02 — Trading Comparables</div>
+<p class="lesson-intro">Trading comparables is the valuation methodology most used in day-to-day IB work. It is market-based, transparent, and anchored in observable prices. Master the process and the judgement calls — they are what separate adequate analysts from excellent ones.</p>
+
+<h2>Step 1 — <em>Define the peer universe</em></h2>
+<p>Peer selection is the most important — and most judgemental — step. Use these criteria in order of importance:</p>
+<table class="lesson-table">
+<thead><tr><th>Criterion</th><th>Why it matters</th><th>How to apply</th></tr></thead>
+<tbody>
+<tr><td>Business model</td><td>Revenue model, customer type, value chain position must be similar</td><td>Read each company's 10-K/annual report business description</td></tr>
+<tr><td>Sector/sub-sector</td><td>Industry dynamics drive multiples more than any other factor</td><td>Use GICS or SIC codes as a starting screen; refine manually</td></tr>
+<tr><td>Geography</td><td>Regional market dynamics affect margins and growth</td><td>Prefer same-region peers; flag if mixing geographies</td></tr>
+<tr><td>Size</td><td>Large-caps trade at premiums to small-caps (liquidity, scale)</td><td>Screen within ±3× revenue; note if forced to use different sizes</td></tr>
+<tr><td>Margin profile</td><td>Businesses with 60% EBITDA margins should not be in the same set as 15% margin businesses</td><td>Check EBITDA margin for each peer; flag outliers</td></tr>
+</tbody>
+</table>
+
+<h2>Step 2 — <em>Spread the financials</em></h2>
+<p>For each peer, collect LTM and NTM financials: Revenue, Gross Profit, EBITDA, EBIT, Net Income, EPS. Source from Bloomberg or CapIQ — but cross-check every figure against the actual filing. CapIQ contains errors, particularly for operating lease adjustments under IFRS 16.</p>
+<p>Normalise for non-recurring items. If a peer had a large one-off in their LTM period, adjust it out so the comparison is apples-to-apples. Document every adjustment.</p>
+
+<h2>Step 3 — <em>Calculate EV for each peer</em></h2>
+<div class="formula-block">EV = Market Cap + Net Debt + Minority Interest + Preferred Equity
+   = (Shares × Price) + (Gross Debt − Cash) + Minority Interest + Preferred
+
+Key data sources:
+  Market cap: Bloomberg, real-time
+  Shares: diluted (includes in-the-money options, convertibles)
+  Debt: latest balance sheet (may need IFRS 16 lease adjustment)
+  Cash: latest balance sheet — exclude restricted cash</div>
+
+<h2>Step 4 — <em>Calculate and present multiples</em></h2>
+<table class="lesson-table">
+<thead><tr><th>Multiple</th><th>Formula</th><th>When to use</th><th>Typical range</th></tr></thead>
+<tbody>
+<tr><td>EV/EBITDA</td><td>EV ÷ LTM EBITDA</td><td>Universal — primary multiple for most sectors</td><td>6–20x depending on sector</td></tr>
+<tr><td>EV/EBIT</td><td>EV ÷ LTM EBIT</td><td>When D&amp;A differences are meaningful across peers</td><td>8–25x</td></tr>
+<tr><td>EV/Revenue</td><td>EV ÷ LTM Revenue</td><td>Pre-profit businesses; SaaS; high-growth tech</td><td>1–15x</td></tr>
+<tr><td>P/E</td><td>Price ÷ LTM EPS</td><td>Equity-level comparison; mature businesses; financials</td><td>10–35x</td></tr>
+<tr><td>NTM EV/EBITDA</td><td>EV ÷ NTM EBITDA consensus</td><td>Show growth trajectory; relevant when LTM is distorted</td><td>Similar to LTM but lower if growth expected</td></tr>
+</tbody>
+</table>
+
+<h2>Step 5 — <em>Derive implied valuation</em></h2>
+<div class="formula-block">Implied EV = Subject EBITDA × Median peer EV/EBITDA
+Implied Equity Value = Implied EV − Subject Net Debt − Minority − Preferred
+Implied Share Price = Implied Equity Value ÷ Diluted Shares Outstanding</div>
+
+<h2>Step 6 — <em>Sense check and present range</em></h2>
+<p>Apply both median and 25th–75th percentile range. The median anchors your recommendation; the range shows upside and downside. Always compare the implied range to the current trading price and explain any premium or discount.</p>
+
+<div class="mistake-box">
+<div class="m-label">The Three Mistakes That Will Get You Caught</div>
+<p><strong>1. Using gross debt instead of net debt.</strong> Every time. Net debt = gross debt minus cash. Check the cash balance.<br><br>
+<strong>2. Using basic shares instead of diluted.</strong> Diluted includes options and convertibles in-the-money. CapIQ has a diluted share count — use it.<br><br>
+<strong>3. Not normalising peers for one-off items.</strong> If a peer had a large restructuring in the LTM period, their EBITDA is understated. Your multiple for that peer will be artificially high and skew your median. Adjust it out and note the adjustment.</p>
+</div>
+<div class="bank-box">
+<div class="b-label">In a Real Bank</div>
+<p>Building a comps table for a mid-sized deal takes a junior analyst 1–2 full days. Data collection, checking against filings, normalisation, formatting, and cross-checking consume the bulk of the time. The MD will likely ask you to re-run with a different peer set or different normalisation at least once. Every figure must be defensible in a client meeting — you should be able to say "that number comes from page 34 of their last annual report" for any figure in your table.</p>
+</div>
+<div class="lender-box">
+<div class="l-label">&#128273; Lender's Perspective — JaceyTrayd</div>
+<p>We use trading comps to establish trough valuation — the floor value we could recover in a distressed sale. We apply the lowest credible peer multiple (25th percentile or trough cycle multiple) to the borrower's EBITDA and compare it to our loan balance. If this trough EV comfortably exceeds our debt, we have collateral coverage. If not, we either require additional security, a lower loan amount, or we decline to lend.</p>
+</div>
+
+<div class="page-nav">
+  <a href="l3-intro.html" class="btn btn-ghost">&larr; Previous</a>
+  <div class="pn-context">Level <span>03</span> &middot; Valuation</div>
+  <a href="l3-precedent.html" class="btn btn-gold">Next &rarr;</a>
+</div>
+</div>
+</div></div>
+<script src="shared.js"></script>
+<script>
+document.getElementById('eco-hdr').outerHTML=buildEcoHeader();
+document.getElementById('hdr').outerHTML=buildHeader();
+document.getElementById('sb').outerHTML=buildSidebar(3);
+</script>
+</body></html>

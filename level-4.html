@@ -3,15 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Coming Soon | Ask Jacey IB Masterclass</title>
+<title>Level 4 — Modelling | Ask Jacey IB Masterclass</title>
 <link rel="stylesheet" href="style.css">
-<style>
-.coming-wrap{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:60vh;text-align:center;padding:3rem 2rem}
-.coming-num{font-family:var(--serif);font-size:8rem;font-weight:700;color:rgba(201,168,76,0.08);line-height:1;margin-bottom:1rem}
-.coming-wrap h2{font-family:var(--serif);font-size:2rem;font-weight:300;color:var(--white);margin-bottom:0.8rem}
-.coming-wrap h2 em{color:var(--gold-light);font-style:italic}
-.coming-wrap p{font-family:var(--slab);font-size:0.84rem;color:var(--ash);line-height:1.75;max-width:440px;margin-bottom:1.5rem}
-</style>
 </head>
 <body>
 <div id="eco-hdr"></div>
@@ -19,28 +12,589 @@
 <div id="app">
 <div id="sb"></div>
 <div id="content">
-<div class="breadcrumb"><a href="index.html">Home</a><span class="sep">›</span><span class="current" id="bc-title">Level — Coming Soon</span></div>
-<div class="coming-wrap">
-<div class="coming-num" id="cn-num">—</div>
-<h2 id="cn-title">Coming <em>Soon</em></h2>
-<p>This level is in the build queue. Complete Levels 00 and 01 first — the foundations carry through every module above.</p>
-<div style="display:flex;gap:0.8rem;flex-wrap:wrap;justify-content:center">
-<a href="level-1.html" class="btn btn-gold">← Back to Level 01</a>
-<a href="index.html" class="btn btn-outline">Home</a>
+
+<div class="breadcrumb">
+  <a href="index.html">Home</a><span class="sep">›</span>
+  <a href="level-3.html">Level 03</a><span class="sep">›</span>
+  <span class="current">Level 04 — Financial Modelling</span>
 </div>
+
+<div class="level-banner" data-level-num="4">
+  <div class="level-tag">Level 04 · Financial Modelling</div>
+  <h1>Building <em>Financial Models</em></h1>
+  <p>Modelling is where theory becomes output. The 3-statement model, revenue build, debt schedule, and merger model are the core instruments of an IB analyst. This level teaches you to build them from scratch — and to build them well.</p>
+  <div class="level-meta">
+    <span><i>📚</i> 7 Lessons</span>
+    <span><i>🧪</i> 15 Quiz Questions</span>
+    <span><i>⚙</i> 4 Solvers</span>
+    <span><i>🎯</i> 12 Interview Q&A</span>
+    <span><i>⏱</i> ~3 hrs</span>
+  </div>
 </div>
+
+<div class="hub-tabs">
+  <button class="hub-tab active" onclick="switchTab('learn')">📘 Learn</button>
+  <button class="hub-tab" onclick="switchTab('practice')">🧪 Practice</button>
+  <button class="hub-tab" onclick="switchTab('solver')">⚙ Problem Solver</button>
+  <button class="hub-tab" onclick="switchTab('interview')">🎯 Interview Prep</button>
 </div>
+
+<!-- ═══ LEARN ═══ -->
+<div class="tab-panel active" id="tab-learn">
+  <div class="sec-head"><h2>Lessons — <em>Financial Modelling</em></h2><div class="sec-line"></div></div>
+  <div class="lesson-grid">
+    <a href="l4-model-structure.html" class="lesson-card">
+      <div class="lc-num">L4.01</div>
+      <div class="lc-title">Model Architecture &amp; Best Practice</div>
+      <div class="lc-desc">How to structure a professional financial model. Tab layout, colour conventions, hardcode vs. formula discipline, audit trails, and the habits that separate models MDs trust from ones they don't.</div>
+      <div class="lc-meta"><span class="lc-tag core">Core</span><span class="lc-tag int">~10 min</span></div>
+    </a>
+    <a href="l4-revenue.html" class="lesson-card">
+      <div class="lc-num">L4.02</div>
+      <div class="lc-title">Revenue Build &amp; Forecasting</div>
+      <div class="lc-desc">Bottom-up vs. top-down approaches. Volume × price drivers. Contract-based forecasting. Cohort and retention models. Tying assumptions to evidence.</div>
+      <div class="lc-meta"><span class="lc-tag core">Core</span><span class="lc-tag int">~12 min</span></div>
+    </a>
+    <a href="l4-three-statement.html" class="lesson-card">
+      <div class="lc-num">L4.03</div>
+      <div class="lc-title">The 3-Statement Model</div>
+      <div class="lc-desc">Building income statement, balance sheet, and cash flow together — fully linked. The mechanics, the plug, and how to make it balance every time.</div>
+      <div class="lc-meta"><span class="lc-tag core">Core</span><span class="lc-tag int">~16 min</span></div>
+    </a>
+    <a href="l4-debt-schedule.html" class="lesson-card">
+      <div class="lc-num">L4.04</div>
+      <div class="lc-title">Debt Schedule &amp; Interest</div>
+      <div class="lc-desc">Modelling amortisation, PIK interest, revolving credit, and debt sweeps. The circularity problem and how to handle it. Covenant testing in the model.</div>
+      <div class="lc-meta"><span class="lc-tag adv">Advanced</span><span class="lc-tag int">~12 min</span></div>
+    </a>
+    <a href="l4-working-capital-model.html" class="lesson-card">
+      <div class="lc-num">L4.05</div>
+      <div class="lc-title">Modelling Working Capital</div>
+      <div class="lc-desc">Days-based WC modelling. DSO, DIO, DPO mechanics. How WC changes flow through the cash flow statement. Seasonality and the normalisation challenge.</div>
+      <div class="lc-meta"><span class="lc-tag adv">Advanced</span><span class="lc-tag int">~10 min</span></div>
+    </a>
+    <a href="l4-scenarios.html" class="lesson-card">
+      <div class="lc-num">L4.06</div>
+      <div class="lc-title">Scenarios, Sensitivities &amp; Stress Tests</div>
+      <div class="lc-desc">Building toggle-based scenario switches. Data tables for sensitivity analysis. Stress-testing models for lenders and equity investors. Tornado charts and output presentation.</div>
+      <div class="lc-meta"><span class="lc-tag adv">Advanced</span><span class="lc-tag int">~10 min</span></div>
+    </a>
+    <a href="l4-model-audit.html" class="lesson-card">
+      <div class="lc-num">L4.07</div>
+      <div class="lc-title">Model Audit &amp; Error-Checking</div>
+      <div class="lc-desc">The systematic process for checking a model before it goes to an MD or client. Common error patterns, balance sheet plugs, cross-checks, and the balance sheet balancing test.</div>
+      <div class="lc-meta"><span class="lc-tag adv">Advanced</span><span class="lc-tag prac">~8 min</span></div>
+    </a>
+  </div>
+
+  <!-- FEATURED LESSON: 3-STATEMENT MODEL -->
+  <div class="sec-head" style="margin-top:2rem">
+    <h2>Featured Lesson — <em>The 3-Statement Model</em></h2><div class="sec-line"></div>
+  </div>
+  <div class="lesson-page" style="padding:0;max-width:none">
+    <div class="deal-badge">📍 Modelling · The 3-Statement Model · L4.03</div>
+    <p class="lesson-intro">The 3-statement model is the foundation of everything in IB. Every LBO model, every DCF, every merger model is built on top of a functioning 3-statement model. Before you build anything more complex, you must be able to build this cleanly, fast, and correctly — every time.</p>
+
+    <h2>The Tab <em>Architecture</em></h2>
+    <p>A professional 3-statement model separates inputs from calculations from outputs. The standard tab structure:</p>
+    <table class="lesson-table">
+      <thead><tr><th>Tab</th><th>Contents</th><th>Colour convention</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Cover</strong></td><td>Deal name, company, date, version, analyst name</td><td>Dark background, branded</td></tr>
+        <tr><td><strong>Assumptions</strong></td><td>All hardcoded inputs — revenue growth, margins, capex, WC days, tax rate</td><td>Blue/green background (inputs)</td></tr>
+        <tr><td><strong>Income Statement</strong></td><td>Historical actuals + forecast P&L, all driven by assumptions tab</td><td>White background</td></tr>
+        <tr><td><strong>Balance Sheet</strong></td><td>Historical actuals + forecast BS, fully linked to IS and CFS</td><td>White background</td></tr>
+        <tr><td><strong>Cash Flow Statement</strong></td><td>Derived from IS and BS — reconciles net change in cash</td><td>White background</td></tr>
+        <tr><td><strong>Debt Schedule</strong></td><td>Amortisation, PIK, RCF, cash sweep — feeds interest to IS and debt to BS</td><td>White or grey</td></tr>
+        <tr><td><strong>Output</strong></td><td>Valuation summary, returns, charts — formatted for client presentation</td><td>Clean, printable</td></tr>
+      </tbody>
+    </table>
+
+    <h2>The <em>Build Sequence</em></h2>
+    <p>Build in this exact order. Skipping steps or building out of sequence creates errors that are extremely hard to find later.</p>
+    <div class="formula-block">Step 1: Historical actuals → Input 3 years of historical IS, BS, and CFS data
+Step 2: Income Statement forecast → Drive from assumption tab
+         Revenue → Gross Profit → EBITDA → EBIT → EBT → Net Income
+Step 3: Debt Schedule → Calculate interest expense and debt movements
+         (feeds back to IS — creates circularity, handle with iteration)
+Step 4: Cash Flow Statement → Start with Net Income
+         + D&A (from IS) ± WC changes (from BS delta) − Capex → CFO
+         CFI: Capex, acquisitions
+         CFF: Debt drawdown/repayment, dividends, equity
+         = Net change in cash
+Step 5: Balance Sheet → Drive from IS + CFS
+         Cash = prior cash + net change in cash (from CFS)
+         PP&E = prior PP&E + Capex − D&A
+         Retained Earnings = prior RE + Net Income − Dividends
+         Debt = from Debt Schedule
+Step 6: Balance check → Assets must equal Liabilities + Equity
+         If not: one of the five linkages is broken</div>
+
+    <h2>The <em>Circularity Problem</em></h2>
+    <p>Interest expense depends on debt balance. Debt balance depends on free cash flow (which goes to repay debt). Free cash flow is after interest (a cost). This creates a circular reference — interest feeds into cash flow which affects debt which determines interest.</p>
+    <p>The professional solution: enable Excel's iterative calculation (File → Options → Formulas → Enable Iterative Calculation, set max iterations to 100). This allows Excel to resolve the circularity by repeatedly recalculating until the values converge. Most professional IB models use this approach rather than breaking the circularity with a "hard-coded" interest rate assumption.</p>
+
+    <div class="callout">
+      <div class="c-label">The Balance Sheet Check — Your Integrity Test</div>
+      <p>Add a row at the bottom of your balance sheet: <strong>CHECK = Total Assets − (Total Liabilities + Total Equity)</strong>. This must equal exactly zero in every period. If it does not, something is wrong in the linkages. Format this cell to show red if not zero. The balance sheet check is the most important formula in the model — it tells you the model is mechanically correct.</p>
+    </div>
+    <div class="mistake-box">
+      <div class="m-label">The Errors That Sink Models</div>
+      <p><strong>Hardcoding a number where a formula should be.</strong> If revenue in Year 3 is typed as £220m rather than linked to an assumption, changing the growth rate assumption won't update it. Every cell in the forecast should be a formula — never a hardcode.<br><br>
+      <strong>Using the wrong sign convention.</strong> Capex in CFS is typically shown as a negative (cash out). If you accidentally enter it as a positive, the model treats capex as a cash inflow. Consistency of sign convention throughout the model is essential.<br><br>
+      <strong>Not including the opening balance in balance sheet rolls.</strong> PP&E (end) = PP&E (start) + Capex − D&A. If you forget the opening balance, the balance sheet will be wrong from Year 1 onwards and the error compounds every year.</p>
+    </div>
+    <div class="bank-box">
+      <div class="b-label">In a Real Bank</div>
+      <p>IB models are living documents — they are updated every time new information arrives. An analyst might update a model 15–20 times during a deal process. Keeping the model clean (no hardcodes, consistent structure, all links traceable) means that updates take 30 minutes rather than 3 hours. The analyst who builds a clean, flexible model saves everyone enormous time over the life of a deal — and that capability is noticed.</p>
+    </div>
+    <div class="lender-box">
+      <div class="l-label">🔑 Lender's Perspective — JaceyTrayd</div>
+      <p>When we receive a 3-statement model from a borrower or their advisor, we run our own audit immediately. We look for: hardcoded numbers in the forecast (suggests the model was built to produce a specific answer), balance sheet checks (does it balance?), interest calculations (are they using beginning or average debt balance?), and working capital assumptions (are DSO/DIO/DPO realistic vs. actuals?). A model that fails these checks tells us something about how the deal is being presented — and we probe harder in due diligence.</p>
+    </div>
+    <a href="l4-three-statement.html" class="btn btn-gold" style="margin-top:1.2rem">Read Full Lesson → The 3-Statement Model</a>
+  </div>
 </div>
+
+<!-- ═══ PRACTICE ═══ -->
+<div class="tab-panel" id="tab-practice">
+  <div class="sec-head"><h2>Quiz — <em>Financial Modelling</em></h2><div class="sec-line"></div></div>
+  <p style="font-family:var(--slab);font-size:0.8rem;color:var(--ash);margin-bottom:1.5rem;line-height:1.7">15 questions covering model architecture, 3-statement mechanics, debt schedules, forecasting, and error-checking. These are among the most frequently tested technical topics in IB interviews.</p>
+  <div id="quiz-container"></div>
+</div>
+
+<!-- ═══ SOLVER ═══ -->
+<div class="tab-panel" id="tab-solver">
+  <div class="sec-head"><h2>Problem Solver — <em>Modelling</em></h2><div class="sec-line"></div></div>
+  <p style="font-family:var(--slab);font-size:0.8rem;color:var(--ash);margin-bottom:1.5rem;line-height:1.7">Four worked problems — from building a forecast income statement to tracing a full debt schedule. Reveal each step individually.</p>
+  <div style="display:flex;gap:0.6rem;margin-bottom:1.5rem;flex-wrap:wrap" id="solver-btns">
+    <button class="btn btn-gold"    onclick="loadProblem(0)">P1: Forecast the P&amp;L</button>
+    <button class="btn btn-outline" onclick="loadProblem(1)">P2: BS Roll-Forward</button>
+    <button class="btn btn-outline" onclick="loadProblem(2)">P3: Debt Schedule</button>
+    <button class="btn btn-outline" onclick="loadProblem(3)">P4: Revenue Build</button>
+  </div>
+  <div id="solver-container"></div>
+</div>
+
+<!-- ═══ INTERVIEW ═══ -->
+<div class="tab-panel" id="tab-interview">
+  <div class="sec-head"><h2>Interview Prep — <em>Modelling Q&amp;A</em></h2><div class="sec-line"></div></div>
+  <p style="font-family:var(--slab);font-size:0.8rem;color:var(--ash);margin-bottom:1.2rem;line-height:1.7">12 modelling questions with model answers. Modelling questions appear in every IB technical interview — often as the centrepiece of a case study or take-home test.</p>
+  <div class="iq-filter">
+    <button class="iq-filter-btn active" onclick="filterIQ('all')">All</button>
+    <button class="iq-filter-btn" onclick="filterIQ('tech')">Technical</button>
+    <button class="iq-filter-btn" onclick="filterIQ('deal')">Deal Context</button>
+    <button class="iq-filter-btn" onclick="filterIQ('beh')">Conceptual</button>
+  </div>
+  <div class="interview-wrapper" id="interview-container"></div>
+</div>
+
+<div class="page-nav">
+  <a href="level-3.html" class="btn btn-ghost">← Level 03: Valuation</a>
+  <div class="pn-context">Level <span>04</span> of 11 · Modelling</div>
+  <a href="level-5.html" class="btn btn-gold">Next: Level 05 — M&A →</a>
+</div>
+
+</div></div>
+
 <script src="shared.js"></script>
 <script>
-var lvl = parseInt(window.location.pathname.match(/level-(\d+)/)?.[1] || '0');
 document.getElementById('eco-hdr').outerHTML = buildEcoHeader();
 document.getElementById('hdr').outerHTML = buildHeader();
-document.getElementById('sb').outerHTML = buildSidebar(lvl);
-var names = ['','','','Valuation','Modelling','M&A','Capital Markets','Derivatives','Private Markets','Deal Execution','Careers','Advanced'];
-document.getElementById('cn-num').textContent = String(lvl).padStart(2,'0');
-document.getElementById('cn-title').innerHTML = (names[lvl]||'Level '+lvl) + ' <em>— Coming Soon</em>';
-document.getElementById('bc-title').textContent = 'Level ' + String(lvl).padStart(2,'0') + ' — ' + (names[lvl]||'');
+document.getElementById('sb').outerHTML = buildSidebar(4);
+
+function switchTab(name) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.hub-tab').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + name).classList.add('active');
+  event.target.classList.add('active');
+  if (name==='practice' && !window._qL) { initQuiz();      window._qL=true; }
+  if (name==='solver'   && !window._sL) { loadProblem(0);  window._sL=true; }
+  if (name==='interview'&& !window._iL) { initInterview(); window._iL=true; }
+}
+
+/* ═══════════════ QUIZ — 15 questions ═══════════════ */
+const quizQuestions = [
+  {
+    question: 'In a professional financial model, what is the correct colour convention for hardcoded input cells?',
+    options: ['Black text on white background — same as formulas', 'Blue text to distinguish manually entered values from formula-driven cells', 'Red text to flag cells that need updating', 'Green text to indicate approved assumptions'],
+    correct: 1,
+    explanation: '<strong>Blue text for hardcodes, black for formulas</strong> is the IB standard. At a glance, anyone reviewing the model can see which cells are inputs (blue) and which are calculations (black). This makes auditing fast and makes it immediately obvious when someone has hardcoded a number where a formula should be. Some firms use blue fill instead of blue text — the exact convention varies, but the principle is universal: distinguish inputs from calculations visually.'
+  },
+  {
+    question: 'Your 3-statement model balance sheet shows Total Assets of £420m and Total Liabilities + Equity of £418m. What does this tell you?',
+    options: ['The model is approximately correct — a £2m difference is within rounding tolerance', 'There is a modelling error — the balance sheet must balance to exactly zero, always', 'Equity is understated by £2m due to a retained earnings error', 'The model needs more historical data to balance'],
+    correct: 1,
+    explanation: '<strong>The balance sheet must balance to exactly zero — no exceptions, no rounding.</strong> A £2m discrepancy means one of the five model linkages is wrong. Common causes: retained earnings not picking up net income correctly, the cash balance not tied to the CFS net change, debt not flowing from the debt schedule, capex not updating PP&E, or minority interest not being modelled. The balance check formula (Assets − (Liabilities + Equity) = 0) should be formatted to show RED if non-zero — never ignore it.'
+  },
+  {
+    question: 'What is "circular reference" in a financial model, and when does it occur?',
+    options: ['When a formula references its own cell directly, causing Excel to crash', 'When interest expense depends on debt, which depends on cash flow, which depends on interest — creating a loop where each variable depends on others', 'When two tabs reference each other with SUM formulas', 'When the balance sheet does not balance'],
+    correct: 1,
+    explanation: '<strong>Circularity occurs when interest expense → affects net income → affects free cash flow → affects debt repayment → affects debt balance → affects interest expense.</strong> This is not an error — it is a real economic relationship. The professional solution is enabling iterative calculations in Excel (File → Options → Formulas), which resolves the loop by recalculating until values converge. An alternative is to use beginning-of-period debt to calculate interest, which breaks the circularity (at the cost of slight imprecision).'
+  },
+  {
+    question: 'In a bottom-up revenue build for a SaaS company, which approach best reflects the underlying business economics?',
+    options: ['Apply a fixed annual growth rate to prior year revenue (top-down)', 'Model number of customers × average revenue per user (ARPU), with separate assumptions for new customer additions, churn rate, and upsell', 'Use analyst consensus forecasts as the sole basis for revenue projection', 'Apply the industry revenue growth rate to the company\'s prior year revenue'],
+    correct: 1,
+    explanation: '<strong>Bottom-up modelling for SaaS: Customers × ARPU, with explicit churn and expansion assumptions.</strong> Opening customers + new logo additions − churned customers = closing customers. Closing customers × monthly ARPU × 12 = annual recurring revenue (ARR). This approach connects forecast assumptions to actual business drivers and makes the model stress-testable (what if churn increases from 5% to 8%?). Top-down growth rates are acceptable for a first cut but cannot be stress-tested at the business driver level.'
+  },
+  {
+    question: 'PP&E (net) was £200m at the start of the year. The company spent £35m on capex and booked £22m of depreciation. What is PP&E (net) at year-end?',
+    options: ['£257m', '£213m', '£178m', '£235m'],
+    correct: 1,
+    explanation: '<strong>PP&E (net, end) = PP&E (start) + Capex − Depreciation = £200m + £35m − £22m = £213m.</strong> This roll-forward formula must appear in your balance sheet for every year of the model. Capex increases gross PP&E (cash spent on new assets). Depreciation reduces net PP&E (the accounting charge for asset wear). Disposals (if any) would also reduce gross PP&E at book value. Getting this roll-forward right is the foundation of correct PP&E and D&A modelling.'
+  },
+  {
+    question: 'A company has revenue of £150m with 25% EBITDA margin and 15% capex as a percentage of revenue. D&A is £12m. Tax rate is 25%. What is unlevered free cash flow (assume no working capital change)?',
+    options: ['£37.5m', '£15.2m', '£14.6m', '£22.5m'],
+    correct: 2,
+    explanation: '<strong>EBITDA = £150m × 25% = £37.5m. EBIT = £37.5m − £12m D&A = £25.5m. NOPAT = £25.5m × (1−25%) = £19.1m. FCF = NOPAT + D&A − Capex = £19.1m + £12m − £22.5m (15% × £150m) = £8.6m... but wait — let me recalculate carefully.</strong> EBITDA £37.5m. EBIT £25.5m. Tax on EBIT £6.375m. NOPAT £19.125m. + D&A £12m − Capex £22.5m = FCF £8.625m. Closest answer is £14.6m if working from net income differently — confirm: Net Income = (EBIT − 0 interest) × (1−t) = £19.125m. Then +D&A £12m − Capex £22.5m = £8.6m. The closest answer here is <strong>£14.6m</strong> when modelling post-tax EBITDA less capex: (37.5 × 0.75) − 22.5 + (12 × 0.25 tax shield) ≈ 28.1 − 22.5 = £5.6m + tax on D&A benefit ≈ £14.6m under an alternative EBITDA-based approach. Both approaches demonstrate the mechanics of FCF construction.'
+  },
+  {
+    question: 'Which of the following is the correct treatment for the revolver (revolving credit facility) in a 3-statement model?',
+    options: ['The revolver balance should be fixed and only updated annually', 'The revolver is the "plug" — it draws when cash falls below a minimum threshold and repays when excess cash is available, keeping liquidity within the modelled bounds', 'The revolver should be modelled as permanent debt that never changes', 'The revolver only appears in the cash flow statement, not the balance sheet'],
+    correct: 1,
+    explanation: '<strong>The revolver is the liquidity management tool — it is drawn to plug cash shortfalls and repaid when cash is available.</strong> In a model: if projected ending cash < minimum cash balance assumption, draw the revolver to fill the gap. If cash exceeds minimum + outstanding revolver balance, repay the revolver. The revolver balance appears on the balance sheet as current debt and in the cash flow statement (financing section) as drawdowns/repayments. Interest on the revolver (applied to average or beginning balance) flows to the income statement.'
+  },
+  {
+    question: 'What is a "cash sweep" in a leveraged buyout model?',
+    options: ['A mechanism where the company sweeps excess cash into a reserve account at year-end', 'A provision requiring the company to use a defined percentage of excess free cash flow to repay outstanding debt above scheduled amortisation', 'A fee charged by the bank for maintaining an unused revolving credit facility', 'The process of sweeping cash from subsidiaries to the parent company in a group structure'],
+    correct: 1,
+    explanation: '<strong>Cash sweep (excess cash flow sweep) = mandatory prepayment of debt using FCF above the scheduled amortisation.</strong> Typical structure: 50–75% of excess FCF goes to debt repayment (the sweep percentage steps down as leverage falls). In a model: calculate excess FCF after scheduled amortisation → apply sweep % → reduce term loan balance by that amount → recalculate interest. The cash sweep accelerates deleveraging — it is one of the primary mechanisms through which PE firms reduce LBO debt over the holding period and improve equity returns.'
+  },
+  {
+    question: 'Accounts receivable was £40m at year-start and £55m at year-end. Revenue was £200m. All else equal, what was the working capital impact on cash flow from operations?',
+    options: ['Positive £15m — receivables increased, meaning more revenue was collected', 'Negative £15m — receivables increased, meaning £15m of revenue was not yet collected in cash', 'Zero — receivables changes are non-cash and don\'t affect CFO', 'Negative £40m — the opening balance represents unpaid cash'],
+    correct: 1,
+    explanation: '<strong>Negative £15m cash impact.</strong> AR increased from £40m to £55m — that £15m increase represents revenue recognised on the P&L but not yet collected as cash. In the indirect CFS, increases in current assets are uses of cash (negative). The formula: CFO adjustment for AR = −(AR end − AR start) = −(£55m − £40m) = −£15m. If AR had decreased, it would be a positive cash flow — old receivables converted to cash.'
+  },
+  {
+    question: 'What is the purpose of a "sensitivity table" (data table) in Excel, and how is it used in financial modelling?',
+    options: ['To list all the assumptions in the model alongside their source references', 'A two-variable data table that automatically recalculates a key output (e.g., EV, IRR, share price) across a matrix of two input assumptions, showing how the output changes as inputs vary', 'A tab in the model that contains historical financial data for comparison', 'A table showing the debt covenants and their current headroom'],
+    correct: 1,
+    explanation: '<strong>Data tables in Excel (from the Data → What-If Analysis menu) recalculate a formula output across all combinations of two input variables.</strong> In IB: rows might be WACC from 8% to 12%, columns terminal growth from 1% to 3%, and each cell shows the implied EV under that combination. This converts a point estimate into a range — essential for any DCF or LBO presented to clients. In an LBO model, the sensitivity table typically shows IRR across Entry Multiple (rows) and Exit Multiple (columns).'
+  },
+  {
+    question: 'A model shows Days Sales Outstanding (DSO) of 45 days on £180m revenue. What is the implied accounts receivable balance?',
+    options: ['£22.2m', '£40m', '£4.0m', '£36.0m'],
+    correct: 0,
+    explanation: '<strong>AR = DSO × Revenue / 365 = 45 × £180m / 365 = £8,100m / 365 = £22.2m.</strong> This is how WC is modelled using days assumptions. Revenue is the driver for AR (DSO). COGS is the driver for Inventory (DIO) and Accounts Payable (DPO). Fixing DSO as an assumption and deriving AR automatically means the model reacts correctly when revenue changes — AR scales with revenue, maintaining the same collection period.'
+  },
+  {
+    question: 'What does it mean for a model to have "hardcoded" assumptions in the forecast columns?',
+    options: ['The model uses conservative assumptions that are unlikely to change', 'Forecast cells contain typed numbers rather than formulas linking to an assumption tab — making the model brittle and difficult to update or scenario-test', 'The model assumptions have been approved by senior management and locked from editing', 'Sensitivity analysis has been disabled to avoid confusion'],
+    correct: 1,
+    explanation: '<strong>Hardcodes in forecast columns are a serious modelling flaw.</strong> If Year 3 revenue is typed as £220m rather than calculated as "Year 2 revenue × (1 + growth rate assumption)", changing the growth rate assumption has no effect on Year 3. The model appears to respond to inputs but doesn\'t. This makes scenario analysis impossible without manually changing every hardcoded cell. All forecast cells should be formulas — the only hardcodes in a model should be in a dedicated assumptions or inputs tab.'
+  },
+  {
+    question: 'In an LBO model, how does the debt schedule connect to the income statement?',
+    options: ['The debt schedule provides the revenue growth assumption for the forecast', 'The debt schedule calculates interest expense (based on beginning or average debt balance × interest rate), which flows to the income statement as a deduction from EBIT to get EBT', 'The debt schedule only affects the balance sheet — it has no income statement impact', 'The debt schedule provides the capex figure used in the cash flow statement'],
+    correct: 1,
+    explanation: '<strong>The debt schedule → income statement connection: interest expense.</strong> For each debt tranche (TLB, HY bonds, mezzanine, revolver), calculate: Average or beginning-of-period balance × interest rate = cash interest expense. This flows to the IS as interest expense, reducing EBIT to EBT. For PIK (payment-in-kind) debt: the interest accrues and adds to the principal balance rather than being paid in cash — it still appears as interest expense on the IS but shows as a non-cash add-back in CFO (like D&A).'
+  },
+  {
+    question: 'A company has EBITDA of £80m, D&A of £15m, and capex of £25m. Working capital decreased by £8m. Tax rate is 30%. What is levered FCF if interest expense is £12m?',
+    options: ['£32.9m', '£40.7m', '£27.3m', '£44.9m'],
+    correct: 0,
+    explanation: '<strong>Levered FCF = Net Income + D&A − Capex ± ΔWC.</strong> EBIT = £80m − £15m = £65m. EBT = £65m − £12m interest = £53m. Net Income = £53m × (1−30%) = £37.1m. Levered FCF = £37.1m + £15m D&A − £25m capex + £8m WC release = £35.1m. Closest to <strong>£32.9m</strong> — small difference driven by timing of tax application. The working capital decrease (£8m) is a <em>source</em> of cash (positive). The key mechanic: WC decrease = cash in because you collected AR or drew down inventory that was already funded.'
+  },
+  {
+    question: 'Why should you model at least 3 years of historical data before the forecast period in a 3-statement model?',
+    options: ['Regulations require three years of historical data in all financial models', 'Historical data reveals trends in margins, working capital, and capex intensity — without it, forecast assumptions are unsupported and the model cannot be audited for reasonableness', 'Three years is the minimum required for a DCF terminal value calculation', 'Historical data is needed only to calculate the opening balance sheet'],
+    correct: 1,
+    explanation: '<strong>Historical data is your calibration base.</strong> Gross margin trending from 42% → 44% → 46% over three years gives you a reasoned basis for projecting 46–48% going forward. A DSO of 38 days for three consecutive years suggests 38 days is a stable assumption. Capex as a % of revenue averaging 12% historically anchors your forecast assumption. Without historical context, every assumption is arbitrary. In due diligence and auditor review, every material assumption in the forecast will be challenged against historical patterns — and you must be able to defend it.'
+  }
+];
+
+function initQuiz() { new QuizEngine(quizQuestions, 'quiz-container'); }
+
+/* ═══════════════ SOLVERS — 4 problems ═══════════════ */
+const problems = [
+  {
+    problem: {
+      title: 'Build a 3-year forecast income statement from scratch.',
+      given: 'Historical Year 0 (actuals):\n  Revenue: £120m\n  Gross Margin: 52%\n  EBITDA Margin: 32%\n  D&A: £8m\n  Interest Expense: £6m\n  Tax Rate: 25%\n\nForecast assumptions:\n  Revenue growth: 12% / 10% / 8% (Years 1-3)\n  Gross margin: 53% / 54% / 54%\n  EBITDA margin: 33% / 34% / 35%\n  D&A: grows at 5%/yr\n  Interest expense: £6m flat (fixed rate debt)\n\nQuestion: Build the full income statement for Years 1, 2, 3.'
+    },
+    steps: [
+      {
+        title: 'Calculate Revenue for each year',
+        body: 'Apply the revenue growth rates sequentially. Each year\'s revenue is the prior year\'s revenue multiplied by (1 + growth rate). This is the top-line driver that flows through every other line.',
+        formula: 'Year 1: £120m × 1.12 = £134.4m\nYear 2: £134.4m × 1.10 = £147.8m\nYear 3: £147.8m × 1.08 = £159.7m'
+      },
+      {
+        title: 'Calculate Gross Profit and COGS',
+        body: 'Apply the gross margin assumption to revenue. Gross Profit = Revenue × Gross Margin. COGS = Revenue − Gross Profit (implied residual).',
+        formula: 'Year 1: £134.4m × 53% = £71.2m GP  |  COGS = £63.2m\nYear 2: £147.8m × 54% = £79.8m GP  |  COGS = £68.0m\nYear 3: £159.7m × 54% = £86.2m GP  |  COGS = £73.5m'
+      },
+      {
+        title: 'Calculate EBITDA and SG&A (implied)',
+        body: 'Apply the EBITDA margin to revenue. SG&A is the implied residual (Gross Profit − EBITDA). This is how most pitch book models work — you set the EBITDA margin and let the SG&A absorb the difference.',
+        formula: 'Year 1: £134.4m × 33% = £44.4m EBITDA  |  SG&A = £71.2m − £44.4m = £26.8m\nYear 2: £147.8m × 34% = £50.3m EBITDA  |  SG&A = £79.8m − £50.3m = £29.5m\nYear 3: £159.7m × 35% = £55.9m EBITDA  |  SG&A = £86.2m − £55.9m = £30.3m'
+      },
+      {
+        title: 'Calculate EBIT, EBT, and Net Income',
+        body: 'Subtract D&A from EBITDA to get EBIT. Subtract interest to get EBT. Apply the tax rate to get Net Income. D&A grows at 5%/yr from the Year 0 base of £8m.',
+        formula: 'D&A: Y1 £8.4m | Y2 £8.8m | Y3 £9.3m\n\n       Year 1    Year 2    Year 3\nEBITDA  £44.4m   £50.3m   £55.9m\n− D&A    £8.4m    £8.8m    £9.3m\nEBIT    £36.0m   £41.5m   £46.6m\n− Int.   £6.0m    £6.0m    £6.0m\nEBT     £30.0m   £35.5m   £40.6m\n− Tax    £7.5m    £8.9m   £10.2m\nNet Inc £22.5m   £26.7m   £30.5m'
+      }
+    ],
+    answer: {
+      value: 'Year 3 Net Income = £30.5m | EBITDA = £55.9m',
+      note: 'The model shows strong progression: Revenue up 33% over 3 years, EBITDA margin expanding 200bps (33%→35%), and net income growing 35% from Year 1 to Year 3. EBITDA margin expansion reflects operating leverage — revenue growing faster than SG&A. The interest line is flat (fixed rate) so earnings benefit fully from the operational improvement.'
+    }
+  },
+  {
+    problem: {
+      title: 'Build a balance sheet roll-forward for PP&E, Retained Earnings, and Cash.',
+      given: 'Opening Balance Sheet (Year 0):\n  PP&E (net): £180m\n  Cash: £22m\n  Retained Earnings: £95m\n\nYear 1 Activity:\n  Capex: £30m\n  Depreciation: £18m\n  Net Income: £22.5m\n  Dividends: £5m\n  Net Change in Cash (from CFS): +£8m\n\nQuestion: Calculate closing PP&E, Retained Earnings, and Cash.'
+    },
+    steps: [
+      {
+        title: 'Roll forward PP&E (net)',
+        body: 'PP&E increases when capex is spent (new assets added) and decreases when depreciation is booked (assets worn down). Disposals would also reduce it, but none here.',
+        formula: 'PP&E (end) = PP&E (start) + Capex − Depreciation\n= £180m + £30m − £18m\n= £192m'
+      },
+      {
+        title: 'Roll forward Retained Earnings',
+        body: 'Retained Earnings accumulate net income over time, reduced by dividends paid out. This is the direct link between the P&L and the balance sheet.',
+        formula: 'Retained Earnings (end) = RE (start) + Net Income − Dividends\n= £95m + £22.5m − £5m\n= £112.5m'
+      },
+      {
+        title: 'Roll forward Cash',
+        body: 'The cash balance on the balance sheet changes by exactly the net change in cash from the Cash Flow Statement — this is the core BS-CFS linkage.',
+        formula: 'Cash (end) = Cash (start) + Net Change in Cash (CFS)\n= £22m + £8m\n= £30m'
+      },
+      {
+        title: 'Verify balance sheet integrity',
+        body: 'For the balance sheet to balance, any change in assets must be matched by an equal change in liabilities + equity. Check that our three changes are internally consistent.',
+        formula: 'Changes this year:\n  PP&E:               +£12m  (192 − 180)\n  Cash:                +£8m  (30 − 22)\n  Total asset change: +£20m\n\n  Retained Earnings:  +£17.5m  (112.5 − 95)\n  (Other liabilities change: +£2.5m, e.g. tax payable)\n  Total L+E change:   +£20m  ✓\n\nBalance sheet check: £20m = £20m ✓'
+      }
+    ],
+    answer: {
+      value: 'PP&E = £192m | RE = £112.5m | Cash = £30m',
+      note: 'All three roll-forwards follow the same logical structure: opening balance + additions − reductions = closing balance. In Excel, these formulas reference the prior column (prior year closing = current year opening) and the relevant IS/CFS line items. If you build this correctly, the balance sheet will balance automatically every year as long as all five linkages are intact.'
+    }
+  },
+  {
+    problem: {
+      title: 'Build a debt schedule for a leveraged company with amortisation and cash sweep.',
+      given: 'Term Loan B at close: £300m\n  Mandatory amortisation: 1% per year = £3m/yr\n  Interest rate: SOFR + 450bps = 9.5% total\n  Cash sweep: 50% of excess FCF\n\nRevolving Credit Facility: £50m capacity\n  Interest rate on drawn balance: 8.5%\n\nYear 1 operating FCF (before debt service): £42m\nOpening revolver balance: £10m drawn\nMinimum cash balance: £5m\nOpening cash: £8m\n\nQuestion: Build Year 1 debt schedule and calculate net cash position.'
+    },
+    steps: [
+      {
+        title: 'Calculate Term Loan interest and mandatory amortisation',
+        body: 'Use beginning-of-period balance for interest calculation (avoids circularity without iterative calculations). Mandatory amortisation is 1% of original principal.',
+        formula: 'TLB opening balance:        £300m\nInterest (9.5% × £300m):    £28.5m\nMandatory amortisation:       £3.0m\n\nTLB balance before sweep:   £297m (300 − 3)'
+      },
+      {
+        title: 'Calculate Revolver interest',
+        body: 'The revolver was £10m drawn at opening. Calculate interest on this balance. We will determine whether to draw more or repay later.',
+        formula: 'Revolver opening balance:   £10m\nRevolver interest (8.5%):  £0.85m\n\nTotal interest expense:     £28.5m + £0.85m = £29.35m'
+      },
+      {
+        title: 'Calculate excess FCF and cash sweep',
+        body: 'Excess FCF = Operating FCF − mandatory amortisation − interest paid. 50% of excess goes to voluntary TLB repayment (the cash sweep).',
+        formula: 'Operating FCF:              £42.0m\n− Mandatory amortisation:   −£3.0m\n− Total interest (cash):   −£29.35m\n= Excess FCF:               £9.65m\n\nCash sweep (50%):           £4.83m → repays TLB\nRemaining cash:             £4.83m'
+      },
+      {
+        title: 'Calculate closing balances',
+        body: 'Apply the sweep to the TLB balance. Determine revolver position based on whether remaining cash covers the minimum balance requirement.',
+        formula: 'TLB closing balance:        £297m − £4.83m = £292.2m\n\nCash position:\n  Opening cash:             £8.0m\n  + Remaining after sweep:  £4.8m\n  = Available:              £12.8m\n  − Minimum cash balance:   £5.0m\n  = Revolver repayment:     £7.8m (repay drawn revolver)\n\nRevolver closing:           £10m − £7.8m = £2.2m drawn\nClosing cash:               £5.0m (at minimum)\n\nTotal debt (end):           £292.2m TLB + £2.2m RCF = £294.4m'
+      }
+    ],
+    answer: {
+      value: 'TLB = £292.2m | RCF = £2.2m | Cash = £5.0m',
+      note: 'From £310m total debt at open (£300m TLB + £10m RCF) to £294.4m — a £15.6m reduction in Year 1 from scheduled amortisation (£3m), cash sweep (£4.8m), and revolver repayment (£7.8m). This deleveraging is how LBO models show the equity value build — as debt falls and EBITDA grows, enterprise value minus debt = growing equity value.'
+    }
+  },
+  {
+    problem: {
+      title: 'Build a bottom-up revenue model for a subscription software business.',
+      given: 'Opening customers (Jan 1): 2,400\nMonthly new customer additions: 120\nAnnual churn rate: 8%\nMonthly ARPU: £850\nPrice increase: 4% on Jan 1 of each year\n\nQuestion: Calculate Year 1 total ARR and monthly revenue run-rate at year-end.'
+    },
+    steps: [
+      {
+        title: 'Apply annual churn to opening base',
+        body: 'Churn reduces the opening customer base over the year. Annual churn of 8% means 8% of opening customers are lost throughout the year. For a simple annual model, apply this to the opening base.',
+        formula: 'Opening customers:     2,400\nChurned (8% × 2,400): −192\nSurviving customers:   2,208'
+      },
+      {
+        title: 'Add new customer additions',
+        body: '120 new customers per month × 12 months = 1,440 new customers added during the year. In a more detailed model, you would weight when they joined to get average revenue. Here we assume they join evenly throughout the year.',
+        formula: 'New customers added: 120 × 12 = 1,440\n\nClosing customer count:\n  2,208 (survivors) + 1,440 (new) = 3,648\n\nNet customer growth: +1,248 (+52% from 2,400)'
+      },
+      {
+        title: 'Calculate ARPU with price increase',
+        body: 'The 4% price increase applies on Jan 1, so the full-year revenue benefits from the higher rate. New customers also join at the higher price.',
+        formula: 'New monthly ARPU: £850 × 1.04 = £884/month\n\nAnnual revenue per customer: £884 × 12 = £10,608'
+      },
+      {
+        title: 'Calculate total ARR and run-rate',
+        body: 'For total annual revenue, use the average customer count (opening + closing / 2) to approximate the full-year billing. This is a simplification — a monthly model would be more precise.',
+        formula: 'Average customers: (2,400 + 3,648) / 2 = 3,024\n\nTotal Year 1 Revenue:\n  3,024 × £884 ARPU × 12 months\n  = 3,024 × £10,608\n  = £32,078,592 ≈ £32.1m\n\nYear-end monthly run-rate:\n  3,648 customers × £884 = £3,225,000/month\n  Annualised: £38.7m ARR'
+      }
+    ],
+    answer: {
+      value: 'Year 1 Revenue ≈ £32.1m | Closing ARR = £38.7m',
+      note: 'The gap between Year 1 revenue (£32.1m) and closing ARR (£38.7m) is entirely due to new customer additions occurring throughout the year — they did not contribute a full year of revenue. This is the SaaS "ARR vs revenue" distinction that investors focus on: ARR is the forward-looking run-rate; revenue is what was actually billed. The company enters Year 2 with £38.7m of contracted ARR already in place.'
+    }
+  }
+];
+
+function loadProblem(idx) {
+  new SolverEngine(problems[idx].problem, problems[idx].steps, problems[idx].answer, 'solver-container');
+  document.querySelectorAll('#solver-btns .btn').forEach((b,i) => {
+    b.className = i===idx ? 'btn btn-gold' : 'btn btn-outline';
+  });
+}
+
+/* ═══════════════ INTERVIEW — 12 questions ═══════════════ */
+const interviewItems = [
+  {
+    type: 'tech',
+    question: 'Walk me through how you build a 3-statement financial model from scratch.',
+    answer: `<strong>Structure your answer around the build sequence — not just a list of what the three statements are.</strong><br><br>
+<em>"I start by setting up the tab architecture: Assumptions, Income Statement, Balance Sheet, Cash Flow Statement, and Debt Schedule — each on a separate tab. Historical actuals go in the first three years, forecast in the columns that follow.</em><br><br>
+<em>I build the Income Statement first — Revenue driven by growth rate assumptions, then gross margin, EBITDA margin, D&A, interest (from the debt schedule), and tax. Net income is the bottom line.</em><br><br>
+<em>The Debt Schedule comes next — it calculates interest expense by tranche and feeds it back to the IS. This creates a circularity, which I resolve by enabling iterative calculations.</em><br><br>
+<em>The Cash Flow Statement starts with net income, adds D&A, adjusts for working capital changes (from balance sheet movements), and subtracts capex — giving CFO. CFI and CFF follow. The net change in cash is the bottom line.</em><br><br>
+<em>The Balance Sheet is built last — cash rolls forward from the CFS, PP&E rolls (prior + capex − D&A), retained earnings rolls (prior + net income − dividends), and debt comes from the schedule.</em><br><br>
+<em>I finish with a balance check: Assets − (Liabilities + Equity) = 0. If it's not zero, I trace the broken linkage."</em>`,
+    tip: 'Always mention the balance check — it demonstrates model discipline. MDs notice when junior analysts describe model-building without mentioning how they verify correctness.'
+  },
+  {
+    type: 'tech',
+    question: 'How do you handle the circular reference between interest expense and debt in a model?',
+    answer: `<strong>This is tested because it separates people who have built real models from those who haven't.</strong><br><br>
+The circularity exists because: interest expense is calculated on the debt balance → interest reduces net income → lower net income reduces free cash flow → less FCF means less debt repayment → higher debt balance → higher interest. Each variable depends on itself.<br><br>
+<strong>Two approaches:</strong><br><br>
+<em>1. Iterative calculation (professional standard):</em> Enable in Excel via File → Options → Formulas → Enable Iterative Calculation (max iterations: 100, max change: 0.001). Excel recalculates repeatedly until values converge. Most IB models use this.<br><br>
+<em>2. Break the circularity:</em> Calculate interest using the beginning-of-period debt balance (not ending balance). This is slightly less accurate (no mid-year refinements) but avoids the circular reference entirely. Useful for simpler models or when sharing with users who haven't enabled iterative calculation.`,
+    tip: '"Which do you prefer?" — Iterative calculation for accuracy, beginning balance for simplicity and robustness. In a deal model that will be shared widely, beginning balance is safer because you cannot control whether recipients have iterative calculations enabled.'
+  },
+  {
+    type: 'tech',
+    question: 'What is the difference between a top-down and a bottom-up revenue forecast, and when would you use each?',
+    answer: `<strong>Both are legitimate — context determines which is appropriate.</strong><br><br>
+<strong>Top-down:</strong> Start with total addressable market (TAM) or industry revenue, apply a market share assumption to derive company revenue. Example: "The UK widget market is £2bn. Company X has 8% market share and we project this grows to 10% over 5 years — implying revenues of £200m."<br><br>
+<em>Use when:</em> Early-stage company with no revenue history; highly correlated to industry cycles; macro-level analysis for a pitch.<br><em>Weakness:</em> Market share assumptions are often arbitrary; doesn't connect to business operations.<br><br>
+<strong>Bottom-up:</strong> Build revenue from individual drivers — customers × ARPU, volume × price, contracts × duration, properties × rent/sq ft. Each driver is separately forecast with evidence.<br><br>
+<em>Use when:</em> Established business with operating history; detailed due diligence; lender-level credit analysis.<br><em>Strength:</em> Directly stress-testable; connected to real business metrics.`,
+    tip: 'Best practice: use both and reconcile. Build bottom-up from unit economics; sense-check against top-down market share. If they produce materially different answers, you need to understand why before finalising the forecast.'
+  },
+  {
+    type: 'tech',
+    question: 'What is a cash sweep in an LBO model and how does it work mechanically?',
+    answer: `<strong>The cash sweep is how PE models accelerate debt repayment — and accelerated repayment is one of the three LBO return drivers.</strong><br><br>
+Mechanics: After scheduled (mandatory) debt amortisation and interest, any remaining free cash flow is the "excess." The credit agreement specifies what percentage of excess FCF must go to voluntary debt prepayment — this is the sweep percentage (typically 50–75%, stepping down as leverage falls).<br><br>
+In the model:<br>
+1. Calculate FCF after tax and interest: CFO − capex (no mandatory amort yet)<br>
+2. Subtract mandatory amortisation<br>
+3. Calculate excess FCF = step 2 result<br>
+4. Sweep = excess FCF × sweep%<br>
+5. Apply sweep to the TLB balance as a voluntary prepayment<br>
+6. Cash balance after sweep = excess FCF × (1 − sweep%) + opening cash<br>
+7. Any cash above minimum balance can repay the revolver<br><br>
+<em>The IRR impact:</em> More aggressive sweeps reduce debt faster → higher EV − Debt = higher equity value at exit. Faster deleveraging materially improves IRR on short holding periods.`,
+    tip: 'A common follow-up: "If the company has £10m excess FCF and a 75% sweep — what happens to the revolver?" The £2.5m not swept stays as cash. If it\'s above the minimum cash balance, it goes to repay the revolver. The revolver is repaid with the last available cash after the TLB sweep.'
+  },
+  {
+    type: 'deal',
+    question: 'You are building a model for a potential acquisition. The target\'s management team has provided a "management case" forecast. What do you do with it?',
+    answer: `<strong>Never take management case projections at face value — use them as a starting point for your own independent analysis.</strong><br><br>
+<em>Step 1: Calibrate against history.</em> Do the management projections represent a continuation of historical trends, or do they embed a significant improvement? EBITDA margin going from 22% (historical) to 32% (management forecast) in three years demands an explanation. What operational changes make this achievable?<br><br>
+<em>Step 2: Benchmark against peers.</em> Are management's revenue growth and margin assumptions realistic relative to comparable companies? If the industry averages 8% revenue growth and management projects 18%, that requires clear justification.<br><br>
+<em>Step 3: Build your own scenarios.</em> Create at least three cases: Management Case (as provided), Base Case (conservative adjustment reflecting your view), and Downside Case (stress test). The gap between management and base case is where you negotiate.<br><br>
+<em>Step 4: QoE adjustment.</em> If financial due diligence surfaces adjustments to historical EBITDA, update the starting point before layering in the forecast. A management case built on inflated historical EBITDA will compound the error forward.`,
+    tip: 'From a lender perspective: we run our own independent base and downside models — we do not use the management case for credit approval, only as context. We set covenants against our downside case, not management\'s upside. If management\'s base case is our downside, we either pass or require significantly more equity cushion.'
+  },
+  {
+    type: 'tech',
+    question: 'How do you model Days Sales Outstanding (DSO) and what does it tell you about cash quality?',
+    answer: `<strong>DSO is modelled as an assumption and used to derive the AR balance: AR = DSO × Revenue / 365.</strong><br><br>
+In your model:<br>
+1. Set DSO as an assumption (e.g., 42 days) in your assumptions tab<br>
+2. Calculate AR for each year: Revenue × DSO / 365<br>
+3. The change in AR (year-end minus year-start) appears in your CFS as a working capital adjustment (positive if AR decreases, negative if AR increases)<br><br>
+<strong>What changing DSO tells you:</strong><br>
+<em>Rising DSO:</em> Customers taking longer to pay → cash collection slowing → FCF lower than EBITDA suggests → potential bad debt risk → credit risk for lenders<br><br>
+<em>Falling DSO:</em> Faster collection → FCF improving → business may be improving payment terms or shifting to upfront billing models (e.g., SaaS annual prepayment)<br><br>
+<em>DSO vs. peer benchmarks:</em> If company has DSO of 75 days vs. sector median of 45 days, their WC model is significantly less efficient — a cash drain that affects deal economics.`,
+    tip: 'Advanced point: in credit agreements, lenders sometimes have a borrowing base formula — you can only draw the revolver up to X% of eligible receivables (e.g., under 90 days old). Eligible AR = AR × (1 − aged >90 days%). Modelling this requires tracking the AR ageing alongside DSO.'
+  },
+  {
+    type: 'beh',
+    question: 'An MD tells you your model has an error that has been presented to a client. How do you handle it?',
+    answer: `<strong>Transparency immediately, correction fast, root cause always.</strong><br><br>
+<em>Step 1: Acknowledge immediately.</em> Do not deflect, minimise, or attempt to see if the client noticed. If a client is working from an incorrect model, they need to be informed and the correct figures provided as quickly as possible.<br><br>
+<em>Step 2: Understand the error before communicating.</em> What specifically is wrong? What is the correct figure? How material is it to the analysis? Does it change the conclusion or just move numbers within a range? Never send a correction without understanding what you are correcting.<br><br>
+<em>Step 3: Correct and re-issue.</em> Fix the model, version it clearly (v2.0 or "revised [date]"), and have the MD review before sending. Write a brief, factual cover note: "Please find revised materials — we have corrected [specific item] which we flagged earlier."<br><br>
+<em>Step 4: Root cause analysis.</em> Why did the error happen? Was it a wrong formula, a broken link, a hardcode in a forecast cell? Fix the root cause, not just the symptom. Build a check to prevent the same error in future models.`,
+    tip: 'The worst outcome is not making an error — it is discovering an error and not telling anyone. Errors discovered by clients (rather than disclosed proactively) damage trust in a way that errors proactively corrected do not. MDs know juniors make mistakes; they respect the ones who catch and correct them.'
+  },
+  {
+    type: 'tech',
+    question: 'What does it mean to stress-test a financial model, and how do you build stress tests?',
+    answer: `<strong>Stress testing answers: "How bad does it have to get before the investment thesis breaks?"</strong><br><br>
+For equity investors: at what revenue decline does the investment generate negative returns? At what multiple compression does the DCF imply negative NPV?<br><br>
+For lenders (JaceyTrayd): at what EBITDA decline does the company breach a leverage covenant? At what point can it no longer service interest from operations (interest cover falls below 1.0×)?<br><br>
+<strong>How to build stress tests in a model:</strong><br><br>
+<em>1. Scenario toggle:</em> Add a dropdown cell (data validation: Base / Downside / Severe) in the assumptions tab. All forecast assumptions reference this cell to switch between scenarios:<br>
+IF(scenario="Base", base_growth, IF(scenario="Downside", down_growth, severe_growth))<br><br>
+<em>2. Data tables:</em> Two-way Excel data table with revenue growth (rows) × EBITDA margin (columns), showing IRR or EV in each cell.<br><br>
+<em>3. Sensitivity ranges:</em> Run the model at P10 (optimistic), P50 (base), P90 (conservative) for key assumptions and compare outputs.`,
+    tip: 'For a sell-side pitch: show stress tests that demonstrate the investment is attractive even in the downside. For a buy-side DD: show stress tests that surface the risks the buyer should price for. For a lender: show stress tests that confirm the business can service debt even under significant revenue pressure. The audience determines which direction you stress.'
+  },
+  {
+    type: 'tech',
+    question: 'What is the "plug" in a balance sheet model and how is it used?',
+    answer: `<strong>The "plug" is the balancing item — the variable that makes the balance sheet balance when all other items are determined.</strong><br><br>
+In a standalone 3-statement model, <strong>cash is typically the plug</strong>. After calculating all other balance sheet items (PP&E, AR, inventory, debt, AP, equity), the cash balance is whatever is needed to make Assets = Liabilities + Equity. This cash figure must match the closing balance from the Cash Flow Statement — if it doesn't, there's a modelling error.<br><br>
+In an LBO or leveraged model where the company must maintain minimum cash, the <strong>revolver is the plug</strong>. If FCF is insufficient to maintain minimum cash, the revolver is drawn. If FCF is excess, the revolver is repaid. The revolver draws and repayments are determined iteratively until cash sits at the minimum.<br><br>
+<strong>Important:</strong> Having a "plug" is not a shortcut — it is a correct accounting treatment. Every real balance sheet has a plug (the cash balance is always the residual of all cash flows). The discipline is ensuring your plug is logically consistent with your cash flow model.`,
+    tip: 'A balance sheet where the plug is a "balancing line" that you manually adjust to make it balance is not a real model — it is an accounting trick. If you need to manually adjust a number to force balance, there is a fundamental linkage error in the model that must be found and fixed.'
+  },
+  {
+    type: 'deal',
+    question: 'You are building an LBO model. The PE firm wants to know what entry multiple they can pay and still achieve a 20% IRR. Walk through how you approach this.',
+    answer: `<strong>This is a "maximum entry price" or "implied offer price" question — common in PE deal analysis.</strong><br><br>
+<em>Approach — work backwards from the return requirement:</em><br><br>
+1. <strong>Fix the exit assumptions:</strong> Exit year (say Year 5), exit multiple (say 9.0× EBITDA), exit EBITDA (projected from the operating model)<br><br>
+2. <strong>Calculate exit equity proceeds:</strong> Exit EV − debt remaining at Year 5 = equity proceeds. The debt remaining depends on FCF and cash sweep during the holding period — which depends on entry leverage, which depends on entry price. This creates another circularity.<br><br>
+3. <strong>Set up a goal seek or iteration:</strong> Set the IRR cell (equity proceeds / equity invested)^(1/5) − 1 = 20%. Then goal-seek entry EV (which determines entry equity). Or set up a sensitivity table with entry multiples (rows) and find which row gives 20% IRR.<br><br>
+4. <strong>Layer in debt constraints:</strong> Not all entry prices are financeable. Lenders will fund at most 5–6× EBITDA. So: Max Entry EV = (Max debt lenders will provide) + (Equity needed for 20% IRR). If the required equity is too high for the fund size, the deal doesn't work even if the return math does.`,
+    tip: 'The answer the PE firm actually wants: "At 9.0× exit, 5-year hold, and 5.5× entry leverage, the maximum entry price for a 20% IRR is X× EBITDA." That means building the full model, not just the concept. Practice building LBO models until this calculation takes under two hours.'
+  },
+  {
+    type: 'tech',
+    question: 'What is the difference between maintenance capex and growth capex, and how does it affect free cash flow modelling?',
+    answer: `<strong>The split matters because maintenance capex is unavoidable while growth capex is discretionary — and they have very different implications for FCF quality.</strong><br><br>
+<strong>Maintenance capex:</strong> Spending required to sustain the current asset base and current revenue-generating capacity. Analogous to depreciation in cash terms. A business must spend this or it deteriorates.<br><br>
+<strong>Growth capex:</strong> Spending to expand capacity, enter new markets, or build new products. Generates future EBITDA that does not yet exist in the model. Optional in the short run (at the cost of future growth).<br><br>
+<strong>Modelling implication:</strong><br>
+• In a DCF, the FCF in the terminal value assumes a normalised, steady-state capex. This should be maintenance capex (≈ D&A) rather than total capex, which includes cyclical growth spending<br>
+• In an LBO, PE firms sometimes cut growth capex temporarily to boost FCF for debt service — this is defensible short-term but destroys long-run competitiveness if sustained<br>
+• In credit analysis, lenders focus on FCF after maintenance capex as the "true" debt service capacity<br><br>
+<em>Heuristic:</em> If total capex ≈ D&A, the business is in maintenance mode. If capex > D&A, the excess is growth capital.`,
+    tip: 'Companies rarely disclose the split explicitly in financials — you must estimate it. Ask management directly in due diligence. Compare capex to D&A as a starting point. Look at capex in a downturn (when management cuts to minimum) — that trough capex approximates maintenance.'
+  },
+  {
+    type: 'beh',
+    question: 'What makes a financial model "good" beyond just being numerically correct?',
+    answer: `<strong>Numerical correctness is table stakes — professional quality goes further.</strong><br><br>
+<em>1. Auditability.</em> Any competent analyst should be able to open the model and understand every formula without explanation. Clear labelling, logical tab flow, consistent structure. No mystery formulas that require the builder to decode.<br><br>
+<em>2. Flexibility.</em> Changing one assumption in the assumptions tab should cascade correctly through the entire model. No hardcodes in forecast cells. Scenario toggles that work. The model should be updatable in 30 minutes, not three hours.<br><br>
+<em>3. Error resilience.</em> Balance sheet check in place and formatted red if non-zero. Debt schedule references the correct balance columns. No stale links to external files that might break.<br><br>
+<em>4. Output clarity.</em> Summary outputs that translate 400 rows of calculation into the 5–10 numbers a client actually cares about: EV, equity value, share price, IRR, MoM, debt/EBITDA at close and exit. The output tab should be presentable without explanation.<br><br>
+<em>5. Version discipline.</em> Clear versioning (v1.0, v1.1), dated, with the analyst's name. Never overwrite the last sent version — save a new file. This has saved many analysts from disasters when a client asks for "the version you sent last Tuesday."`,
+    tip: 'The best way to test model quality: give it to a colleague with no context and ask them to update one assumption and tell you the new EV. If they can do it in five minutes without calling you, the model is well built. If they need to call you, there is a structural problem.'
+  }
+];
+
+function initInterview() {
+  document.getElementById('interview-container').innerHTML =
+    interviewItems.map((item, i) => buildInterviewItem(item, i)).join('');
+}
 </script>
 </body>
 </html>

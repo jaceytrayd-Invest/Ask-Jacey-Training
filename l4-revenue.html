@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L4.02 — Revenue Build & Forecasting | Ask Jacey</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="eco-hdr"></div><div id="hdr"></div>
+<div id="app"><div id="sb"></div><div id="content">
+<div class="breadcrumb">
+  <a href="index.html">Home</a><span class="sep">&#8250;</span>
+  <a href="level-4.html">Level 04</a><span class="sep">&#8250;</span>
+  <span class="current">L4.02 — Revenue Build & Forecasting</span>
+</div>
+<div class="lesson-page">
+<div class="deal-badge">&#128204; Level 04 &middot; Modelling &middot; L4.02 — Revenue Build & Forecasting</div>
+<p class="lesson-intro">Revenue is the foundation of every financial model. The quality of the entire analysis — valuation, credit, returns — depends on how well the revenue forecast is constructed and how defensible its assumptions are. There is no more important modelling decision than how you build the top line.</p>
+
+<h2>Two Fundamentally Different <em>Approaches</em></h2>
+<table class="lesson-table">
+<thead><tr><th></th><th>Top-Down</th><th>Bottom-Up</th></tr></thead>
+<tbody>
+<tr><td><strong>Method</strong></td><td>Start with market size; apply market share to get company revenue</td><td>Start with business unit drivers; build revenue from individual components</td></tr>
+<tr><td><strong>Formula</strong></td><td>TAM × Market Share %</td><td>Volume × Price, or Customers × ARPU, or Contracts × Value</td></tr>
+<tr><td><strong>Best for</strong></td><td>Early-stage; market context; pitch book overview</td><td>Established businesses; due diligence; lender analysis</td></tr>
+<tr><td><strong>Stress-testable</strong></td><td>Poorly — market share assumptions are difficult to link to business levers</td><td>Highly — each driver can be independently stressed</td></tr>
+<tr><td><strong>Management challenge</strong></td><td>Easy to be overly optimistic ("we only need 1% of a £10bn market")</td><td>Forces explicit assumptions about sales capacity, churn, pricing</td></tr>
+</tbody>
+</table>
+
+<h2>Common Revenue <em>Driver Frameworks</em></h2>
+<h3>Volume × Price (manufacturing, distribution, commodity)</h3>
+<div class="formula-block">Revenue = Units sold × Average selling price (ASP)
+
+Drivers to forecast separately:
+  Volume: capacity utilisation, market demand, new contracts, geographic expansion
+  ASP: pricing power, mix shift (premium vs. standard), inflation pass-through
+
+Example: Manufacturer sells 120,000 units at £85 ASP in Year 1
+  Volume growth: 8%/yr | Price increase: 3%/yr
+  Year 2: 129,600 units × £87.55 = £11.3m
+  Year 3: 139,968 units × £90.18 = £12.6m</div>
+
+<h3>Customers × ARPU (SaaS, subscription, telecoms)</h3>
+<div class="formula-block">Revenue = Customers × ARPU × Months
+
+Build customer count as a flow:
+  Opening customers
+  + New customer additions (new logos)
+  − Churned customers (churn rate × opening)
+  = Closing customers
+
+Average customers = (Opening + Closing) / 2  ← use for revenue calc
+Revenue = Average customers × monthly ARPU × 12
+
+Key assumptions:
+  Monthly new logo rate, annual churn %, ARPU, annual price increase %</div>
+
+<h3>Contract-Based (professional services, construction, defence)</h3>
+<div class="formula-block">Revenue = Σ (Contract value × % recognised in period)
+
+Steps:
+  1. List all signed contracts with total value and expected delivery schedule
+  2. For each contract, apply revenue recognition % per year
+  3. Add "pipeline" revenue: new contracts expected × win rate × average value × recognition schedule
+  4. Sum across all contracts to get total revenue
+
+Key risk: pipeline win rate assumption — stress test this heavily</div>
+
+<h3>Properties × Rent per sq ft (real estate, hospitality, retail chains)</h3>
+<div class="formula-block">Revenue = Number of properties × Average rent (or RevPAR) × Occupancy
+
+For a hotel group:
+  Revenue = Rooms available × Average occupancy % × Average daily rate (ADR)
+  RevPAR = ADR × Occupancy
+  Total Revenue = RevPAR × Available room nights</div>
+
+<div class="callout">
+<div class="c-label">The Most Important Revenue Modelling Discipline</div>
+<p><strong>Every material assumption must be tied to evidence.</strong> If you assume 15% revenue growth, you must be able to answer: where is this growth coming from? New customer acquisitions at a specific rate? Geographic expansion? A new product line? "Management told us" is not evidence — management is biased toward optimism. Cross-reference against industry growth rates, historical company performance, and comparable company growth trajectories.</p>
+</div>
+
+<div class="mistake-box">
+<div class="m-label">The Revenue Modelling Mistakes That Kill Credibility</div>
+<p><strong>"Hockey stick" forecasts with no operational justification.</strong> Revenue flat for 3 years then suddenly growing 25% per year — what changed? If you cannot explain the specific operational driver for the inflection point, the model is not credible.<br><br>
+<strong>Ignoring churn in subscription models.</strong> A subscription business that adds 100 new customers per month but loses 80 through churn is barely growing — not growing at 100/month. Model new additions and churn separately; never model net growth as an assumption without decomposing it.<br><br>
+<strong>Applying a constant growth rate without seasonality or cycle adjustment.</strong> Many businesses are seasonal or cyclical. Applying a smooth annual growth rate produces unrealistic quarterly patterns that immediately reveal the model as unsophisticated.</p>
+</div>
+
+<div class="lender-box">
+<div class="l-label">&#128273; Lender's Perspective — JaceyTrayd</div>
+<p>We build our own independent revenue model for every credit — we do not accept the borrower's management case. Our approach: take the last three years of actuals, identify the primary revenue drivers, forecast each driver separately under base and downside scenarios, and stress the downside to −25% from our base. Our debt sizing is based on the revenue the business generates in the downside scenario — we lend against downside FCF, not upside potential.</p>
+</div>
+
+<div class="page-nav">
+  <a href="l4-model-structure.html" class="btn btn-ghost">&larr; Previous</a>
+  <div class="pn-context">Level <span>04</span> &middot; Financial Modelling</div>
+  <a href="l4-three-statement.html" class="btn btn-gold">Next &rarr;</a>
+</div>
+</div>
+</div></div>
+<script src="shared.js"></script>
+<script>
+document.getElementById('eco-hdr').outerHTML=buildEcoHeader();
+document.getElementById('hdr').outerHTML=buildHeader();
+document.getElementById('sb').outerHTML=buildSidebar(4);
+</script>
+</body></html>

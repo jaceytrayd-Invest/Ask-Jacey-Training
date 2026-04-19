@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L4.03 — The 3-Statement Model | Ask Jacey</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="eco-hdr"></div><div id="hdr"></div>
+<div id="app"><div id="sb"></div><div id="content">
+<div class="breadcrumb">
+  <a href="index.html">Home</a><span class="sep">&#8250;</span>
+  <a href="level-4.html">Level 04</a><span class="sep">&#8250;</span>
+  <span class="current">L4.03 — The 3-Statement Model</span>
+</div>
+<div class="lesson-page">
+<div class="deal-badge">&#128204; Level 04 &middot; Modelling &middot; L4.03 — The 3-Statement Model</div>
+<p class="lesson-intro">The 3-statement model is the skeleton of every financial analysis in IB. Master it completely. Every error in a more complex model (LBO, DCF, merger model) can be traced back to a broken linkage in the underlying three statements.</p>
+
+<h2>The Build <em>Sequence</em></h2>
+<p>Always build in this order. Out-of-sequence building creates dependencies that are impossible to resolve cleanly.</p>
+<div class="formula-block">1. Historical data input (3+ years of actuals)
+2. Income Statement forecast (formulas from assumptions tab)
+3. Debt Schedule (calculates interest; creates circularity)
+4. Cash Flow Statement (starts with Net Income from IS)
+5. Balance Sheet (rolls forward using IS, CFS, and debt schedule)
+6. Balance check (Assets = Liabilities + Equity, every year)</div>
+
+<h2>Income Statement <em>Build</em></h2>
+<div class="formula-block">Revenue                          ← assumptions tab (growth rate × prior year)
+− COGS                           ← assumptions tab (1 − gross margin %)
+= Gross Profit
+− SG&A                           ← assumptions tab (% of revenue or fixed growth)
+− R&D                            ← assumptions tab (% of revenue)
+= EBITDA
+− Depreciation & Amortisation   ← from PP&E roll-forward or assumptions
+= EBIT (Operating Profit)
+− Interest Expense               ← from debt schedule
++ Interest Income                ← cash balance × interest rate on cash
+= EBT (Pre-tax Profit)
+− Income Tax                     ← EBT × effective tax rate
+= Net Income</div>
+
+<h2>Cash Flow Statement <em>Build</em> — Indirect Method</h2>
+<div class="formula-block">OPERATING ACTIVITIES:
+  Net Income                     ← direct link from IS
+  + Depreciation & Amortisation  ← same D&A as IS (non-cash add-back)
+  − Increase in AR               ← -(AR_end - AR_start)  [if AR↑, cash↓]
+  − Increase in Inventory        ← -(Inv_end - Inv_start)
+  + Increase in AP               ← (AP_end - AP_start)   [if AP↑, cash↑]
+  + Increase in Accrued Liabs    ← (AccL_end - AccL_start)
+  = Cash Flow from Operations (CFO)
+
+INVESTING ACTIVITIES:
+  − Capital Expenditure          ← assumptions tab (% of revenue or fixed)
+  ± Acquisitions / Disposals     ← deal-specific
+  = Cash Flow from Investing (CFI)
+
+FINANCING ACTIVITIES:
+  ± Debt raised / repaid         ← from debt schedule
+  − Dividends paid               ← assumptions tab (payout ratio × NI)
+  ± Equity issued / bought back  ← deal-specific
+  = Cash Flow from Financing (CFF)
+
+NET CHANGE IN CASH = CFO + CFI + CFF
+CLOSING CASH = Opening Cash + Net Change</div>
+
+<h2>Balance Sheet <em>Roll-Forwards</em></h2>
+<div class="formula-block">ASSETS:
+  Cash              = Prior cash + Net change in cash (CFS bottom line)
+  AR                = Revenue × DSO / 365
+  Inventory         = COGS × DIO / 365
+  PP&E (net)        = Prior PP&E + Capex − D&A
+  Goodwill          = Prior goodwill − impairments (or fixed)
+  Other assets      = prior year or formula-driven
+
+LIABILITIES:
+  AP                = COGS × DPO / 365
+  Accrued liabs     = Revenue or OpEx × accrual days / 365
+  Short-term debt   = Current portion from debt schedule
+  Long-term debt    = Debt schedule closing balances
+
+EQUITY:
+  Share capital     = Prior + new equity issuance
+  Retained earnings = Prior RE + Net Income − Dividends
+  Other reserves    = Prior + other comprehensive income
+
+BALANCE CHECK: Assets − (Liabilities + Equity) = 0 (must be zero)</div>
+
+<div class="callout">
+<div class="c-label">The Retained Earnings Link — The Most Missed Connection</div>
+<p>Retained Earnings is where the income statement permanently joins the balance sheet. <strong>RE (end) = RE (start) + Net Income − Dividends.</strong> Every year's net income adds to equity through this mechanism. If your RE roll-forward is wrong, every equity figure in the model is wrong, the balance sheet won't balance, and your equity-level valuation metrics are incorrect. Double-check this link is formula-driven and references net income directly from the IS.</p>
+</div>
+
+<div class="bank-box">
+<div class="b-label">In a Real Bank</div>
+<p>Building a standalone 3-statement model for a new company from scratch (pulling and inputting historical data, setting up all linkages, building the debt schedule, writing the formulas) typically takes a junior analyst 4–8 hours for a company they know well, and up to 2 days for a complex corporate with multiple segments and non-standard balance sheet items. Speed comes with repetition — most experienced analysts can build a clean model in 3–4 hours. Practice until this is automatic.</p>
+</div>
+
+<div class="page-nav">
+  <a href="l4-revenue.html" class="btn btn-ghost">&larr; Previous</a>
+  <div class="pn-context">Level <span>04</span> &middot; Financial Modelling</div>
+  <a href="l4-debt-schedule.html" class="btn btn-gold">Next &rarr;</a>
+</div>
+</div>
+</div></div>
+<script src="shared.js"></script>
+<script>
+document.getElementById('eco-hdr').outerHTML=buildEcoHeader();
+document.getElementById('hdr').outerHTML=buildHeader();
+document.getElementById('sb').outerHTML=buildSidebar(4);
+</script>
+</body></html>

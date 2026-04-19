@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L4.07 — Model Audit & Error-Checking | Ask Jacey</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="eco-hdr"></div><div id="hdr"></div>
+<div id="app"><div id="sb"></div><div id="content">
+<div class="breadcrumb">
+  <a href="index.html">Home</a><span class="sep">&#8250;</span>
+  <a href="level-4.html">Level 04</a><span class="sep">&#8250;</span>
+  <span class="current">L4.07 — Model Audit & Error-Checking</span>
+</div>
+<div class="lesson-page">
+<div class="deal-badge">&#128204; Level 04 &middot; Modelling &middot; L4.07 — Model Audit & Error-Checking</div>
+<p class="lesson-intro">Every financial model contains errors — the difference between good and bad analysts is whether those errors are found before the model reaches a client. Model auditing is a systematic discipline, not a casual review. Apply it every time, without exception.</p>
+
+<h2>The Model Audit <em>Checklist</em></h2>
+<p>Run these checks in order every time you complete or update a model before sending:</p>
+<table class="lesson-table">
+<thead><tr><th>#</th><th>Check</th><th>What you're looking for</th><th>How to check</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Balance sheet balances</td><td>CHECK row = 0 in every period (every year)</td><td>Visual scan of CHECK row; should all show 0 or empty if no formula errors</td></tr>
+<tr><td>2</td><td>Retained earnings roll</td><td>RE (end) = RE (start) + Net Income − Dividends</td><td>Trace the RE formula to IS net income and assumption tab dividend</td></tr>
+<tr><td>3</td><td>Cash ties to CFS</td><td>BS cash change = CFS net change in cash</td><td>Add a check: BS cash end − BS cash start = CFS net change; should be zero</td></tr>
+<tr><td>4</td><td>No hardcodes in forecast</td><td>Blue cells only in assumptions tab; black formulas in IS/BS/CFS</td><td>Select all forecast cells; press Ctrl+~ to show formulas; scan for numbers</td></tr>
+<tr><td>5</td><td>Sign convention consistent</td><td>Capex negative in CFS throughout; interest positive in IS throughout</td><td>Scan the CFS and IS for sign reversals</td></tr>
+<tr><td>6</td><td>Debt schedule ties to BS</td><td>Debt schedule closing balance = BS debt balance (every tranche)</td><td>Add check rows below debt schedule: = debt schedule close − BS debt</td></tr>
+<tr><td>7</td><td>Interest calculated correctly</td><td>Interest = debt balance × rate (not a hardcoded figure)</td><td>Trace the interest expense cell in IS back to debt schedule</td></tr>
+<tr><td>8</td><td>WC drivers consistent</td><td>AR uses Revenue driver; AP and Inventory use COGS</td><td>Trace AR, AP, Inventory formulas to confirm revenue/COGS references</td></tr>
+<tr><td>9</td><td>Historical data matches source</td><td>All historical figures match company filings</td><td>Cross-reference against the annual report — at minimum Revenue, EBITDA, Net Debt</td></tr>
+<tr><td>10</td><td>Output summary matches model</td><td>The summary valuation page pulls correctly from the model</td><td>Trace each output metric back to its source formula</td></tr>
+</tbody>
+</table>
+
+<h2>Common Error <em>Patterns</em></h2>
+<p><strong>Off-by-one-period errors.</strong> The most common modelling error. Year 3 balance sheet references Year 3 cash flow instead of Year 2 (prior period). The formula is correct conceptually but references the wrong column. Always check that opening balance = prior year closing balance — use Ctrl+[ to trace precedents.</p>
+<p><strong>SUM range doesn't extend to new rows.</strong> You add a new debt tranche or a new P&L line — but the SUM formula above it doesn't include the new row. The model looks correct but is missing a line. Audit all SUM formulas to confirm their ranges are comprehensive.</p>
+<p><strong>Linking to an old version of the model.</strong> A formula in the Output tab links to a cell in the Assumptions tab that was moved when the model was restructured. The formula now points to an empty or wrong cell. All cross-tab references should be checked when the model structure changes.</p>
+
+<div class="callout">
+<div class="c-label">Ctrl+[ and Ctrl+] — Your Debugging Tools</div>
+<p><strong>Ctrl+[</strong> (trace precedents): shows which cells feed into the selected cell. Use this to verify that a formula is pointing to the right source.<br><br>
+<strong>Ctrl+]</strong> (trace dependents): shows which cells use the selected cell as an input. Use this to verify that a change in an assumption cascades to all the right places — and nowhere unexpected.<br><br>
+These two shortcuts, combined with Ctrl+~ (toggle formula display), are the three most important Excel keyboard shortcuts for model auditing.</p>
+</div>
+
+<div class="mistake-box">
+<div class="m-label">The Error That Reaches Clients</div>
+<p>The model error that most often survives to reach a client is one where the model balance check passes (balance sheet = 0) but a formula elsewhere produces a wrong number that happens to be internally consistent. Example: the debt schedule correctly reduces debt by £10m due to a sweep — but the sweep formula is wrong and should have been £15m. The balance sheet still balances (cash is £5m lower than it should be, debt is £5m higher), but the equity value is wrong. The only protection: also check that specific outputs (EV, equity value, debt level) make intuitive sense in the context of the deal.</p>
+</div>
+
+<div class="bank-box">
+<div class="b-label">In a Real Bank</div>
+<p>Before any model goes to an MD or to a client, many banks require a "model sign-off" from a senior associate or junior vice president who did not build the model — a fresh pair of eyes. This person runs through the standard audit checklist and flags any issues. The builder fixes them. This separation of duties is a simple control that catches the vast majority of errors before they reach the market. In your career, be the analyst who proactively asks for a model review — not the one who gets called at midnight because a client spotted an error.</p>
+</div>
+
+<div class="page-nav">
+  <a href="l4-scenarios.html" class="btn btn-ghost">&larr; Previous</a>
+  <div class="pn-context">Level <span>04</span> &middot; Financial Modelling</div>
+  <a href="level-5.html" class="btn btn-gold">Next &rarr;</a>
+</div>
+</div>
+</div></div>
+<script src="shared.js"></script>
+<script>
+document.getElementById('eco-hdr').outerHTML=buildEcoHeader();
+document.getElementById('hdr').outerHTML=buildHeader();
+document.getElementById('sb').outerHTML=buildSidebar(4);
+</script>
+</body></html>

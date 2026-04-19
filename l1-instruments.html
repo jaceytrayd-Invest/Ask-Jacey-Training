@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L1.02 — Financial Instruments — Equity, Debt & Derivatives | Ask Jacey</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="eco-hdr"></div><div id="hdr"></div>
+<div id="app"><div id="sb"></div><div id="content">
+<div class="breadcrumb">
+  <a href="index.html">Home</a><span class="sep">&#8250;</span>
+  <a href="level-1.html">Level 01 — Foundations</a><span class="sep">&#8250;</span>
+  <span class="current">L1.02 — Financial Instruments — Equity, Debt & Derivatives</span>
+</div>
+<div class="lesson-page">
+<div class="deal-badge">&#128204; Level 01 — Foundations &middot; L1.02 — Financial Instruments — Equity, Debt & Derivatives</div>
+<p class="lesson-intro">Every transaction in IB involves one or more financial instruments. Before you can value them, structure them, or advise on them, you need to understand what each instrument is, how it is priced, and what claim it gives its holder.</p>
+
+<h2>Equity Instruments</h2>
+<table class="lesson-table">
+<thead><tr><th>Instrument</th><th>Key features</th><th>Pricing</th><th>IB relevance</th></tr></thead>
+<tbody>
+<tr><td><strong>Common stock</strong></td><td>Residual claim; unlimited upside; voting rights; last in liquidation</td><td>P/E, EV/EBITDA multiples; DCF equity value / shares</td><td>ECM: IPOs, follow-ons, block trades</td></tr>
+<tr><td><strong>Preferred stock</strong></td><td>Priority over common for dividends and liquidation; fixed dividend; limited/no voting</td><td>Yield-based; treated as quasi-debt in capital structure</td><td>PE deal structures; convertible deals; venture</td></tr>
+<tr><td><strong>Warrants</strong></td><td>Right to buy shares at a fixed strike price in the future</td><td>Black-Scholes (option pricing model)</td><td>HY bonds; mezzanine debt packages</td></tr>
+</tbody>
+</table>
+
+<h2>Debt Instruments</h2>
+<table class="lesson-table">
+<thead><tr><th>Instrument</th><th>Key features</th><th>Pricing</th><th>IB relevance</th></tr></thead>
+<tbody>
+<tr><td><strong>Investment grade bonds</strong></td><td>Fixed coupon; priority claim; rated BBB-/Baa3+; bullet maturity</td><td>Yield spread over government benchmark (e.g., Gilts + 120bps)</td><td>DCM — large corporate issuances</td></tr>
+<tr><td><strong>High yield bonds</strong></td><td>Sub-IG rated; higher coupon; often callable; covenant-lite</td><td>Absolute yield (e.g., 9.5%)</td><td>Leveraged finance — LBO financing</td></tr>
+<tr><td><strong>Leveraged loans</strong></td><td>Floating rate (SOFR+); syndicated; term loans (TLA/TLB); revolving credit</td><td>SOFR + spread (e.g., SOFR + 450bps)</td><td>Core LBO financing instrument</td></tr>
+<tr><td><strong>Convertible bonds</strong></td><td>Bond with option to convert to equity; lower coupon than straight debt</td><td>Bond value + option value (hybrid pricing)</td><td>ECM product; growth company financing</td></tr>
+<tr><td><strong>Mezzanine / PIK</strong></td><td>Subordinated; payment-in-kind interest option; often with equity kicker</td><td>High yield; 13–18%; IRR-based for PE</td><td>LBO capital stacks; bridge financing</td></tr>
+</tbody>
+</table>
+
+<h2>Derivatives</h2>
+<p>Derivatives are instruments whose value derives from an underlying asset. They are used for hedging (reducing risk) and speculation (taking risk).</p>
+<table class="lesson-table">
+<thead><tr><th>Instrument</th><th>What it is</th><th>IB use</th></tr></thead>
+<tbody>
+<tr><td><strong>Options (calls/puts)</strong></td><td>Right (not obligation) to buy/sell at a strike price</td><td>Employee stock options; M&amp;A deal protection; convertible bonds</td></tr>
+<tr><td><strong>Futures/Forwards</strong></td><td>Obligation to buy/sell at a fixed price on a future date</td><td>FX hedging for cross-border deals; commodity price exposure</td></tr>
+<tr><td><strong>Interest Rate Swaps</strong></td><td>Exchange fixed for floating interest payments (or vice versa)</td><td>Converting floating-rate loans to fixed for budgeting certainty</td></tr>
+<tr><td><strong>CDS (Credit Default Swap)</strong></td><td>Insurance against a borrower defaulting on their debt</td><td>Hedge fund credit trading; bank balance sheet management</td></tr>
+</tbody>
+</table>
+<div class="callout">
+<div class="c-label">In IB — When Each Instrument Appears</div>
+<p>In an M&amp;A deal: the target's shares (equity) are acquired; the acquirer may issue new shares (equity) or raise debt (bonds or loans) to fund the purchase. In an LBO: the PE firm uses a mix of equity and debt (leveraged loans + high yield bonds) to acquire the target. In an IPO: the company creates and sells new common stock in the primary market. Knowing which instrument is used and why is the context for every transaction you will work on.</p>
+</div>
+
+<div class="page-nav">
+  <a href="l1-markets.html" class="btn btn-ghost">&larr; Previous</a>
+  <div class="pn-context">Level 01 — Foundations &middot; L1.02 — Financial Instruments — Equity, Debt & Derivatives</div>
+  <a href="l1-capital-structure.html" class="btn btn-gold">Next &rarr;</a>
+</div>
+</div>
+</div></div>
+<script src="shared.js"></script>
+<script>
+document.getElementById('eco-hdr').outerHTML=buildEcoHeader();
+document.getElementById('hdr').outerHTML=buildHeader();
+document.getElementById('sb').outerHTML=buildSidebar(1);
+</script>
+</body></html>

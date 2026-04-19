@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L1.04 — Time Value of Money | Ask Jacey</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="eco-hdr"></div><div id="hdr"></div>
+<div id="app"><div id="sb"></div><div id="content">
+<div class="breadcrumb">
+  <a href="index.html">Home</a><span class="sep">&#8250;</span>
+  <a href="level-1.html">Level 01 — Foundations</a><span class="sep">&#8250;</span>
+  <span class="current">L1.04 — Time Value of Money</span>
+</div>
+<div class="lesson-page">
+<div class="deal-badge">&#128204; Level 01 — Foundations &middot; L1.04 — Time Value of Money</div>
+<p class="lesson-intro">Time value of money is the mathematical foundation of all valuation in finance. A pound today is worth more than a pound tomorrow — because today's pound can be invested to earn a return. Every DCF, every bond price, every IRR calculation rests on this principle.</p>
+
+<h2>The Core <em>Formulas</em></h2>
+<div class="formula-block">FUTURE VALUE:   FV = PV × (1 + r)^n
+PRESENT VALUE:  PV = FV / (1 + r)^n
+
+Where:
+  PV = Present Value (what it is worth today)
+  FV = Future Value (what it will be worth in the future)
+  r  = Discount / interest rate per period
+  n  = Number of periods
+
+Example:
+  £1,000 invested today at 8% for 5 years:
+  FV = £1,000 × (1.08)^5 = £1,000 × 1.469 = £1,469
+
+  What is £1,469 received in 5 years worth today at 8%?
+  PV = £1,469 / (1.08)^5 = £1,469 / 1.469 = £1,000 ✓</div>
+
+<h2>Net Present Value (NPV)</h2>
+<div class="formula-block">NPV = Σ [CFt / (1+r)^t] - Initial Investment
+
+Decision rule:
+  NPV > 0 → Investment creates value → Accept
+  NPV < 0 → Investment destroys value → Reject
+  NPV = 0 → Investment earns exactly the required return
+
+Example:
+  Invest £500 today, receive £200/yr for 3 years, r = 10%:
+  PV of CFs = £200/1.1 + £200/1.21 + £200/1.331
+            = £181.8 + £165.3 + £150.3 = £497.4
+  NPV = £497.4 - £500 = -£2.6 (negative → reject at 10% hurdle)</div>
+
+<h2>Internal Rate of Return (IRR)</h2>
+<p>The IRR is the discount rate that makes NPV = 0. It represents the annualised return on an investment. In PE: investments are targeted to generate 20–25%+ IRR. In corporate finance: if IRR exceeds WACC, the project creates value.</p>
+<div class="formula-block">Solve for r where:
+  Σ [CFt / (1+r)^t] = Initial Investment
+
+Quick approximation for PE:
+  MoM = Exit Proceeds / Equity Invested
+  IRR ≈ MoM^(1/years) - 1
+
+Example: 3.0x MoM in 5 years:
+  IRR ≈ (3.0)^(0.2) - 1 = 1.246 - 1 = 24.6%</div>
+
+<h2>Annuities and <em>Perpetuities</em></h2>
+<div class="formula-block">Perpetuity (constant cash flow forever):
+  PV = C / r
+
+Growing Perpetuity (DCF Terminal Value — Gordon Growth):
+  PV = C × (1+g) / (r - g)   [requires r > g]
+
+Annuity (fixed payments for n periods):
+  PV = C × [1 - 1/(1+r)^n] / r</div>
+
+<div class="callout">
+<div class="c-label">TVM in Every IB Context</div>
+<p>Bond pricing: PV of all coupon payments (annuity) + PV of face value (lump sum) discounted at yield to maturity.<br>DCF valuation: PV of explicit FCFs + PV of terminal value (growing perpetuity) discounted at WACC.<br>LBO returns: IRR calculation from equity invested to equity proceeds at exit.<br>Every one of these is a direct application of the PV formula — just applied to different cash flow streams.</p>
+</div>
+
+<div class="page-nav">
+  <a href="l1-capital-structure.html" class="btn btn-ghost">&larr; Previous</a>
+  <div class="pn-context">Level 01 — Foundations &middot; L1.04 — Time Value of Money</div>
+  <a href="l1-risk-return.html" class="btn btn-gold">Next &rarr;</a>
+</div>
+</div>
+</div></div>
+<script src="shared.js"></script>
+<script>
+document.getElementById('eco-hdr').outerHTML=buildEcoHeader();
+document.getElementById('hdr').outerHTML=buildHeader();
+document.getElementById('sb').outerHTML=buildSidebar(1);
+</script>
+</body></html>
