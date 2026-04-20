@@ -3,15 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Coming Soon | Ask Jacey IB Masterclass</title>
+<title>Level 7 — Derivatives | Ask Jacey IB Masterclass</title>
 <link rel="stylesheet" href="style.css">
-<style>
-.coming-wrap{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:60vh;text-align:center;padding:3rem 2rem}
-.coming-num{font-family:var(--serif);font-size:8rem;font-weight:700;color:rgba(201,168,76,0.08);line-height:1;margin-bottom:1rem}
-.coming-wrap h2{font-family:var(--serif);font-size:2rem;font-weight:300;color:var(--white);margin-bottom:0.8rem}
-.coming-wrap h2 em{color:var(--gold-light);font-style:italic}
-.coming-wrap p{font-family:var(--slab);font-size:0.84rem;color:var(--ash);line-height:1.75;max-width:440px;margin-bottom:1.5rem}
-</style>
 </head>
 <body>
 <div id="eco-hdr"></div>
@@ -19,28 +12,729 @@
 <div id="app">
 <div id="sb"></div>
 <div id="content">
-<div class="breadcrumb"><a href="index.html">Home</a><span class="sep">›</span><span class="current" id="bc-title">Level — Coming Soon</span></div>
-<div class="coming-wrap">
-<div class="coming-num" id="cn-num">—</div>
-<h2 id="cn-title">Coming <em>Soon</em></h2>
-<p>This level is in the build queue. Complete Levels 00 and 01 first — the foundations carry through every module above.</p>
-<div style="display:flex;gap:0.8rem;flex-wrap:wrap;justify-content:center">
-<a href="level-1.html" class="btn btn-gold">← Back to Level 01</a>
-<a href="index.html" class="btn btn-outline">Home</a>
+
+<div class="breadcrumb">
+  <a href="index.html">Home</a><span class="sep">›</span>
+  <a href="level-6.html">Level 06</a><span class="sep">›</span>
+  <span class="current">Level 07 — Derivatives &amp; Structuring</span>
 </div>
+
+<div class="level-banner" data-level-num="7">
+  <div class="level-tag">Level 07 · Derivatives &amp; Structuring</div>
+  <h1>Derivatives — <em>Intuition Before</em> Mathematics</h1>
+  <p>Derivatives are instruments whose value derives from an underlying asset. They exist to transfer risk — from those who cannot bear it to those who will, for a price. This level builds intuition for options, futures, swaps, and structured instruments, and shows how they appear in real IB and lending contexts.</p>
+  <div class="level-meta">
+    <span><i>📚</i> 6 Lessons</span>
+    <span><i>🧪</i> 15 Quiz Questions</span>
+    <span><i>⚙</i> 4 Solvers</span>
+    <span><i>🎯</i> 12 Interview Q&A</span>
+    <span><i>⏱</i> ~2.5 hrs</span>
+  </div>
 </div>
+
+<div class="hub-tabs">
+  <button class="hub-tab active" onclick="switchTab('learn')">📘 Learn</button>
+  <button class="hub-tab" onclick="switchTab('practice')">🧪 Practice</button>
+  <button class="hub-tab" onclick="switchTab('solver')">⚙ Problem Solver</button>
+  <button class="hub-tab" onclick="switchTab('interview')">🎯 Interview Prep</button>
+</div>
+
+<!-- ═══ LEARN ═══ -->
+<div class="tab-panel active" id="tab-learn">
+  <div class="sec-head"><h2>Lessons — <em>Derivatives &amp; Structuring</em></h2><div class="sec-line"></div></div>
+  <div class="lesson-grid">
+    <a href="l7-intro.html" class="lesson-card">
+      <div class="lc-num">L7.01</div>
+      <div class="lc-title">Derivatives — Purpose &amp; Taxonomy</div>
+      <div class="lc-desc">Why derivatives exist, who uses them and why, and the four families: forwards, futures, options, and swaps. The risk transfer logic that unifies them all.</div>
+      <div class="lc-meta"><span class="lc-tag core">Core</span><span class="lc-tag int">~10 min</span></div>
+    </a>
+    <a href="l7-options.html" class="lesson-card">
+      <div class="lc-num">L7.02</div>
+      <div class="lc-title">Options — Calls, Puts &amp; Payoff Profiles</div>
+      <div class="lc-desc">The right but not the obligation. Strike price, premium, intrinsic value, time value, moneyness — and the four basic payoff diagrams every analyst must know.</div>
+      <div class="lc-meta"><span class="lc-tag core">Core</span><span class="lc-tag int">~14 min</span></div>
+    </a>
+    <a href="l7-futures-forwards.html" class="lesson-card">
+      <div class="lc-num">L7.03</div>
+      <div class="lc-title">Futures &amp; Forwards</div>
+      <div class="lc-desc">The obligation to transact at a fixed future price. How forwards and futures differ, how they are used for hedging currency and commodity exposure in deals, and basis risk.</div>
+      <div class="lc-meta"><span class="lc-tag core">Core</span><span class="lc-tag int">~10 min</span></div>
+    </a>
+    <a href="l7-swaps.html" class="lesson-card">
+      <div class="lc-num">L7.04</div>
+      <div class="lc-title">Interest Rate &amp; Currency Swaps</div>
+      <div class="lc-desc">The most widely used derivative in corporate finance. Fixed-for-floating swaps, cross-currency swaps, how they are used to manage balance sheet risk — and how they appear in LBO structures.</div>
+      <div class="lc-meta"><span class="lc-tag adv">Advanced</span><span class="lc-tag int">~12 min</span></div>
+    </a>
+    <a href="l7-hedging.html" class="lesson-card">
+      <div class="lc-num">L7.05</div>
+      <div class="lc-title">Hedging Strategies in Deal Context</div>
+      <div class="lc-desc">How companies hedge FX risk in cross-border M&A, interest rate risk on floating debt, commodity price exposure, and equity risk in compensation schemes.</div>
+      <div class="lc-meta"><span class="lc-tag adv">Advanced</span><span class="lc-tag int">~12 min</span></div>
+    </a>
+    <a href="l7-structured.html" class="lesson-card">
+      <div class="lc-num">L7.06</div>
+      <div class="lc-title">Structured Products &amp; Convertibles</div>
+      <div class="lc-desc">How derivatives are embedded into conventional instruments — convertible bonds, contingent value rights, warrants, collar structures, and CPPI. The structuring logic behind each.</div>
+      <div class="lc-meta"><span class="lc-tag adv">Advanced</span><span class="lc-tag int">~12 min</span></div>
+    </a>
+  </div>
+
+  <!-- FEATURED LESSON: OPTIONS -->
+  <div class="sec-head" style="margin-top:2rem">
+    <h2>Featured Lesson — <em>Options: Calls, Puts &amp; Payoff Profiles</em></h2><div class="sec-line"></div>
+  </div>
+  <div class="lesson-page" style="padding:0;max-width:none">
+    <div class="deal-badge">📍 Derivatives · Options · L7.02</div>
+    <p class="lesson-intro">Options are the most versatile derivative. Unlike forwards and futures — which create obligations — an option gives the holder a right without an obligation. This asymmetry is what makes options uniquely powerful: the buyer's downside is capped at the premium paid, while the upside is theoretically unlimited.</p>
+
+    <h2>The Two <em>Basic Options</em></h2>
+    <table class="lesson-table">
+      <thead><tr><th></th><th>Call Option</th><th>Put Option</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Right to</strong></td><td>Buy the underlying at the strike price</td><td>Sell the underlying at the strike price</td></tr>
+        <tr><td><strong>Profitable when</strong></td><td>Underlying price rises above strike + premium</td><td>Underlying price falls below strike − premium</td></tr>
+        <tr><td><strong>Buyer's view</strong></td><td>Bullish — expects price to rise</td><td>Bearish — expects price to fall</td></tr>
+        <tr><td><strong>Buyer's max loss</strong></td><td>Premium paid (if option expires worthless)</td><td>Premium paid (if option expires worthless)</td></tr>
+        <tr><td><strong>Buyer's max gain</strong></td><td>Unlimited (as underlying rises)</td><td>Strike price − Premium (if underlying goes to zero)</td></tr>
+        <tr><td><strong>Seller's max gain</strong></td><td>Premium received</td><td>Premium received</td></tr>
+        <tr><td><strong>Seller's max loss</strong></td><td>Unlimited (as underlying rises)</td><td>Strike price − Premium (if underlying goes to zero)</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Key <em>Option Terms</em></h2>
+    <div class="formula-block">Strike price (K):    The agreed price at which the underlying can be bought/sold
+Spot price (S):      Current market price of the underlying
+Premium (P):         Price paid for the option — the option's market value
+Expiry (T):          Date on which the option expires — exercise or lapse
+Exercise style:
+  European:          Can only be exercised at expiry date
+  American:          Can be exercised any time up to and including expiry
+
+Moneyness:
+  In the money (ITM):     Call: S > K  |  Put: S < K  (has intrinsic value)
+  At the money (ATM):     Call/Put: S ≈ K  (intrinsic value ≈ zero)
+  Out of the money (OTM): Call: S < K  |  Put: S > K  (no intrinsic value)
+
+Option value = Intrinsic Value + Time Value
+  Intrinsic value: max(S − K, 0) for a call; max(K − S, 0) for a put
+  Time value:      reflects probability that option becomes ITM before expiry</div>
+
+    <h2>The Four <em>Payoff Diagrams</em></h2>
+    <p>Every option position has a payoff diagram — showing profit or loss at expiry for different prices of the underlying. These four are the building blocks from which all complex derivatives strategies are constructed.</p>
+    <div class="formula-block">1. LONG CALL (bought a call):
+   Profit
+     |           /
+     |          /
+   --+----------/---------- Underlying price
+     |         /
+  -P |________/ 
+   (loss = premium P up to strike K; profit above K+P)
+   Break-even: S = K + P
+
+2. LONG PUT (bought a put):
+   Profit
+     |  \
+     |   \
+   --+----\--------------- Underlying price
+     |     \
+  -P |      \______________
+   Break-even: S = K - P
+
+3. SHORT CALL (sold a call):
+   Profit
+  +P |__________
+     |          \
+   --+-----------\-------- Underlying price
+     |            \
+     |             \
+   (profit = premium; loss unlimited above K+P)
+
+4. SHORT PUT (sold a put):
+   Profit
+  +P |             _______
+     |            /
+   --+___________/--------- Underlying price
+     |
+   (profit = premium; loss up to K-P if underlying falls to zero)</div>
+
+    <div class="callout">
+      <div class="c-label">Options in IB — Where They Actually Appear</div>
+      <p><strong>Convertible bonds:</strong> A bond with an embedded call option on the issuer's equity. The bondholder has the right (not obligation) to convert to shares at the conversion price.<br><br>
+      <strong>Employee stock options (ESOs):</strong> Call options granted to employees at a strike equal to the share price at grant date. The employee profits only if the stock rises — aligning incentives.<br><br>
+      <strong>M&A deal protection:</strong> Option-like structures in deal agreements — break fees, reverse break fees, lockup agreements. A break fee paid if the deal fails is economically like a put option on the deal proceeding.<br><br>
+      <strong>Caps, floors, collars on interest rates:</strong> An interest rate cap is a call option on interest rates — the borrower pays a premium to cap their floating rate exposure at a ceiling level.</p>
+    </div>
+
+    <div class="mistake-box">
+      <div class="m-label">The Most Common Options Misconception</div>
+      <p>Many students confuse the option's intrinsic value with its total value. <strong>An option always has some time value as long as time remains before expiry — even if it is out of the money.</strong> A call with S = £18 and K = £20 (OTM) has zero intrinsic value today, but still has positive time value because there is a chance S rises above £20 before expiry. As expiry approaches, time value decays to zero (theta decay) — and on expiry day, option value equals intrinsic value only.</p>
+    </div>
+
+    <div class="bank-box">
+      <div class="b-label">In a Real Bank</div>
+      <p>IBD analysts rarely price options directly — that is the domain of the derivatives desk. But IBD professionals must understand options conceptually because they appear constantly: in convertible bond analysis (the embedded call option value drives the lower coupon), in M&A structuring (collar agreements, CVRs, contingent consideration), in equity compensation (option expensing under IFRS 2), and in financing structures (interest rate caps and floors on leveraged loans). The question is never "can you price Black-Scholes" — it is "do you understand what the option is doing in this structure and why."</p>
+    </div>
+    <a href="l7-options.html" class="btn btn-gold" style="margin-top:1.2rem">Read Full Lesson → Options: Calls, Puts &amp; Payoff Profiles</a>
+  </div>
+</div>
+
+<!-- ═══ PRACTICE ═══ -->
+<div class="tab-panel" id="tab-practice">
+  <div class="sec-head"><h2>Quiz — <em>Derivatives &amp; Structuring</em></h2><div class="sec-line"></div></div>
+  <p style="font-family:var(--slab);font-size:0.8rem;color:var(--ash);margin-bottom:1.5rem;line-height:1.7">15 questions covering options mechanics, futures/forwards, interest rate swaps, hedging strategy, and structured products. These test the conceptual derivatives knowledge expected in all IB generalist interviews.</p>
+  <div id="quiz-container"></div>
+</div>
+
+<!-- ═══ SOLVER ═══ -->
+<div class="tab-panel" id="tab-solver">
+  <div class="sec-head"><h2>Problem Solver — <em>Derivatives</em></h2><div class="sec-line"></div></div>
+  <p style="font-family:var(--slab);font-size:0.8rem;color:var(--ash);margin-bottom:1.5rem;line-height:1.7">Four worked problems: option payoff and break-even, interest rate swap economics, FX forward hedge for M&A, and convertible bond decomposition. Reveal each step in sequence.</p>
+  <div style="display:flex;gap:0.6rem;margin-bottom:1.5rem;flex-wrap:wrap" id="solver-btns">
+    <button class="btn btn-gold"    onclick="loadProblem(0)">P1: Option Payoffs</button>
+    <button class="btn btn-outline" onclick="loadProblem(1)">P2: Interest Rate Swap</button>
+    <button class="btn btn-outline" onclick="loadProblem(2)">P3: FX Forward Hedge</button>
+    <button class="btn btn-outline" onclick="loadProblem(3)">P4: Convertible Bond</button>
+  </div>
+  <div id="solver-container"></div>
+</div>
+
+<!-- ═══ INTERVIEW ═══ -->
+<div class="tab-panel" id="tab-interview">
+  <div class="sec-head"><h2>Interview Prep — <em>Derivatives Q&amp;A</em></h2><div class="sec-line"></div></div>
+  <p style="font-family:var(--slab);font-size:0.8rem;color:var(--ash);margin-bottom:1.2rem;line-height:1.7">12 derivatives questions with model answers. These range from foundational (option payoff diagrams) to applied (how swaps appear in LBO structures). Focus on conceptual clarity over mathematical precision.</p>
+  <div class="iq-filter">
+    <button class="iq-filter-btn active" onclick="filterIQ('all')">All</button>
+    <button class="iq-filter-btn" onclick="filterIQ('tech')">Technical</button>
+    <button class="iq-filter-btn" onclick="filterIQ('deal')">Deal Context</button>
+    <button class="iq-filter-btn" onclick="filterIQ('beh')">Conceptual</button>
+  </div>
+  <div class="interview-wrapper" id="interview-container"></div>
+</div>
+
+<div class="page-nav">
+  <a href="level-6.html" class="btn btn-ghost">← Level 06: Capital Markets</a>
+  <div class="pn-context">Level <span>07</span> of 11 · Derivatives</div>
+  <a href="level-8.html" class="btn btn-gold">Next: Level 08 — Private Markets →</a>
+</div>
+
 </div>
 </div>
 <script src="shared.js"></script>
 <script>
-var lvl = parseInt(window.location.pathname.match(/level-(\d+)/)?.[1] || '0');
 document.getElementById('eco-hdr').outerHTML = buildEcoHeader();
 document.getElementById('hdr').outerHTML = buildHeader();
-document.getElementById('sb').outerHTML = buildSidebar(lvl);
-var names = ['','','','Valuation','Modelling','M&A','Capital Markets','Derivatives','Private Markets','Deal Execution','Careers','Advanced'];
-document.getElementById('cn-num').textContent = String(lvl).padStart(2,'0');
-document.getElementById('cn-title').innerHTML = (names[lvl]||'Level '+lvl) + ' <em>— Coming Soon</em>';
-document.getElementById('bc-title').textContent = 'Level ' + String(lvl).padStart(2,'0') + ' — ' + (names[lvl]||'');
+document.getElementById('sb').outerHTML = buildSidebar(7);
+
+function switchTab(name) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.hub-tab').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + name).classList.add('active');
+  event.target.classList.add('active');
+  if (name==='practice' && !window._qL) { initQuiz();      window._qL=true; }
+  if (name==='solver'   && !window._sL) { loadProblem(0);  window._sL=true; }
+  if (name==='interview'&& !window._iL) { initInterview(); window._iL=true; }
+}
+
+/* ════════════════════════════════════════
+   QUIZ — 15 questions
+════════════════════════════════════════ */
+const quizQuestions = [
+  {
+    question: 'What is the fundamental difference between an option and a forward contract?',
+    options: [
+      'Options are traded on exchanges; forwards are always OTC',
+      'An option gives the holder a RIGHT but not an obligation to transact; a forward creates a binding OBLIGATION on both parties to transact at the agreed price and date',
+      'Options involve equity underlyings only; forwards involve commodity and FX underlyings',
+      'Options are settled in cash; forwards always require physical delivery'
+    ],
+    correct: 1,
+    explanation: '<strong>The right vs. obligation distinction is the defining feature of options.</strong> A forward locks both parties into a transaction at a fixed price on a fixed date — there is no choice. An option buyer pays a premium for the right to choose: if the market price is better than the strike, they exercise; if not, they let the option lapse (losing only the premium). This asymmetry — capped downside, uncapped upside — is what makes options valuable and what justifies the premium cost.'
+  },
+  {
+    question: 'You buy a call option on a stock with strike £50, paying a £3 premium. At expiry, the stock trades at £56. What is your profit/loss?',
+    options: ['£6 profit', '£3 profit', '£3 loss', '£9 profit'],
+    correct: 1,
+    explanation: '<strong>Call payoff at expiry = max(S − K, 0) − Premium.</strong> S = £56, K = £50, intrinsic value = £56 − £50 = £6. Net of the £3 premium: £6 − £3 = <strong>£3 profit</strong>. Break-even is at S = K + Premium = £50 + £3 = £53. Below £53 the position loses money (max loss = £3 premium). Above £53 the position profits. At £56, the profit is £3.'
+  },
+  {
+    question: 'What does it mean for an option to be "in the money" (ITM)?',
+    options: [
+      'The option is currently profitable net of the premium paid',
+      'The option has positive intrinsic value — for a call: spot price > strike; for a put: spot price < strike',
+      'The option has been exercised and physical delivery has occurred',
+      'The option has more than 30 days remaining to expiry'
+    ],
+    correct: 1,
+    explanation: '<strong>"In the money" describes the intrinsic value relationship — not the overall profitability after premium.</strong> A call is ITM when the underlying spot price exceeds the strike (S > K) — there is immediate exercise value. A put is ITM when spot is below strike (S < K). Note: ITM does not mean profitable overall — if the premium paid was £5 and the intrinsic value is £3, the option is ITM but the position is still showing a £2 loss. You need intrinsic value > premium to break even.'
+  },
+  {
+    question: 'A company has floating-rate debt at SOFR + 200bps. It is worried interest rates will rise and wants to cap its borrowing cost at 7%. What derivative should it use?',
+    options: [
+      'An interest rate floor',
+      'An interest rate swap (receive fixed, pay floating)',
+      'An interest rate cap',
+      'A credit default swap'
+    ],
+    correct: 2,
+    explanation: '<strong>An interest rate cap is a call option on interest rates — it limits the borrower\'s maximum rate.</strong> The company pays a premium for the cap. If SOFR rises above the cap strike (e.g., 5% strike, so all-in capped rate = 5% + 200bps = 7%), the cap provider pays the difference — effectively capping the borrower\'s cost at 7%. If SOFR stays below 5%, the cap expires worthless (the company paid the premium but rates didn\'t rise enough to need the protection). Unlike a swap, the cap preserves the benefit if rates fall.'
+  },
+  {
+    question: 'What is the key difference between a futures contract and a forward contract?',
+    options: [
+      'Futures are for longer periods; forwards are for short-term hedging only',
+      'Futures are standardised and exchange-traded with daily mark-to-market (margin calls); forwards are customised OTC contracts with settlement only at maturity',
+      'Futures require physical delivery; forwards are always cash-settled',
+      'Futures are only available for equity underlyings; forwards cover all asset classes'
+    ],
+    correct: 1,
+    explanation: '<strong>Standardisation and margining distinguish futures from forwards.</strong> Futures: standardised contract terms (size, delivery date), traded on an exchange, cleared through a central counterparty (CCP), with daily mark-to-market — profits/losses settled daily (variation margin). Forwards: customised bilaterally between counterparties (OTC), no CCP, no daily settlement — profit/loss crystallises at maturity. Forwards have more basis risk but more flexibility. Futures have less counterparty risk but less customisation.'
+  },
+  {
+    question: 'In an interest rate swap, Company A pays fixed 4% and receives SOFR. Company B pays SOFR and receives fixed 4%. If SOFR rises to 6%, who benefits?',
+    options: [
+      'Company A benefits — it is receiving the higher floating rate',
+      'Company B benefits — it locks in paying only 4% fixed while SOFR is at 6%',
+      'Neither benefits — the swap is zero-sum and both break even',
+      'Both benefit from higher rates'
+    ],
+    correct: 0,
+    explanation: '<strong>Company A benefits when SOFR rises — it receives the higher floating rate.</strong> Company A: pays fixed 4%, receives SOFR 6% → net receipt of 2% (SOFR − fixed = 6% − 4% = +2%). Company B: pays SOFR 6%, receives fixed 4% → net payment of 2% (SOFR − fixed = 6% − 4% = −2%). Company B took the swap to lock in paying 4% fixed on an otherwise floating rate obligation — it benefits because its all-in cost is capped at 4% even though SOFR is 6%. The swap is zero-sum: A\'s gain equals B\'s cost.'
+  },
+  {
+    question: 'What is "delta" in the context of options, and why does it matter?',
+    options: [
+      'Delta is the option\'s sensitivity to changes in the underlying\'s price — a delta of 0.6 means the option price moves £0.60 for every £1 move in the underlying',
+      'Delta is the difference between the option\'s intrinsic value and its market price',
+      'Delta measures how quickly the option\'s time value decays as expiry approaches',
+      'Delta is the option\'s sensitivity to changes in implied volatility'
+    ],
+    correct: 0,
+    explanation: '<strong>Delta is the first derivative of option price with respect to underlying price — the option\'s price sensitivity.</strong> Delta ranges from 0 to 1 for calls and −1 to 0 for puts. ATM options have delta ≈ 0.5 (call) or −0.5 (put). Deep ITM options have delta ≈ 1 (call) or −1 (put) — behave like the underlying. Deep OTM options have delta ≈ 0. In convertible bond analysis, delta tells you how equity-like the convertible is: high delta = behaves like equity; low delta = behaves like a bond. Delta-hedging (holding delta shares against the option) is how dealers manage their book.'
+  },
+  {
+    question: 'A UK company is acquiring a US target for $500m and expects to close in 6 months. It is worried the USD will strengthen vs GBP, making the deal more expensive in sterling terms. What should it do?',
+    options: [
+      'Buy USD forward — lock in the current exchange rate for USD delivery in 6 months',
+      'Sell USD forward — lock in selling USD at today\'s rate in 6 months',
+      'Buy a USD put option — the right to sell USD at the current rate',
+      'Take out a GBP loan to pre-fund the acquisition'
+    ],
+    correct: 0,
+    explanation: '<strong>The company needs USD in 6 months and wants to lock in today\'s rate — it should buy USD forward (sell GBP forward).</strong> By buying $500m forward at today\'s rate, the company fixes the GBP cost of the acquisition regardless of where GBPUSD moves in the next 6 months. If USD strengthens (GBP weakens), the forward gain offsets the higher sterling cost of the acquisition. If USD weakens, the forward costs more than market — but the company accepted this "cost" for certainty. This is classic FX transaction risk hedging: the company has a known future FX obligation and uses a forward to eliminate the currency uncertainty.'
+  },
+  {
+    question: 'What is the "put-call parity" relationship?',
+    options: [
+      'The rule that the price of a put must always equal the price of a call with the same strike',
+      'The no-arbitrage relationship: Call − Put = Spot − PV(Strike), meaning if you know three of these values you can derive the fourth',
+      'The principle that puts become more valuable when calls become less valuable, keeping total option premium constant',
+      'The requirement that options markets must have equal numbers of calls and puts outstanding'
+    ],
+    correct: 1,
+    explanation: '<strong>Put-call parity is a no-arbitrage relationship: C − P = S − PV(K).</strong> Rearranged: C = P + S − PV(K). This means a call can be replicated by: buying a put + buying the underlying stock + borrowing PV(K). If prices deviated from this relationship, arbitrageurs would immediately exploit the discrepancy. Practical use: if you know the call price, spot price, and risk-free rate, you can derive the put price without modelling it separately. This is foundational for derivatives pricing and for understanding how convertible bonds are valued.'
+  },
+  {
+    question: 'What is a "collar" structure in the context of interest rate hedging?',
+    options: [
+      'A structure in which the borrower buys an interest rate cap and sells an interest rate floor — capping the maximum rate and setting a minimum, often at zero net premium',
+      'A regulatory requirement that borrowers must maintain minimum liquidity in a separate account',
+      'A derivative that limits the number of times a floating rate loan can be repriced per year',
+      'A covenant requiring the borrower to maintain a minimum interest rate coverage ratio'
+    ],
+    correct: 0,
+    explanation: '<strong>A collar combines a cap (bought) and a floor (sold) to create a bounded interest rate range.</strong> The borrower buys a cap (sets maximum rate) and sells a floor (sets minimum rate). The floor premium received partially or fully offsets the cap premium paid — often structured for zero net premium. Example: SOFR + 300bps floating rate loan. Borrower buys cap at SOFR = 5% (all-in 8% max) and sells floor at SOFR = 2% (all-in 5% min). The borrower\'s rate is bounded between 5% and 8% — certainty in both directions. The trade-off: by selling the floor, the borrower gives up the benefit if rates fall below 2%.'
+  },
+  {
+    question: 'How does implied volatility (IV) affect option prices, and what happens to option prices when IV spikes?',
+    options: [
+      'Higher IV decreases option prices — more volatility means options are less reliable and therefore worth less',
+      'Higher IV increases option prices — greater uncertainty means a wider range of possible outcomes, making the right to transact at a fixed price more valuable',
+      'IV only affects put prices; call prices are determined solely by the underlying\'s direction',
+      'IV has no effect on option prices — only the intrinsic value matters'
+    ],
+    correct: 1,
+    explanation: '<strong>Implied volatility is the market\'s expectation of future volatility — and it is the primary driver of option time value.</strong> Higher IV = wider expected range of outcomes = greater chance the option ends up deep ITM = higher option premium. When the VIX (implied volatility index) spikes during market stress, all options become more expensive — even though the direction is uncertain. This is why options are expensive precisely when you most want them (market stress). Investors "buy protection" via puts before a crash, but after the crash IV is already elevated — protection is suddenly very costly. IV is sometimes called the "fear gauge" for this reason.'
+  },
+  {
+    question: 'What is a Credit Default Swap (CDS) and who typically buys one?',
+    options: [
+      'A swap in which the borrower converts fixed-rate debt to floating rate via a credit-linked structure',
+      'A contract in which the protection buyer pays a periodic fee to the protection seller; in exchange, if the reference entity (a company or sovereign) defaults, the protection seller compensates the buyer — effectively insurance against credit events',
+      'A bond issuance structure where the coupon resets based on the issuer\'s credit rating',
+      'An agreement between two companies to swap their respective credit facilities to achieve lower blended borrowing costs'
+    ],
+    correct: 1,
+    explanation: '<strong>A CDS is credit insurance — the buyer pays a premium (CDS spread) to transfer default risk to the seller.</strong> If the reference entity (e.g., Company X) defaults, files for bankruptcy, or restructures its debt, the protection seller pays the buyer the difference between par and the recovery value of the defaulted bonds. Buyers: banks hedging their loan book exposure; bond investors protecting their portfolio; hedge funds speculating on credit deterioration. Sellers: insurance companies and other investors seeking yield. The CDS spread (expressed in bps per year) is the market\'s real-time view of the credit risk of the reference entity.'
+  },
+  {
+    question: 'In an LBO, a PE firm finances the acquisition with a floating-rate term loan. Why might it enter into an interest rate swap on part of the debt?',
+    options: [
+      'To convert the loan\'s currency from USD to GBP for reporting purposes',
+      'To fix the interest cost on part of the debt — reducing uncertainty about annual debt service costs, enabling more reliable FCF planning, and protecting against rate rises that could breach interest cover covenants',
+      'To extend the loan maturity beyond the original term without refinancing',
+      'To reduce the face value of the debt outstanding for leverage calculation purposes'
+    ],
+    correct: 1,
+    explanation: '<strong>Interest rate swaps provide certainty on a portion of debt service — critical for LBO cash flow management.</strong> Floating-rate loans (TLBs) have uncertain interest costs that change with SOFR. If SOFR rises 200bps, the company\'s interest expense rises materially — potentially breaching interest cover covenants and reducing FCF available for debt repayment. By swapping 50–75% of the loan from floating to fixed, the PE firm locks in a known interest cost on that portion, making the debt schedule more predictable. The remaining floating portion retains the benefit if rates fall. Most lenders actually require borrowers above a certain leverage threshold to hedge a minimum percentage of their floating rate debt.'
+  },
+  {
+    question: 'What is theta in the context of options, and what does "theta decay" mean for an option buyer?',
+    options: [
+      'Theta measures the option\'s sensitivity to dividend payments from the underlying stock',
+      'Theta is the rate at which an option\'s time value decreases as expiry approaches — option buyers lose value every day simply by the passage of time (all else equal)',
+      'Theta represents the correlation between the option\'s price and the risk-free interest rate',
+      'Theta is the adjustment factor applied to the option price when the underlying pays a dividend'
+    ],
+    correct: 1,
+    explanation: '<strong>Theta (time decay) is the daily cost of holding an option — the erosion of time value as expiry approaches.</strong> An OTM option has no intrinsic value — its entire value is time value (the probability that it becomes ITM before expiry). As each day passes, this probability reduces. Theta accelerates as expiry nears — the time value erosion is fastest in the last 30 days. For option buyers: theta works against them (they lose value each day the underlying doesn\'t move). For option sellers (who collected the premium): theta works in their favour (the option they sold becomes less valuable each day, which is a gain for them). This is why short-dated options are cheaper but decay faster.'
+  },
+  {
+    question: 'A convertible bond has a conversion price of £25 and a face value of £1,000. The current stock price is £20. Is the conversion option in the money?',
+    options: [
+      'Yes — the bondholder can convert immediately for a profit',
+      'No — the stock is below the conversion price; conversion would give the bondholder shares worth less than the bond\'s face value',
+      'It cannot be determined without knowing the bond\'s current yield',
+      'Yes — the conversion price and stock price relationship is irrelevant to moneyness'
+    ],
+    correct: 1,
+    explanation: '<strong>The conversion option is out of the money — the stock (£20) is below the conversion price (£25).</strong> Conversion ratio = Face Value / Conversion Price = £1,000 / £25 = 40 shares. If the bondholder converted today, they would receive 40 shares × £20 = £800 — less than the £1,000 face value of the bond. There is no rational reason to convert; the bondholder holds the bond for its fixed income characteristics (coupons and principal repayment) and waits to see if the stock rises above £25. The conversion option has time value (positive if there is time remaining) but zero intrinsic value.'
+  }
+];
+
+function initQuiz() { new QuizEngine(quizQuestions, 'quiz-container'); }
+
+/* ════════════════════════════════════════
+   SOLVERS — 4 problems
+════════════════════════════════════════ */
+const problems = [
+  /* P1 — Option payoffs */
+  {
+    problem: {
+      title: 'Calculate the payoff and profit/loss for four option positions at expiry.',
+      given: 'Underlying stock: current price £45 at expiry\nStrike price (K) for all options: £40\nPremium paid/received: £4 per option (all four positions use same terms)\n\nFour positions to analyse:\n  A. Long call (bought a call)\n  B. Short call (sold a call)\n  C. Long put (bought a put)\n  D. Short put (sold a put)\n\nQuestion: Calculate payoff and profit/loss for each position at S = £45.'
+    },
+    steps: [
+      {
+        title: 'Analyse Position A — Long Call',
+        body: 'The long call buyer has the right to buy at £40. With the stock at £45, exercising the call is profitable (buy at £40, stock worth £45). Subtract the premium paid to get net profit.',
+        formula: 'Intrinsic value = max(S − K, 0) = max(£45 − £40, 0) = £5\nNet profit = Intrinsic value − Premium paid = £5 − £4 = +£1\n\nThe call is IN THE MONEY (S > K)\nBreak-even: S = K + Premium = £40 + £4 = £44\nAt S = £45 (above break-even): £1 profit per option\nMax gain: unlimited (as S rises)\nMax loss: −£4 (premium, if S ≤ £40 at expiry)'
+      },
+      {
+        title: 'Analyse Position B — Short Call',
+        body: 'The short call seller received the £4 premium and must deliver the stock at £40 if the buyer exercises. With stock at £45, the buyer will exercise — the seller loses on the position.',
+        formula: 'Intrinsic value (short call obligation) = −max(S − K, 0) = −£5\nNet P&L = Premium received + obligation = +£4 − £5 = −£1\n\nShort call is the mirror image of long call.\nBreak-even: £44 (same as long call)\nAt S = £45: £1 LOSS per option\nMax gain: +£4 premium (if S ≤ £40 at expiry)\nMax loss: Unlimited (as S rises above K + Premium)'
+      },
+      {
+        title: 'Analyse Position C — Long Put',
+        body: 'The long put buyer has the right to sell at £40. With the stock at £45 (above the strike), the put is out of the money — exercising would mean selling at £40 when the market price is £45. No rational holder exercises.',
+        formula: 'Intrinsic value = max(K − S, 0) = max(£40 − £45, 0) = £0\nNet P&L = Intrinsic value − Premium paid = £0 − £4 = −£4\n\nThe put is OUT OF THE MONEY (S > K for a put)\nOption expires worthless — the holder loses the full premium\nBreak-even: S = K − Premium = £40 − £4 = £36\nAt S = £45 (above strike): −£4 maximum loss (full premium)\nMax gain: K − Premium = £40 − £4 = £36 (if S falls to zero)'
+      },
+      {
+        title: 'Analyse Position D — Short Put and summarise',
+        body: 'The short put seller received £4 premium and must buy the stock at £40 if exercised. The put is OTM (S > K), so the buyer will not exercise — the seller keeps the full premium.',
+        formula: 'Net P&L = Premium received (no exercise since OTM) = +£4\n\nShort put is the mirror image of long put.\nBreak-even: £36 (same as long put)\nAt S = £45 (put OTM): +£4 PROFIT (keeps full premium)\nMax gain: +£4 premium received\nMax loss: −(K − Premium) = −£36 (if S falls to zero)\n\n════════ SUMMARY TABLE ════════\nPosition     Payoff    P&L\nLong Call:   +£5       +£1  profit\nShort Call:  −£5       −£1  loss\nLong Put:    £0        −£4  loss (full premium)\nShort Put:   £0        +£4  profit (full premium)'
+      }
+    ],
+    answer: {
+      value: 'Long Call: +£1 profit | Short Call: −£1 | Long Put: −£4 | Short Put: +£4',
+      note: 'Key insight: positions A and B are perfect mirrors; C and D are perfect mirrors. The total P&L across all four positions nets to zero — options are a zero-sum game between buyer and seller. The asymmetry is in the risk profile: buyers have limited downside (premium) and unlimited upside; sellers have limited upside (premium) and theoretically unlimited downside (for calls) or large downside (for puts).'
+    }
+  },
+
+  /* P2 — Interest Rate Swap */
+  {
+    problem: {
+      title: 'Analyse an interest rate swap — calculate cash flows and determine the net benefit.',
+      given: 'Company XYZ has a £200m floating rate term loan at SOFR + 250bps.\nCurrent SOFR: 5.25%  →  All-in current rate: 7.75%\n\nXYZ enters an interest rate swap:\n  Notional: £150m (75% of the loan)\n  XYZ pays: Fixed 6.50% per year\n  XYZ receives: SOFR (floating)\n  Tenor: 5 years\n\nScenario A: SOFR stays at 5.25% for Year 1\nScenario B: SOFR rises to 7.50% in Year 2\nScenario C: SOFR falls to 3.00% in Year 3\n\nQuestion: Calculate all-in interest cost in each scenario for the swapped and unswapped portions.'
+    },
+    steps: [
+      {
+        title: 'Understand the swap structure',
+        body: 'XYZ has transformed part of its floating exposure into a fixed-rate obligation. It still pays SOFR + 250bps on the loan — but the swap converts the SOFR portion on £150m to a known fixed cost.',
+        formula: 'Loan structure:\n  £200m total at SOFR + 250bps\n  £150m hedged via swap | £50m unhedged (floating)\n\nOn the hedged £150m:\n  XYZ pays loan:      SOFR + 250bps\n  XYZ pays swap:      Fixed 6.50%\n  XYZ receives swap:  SOFR\n  Net (SOFR cancels): Fixed 6.50% + 250bps = 8.75% all-in\n\nOn the unhedged £50m:\n  XYZ pays:           SOFR + 250bps (fully floating)'
+      },
+      {
+        title: 'Scenario A — SOFR stays at 5.25%',
+        body: 'Calculate total annual interest cost across both tranches.',
+        formula: 'Hedged £150m:\n  All-in: 8.75% fixed\n  Cost: £150m × 8.75% = £13.125m\n\nUnhedged £50m:\n  SOFR + 250bps = 5.25% + 2.50% = 7.75%\n  Cost: £50m × 7.75% = £3.875m\n\nTotal Year 1 interest: £13.125m + £3.875m = £17.000m\nBlended rate: £17.000m / £200m = 8.50%\n\nWithout swap (all £200m at 7.75%):\n  Cost: £200m × 7.75% = £15.500m\n  → Swap costs £1.5m MORE in Scenario A (SOFR didn\'t rise enough to justify hedge)'
+      },
+      {
+        title: 'Scenario B — SOFR rises to 7.50%',
+        body: 'At higher SOFR, the swap benefit becomes clear — the hedged portion avoids the rate increase.',
+        formula: 'Hedged £150m:\n  All-in: 8.75% fixed (unchanged — this is the point of the hedge)\n  Cost: £150m × 8.75% = £13.125m\n\nUnhedged £50m:\n  SOFR + 250bps = 7.50% + 2.50% = 10.00%\n  Cost: £50m × 10.00% = £5.000m\n\nTotal Year 2 interest: £13.125m + £5.000m = £18.125m\nBlended rate: 9.06%\n\nWithout swap (all £200m at 10.00%):\n  Cost: £200m × 10.00% = £20.000m\n  → Swap SAVES £1.875m in Scenario B'
+      },
+      {
+        title: 'Scenario C — SOFR falls to 3.00%',
+        body: 'When rates fall, the unhedged portion benefits but the swap portion does not — this is the cost of the hedge.',
+        formula: 'Hedged £150m:\n  All-in: 8.75% fixed (still locked in — cannot benefit from lower rates)\n  Cost: £150m × 8.75% = £13.125m\n\nUnhedged £50m:\n  SOFR + 250bps = 3.00% + 2.50% = 5.50%\n  Cost: £50m × 5.50% = £2.750m\n\nTotal Year 3 interest: £13.125m + £2.750m = £15.875m\nBlended rate: 7.94%\n\nWithout swap (all £200m at 5.50%):\n  Cost: £200m × 5.50% = £11.000m\n  → Swap costs £4.875m MORE in Scenario C\n\n════ SCENARIO SUMMARY ════\n          With swap    Without swap   Swap P&L\nA (5.25%): £17.000m    £15.500m      −£1.500m\nB (7.50%): £18.125m    £20.000m      +£1.875m\nC (3.00%): £15.875m    £11.000m      −£4.875m'
+      }
+    ],
+    answer: {
+      value: 'Swap saves £1.875m when SOFR rises to 7.50%; costs £4.875m when SOFR falls to 3.00%',
+      note: 'This illustrates the fundamental trade-off in hedging: protection against adverse rate moves comes at the cost of forgoing benefits from favourable moves. The company accepted this trade-off to reduce uncertainty in its debt service — making FCF projections more reliable and reducing covenant breach risk in a rising rate scenario. The hedge is not about making money; it is about buying predictability.'
+    }
+  },
+
+  /* P3 — FX Forward Hedge */
+  {
+    problem: {
+      title: 'Structure an FX forward hedge for a cross-border M&A acquisition.',
+      given: 'UK acquirer is acquiring a US target for $800m.\nExpected deal close: 4 months from today.\nCurrent spot rate: GBPUSD 1.2500 (£1 = $1.25)\nGBP risk-free rate (4-month): 5.0% annualised\nUSD risk-free rate (4-month): 5.3% annualised\n\nThe acquirer is worried USD will strengthen (GBP weaken) before close,\nmaking the acquisition more expensive in sterling terms.\n\nQuestion: Calculate the fair 4-month forward rate, the sterling cost\nof the acquisition at spot and forward, and explain the hedge.'
+    },
+    steps: [
+      {
+        title: 'Calculate the 4-month forward exchange rate',
+        body: 'The forward rate is determined by interest rate parity — not by speculation about where GBPUSD will move. The currency with the higher interest rate trades at a forward discount.',
+        formula: 'Interest rate parity formula:\nF = S × [(1 + r_USD × T) / (1 + r_GBP × T)]\n\nWhere:\n  S = Spot rate 1.2500 (USD per GBP)\n  r_USD = 5.3% annualised = 5.3% × (4/12) = 1.767% for 4 months\n  r_GBP = 5.0% annualised = 5.0% × (4/12) = 1.667% for 4 months\n  T = 4/12 year\n\nF = 1.2500 × [(1 + 0.01767) / (1 + 0.01667)]\n  = 1.2500 × [1.01767 / 1.01667]\n  = 1.2500 × 1.000983\n  = 1.2512\n\n4-month forward rate: GBPUSD 1.2512\n(USD slightly weaker in forward market — USD has higher rates,\ntrades at a small forward discount as theory predicts)'
+      },
+      {
+        title: 'Calculate sterling cost at spot vs. forward',
+        body: 'Determine what the acquirer would pay in sterling at the current spot rate versus locking in the forward rate.',
+        formula: 'Deal value: $800m\n\nAt current spot (1.2500):\n  Sterling cost = $800m / 1.2500 = £640.0m\n\nAt forward rate (1.2512):\n  Sterling cost = $800m / 1.2512 = £639.4m\n\nDifference: £0.6m (minimal — forward is close to spot\nbecause US and UK rates are close)\n\nNote: The forward is slightly MORE favourable than spot for the\nacquirer — GBP appreciated slightly in forward terms (USD weaker\nin forward market because USD has higher rates).'
+      },
+      {
+        title: 'Structure the hedge: buy USD forward',
+        body: 'To hedge, the acquirer buys $800m forward at GBPUSD 1.2512. This locks in the sterling cost of the acquisition regardless of where GBPUSD moves in the next 4 months.',
+        formula: 'Hedge transaction:\n  Buy $800m forward at GBPUSD 1.2512\n  Deliver £639.4m in 4 months, receive $800m\n  Lock-in sterling cost: £639.4m\n\nScenario A — GBP weakens to 1.1500 at close (USD stronger):\n  Without hedge: $800m / 1.1500 = £695.7m → £56.3m MORE than forward\n  With hedge: £639.4m (locked in) → £56.3m SAVED\n\nScenario B — GBP strengthens to 1.3500 at close (USD weaker):\n  Without hedge: $800m / 1.3500 = £592.6m → £46.8m LESS than forward\n  With hedge: £639.4m (locked in) → £46.8m OPPORTUNITY COST\n  (the hedge prevented a saving — but also prevented a larger cost)'
+      },
+      {
+        title: 'Assess hedge ratio and alternatives',
+        body: 'Should the company hedge 100%, 50%, or use options instead of a forward? Each approach has different risk/return implications.',
+        formula: '100% forward hedge (this problem):\n  Eliminates all FX uncertainty — full certainty on sterling cost\n  Gives up all upside if GBP strengthens\n  Zero premium (forward contracts have no upfront cost)\n\n50% forward hedge:\n  Hedges half the exposure — partial certainty\n  Retains 50% of the upside if GBP strengthens\n  Popular for companies uncertain about deal timing\n\nFX options (buy USD call / GBP put):\n  Right but not obligation to buy USD at 1.2512\n  If GBP strengthens: let the option lapse, buy USD at market\n  If GBP weakens: exercise the option, cap the loss\n  Premium cost: typically 1.5-3% of notional (£10-19m)\n  → More expensive but preserves upside — useful if deal uncertain\n\nBoard recommendation: 100% forward hedge is standard practice\nfor a definitive-signed M&A transaction with certain timing.'
+      }
+    ],
+    answer: {
+      value: '4-month forward: 1.2512 | Sterling cost locked: £639.4m | Hedge saves £56m if GBP weakens 8%',
+      note: 'Forward hedging is the standard practice for cross-border M&A. Once the SPA is signed and the deal is near-certain to close, a forward hedge removes the FX uncertainty from the board\'s consideration. The cost is giving up any favourable FX movement — a price worth paying for certainty. Options are preferred when deal completion is uncertain (e.g., pending regulatory approval) because they provide protection without the obligation if the deal falls through.'
+    }
+  },
+
+  /* P4 — Convertible bond decomposition */
+  {
+    problem: {
+      title: 'Decompose a convertible bond into its debt and equity components and value each.',
+      given: 'Convertible bond details:\n  Face value: £1,000\n  Coupon rate: 2.0% (annual)\n  Maturity: 5 years\n  Conversion price: £30 per share\n  Current stock price: £22\n  Current stock implied volatility: 35%\n\nComparable straight bond (same issuer, same maturity):\n  Yield: 7.0% per year (straight debt yield)\n\nRisk-free rate: 4.5%\n\nQuestion: Estimate the straight bond value and the conversion option value,\nand explain what each implies about the convertible\'s pricing.'
+    },
+    steps: [
+      {
+        title: 'Calculate the straight bond value (bond floor)',
+        body: 'The straight bond value is what the convertible would be worth without the conversion feature — the PV of coupons and face value discounted at the issuer\'s straight debt yield.',
+        formula: 'Cash flows:\n  Annual coupon: 2.0% × £1,000 = £20/year for 5 years\n  Face value: £1,000 at Year 5\n  Discount rate: 7.0% (straight debt yield)\n\nPV of coupons (annuity, 5 years at 7%):\n  PV = £20 × [1 − (1/1.07)^5] / 0.07\n     = £20 × [1 − 0.7130] / 0.07\n     = £20 × 4.100\n     = £82.00\n\nPV of face value:\n  PV = £1,000 / (1.07)^5 = £1,000 / 1.4026 = £712.99\n\nStraight Bond Value (Bond Floor):\n  = £82.00 + £712.99 = £795.00\n\nThe convertible will NEVER fall below £795 (the bond floor),\nbecause at £795 it yields 7% as a straight bond — irrespective\nof the equity conversion option\'s value.'
+      },
+      {
+        title: 'Calculate the conversion value (parity)',
+        body: 'The conversion value is what the bond is worth if converted to equity immediately at the current stock price.',
+        formula: 'Conversion ratio = Face Value / Conversion Price\n  = £1,000 / £30 = 33.33 shares per bond\n\nConversion value (parity) = Shares × Current Stock Price\n  = 33.33 × £22 = £733.33\n\nConversion premium:\n  Parity:                 £733.33\n  Bond floor:             £795.00\n  The bond is worth more as a bond than converted\n  → Conversion option is OUT OF THE MONEY\n  (Stock £22 < Conversion price £30 — needs 36% rise to be ITM)\n\nConversion premium over parity = (Market price − Parity) / Parity\n  (Will calculate market price in next step)'
+      },
+      {
+        title: 'Estimate the conversion option value (Black-Scholes intuition)',
+        body: 'The conversion option is a call on the stock with strike = conversion price. Use the key inputs to estimate its value (without full Black-Scholes calculation).',
+        formula: 'Call option on the stock:\n  Current stock price (S): £22\n  Strike (K = conversion price): £30\n  Moneyness: OTM by 36.4% (S/K = 0.733)\n  Time to expiry (T): 5 years\n  Volatility (σ): 35%\n  Risk-free rate (r): 4.5%\n\nKey drivers of option value:\n  Time: 5 years is a long time → significant chance stock reaches £30+\n  Volatility: 35% is high → wider range of outcomes → more valuable\n  OTM factor: 36% OTM is a significant gap → reduces value\n\nConversion ratio × Option value per share (estimated):\n  At 35% vol, 5-year, 36% OTM: rough Black-Scholes estimate ≈ £5-7/share\n  (Full B-S would give ~£6.20 per share for these inputs)\n  \n  Estimated option value: 33.33 shares × £6.20 = £206.66\n\nNote: This requires iterative B-S calculation in practice;\nthe intuition is what matters for IB interviews.'
+      },
+      {
+        title: 'Calculate total convertible value and interpret the pricing',
+        body: 'Sum the straight bond floor and the option value. Compare to the face value to understand the convertible\'s premium over par and what it implies for the issuer.',
+        formula: 'Estimated Convertible Value:\n  Straight bond value (floor):  £795.00\n  Conversion option value:      £206.66\n  Total estimated value:        £1,001.66\n\nThis is approximately at par (£1,000) — consistent with a\nnewly issued convertible priced at face value.\n\nConversion premium:\n  Market price: ~£1,000\n  Conversion value (parity): £733.33\n  Premium = (£1,000 − £733.33) / £733.33 = 36.4%\n  (Typical for a new convertible — usually 20-40% premium)\n\nWhat this means for the issuer:\n  Instead of paying 7% straight debt yield, issuer pays 2% coupon\n  Coupon saving: 7% − 2% = 5% per year × £1,000 = £50/year × 5 years\n  PV of saving: £50 × 4.100 = £205\n  This £205 coupon saving = the option value sold to investors (~£207)\n  → The issuer effectively SOLD the conversion option to investors\n    in exchange for the lower coupon rate — a fair exchange'
+      }
+    ],
+    answer: {
+      value: 'Bond floor: £795 | Option value: ~£207 | Total: ~£1,002 | Issuer saves 5%/yr in coupon',
+      note: 'The convertible bond analysis reveals the elegant equity-for-yield trade: the issuer sells an equity call option (worth ~£207) to investors in exchange for a lower coupon (saves £205 in PV terms). The investor gets: bond protection (floor at £795) plus equity upside (if stock rises above £30). The issuer gets: cheaper debt today in exchange for potential equity dilution if the stock performs. Both parties can rationally prefer this over a straight bond — that is why the convertible market exists.'
+    }
+  }
+];
+
+function loadProblem(idx) {
+  new SolverEngine(problems[idx].problem, problems[idx].steps, problems[idx].answer, 'solver-container');
+  document.querySelectorAll('#solver-btns .btn').forEach((b,i) => {
+    b.className = i===idx ? 'btn btn-gold' : 'btn btn-outline';
+  });
+}
+
+/* ════════════════════════════════════════
+   INTERVIEW — 12 questions
+════════════════════════════════════════ */
+const interviewItems = [
+  {
+    type: 'tech',
+    question: 'What is a derivative and why do derivatives exist?',
+    answer: `<strong>A derivative is a financial instrument whose value derives from an underlying asset, index, rate, or event.</strong><br><br>
+The underlying can be: equity (stock, index), fixed income (bond, interest rate), currency (FX rate), commodity (oil, gold, wheat), or credit (probability of default).<br><br>
+<strong>Why derivatives exist — three reasons:</strong><br><br>
+<em>1. Risk transfer (hedging):</em> Entities with unwanted risk can transfer it to those willing to bear it. An airline worried about fuel prices buys oil futures — locking in a cost and transferring the risk to the counterparty (typically a financial institution or speculator).<br><br>
+<em>2. Price discovery:</em> Derivatives markets reveal market expectations about future prices. The futures curve for oil tells you what the market expects oil to cost in 6, 12, 24 months. This information is valuable for producers, consumers, and investors.<br><br>
+<em>3. Leverage and efficiency:</em> Derivatives enable exposure to an underlying asset for a fraction of the cost of owning it outright. A futures contract controls £1m of commodities for a £50k margin deposit. This efficiency reduces capital requirements for investors who want a specific exposure.`,
+    tip: '"Do derivatives create risk or just redistribute it?" A classic philosophical question. The honest answer: both. Derivatives allow hedgers to transfer risk to speculators (net risk reduction for the hedger). But they also allow speculators to take leveraged positions that amplify systemic risk in aggregate. The 2008 financial crisis was partly caused by CDS contracts that allowed excessive credit risk accumulation without the capital to back it. Derivatives are a tool — powerful and potentially dangerous if misused.'
+  },
+  {
+    type: 'tech',
+    question: 'Explain the payoff of a long call option. What is the buyer\'s maximum gain and maximum loss?',
+    answer: `<strong>A long call gives the buyer the RIGHT to purchase the underlying at the strike price (K) on or before expiry.</strong><br><br>
+<strong>Payoff at expiry:</strong><br>
+If S > K (in the money): payoff = S − K. Profit = (S − K) − Premium paid.<br>
+If S ≤ K (out of the money or at the money): option expires worthless. Loss = Premium paid.<br><br>
+<strong>Maximum gain:</strong> Unlimited — as the underlying price rises above K, the profit rises without bound. (Theoretically: S − K − Premium, as S → ∞)<br><br>
+<strong>Maximum loss:</strong> The premium paid. If the option expires worthless (S ≤ K), the buyer loses 100% of the premium — but nothing more. This capped downside is the defining feature of long option positions.<br><br>
+<strong>Break-even:</strong> S = K + Premium. The underlying must rise above strike by at least the premium paid for the trade to be profitable.<br><br>
+<strong>In IB context:</strong> Convertible bonds contain an embedded long call on the issuer's equity (conversion right). Employee stock options are long calls on company equity granted at-the-money. An M&A break fee paid by a seller if a higher bidder emerges is economically similar to a call option on the deal.`,
+    tip: '"What does it mean to be long volatility?" Buying options (long call or long put) is being long volatility — you benefit if the underlying moves more than the market expected (in either direction for a straddle, or in your favoured direction for a call/put). This is why options are more expensive when the market is fearful (high VIX) — the market is pricing in higher expected moves.'
+  },
+  {
+    type: 'tech',
+    question: 'What is an interest rate swap and how is it used by a corporate borrower?',
+    answer: `<strong>An interest rate swap (IRS) is a contract in which two parties exchange interest payment streams — typically fixed for floating — on the same notional amount.</strong><br><br>
+<strong>Mechanics:</strong><br>
+Party A pays fixed 5% annually. Party B pays SOFR. Both on £100m notional. No principal exchanges — only interest payment differences are settled net.<br><br>
+<strong>Why a corporate borrower uses it:</strong><br>
+A company has a floating-rate bank loan at SOFR + 300bps. It enters a swap: pays fixed 5%, receives SOFR. The SOFR payments cancel. Net result: all-in fixed rate = 5% + 300bps = 8% — regardless of where SOFR moves.<br><br>
+<strong>Motivation:</strong><br>
+1. <em>Certainty:</em> Fixes interest expense for budgeting and covenant compliance<br>
+2. <em>Risk management:</em> Eliminates the risk that rising SOFR breaches interest cover covenants<br>
+3. <em>Sometimes required:</em> Many LBO lenders require borrowers above a leverage threshold to hedge 50–75% of floating rate debt via swaps<br><br>
+<strong>The cost:</strong> If rates fall, the swap locks the company into paying above-market rates. The hedge is insurance — not speculation.`,
+    tip: '"What determines whether the swap has positive or negative mark-to-market value after execution?" If market rates rise above the fixed rate the company agreed to pay, the swap has positive value to the receiver of floating (the company benefits — it locked in cheap fixed rates). If rates fall below the fixed rate, the swap has negative mark-to-market. This can create balance sheet complications in accounting — the swap must be reported at fair value under IFRS 9.'
+  },
+  {
+    type: 'tech',
+    question: 'What are the Greeks in options pricing and why do they matter?',
+    answer: `<strong>The Greeks measure an option\'s sensitivity to changes in each of its pricing inputs.</strong><br><br>
+<strong>Delta (Δ):</strong> % price change per £1 change in the underlying. ATM call ≈ 0.5; deep ITM call ≈ 1.0; deep OTM call ≈ 0. Used for hedging — a delta of 0.6 means holding 0.6 shares hedges one call option.<br><br>
+<strong>Gamma (Γ):</strong> Rate of change of delta as underlying moves. Highest near expiry and near ATM. High gamma = delta changes rapidly = hedges need frequent rebalancing.<br><br>
+<strong>Theta (Θ):</strong> Rate of time value decay per day. Options lose value each day as expiry approaches — all else equal. Highest for short-dated ATM options. Option buyers lose theta; option sellers gain it.<br><br>
+<strong>Vega (ν):</strong> Price change per 1% change in implied volatility. Long options are long vega (benefit from IV rises). Short options are short vega (hurt by IV rises). Vega is highest for long-dated options.<br><br>
+<strong>Rho (ρ):</strong> Price change per 1% change in risk-free interest rate. Smallest of the Greeks in practical importance for shorter-dated options.<br><br>
+<strong>In IB:</strong> Understanding delta is most important — it tells you how equity-like a convertible bond is at current stock prices. Vega matters for understanding why convertible bonds become cheaper to issue in low-volatility markets.`,
+    tip: 'A simple mnemonic: <em>Delta = direction, Gamma = acceleration, Theta = time decay, Vega = volatility sensitivity.</em> In an interview, if you are asked about Greeks, lead with delta (the most practical), cover theta (time decay affects premium cost), and mention vega (volatility connection to pricing). Gamma and Rho are for more specialist roles.'
+  },
+  {
+    type: 'deal',
+    question: 'A PE firm acquires a company with a £500m floating rate TLB at SOFR + 450bps. The lender requires at least 50% of debt to be hedged. How does the PE firm structure the hedge?',
+    answer: `<strong>The lender's hedging requirement is a standard covenant in leveraged loan documentation — the PE firm must comply within 90–180 days of close.</strong><br><br>
+<strong>Step 1 — Size the hedge:</strong><br>
+50% of £500m = £250m minimum notional to hedge.<br><br>
+<strong>Step 2 — Choose the instrument:</strong><br>
+<em>Interest rate swap (most common):</em> PE firm enters a 5-year swap on £250m: pays fixed (say 5.75%), receives SOFR. On the hedged portion, SOFR cancels from the loan — all-in cost = 5.75% + 4.50% = 10.25% fixed.<br>
+<em>Interest rate cap:</em> Buy a SOFR cap at strike 5.0%. If SOFR rises above 5%, the cap pays the excess — capping total all-in at 9.50%. More expensive (premium) but preserves benefit if rates fall.<br><br>
+<strong>Step 3 — Unhedged portion:</strong><br>
+£250m remains at SOFR + 450bps — fully floating.<br><br>
+<strong>Step 4 — Accounting treatment:</strong><br>
+Under IFRS 9 hedge accounting, if designated as a "cash flow hedge," the mark-to-market movements on the swap go through Other Comprehensive Income (OCI) — not P&L. Without hedge accounting designation, MTM swings hit the income statement each quarter.<br><br>
+<strong>PE firm's decision logic:</strong> Swap is preferred over cap for minimal upfront cash outlay. Cap is chosen when there is uncertainty about the holding period (can exit the cap if the company is sold early) or when the PE firm has a specific view that rates will fall.`,
+    tip: 'Lenders require hedging to protect their interest cover covenants — not out of concern for the PE firm\'s equity returns. A 200bps SOFR rise on an unhedged £500m loan adds £10m of annual interest cost, which could push EBITDA/Interest below 2.0x — triggering a covenant breach. The hedging requirement is the lender\'s self-protection mechanism.'
+  },
+  {
+    type: 'tech',
+    question: 'What is the difference between a European and an American option?',
+    answer: `<strong>The distinction is about when the option can be exercised — not geography.</strong><br><br>
+<strong>European option:</strong> Can only be exercised on the expiry date itself. No early exercise. The holder must wait until maturity.<br><br>
+<strong>American option:</strong> Can be exercised at any time up to and including the expiry date. The holder has the right to exercise early if it is advantageous.<br><br>
+<strong>Why early exercise might be optimal (American options):</strong><br>
+1. <em>Dividend capture:</em> If the underlying stock pays a large dividend, the option holder might exercise early to receive the dividend (call holder) or benefit from the ex-dividend price drop (put holder).<br>
+2. <em>Deep ITM puts near expiry:</em> If a put is very deep in the money, the remaining time value may be negligible, and immediate exercise gives the put holder the cash now rather than later.<br><br>
+<strong>Pricing implication:</strong> American options are always worth at least as much as European options with identical terms — the extra flexibility (right to early exercise) has non-negative value. For call options on non-dividend-paying stocks, the optimal exercise strategy is to wait until expiry — so European and American calls have the same value.<br><br>
+<strong>In IB practice:</strong> Most exchange-traded equity options are American. Most OTC options, convertible bonds (European-style conversion), and structured products use European exercise.`,
+    tip: '"Why is it never optimal to early-exercise an American call on a non-dividend-paying stock?" Because holding the call rather than the stock preserves optionality and the time value. You also avoid tying up cash (you still have the strike price available to invest elsewhere). The only rational early exercise of a call is to capture a dividend — and that only applies to American options on dividend-paying stocks.'
+  },
+  {
+    type: 'beh',
+    question: 'Why would a company use derivatives to hedge rather than simply avoiding the underlying risk altogether?',
+    answer: `<strong>Many risks cannot be avoided — they are inherent in the business model. Hedging manages them; it does not eliminate the business that generates them.</strong><br><br>
+<strong>Example 1 — Airline and fuel costs:</strong> An airline cannot avoid fuel price risk — fuel is 25-30% of its cost base. It cannot stop flying. It can hedge by buying oil futures, locking in a fuel cost and removing the earnings volatility. Without hedging, a 30% oil price spike could make the airline unprofitable despite strong passenger demand.<br><br>
+<strong>Example 2 — Exporter and currency risk:</strong> A UK manufacturer exports 60% of its revenue to the US, invoiced in USD. It cannot invoice in GBP without losing customers. It hedges by selling USD forward — converting future USD revenues into known GBP amounts. This allows pricing decisions and budgeting in GBP despite USD revenue streams.<br><br>
+<strong>Example 3 — Leveraged borrower and interest rate risk:</strong> A PE-backed company has £500m of floating rate debt. It cannot replace all floating with fixed (the lender insists on floating). It hedges by entering a fixed-rate swap — eliminating the interest expense uncertainty that could breach covenants.<br><br>
+<strong>The hedging philosophy:</strong> Companies should focus on their core competency and avoid being distracted by peripheral financial risks. A beverage company excels at making and selling drinks — not at predicting FX rates. Hedging allows it to focus on operations while removing the financial noise that would otherwise obscure operational performance.`,
+    tip: 'Counter-argument worth knowing: "Shareholders can diversify FX risk themselves — why should companies hedge and bear the cost?" Modigliani-Miller in a frictionless world says hedging adds no value (investors can replicate any hedge). In the real world, hedging reduces earnings volatility → reduces distress risk → reduces cost of debt → increases debt capacity → net value creation. This is why most large corporates hedge — especially when leverage is high.'
+  },
+  {
+    type: 'tech',
+    question: 'How is a convertible bond structured and what determines its conversion premium?',
+    answer: `<strong>A convertible bond is a straight bond with an embedded long call option on the issuer\'s equity.</strong><br><br>
+<strong>Key terms:</strong><br>
+• <em>Face value:</em> Principal repaid at maturity (e.g., £1,000)<br>
+• <em>Coupon:</em> Below-market interest rate (issuer sells the equity option to pay less coupon)<br>
+• <em>Conversion price:</em> The share price at which the bond converts (e.g., £30 per share)<br>
+• <em>Conversion ratio:</em> Face value / Conversion price (e.g., £1,000/£30 = 33.3 shares per bond)<br>
+• <em>Conversion premium:</em> How much above the current share price the conversion price is set<br><br>
+<strong>What determines the conversion premium:</strong><br>
+The premium is set so the embedded option value equals the coupon discount vs. straight debt. Higher volatility → option is more valuable → issuer can set a higher conversion premium (the stock needs to rise more) and/or pay an even lower coupon. Longer maturity → more time for stock to reach conversion price → more valuable option → lower coupon.<br><br>
+Typical conversion premiums: 20–40% above the current stock price at issuance.<br><br>
+<strong>At maturity:</strong> If stock > conversion price → holder converts to equity. If stock < conversion price → bond redeems at par (holder received coupons + principal).`,
+    tip: '"Delta of a convertible" is a practical concept: low delta (stock far below conversion price) = convertible behaves like a bond, investors focus on yield and credit quality. High delta (stock well above conversion price) = convertible behaves like equity, investors focus on the equity story. Most convertibles are designed to launch with delta ~0.3–0.5 — balanced between debt and equity characteristics.'
+  },
+  {
+    type: 'deal',
+    question: 'A company is acquiring a target in Germany for €600m. The deal is signed but regulatory approval is expected in 3 months. Should it use a forward or an option to hedge the EUR/GBP risk?',
+    answer: `<strong>The uncertainty about deal completion makes options preferable to forwards in this specific scenario.</strong><br><br>
+<strong>The key risk:</strong> If the deal is blocked by regulators, the forward contract would still obligate the company to buy €600m at the locked rate. The company would then need to unwind or reverse the forward — potentially at a loss if EUR/GBP has moved.<br><br>
+<strong>Option structure (preferred):</strong><br>
+Buy a EUR call option (right to buy EUR at the agreed strike rate). If deal proceeds: exercise the option, buy EUR at the strike rate (protection if EUR strengthened). If deal is blocked: let the option lapse — no obligation, only the premium is lost. Cost: FX option premium (typically 1–3% of notional = £6–18m equivalent).<br><br>
+<strong>Forward (inappropriate here):</strong><br>
+A forward would lock in the rate but creates an obligation. If the deal collapses, unwinding the forward creates: (a) potential loss if EUR moved against the company; (b) mark-to-market loss on the contract. This adds financial risk to what is already a regulatory risk event.<br><br>
+<strong>Conclusion:</strong> For a deal with uncertain completion, options (or conditional hedges) are the correct instrument. Once regulatory approval is confirmed, the company can convert to a forward (cheaper, no premium) or exercise the option — whichever is more advantageous at that point.`,
+    tip: 'A "contingent FX hedge" is a specialist product some banks offer: an FX hedge that automatically activates only if the deal closes. This eliminates both the option premium cost and the forward obligation risk. More complex and more expensive — but used for very large cross-border M&A where the FX risk is material and the deal timeline is uncertain.'
+  },
+  {
+    type: 'tech',
+    question: 'What is a Credit Default Swap (CDS) and how does its spread relate to default probability?',
+    answer: `<strong>A CDS is a contract providing insurance against a credit event (default, restructuring, or bankruptcy) of a reference entity.</strong><br><br>
+<strong>Structure:</strong> Protection buyer pays a periodic premium (CDS spread, in bps per year) to the protection seller. If the reference entity experiences a credit event, the protection seller pays the buyer the difference between par and the recovery value of the defaulted debt.<br><br>
+<strong>CDS spread and default probability:</strong><br>
+The CDS spread approximately equals the market's implied annual default probability × (1 − recovery rate).<br>
+CDS spread ≈ Default Probability × Loss Given Default (LGD)<br>
+LGD = 1 − Recovery Rate (typically 40% recovery assumed → LGD = 60%)<br><br>
+Example: 5-year CDS spread of 300bps = 3% per year.<br>
+Implied default probability ≈ 3% / 60% = 5% per year → ~23% cumulative over 5 years.<br><br>
+<strong>Who uses CDS:</strong><br>
+• Banks: hedge loan book credit exposure without selling the loan<br>
+• Bond investors: buy protection to hedge their bond holdings<br>
+• Hedge funds: speculate on credit deterioration (buy CDS to short credit risk)<br>
+• Structured finance: CDS are building blocks of CDOs (collateralised debt obligations)<br><br>
+<strong>CDS vs. corporate bond spread:</strong><br>
+Both measure credit risk — but CDS spreads are more liquid and move faster. The CDS-Bond basis (CDS spread minus bond spread) reflects technical factors and arbitrage opportunities.`,
+    tip: '"What happened to CDS in 2008?" AIG had sold massive amounts of CDS protection on mortgage-backed securities. When those underlying assets defaulted, AIG faced enormous protection payments it could not meet — triggering a government bailout. This demonstrated that CDS shifted rather than eliminated systemic risk — concentrating it in entities (like monoline insurers and AIG) that lacked the capital to absorb it. The crisis led to mandatory central clearing of standardised CDS contracts.'
+  },
+  {
+    type: 'tech',
+    question: 'What is a collar structure in the context of equity risk management?',
+    answer: `<strong>An equity collar limits both the upside and downside of a stock position — typically used by founders or large shareholders who want to monetise without triggering tax on an outright sale.</strong><br><br>
+<strong>Structure:</strong><br>
+A shareholder who owns stock at £50 and wants to protect against a fall below £40 while retaining some upside to £60:<br>
+• Buys a put option: right to sell at £40 (downside protection; pays premium)<br>
+• Sells a call option: obligation to sell at £60 (monetises upside; receives premium)<br>
+The premium received from the call offsets the premium paid for the put — often creating a zero-cost collar.<br><br>
+<strong>What the collar achieves:</strong><br>
+• If stock falls below £40: put provides protection — worst case is £40<br>
+• If stock rises above £60: call is exercised — upside is capped at £60<br>
+• Between £40 and £60: the shareholder retains full gains/losses<br><br>
+<strong>In M&A context:</strong><br>
+A collar is also used in stock-deal M&A to bound the value of share consideration. Example: Acquirer offers 0.5 of its shares per target share, but the exchange ratio adjusts within a collar (0.45–0.55x) to maintain a target value range — protecting the target shareholders if the acquirer's stock falls, while limiting upside capture if it rises significantly before close.`,
+    tip: 'The IRS treatment of collars for founder shareholders is complex — in some jurisdictions, certain collar structures are treated as a constructive sale (triggering capital gains tax immediately) even though the shares are not sold. Tax advice is essential before any large shareholder enters into an equity collar. The bank\'s structured products team works alongside tax counsel on these transactions.'
+  },
+  {
+    type: 'deal',
+    question: 'A company issues a £500m high yield bond at a floating rate. Its CFO is considering an interest rate swap to fix the rate. Walk through the considerations.',
+    answer: `<strong>HY bonds are typically fixed rate — a floating-rate HY bond is unusual. Assuming this is a leveraged loan rather than a bond, the CFO faces a classic hedging trade-off.</strong><br><br>
+<strong>Arguments FOR the swap (pay fixed, receive floating):</strong><br>
+1. <em>Cost certainty:</em> Annual interest expense becomes predictable — critical for LBO covenant modelling and FCF planning<br>
+2. <em>Covenant protection:</em> If lenders require minimum interest cover, fixing the rate prevents an unexpected SOFR spike from breaching the covenant<br>
+3. <em>Required:</em> Many leveraged loan agreements mandate hedging a minimum % of floating rate debt (typically 50–75% for 2–3 years)<br>
+4. <em>Rate view:</em> If the CFO believes rates will rise further, locking in today's fixed rate is beneficial<br><br>
+<strong>Arguments AGAINST:</strong><br>
+1. <em>Opportunity cost:</em> If rates fall, the company is locked into paying above-market fixed rates — a cash cost with no economic benefit<br>
+2. <em>Mark-to-market risk:</em> If not designated as a hedge under IFRS 9, swap MTM moves hit the P&L — creating earnings volatility<br>
+3. <em>Refinancing risk:</em> If the loan is refinanced or the company is sold early, the swap may need to be unwound — potentially at a cost (negative MTM if rates have fallen)<br>
+4. <em>Unnecessary at low rates:</em> If rates are already low and credit fundamentals are strong, the insurance cost may not be worth it<br><br>
+<strong>Recommendation:</strong> Hedge 50–75% via swap (per lender requirement), keep remaining floating to benefit from any rate decreases. Use IFRS 9 hedge accounting to minimise P&L volatility.`,
+    tip: 'The critical practical detail: the swap unwind cost at deal exit. If a PE firm sells a portfolio company and the underlying loan is repaid, the associated swap must be terminated. If rates have fallen since the swap was entered (making fixed rates relatively expensive), the swap has a negative MTM — the PE firm must pay a termination fee at close. This swap termination cost is sometimes overlooked in deal economics and can reduce exit proceeds meaningfully.'
+  }
+];
+
+function initInterview() {
+  document.getElementById('interview-container').innerHTML =
+    interviewItems.map((item,i) => buildInterviewItem(item,i)).join('');
+}
 </script>
 </body>
 </html>

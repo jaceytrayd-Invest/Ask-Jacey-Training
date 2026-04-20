@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L8.05 — Covenants — Design & Enforcement | Ask Jacey</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="eco-hdr"></div><div id="hdr"></div>
+<div id="app"><div id="sb"></div><div id="content">
+<div class="breadcrumb">
+  <a href="index.html">Home</a><span class="sep">&#8250;</span>
+  <a href="level-8.html">Level 08</a><span class="sep">&#8250;</span>
+  <span class="current">L8.05 — Covenants — Design & Enforcement</span>
+</div>
+<div class="lesson-page">
+<div class="deal-badge">&#128204; Level 08 &middot; Private Markets &middot; L8.05 — Covenants — Design & Enforcement</div>
+<p class="lesson-intro">Covenants are the lender's early warning system — the contractual tripwires that alert the lender to deterioration before a company reaches financial distress. Understanding how covenants are designed, what triggers a breach, and how lenders actually respond when things go wrong is essential for anyone working in leveraged finance or private credit.</p>
+
+<h2>The Covenant <em>Toolkit</em></h2>
+<table class="lesson-table">
+<thead><tr><th>Covenant type</th><th>What it measures</th><th>Typical threshold</th><th>Testing frequency</th></tr></thead>
+<tbody>
+<tr><td><strong>Net Leverage</strong></td><td>Net Debt / LTM Adjusted EBITDA</td><td>≤ 5.0x (stepping to 4.5x by Year 2)</td><td>Quarterly</td></tr>
+<tr><td><strong>Interest Cover</strong></td><td>LTM EBITDA / Cash Interest Expense</td><td>≥ 2.5x</td><td>Quarterly</td></tr>
+<tr><td><strong>Minimum Liquidity</strong></td><td>Cash + undrawn RCF commitments</td><td>≥ £[X]m (often 3-6 months interest)</td><td>Quarterly or monthly</td></tr>
+<tr><td><strong>Capex Limit</strong></td><td>Annual capital expenditure</td><td>≤ £[X]m (with carry-forward provision)</td><td>Annual</td></tr>
+<tr><td><strong>Restricted Payments</strong></td><td>Dividends and distributions to shareholders</td><td>Zero unless leverage below [Y]x</td><td>Incurrence (tested on payment)</td></tr>
+<tr><td><strong>Change of Control</strong></td><td>Ownership change above threshold</td><td>Usually ≥ 50% ownership change</td><td>Incurrence (tested on transaction)</td></tr>
+</tbody>
+</table>
+
+<h2>What Happens When a Covenant <em>Breaches</em></h2>
+<div class="formula-block">Step 1: Identification (day 0-5)
+  Borrower tests covenants against quarterly accounts
+  Identifies breach (e.g., Net Leverage 5.8x vs. 5.0x covenant)
+  Notifies lender per loan agreement (typically within 3-5 business days)
+  Lender issues formal breach notice — begins standstill period
+
+Step 2: Standstill (day 5-30)
+  No new drawdowns on RCF
+  No distributions or payments to shareholders
+  Borrower provides updated trading and cash flow forecasts
+  Lender reviews recovery plan and management credibility
+
+Step 3: Negotiation (day 30-90)
+  Waiver: lender waives the specific breach for a defined period
+  Reset: covenant level adjusted (e.g., 5.0x → 6.0x for 2 quarters)
+  Cure: PE sponsor injects equity to reduce net debt
+  Consideration: lender receives improved economics for granting waiver
+    → Margin step-up (typically +75-150bps)
+    → Enhanced reporting (monthly accounts, additional KPIs)
+    → Cash sweep requirement (50-75% of excess FCF)
+    → Additional security
+    → Tighter subsequent covenants
+
+Step 4: Resolution or Enforcement (if no agreement)
+  If waiver not agreed: technical default → acceleration rights
+  Lender can demand immediate repayment of entire outstanding balance
+  If borrower cannot pay: enforcement of security → receivership
+  Appointment of administrator or LPA receiver over secured assets</div>
+
+<h2>Equity Cure — <em>the sponsor's rescue mechanism</em></h2>
+<div class="formula-block">How an equity cure works:
+  Covenant breach: Net Leverage = 6.0x (covenant 5.0x)
+  EBITDA = £20m, Net Debt = £120m (120/20 = 6.0x)
+  
+  To cure: PE sponsor injects £10m equity as debt repayment
+  New Net Debt = £120m - £10m = £110m
+  New leverage = £110m / £20m = 5.5x (still breached)
+  
+  Need to inject £20m to reach 5.0x:
+  £120m - £20m = £100m / £20m = 5.0x ✓
+  
+  Limitations in the loan agreement (JaceyTrayd standard):
+  - Maximum 2 equity cures per rolling 4-quarter period
+  - Maximum 5 equity cures over the life of the loan
+  - Cured amount counts as "deemed EBITDA" rather than
+    actual EBITDA (cannot be used twice in subsequent tests)
+  - PE sponsor must confirm in writing the equity injection
+    is not itself funded by debt at the portfolio company level</div>
+
+<div class="callout">
+<div class="c-label">Covenant Headroom — the Lender's Safety Margin</div>
+<p>At JaceyTrayd, we set covenants with deliberate headroom between the expected performance and the breach threshold. If we underwrite to a base case Net Leverage of 4.2x with a 5.0x covenant, the borrower has 0.8x of buffer. We then stress-test: at what EBITDA decline does this borrower breach the covenant? (Answer: EBITDA must fall approximately 19% from base case.) Is that plausible? If yes, the covenant threshold is not conservative enough — we tighten it. This headroom analysis is as important as the absolute covenant level.</p>
+</div>
+<div class="lender-box">
+<div class="l-label">&#128273; JaceyTrayd — What We Actually Do When a Borrower Struggles</div>
+<p>Our first instinct is always to work with the borrower — not to enforce. Enforcement is expensive, disruptive, and rarely maximises recovery. When a borrower misses budget and triggers a covenant concern, our response is: (1) increase contact frequency (weekly calls rather than monthly); (2) request updated forecasts within 10 days; (3) if performance is genuinely deteriorating rather than just a one-quarter blip, initiate a formal waiver discussion; (4) use the waiver negotiation to reset terms that better protect us going forward. Only when management has lost credibility, the business model is structurally impaired, or the sponsor has ceased to be constructive do we consider moving to enforcement.</p>
+</div>
+
+<div class="page-nav">
+  <a href="l8-private-credit.html" class="btn btn-ghost">&larr; Previous</a>
+  <div class="pn-context">Level <span>08</span> &middot; Private Markets</div>
+  <a href="l8-exits.html" class="btn btn-gold">Next &rarr;</a>
+</div>
+</div>
+</div></div>
+<script src="shared.js"></script>
+<script>
+document.getElementById('eco-hdr').outerHTML=buildEcoHeader();
+document.getElementById('hdr').outerHTML=buildHeader();
+document.getElementById('sb').outerHTML=buildSidebar(8);
+</script>
+</body></html>

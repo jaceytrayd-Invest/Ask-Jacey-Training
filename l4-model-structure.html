@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>L4.01 — Model Architecture & Best Practice | Ask Jacey</title>
+<title>L4.01 — Model Architecture & Best Practices | Ask Jacey</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,69 +11,62 @@
 <div class="breadcrumb">
   <a href="index.html">Home</a><span class="sep">&#8250;</span>
   <a href="level-4.html">Level 04</a><span class="sep">&#8250;</span>
-  <span class="current">L4.01 — Model Architecture & Best Practice</span>
+  <span class="current">L4.01 — Model Architecture & Best Practices</span>
 </div>
 <div class="lesson-page">
-<div class="deal-badge">&#128204; Level 04 &middot; Modelling &middot; L4.01 — Model Architecture & Best Practice</div>
-<p class="lesson-intro">A financial model is only as trustworthy as its architecture. Before you build a single formula, the decisions you make about structure, conventions, and organisation will determine whether your model survives six months of updates — or becomes unauditable within two weeks.</p>
+<div class="deal-badge">&#128204; Level 04 &middot; Modelling &middot; L4.01 — Model Architecture & Best Practices</div>
+<p class="lesson-intro">A financial model is only as good as its architecture. The structure determines whether the model is reliable under pressure, legible to colleagues, and defensible to clients. These conventions are not optional in professional IB — they are the baseline.</p>
 
-<h2>The Tab <em>Architecture</em></h2>
-<p>Separate inputs from calculations from outputs. This is the single most important structural rule in financial modelling. A model where assumptions are scattered across multiple tabs is impossible to audit, update, or scenario-test reliably.</p>
+<h2>The Golden Rules of <em>Model Architecture</em></h2>
 <table class="lesson-table">
-<thead><tr><th>Tab</th><th>Purpose</th><th>Who edits it</th></tr></thead>
+<thead><tr><th>Rule</th><th>What it means</th><th>Why it matters</th></tr></thead>
 <tbody>
-<tr><td><strong>Cover</strong></td><td>Deal name, company, analyst, version, date, disclaimer</td><td>Set once; never change during analysis</td></tr>
-<tr><td><strong>Assumptions</strong></td><td>ALL hardcoded inputs — revenue growth, margins, WC days, capex %, tax rate, WACC, exit multiple</td><td>The only tab where you type numbers into forecast columns</td></tr>
-<tr><td><strong>Income Statement</strong></td><td>Historical + forecast P&L, all formulas referencing assumptions tab</td><td>Formulas only — no hardcodes in forecast columns</td></tr>
-<tr><td><strong>Balance Sheet</strong></td><td>Historical + forecast BS, all roll-forward formulas</td><td>Formulas only</td></tr>
-<tr><td><strong>Cash Flow Statement</strong></td><td>Derived from IS and BS changes — reconciles cash</td><td>Formulas only</td></tr>
-<tr><td><strong>Debt Schedule</strong></td><td>Tranche-by-tranche amortisation, interest, PIK, sweep</td><td>Formulas referencing opening balances and IS/CFS</td></tr>
-<tr><td><strong>Valuation / Output</strong></td><td>DCF, comps applied, LBO returns, football field summary</td><td>Client-facing; formatted for printing</td></tr>
+<tr><td><strong>Blue for inputs</strong></td><td>All hard-coded assumptions are coloured blue. No exceptions.</td><td>Anyone opening the model immediately knows which cells drive the outputs and which to change when assumptions update.</td></tr>
+<tr><td><strong>Black for formulas</strong></td><td>Calculated cells are black. They reference inputs — never contain hard-coded numbers except 1, 0, 100, or 365.</td><td>Prevents assumptions being buried in formulas, invisible to auditors.</td></tr>
+<tr><td><strong>One direction of flow</strong></td><td>Data flows left to right (earlier years to later years) and top to bottom. No cell references a cell to its right or below it in the same column.</td><td>Prevents invisible circular references. Makes the model readable in one pass.</td></tr>
+<tr><td><strong>Separate tabs by function</strong></td><td>Assumptions, P&L, Balance Sheet, CFS, Debt Schedule, Working Capital, Capex, Summary/Output are all separate tabs.</td><td>No tab becomes unwieldy. Every component can be audited independently.</td></tr>
+<tr><td><strong>Consistent column structure</strong></td><td>Historical years on the left (grey background), forecast years to the right (white/no fill). A clear visual break between them.</td><td>Prevents mixing actual data into forecast formulas — a major source of errors.</td></tr>
+<tr><td><strong>Balance check on every tab</strong></td><td>A visible row or cell at the bottom of every connected tab confirming outputs are consistent.</td><td>Errors surface immediately where they occur, not three tabs downstream.</td></tr>
 </tbody>
 </table>
 
-<h2>Colour <em>Conventions</em></h2>
-<div class="formula-block">Standard IB model colour convention:
+<h2>Tab Structure — <em>the standard IB layout</em></h2>
+<div class="formula-block">Standard model tab order:
+  [Cover]    — title, date, version, confidentiality
+  [Inputs]   — all assumptions in one place (growth rates, margins, capex %, tax rate)
+  [P&L]      — income statement, historical + forecast
+  [BS]       — balance sheet, historical + forecast
+  [CFS]      — cash flow statement, historical + forecast
+  [Debt]     — debt schedule, amortisation, interest, cash sweeps
+  [WC]       — working capital: AR, inventory, AP days drivers
+  [Capex]    — capex schedule, PP&E roll, depreciation waterfall
+  [Val]      — DCF, comps summary, football field
+  [Output]   — management summary: key metrics, leverage, cover, IRR
+  [Scenarios]— base/downside/severe toggles, sensitivity tables</div>
 
-BLUE TEXT:    Hardcoded inputs (assumptions you typed manually)
-BLACK TEXT:   Formula-driven cells (calculations)
-GREEN TEXT:   Links to other tabs or external sources
-RED TEXT:     Error flags or broken links
-GREY TEXT:    Supporting notes or documentation
-
-Background fills (some firms):
-LIGHT BLUE:   Assumption / input cells
-WHITE:        Calculation cells
-LIGHT GREY:   Non-editable reference cells</div>
-<p>These conventions must be applied consistently throughout the model. An auditor opening your model should be able to tell in three seconds whether any cell is an input or a formula.</p>
-
-<h2>The Formula <em>Discipline Rules</em></h2>
-<p><strong>Rule 1 — Never hardcode in forecast columns.</strong> Every cell in a forecast year must be a formula. The only exception: the assumption tab itself. If you find yourself typing "220" into a Year 3 revenue cell, stop — that number should be "=prior_year × (1 + growth_rate_assumption)".</p>
-<p><strong>Rule 2 — One row, one concept.</strong> Each line of the model does one thing. Don't bundle two calculations into one row. Debt interest for Tranche A and Tranche B should be two separate rows, summed to a subtotal.</p>
-<p><strong>Rule 3 — Consistent sign convention.</strong> Decide upfront: is capex positive or negative in the CFS? Is interest expense positive or negative on the IS? Apply your convention everywhere without exception. Mixed sign conventions are responsible for more model errors than any other single issue.</p>
-<p><strong>Rule 4 — Reference, don't retype.</strong> If a number from one tab is needed in another, use a cell reference (=IS!B12) — never retype the value. Retyping creates two versions of the same number that will inevitably diverge.</p>
+<h2>Version Control and <em>Documentation</em></h2>
+<p>Every model sent outside the team must have a version number and date in the filename. Example: <code>CompanyX_LBO_Model_v4_2024-11-15.xlsx</code>. Never overwrite a previously sent version — always save as a new file. If the client has v3 and you send v4, they must be able to compare the two.</p>
+<p>The Cover tab should include: model purpose, date, version, author, key assumptions summary, and a disclaimer. In a live deal, the Cover tab is what an MD reads first when a model arrives at 11pm — make it informative.</p>
 
 <div class="callout">
-<div class="c-label">Version Control — The Rule That Saves Careers</div>
-<p>Every time you send a model externally, save a new version file: <strong>"CompanyName_Model_v2.1_20250420.xlsx"</strong>. Never overwrite the last sent version. When a client says "can you send me the version from last Tuesday?" — and they will — you need to find it in 30 seconds. One analyst who can immediately produce the version a client is referencing earns enormous credibility. The one who cannot is in a very uncomfortable position.</p>
+<div class="c-label">The Audit Test</div>
+<p>Before sending any model: open it fresh, close all tabs except the Output tab, and try to trace every key output back to a source assumption without opening the Inputs tab. If you cannot do this within 5 minutes, the model is not auditable. Reorganise until it is. An MD who cannot find the revenue growth assumption during a client call will not be happy — and will remember.</p>
 </div>
-
 <div class="mistake-box">
-<div class="m-label">The Structural Mistakes MDs Can Spot Immediately</div>
-<p><strong>No balance sheet check.</strong> If there is no CHECK row at the bottom of the balance sheet, the model has not been verified to balance.<br><br>
-<strong>Assumptions scattered across tabs.</strong> Changing a margin assumption requires hunting through five different tabs — the model cannot be scenario-tested reliably.<br><br>
-<strong>Formulas that skip rows.</strong> =B14+B16 (skipping B15) is a lurking error — if B15 should be included in a sum but was accidentally missed, the model gives wrong totals for years without anyone noticing.</p>
+<div class="m-label">The Most Common Architecture Mistakes</div>
+<p><strong>Linking across workbooks.</strong> External links to other Excel files break when files move or are renamed. Always embed all data within a single workbook. If you must reference external data, hard-code it into a clearly labelled "Source Data" tab with the source noted alongside.<br><br>
+<strong>Merged cells.</strong> Merged cells break array formulas, cause copy-paste errors, and make data tables fail. Never merge cells in a live model — use formatting (borders, bold) to achieve visual grouping instead.<br><br>
+<strong>Hiding rows or columns.</strong> Hidden rows containing intermediate calculations or assumptions become invisible in a client meeting and are the first place errors hide. Use outline grouping (Group → Rows) instead — it shows that rows are grouped, not hidden.</p>
 </div>
-
 <div class="bank-box">
 <div class="b-label">In a Real Bank</div>
-<p>Most bulge-bracket banks have proprietary model templates — pre-built tab structures, pre-set colour conventions, and standard formula layouts. When you join, your first task is usually to learn the house template before building anything from scratch. The template exists because standardised models are faster to review (MDs know exactly where to look) and harder to break (the balance checks are already built in). Follow the house template exactly — do not "improve" it without senior approval.</p>
+<p>Most bulge-bracket banks maintain proprietary model templates for each product type — M&A, LBO, IPO, DCF. First-year analysts spend their first 2–3 weeks learning the bank's specific template before touching a live deal. The template enforces all the conventions above. When you eventually build from scratch (for a boutique or for a special-purpose model), you build on top of the template architecture — not from a blank workbook.</p>
 </div>
 
 <div class="page-nav">
   <a href="level-4.html" class="btn btn-ghost">&larr; Previous</a>
-  <div class="pn-context">Level <span>04</span> &middot; Financial Modelling</div>
-  <a href="l4-revenue.html" class="btn btn-gold">Next &rarr;</a>
+  <div class="pn-context">Level <span>04</span> &middot; Modelling</div>
+  <a href="l4-three-statement.html" class="btn btn-gold">Next &rarr;</a>
 </div>
 </div>
 </div></div>

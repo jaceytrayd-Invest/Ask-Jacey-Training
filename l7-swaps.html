@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L7.04 — Interest Rate & Currency Swaps | Ask Jacey</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="eco-hdr"></div><div id="hdr"></div>
+<div id="app"><div id="sb"></div><div id="content">
+<div class="breadcrumb">
+  <a href="index.html">Home</a><span class="sep">&#8250;</span>
+  <a href="level-7.html">Level 07</a><span class="sep">&#8250;</span>
+  <span class="current">L7.04 — Interest Rate & Currency Swaps</span>
+</div>
+<div class="lesson-page">
+<div class="deal-badge">&#128204; Level 07 &middot; Derivatives &middot; L7.04 — Interest Rate & Currency Swaps</div>
+<p class="lesson-intro">Interest rate swaps are the largest and most liquid derivative market in the world — with notional outstanding in the hundreds of trillions. They appear in virtually every leveraged finance transaction, most corporate bond issuances, and many structured products. Understanding how they work and why they are used is essential.</p>
+
+<h2>Interest Rate Swap — <em>mechanics</em></h2>
+<div class="formula-block">Plain vanilla interest rate swap (IRS):
+  Party A (fixed payer):    Pays fixed rate X% per year on £N notional
+  Party B (floating payer): Pays SOFR per year on £N notional
+
+  No principal exchange — only net interest payments settle
+
+Cash flow example (£100m notional, fixed 5%, SOFR 4%):
+  Fixed payer pays: 5.00% × £100m = £5.00m
+  Fixed payer receives: 4.00% × £100m = £4.00m
+  Net payment from fixed payer: £1.00m
+
+If SOFR rises to 7%:
+  Fixed payer pays: 5.00% × £100m = £5.00m
+  Fixed payer receives: 7.00% × £100m = £7.00m
+  Net receipt by fixed payer: £2.00m (SWAP IS NOW PROFITABLE)
+
+Why: fixed payer benefits when floating rates rise above fixed rate
+Why: floating payer (fixed receiver) benefits when floating rates fall</div>
+
+<h2>Cross-Currency Swap — <em>when currencies differ</em></h2>
+<p>A cross-currency swap (XCCY) exchanges interest payments AND principal in two different currencies. Used when a company raises debt in one currency but needs cash in another — typically for cross-border financing.</p>
+<div class="formula-block">Example: UK company issues USD bonds (lower USD interest rate)
+but needs GBP for UK operations.
+
+Cross-currency swap:
+  Inception: company RECEIVES $500m (from bond proceeds)
+             company PAYS £395m (at spot GBPUSD 1.2658)
+  
+  During: company PAYS USD interest to swap counterparty
+          company RECEIVES GBP interest from swap counterparty
+  
+  Maturity: company PAYS $500m (repays bond)
+            company RECEIVES £395m (from swap counterparty)
+  
+  Net result: company has effectively issued GBP bonds
+  at a rate that reflects the GBP market — despite issuing in USD</div>
+
+<h2>Swap Valuation — <em>mark-to-market</em></h2>
+<p>At inception, a fairly-priced swap has zero market value — both parties exchange equivalent present values. As market rates change, the swap develops a positive or negative mark-to-market (MTM) value to each party.</p>
+<div class="formula-block">Swap MTM mechanics:
+  Fixed payer entered swap at 5% fixed when market rate was 5%
+  → Initial MTM = zero
+
+  Market fixed rate rises to 7%:
+  → The fixed payer locked in 5% — below current market
+  → Swap has POSITIVE MTM to the fixed payer
+  → If the company sold/unwound the swap, it would receive a payment
+
+  Market fixed rate falls to 3%:
+  → The fixed payer locked in 5% — above current market
+  → Swap has NEGATIVE MTM to the fixed payer
+  → Unwinding the swap would cost money (a payment out)</div>
+
+<div class="callout">
+<div class="c-label">IFRS 9 — Hedge Accounting for Swaps</div>
+<p>Under IFRS 9, if a swap is designated as a qualifying cash flow hedge, its MTM changes go through Other Comprehensive Income (OCI) rather than the income statement. This prevents quarterly earnings volatility from swap MTM movements — which can be very large for long-dated swaps when interest rates move significantly. Without hedge accounting designation, every quarterly MTM movement hits the P&L — creating noise that obscures underlying operating performance. Achieving hedge accounting designation requires specific documentation and effectiveness testing — typically done with the help of the bank's derivatives accounting team.</p>
+</div>
+<div class="lender-box">
+<div class="l-label">&#128273; Lender's Perspective — JaceyTrayd</div>
+<p>When we require borrowers to hedge their floating rate debt via swaps, we specify in the loan documentation: minimum % to hedge (e.g., 60%), minimum tenor of the hedge (matching the loan tenor), and permitted counterparties (typically IG-rated banks). We review swap confirmations at close and again at each annual review to verify compliance. We also assess whether the borrower has hedge accounting designation — undesignated swaps creating large P&L volatility can complicate covenant testing if the EBITDA definition does not explicitly exclude derivative fair value movements.</p>
+</div>
+
+<div class="page-nav">
+  <a href="l7-futures-forwards.html" class="btn btn-ghost">&larr; Previous</a>
+  <div class="pn-context">Level <span>07</span> &middot; Derivatives</div>
+  <a href="l7-hedging.html" class="btn btn-gold">Next &rarr;</a>
+</div>
+</div>
+</div></div>
+<script src="shared.js"></script>
+<script>
+document.getElementById('eco-hdr').outerHTML=buildEcoHeader();
+document.getElementById('hdr').outerHTML=buildHeader();
+document.getElementById('sb').outerHTML=buildSidebar(7);
+</script>
+</body></html>

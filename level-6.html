@@ -3,15 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Coming Soon | Ask Jacey IB Masterclass</title>
+<title>Level 6 — Capital Markets | Ask Jacey IB Masterclass</title>
 <link rel="stylesheet" href="style.css">
-<style>
-.coming-wrap{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:60vh;text-align:center;padding:3rem 2rem}
-.coming-num{font-family:var(--serif);font-size:8rem;font-weight:700;color:rgba(201,168,76,0.08);line-height:1;margin-bottom:1rem}
-.coming-wrap h2{font-family:var(--serif);font-size:2rem;font-weight:300;color:var(--white);margin-bottom:0.8rem}
-.coming-wrap h2 em{color:var(--gold-light);font-style:italic}
-.coming-wrap p{font-family:var(--slab);font-size:0.84rem;color:var(--ash);line-height:1.75;max-width:440px;margin-bottom:1.5rem}
-</style>
 </head>
 <body>
 <div id="eco-hdr"></div>
@@ -19,28 +12,704 @@
 <div id="app">
 <div id="sb"></div>
 <div id="content">
-<div class="breadcrumb"><a href="index.html">Home</a><span class="sep">›</span><span class="current" id="bc-title">Level — Coming Soon</span></div>
-<div class="coming-wrap">
-<div class="coming-num" id="cn-num">—</div>
-<h2 id="cn-title">Coming <em>Soon</em></h2>
-<p>This level is in the build queue. Complete Levels 00 and 01 first — the foundations carry through every module above.</p>
-<div style="display:flex;gap:0.8rem;flex-wrap:wrap;justify-content:center">
-<a href="level-1.html" class="btn btn-gold">← Back to Level 01</a>
-<a href="index.html" class="btn btn-outline">Home</a>
+
+<div class="breadcrumb">
+  <a href="index.html">Home</a><span class="sep">›</span>
+  <a href="level-5.html">Level 05</a><span class="sep">›</span>
+  <span class="current">Level 06 — Capital Markets</span>
 </div>
+
+<div class="level-banner" data-level-num="6">
+  <div class="level-tag">Level 06 · Capital Markets</div>
+  <h1>Raising Capital — <em>Equity &amp; Debt</em></h1>
+  <p>Capital markets are where companies access funding at scale. ECM and DCM are the engine rooms of investment banking — connecting issuers who need capital with institutional investors who have it. This level covers the mechanics, pricing, and execution of equity and debt issuance from first principles.</p>
+  <div class="level-meta">
+    <span><i>📚</i> 6 Lessons</span>
+    <span><i>🧪</i> 15 Quiz Questions</span>
+    <span><i>⚙</i> 4 Solvers</span>
+    <span><i>🎯</i> 12 Interview Q&A</span>
+    <span><i>⏱</i> ~2.5 hrs</span>
+  </div>
 </div>
+
+<div class="hub-tabs">
+  <button class="hub-tab active" onclick="switchTab('learn')">📘 Learn</button>
+  <button class="hub-tab" onclick="switchTab('practice')">🧪 Practice</button>
+  <button class="hub-tab" onclick="switchTab('solver')">⚙ Problem Solver</button>
+  <button class="hub-tab" onclick="switchTab('interview')">🎯 Interview Prep</button>
+</div>
+
+<!-- ═══ LEARN ═══ -->
+<div class="tab-panel active" id="tab-learn">
+  <div class="sec-head"><h2>Lessons — <em>Capital Markets</em></h2><div class="sec-line"></div></div>
+  <div class="lesson-grid">
+    <a href="l6-ecm-overview.html" class="lesson-card">
+      <div class="lc-num">L6.01</div>
+      <div class="lc-title">ECM — Equity Capital Markets Overview</div>
+      <div class="lc-desc">The ECM product suite: IPOs, follow-ons, rights issues, convertibles, block trades, and SPACs. Who the players are and how an issuance flows from mandate to listing.</div>
+      <div class="lc-meta"><span class="lc-tag core">Core</span><span class="lc-tag int">~10 min</span></div>
+    </a>
+    <a href="l6-ipo.html" class="lesson-card">
+      <div class="lc-num">L6.02</div>
+      <div class="lc-title">The IPO Process</div>
+      <div class="lc-desc">From the decision to list to the first day of trading. Preparation, prospectus, pilot fishing, roadshow, bookbuilding, pricing, and stabilisation mechanics.</div>
+      <div class="lc-meta"><span class="lc-tag core">Core</span><span class="lc-tag int">~14 min</span></div>
+    </a>
+    <a href="l6-dcm-overview.html" class="lesson-card">
+      <div class="lc-num">L6.03</div>
+      <div class="lc-title">DCM — Debt Capital Markets Overview</div>
+      <div class="lc-desc">The DCM product suite: investment grade bonds, high yield, syndicated loans, private placements, and securitisation. How debt markets differ from equity markets.</div>
+      <div class="lc-meta"><span class="lc-tag core">Core</span><span class="lc-tag int">~10 min</span></div>
+    </a>
+    <a href="l6-bond-mechanics.html" class="lesson-card">
+      <div class="lc-num">L6.04</div>
+      <div class="lc-title">Bond Mechanics &amp; Pricing</div>
+      <div class="lc-desc">Coupon, yield, duration, spread, and convexity. How bonds are priced, how they trade in secondary markets, and what moves bond prices.</div>
+      <div class="lc-meta"><span class="lc-tag adv">Advanced</span><span class="lc-tag int">~14 min</span></div>
+    </a>
+    <a href="l6-credit-ratings.html" class="lesson-card">
+      <div class="lc-num">L6.05</div>
+      <div class="lc-title">Credit Ratings &amp; the Rating Process</div>
+      <div class="lc-desc">S&P, Moody's, and Fitch. How ratings are assigned, what investment grade means, and how a downgrade to high yield can disrupt a company's entire capital structure.</div>
+      <div class="lc-meta"><span class="lc-tag adv">Advanced</span><span class="lc-tag int">~10 min</span></div>
+    </a>
+    <a href="l6-bookbuilding.html" class="lesson-card">
+      <div class="lc-num">L6.06</div>
+      <div class="lc-title">Bookbuilding &amp; Syndication</div>
+      <div class="lc-desc">How price discovery works for both equity and debt issuances. Order books, roadshow strategy, allocation decisions, stabilisation, and the greenshoe option.</div>
+      <div class="lc-meta"><span class="lc-tag adv">Advanced</span><span class="lc-tag int">~12 min</span></div>
+    </a>
+  </div>
+
+  <!-- FEATURED LESSON: THE IPO PROCESS -->
+  <div class="sec-head" style="margin-top:2rem">
+    <h2>Featured Lesson — <em>The IPO Process</em></h2><div class="sec-line"></div>
+  </div>
+  <div class="lesson-page" style="padding:0;max-width:none">
+    <div class="deal-badge">📍 Capital Markets · The IPO Process · L6.02</div>
+    <p class="lesson-intro">An IPO (Initial Public Offering) is the most transformative capital markets transaction a company undertakes. It converts a private enterprise into a publicly traded entity — permanently changing its governance, disclosure requirements, and access to capital. Understanding the mechanics from mandate to market is essential for any ECM analyst.</p>
+
+    <h2>Why Companies <em>Go Public</em></h2>
+    <p>The decision to IPO is rarely simple. Companies weigh significant benefits against real costs and constraints:</p>
+    <table class="lesson-table">
+      <thead><tr><th>Benefits</th><th>Costs &amp; constraints</th></tr></thead>
+      <tbody>
+        <tr><td>Access to large-scale permanent equity capital</td><td>Ongoing disclosure requirements (quarterly/annual filings)</td></tr>
+        <tr><td>Currency for M&A (listed shares as acquisition consideration)</td><td>Management time on investor relations, roadshows, earnings calls</td></tr>
+        <tr><td>Liquidity for founders and early investors (partial exit)</td><td>Short-term earnings pressure from analyst coverage</td></tr>
+        <tr><td>Brand and profile enhancement with customers and employees</td><td>IPO preparation costs: legal, audit, bank fees (3–7% of proceeds)</td></tr>
+        <tr><td>Employee equity incentives (options exercisable into listed shares)</td><td>Loss of control and founder flexibility in decision-making</td></tr>
+      </tbody>
+    </table>
+
+    <h2>The IPO Timeline — <em>six phases</em></h2>
+    <table class="lesson-table">
+      <thead><tr><th>Phase</th><th>Duration</th><th>Key activity</th><th>Analyst role</th></tr></thead>
+      <tbody>
+        <tr><td><strong>1. Preparation</strong></td><td>3–12 months</td><td>Audited accounts (3 years), corporate governance restructuring, appointment of advisors, prospectus drafting begins</td><td>Financial model, comparable company analysis, prospectus financial sections</td></tr>
+        <tr><td><strong>2. Pilot fishing</strong></td><td>2–4 weeks</td><td>Informal, non-deal roadshow with 10–20 key institutional investors. Test appetite, valuation range, and equity story before committing to a public process</td><td>Prepare investor materials, anticipate Q&amp;A, track feedback</td></tr>
+        <tr><td><strong>3. ITF announcement</strong></td><td>1 day</td><td>Public Intention to Float announcement. Pathfinder (preliminary) prospectus filed. Research published by bookrunner banks</td><td>Final financial model update, prospectus numerical review</td></tr>
+        <tr><td><strong>4. Roadshow</strong></td><td>10–14 days</td><td>Management presents to 50–100+ institutional investors across key financial centres (London, Edinburgh, New York, Paris, Frankfurt). CEO/CFO-led; bankers accompany</td><td>Prepare presentation, update model with investor questions, track order book</td></tr>
+        <tr><td><strong>5. Bookbuild &amp; pricing</strong></td><td>2–5 days</td><td>Orders collected by bookrunners. Price discovered by matching supply (shares offered) with demand (investor orders). Price set; allocation decided</td><td>Order book tracking, allocation analysis, pricing sensitivity</td></tr>
+        <tr><td><strong>6. Admission &amp; stabilisation</strong></td><td>First 30 days post-listing</td><td>Shares begin trading on exchange. Stabilisation agent (typically a bookrunner) supports the price if it trades below issue price, using the greenshoe option</td><td>Aftermarket monitoring, lock-up expiry tracking, analyst coverage initiation</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Valuation in an IPO — <em>different from M&A</em></h2>
+    <p>IPO valuation uses the same methodologies — trading comps, DCF — but with a critical difference: there is no precedent transaction (the company has not been sold before) and there is no specific acquirer willing to pay a control premium. The valuation is a minority market price, not a control price.</p>
+    <p>IPO pricing is also market-constrained. Even if the DCF implies £20 per share, if investor appetite only supports £15, the deal prices at £15 — or is pulled. The bookbuild is the market's real-time verdict on valuation.</p>
+
+    <div class="callout">
+      <div class="c-label">The Greenshoe Option</div>
+      <p>The greenshoe (or overallotment option) is a price stabilisation tool. In an IPO, the bookrunners sell 10–15% more shares than the company actually issues — creating a "short position." If the share price falls below the issue price, the stabilisation agent buys shares in the open market (covering the short position), supporting the price. If the price rises, the greenshoe option is exercised — the company issues the overallotment shares at the issue price. The net result: stabilisation without downside risk to the company.</p>
+    </div>
+
+    <div class="mistake-box">
+      <div class="m-label">The Two Most Common IPO Failures</div>
+      <p><strong>Pricing too aggressively.</strong> Leaving no money on the table sounds good until the stock drops 15% on day one. Institutional investors who bought at IPO are immediately underwater — they will not participate in the next deal. A well-priced IPO trades up 10–15% on the first day; this "pop" rewards early investors and creates positive momentum. Pricing above this range risks a broken IPO.<br><br>
+      <strong>Roadshow narrative failing.</strong> Investors buy the story before they buy the numbers. A CEO who cannot articulate clearly why the company is going public, what the use of proceeds achieves, and why now is the right moment will lose investor confidence regardless of the financials.</p>
+    </div>
+
+    <div class="bank-box">
+      <div class="b-label">In a Real Bank</div>
+      <p>ECM analysts during a live IPO work on three simultaneous workstreams: the prospectus (reviewing and updating every financial number in the legal document), the investor materials (the management presentation and its Q&A preparation), and the order book (tracking which investors are building positions and at what price levels). During the roadshow, the analyst is typically running the model updates overnight to incorporate the questions raised in that day's investor meetings — ready for the next morning's session.</p>
+    </div>
+
+    <div class="lender-box">
+      <div class="l-label">🔑 Lender's Perspective — JaceyTrayd</div>
+      <p>An IPO fundamentally changes a borrower's credit profile — for better and worse. The cash raised strengthens the balance sheet (reducing net leverage). But public company status introduces quarterly earnings pressure, which can lead management to cut investment and optimise for short-term EBITDA rather than long-term business health. Post-IPO, we review our covenant packages — listed companies often negotiate for looser covenants as public disclosure already provides investor accountability. We are generally comfortable with this if the balance sheet has genuinely improved post-listing.</p>
+    </div>
+    <a href="l6-ipo.html" class="btn btn-gold" style="margin-top:1.2rem">Read Full Lesson → The IPO Process</a>
+  </div>
+</div>
+
+<!-- ═══ PRACTICE ═══ -->
+<div class="tab-panel" id="tab-practice">
+  <div class="sec-head"><h2>Quiz — <em>Capital Markets</em></h2><div class="sec-line"></div></div>
+  <p style="font-family:var(--slab);font-size:0.8rem;color:var(--ash);margin-bottom:1.5rem;line-height:1.7">15 questions across ECM products, IPO mechanics, DCM instruments, bond pricing, credit ratings, and bookbuilding. These cover the capital markets knowledge base tested in ECM and DCM interviews.</p>
+  <div id="quiz-container"></div>
+</div>
+
+<!-- ═══ SOLVER ═══ -->
+<div class="tab-panel" id="tab-solver">
+  <div class="sec-head"><h2>Problem Solver — <em>Capital Markets</em></h2><div class="sec-line"></div></div>
+  <p style="font-family:var(--slab);font-size:0.8rem;color:var(--ash);margin-bottom:1.5rem;line-height:1.7">Four worked problems: IPO valuation and pricing, bond price calculation, credit spread analysis, and rights issue mechanics. Reveal each step in sequence.</p>
+  <div style="display:flex;gap:0.6rem;margin-bottom:1.5rem;flex-wrap:wrap" id="solver-btns">
+    <button class="btn btn-gold"    onclick="loadProblem(0)">P1: IPO Valuation &amp; Pricing</button>
+    <button class="btn btn-outline" onclick="loadProblem(1)">P2: Bond Price &amp; Yield</button>
+    <button class="btn btn-outline" onclick="loadProblem(2)">P3: Rights Issue</button>
+    <button class="btn btn-outline" onclick="loadProblem(3)">P4: Credit Spread Analysis</button>
+  </div>
+  <div id="solver-container"></div>
+</div>
+
+<!-- ═══ INTERVIEW ═══ -->
+<div class="tab-panel" id="tab-interview">
+  <div class="sec-head"><h2>Interview Prep — <em>Capital Markets Q&amp;A</em></h2><div class="sec-line"></div></div>
+  <p style="font-family:var(--slab);font-size:0.8rem;color:var(--ash);margin-bottom:1.2rem;line-height:1.7">12 capital markets questions covering ECM, DCM, bond mechanics, credit ratings, and market structure. Essential for ECM/DCM roles and relevant for any IB generalist interview.</p>
+  <div class="iq-filter">
+    <button class="iq-filter-btn active" onclick="filterIQ('all')">All</button>
+    <button class="iq-filter-btn" onclick="filterIQ('tech')">Technical</button>
+    <button class="iq-filter-btn" onclick="filterIQ('deal')">Deal Context</button>
+    <button class="iq-filter-btn" onclick="filterIQ('beh')">Conceptual</button>
+  </div>
+  <div class="interview-wrapper" id="interview-container"></div>
+</div>
+
+<div class="page-nav">
+  <a href="level-5.html" class="btn btn-ghost">← Level 05: M&A</a>
+  <div class="pn-context">Level <span>06</span> of 11 · Capital Markets</div>
+  <a href="level-7.html" class="btn btn-gold">Next: Level 07 — Derivatives →</a>
+</div>
+
 </div>
 </div>
 <script src="shared.js"></script>
 <script>
-var lvl = parseInt(window.location.pathname.match(/level-(\d+)/)?.[1] || '0');
 document.getElementById('eco-hdr').outerHTML = buildEcoHeader();
 document.getElementById('hdr').outerHTML = buildHeader();
-document.getElementById('sb').outerHTML = buildSidebar(lvl);
-var names = ['','','','Valuation','Modelling','M&A','Capital Markets','Derivatives','Private Markets','Deal Execution','Careers','Advanced'];
-document.getElementById('cn-num').textContent = String(lvl).padStart(2,'0');
-document.getElementById('cn-title').innerHTML = (names[lvl]||'Level '+lvl) + ' <em>— Coming Soon</em>';
-document.getElementById('bc-title').textContent = 'Level ' + String(lvl).padStart(2,'0') + ' — ' + (names[lvl]||'');
+document.getElementById('sb').outerHTML = buildSidebar(6);
+
+function switchTab(name) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.hub-tab').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + name).classList.add('active');
+  event.target.classList.add('active');
+  if (name==='practice' && !window._qL) { initQuiz();      window._qL=true; }
+  if (name==='solver'   && !window._sL) { loadProblem(0);  window._sL=true; }
+  if (name==='interview'&& !window._iL) { initInterview(); window._iL=true; }
+}
+
+/* ═══════════════════ QUIZ — 15 questions ═══════════════════ */
+const quizQuestions = [
+  {
+    question: 'What is the primary difference between a primary offering and a secondary offering in equity capital markets?',
+    options: [
+      'Primary offerings are on the primary exchange; secondary offerings trade on alternative venues',
+      'In a primary offering, the company issues new shares and receives the proceeds; in a secondary offering, existing shareholders sell their shares and receive the proceeds — the company receives nothing',
+      'Primary offerings are for investment grade companies; secondary offerings are for high yield issuers',
+      'Primary offerings require regulatory approval; secondary offerings do not'
+    ],
+    correct: 1,
+    explanation: '<strong>The destination of proceeds is the defining difference.</strong> Primary offering: company creates new shares → sells them → receives cash (used to fund growth, pay debt, or make acquisitions). Secondary offering: existing shareholders (founders, PE sponsors, early investors) sell their existing shares → those shareholders receive the cash → the company\'s balance sheet is unaffected. Most IPOs combine both — some primary shares (proceeds to company) and some secondary shares (proceeds to selling shareholders). The proportion matters: a largely secondary IPO signals insiders are exiting, which investors read cautiously.'
+  },
+  {
+    question: 'What is "pilot fishing" in the context of an IPO?',
+    options: [
+      'The formal regulatory filing required before an IPO can proceed',
+      'An informal pre-deal investor engagement — senior management meets confidentially with key institutional investors to test appetite and valuation before committing to a public process',
+      'The underwriters\' internal assessment of the company\'s credit quality before agreeing to underwrite',
+      'The roadshow conducted in the first week of the formal marketing period'
+    ],
+    correct: 1,
+    explanation: '<strong>Pilot fishing (or "testing the waters") is the pre-formal-roadshow intelligence-gathering phase.</strong> Before publicly announcing an IPO, management and senior bankers meet confidentially with 10–20 key institutional investors to gauge interest, test the equity story, and understand the valuation range the market will support. It is non-deal — no commitment is made. But it prevents the embarrassing situation of publicly announcing an IPO and then discovering institutional appetite is insufficient to price it. If pilot fishing feedback is negative, the company can quietly cancel plans without public scrutiny.'
+  },
+  {
+    question: 'A bond has a face value of £1,000, a 5% coupon, and 3 years to maturity. If the current market yield is 7%, does the bond trade at a premium, at par, or at a discount?',
+    options: [
+      'At a premium — because the coupon is positive',
+      'At par — because the yield and coupon are both fixed at issuance',
+      'At a discount — because the market yield (7%) exceeds the coupon rate (5%), making the bond less attractive than newly issued bonds',
+      'It cannot be determined without knowing the credit rating'
+    ],
+    correct: 2,
+    explanation: '<strong>When market yield > coupon rate, the bond trades at a discount (below par).</strong> The bond pays £50/year in coupons. New bonds issued today at 7% would pay £70/year on the same £1,000 face value. To make this bond equally attractive, its price must fall until the effective yield equals 7%. The price falls to approximately £947.51: PV(coupons) + PV(face value) = (£50/1.07 + £50/1.07² + £50/1.07³) + £1,000/1.07³ = £130.21 + £816.30 ≈ £947. Price falls, yield rises — the inverse relationship.'
+  },
+  {
+    question: 'What does it mean for a bond to be "investment grade"?',
+    options: [
+      'The bond was issued by a company that is listed on a recognised investment exchange',
+      'The bond is rated BBB-/Baa3 or above by S&P/Moody\'s — indicating relatively low default risk, eligible for purchase by most institutional investors under their mandates',
+      'The bond pays a fixed coupon rate above the prevailing risk-free rate',
+      'The bond was underwritten by a bulge-bracket investment bank'
+    ],
+    correct: 1,
+    explanation: '<strong>Investment grade (IG) is a credit quality threshold set by rating agencies.</strong> S&P/Fitch: BBB- and above = IG. Moody\'s: Baa3 and above = IG. Below these thresholds is "high yield" (HY) or "sub-investment grade" or colloquially "junk." The distinction matters enormously: most pension funds, insurance companies, and bond mutual funds are mandated to hold only IG bonds. A downgrade from BBB- to BB+ (a "fallen angel") forces these investors to sell — creating forced selling pressure that can dramatically widen spreads and increase borrowing costs.'
+  },
+  {
+    question: 'In a rights issue, what is the "theoretical ex-rights price" (TERP)?',
+    options: [
+      'The price at which the new shares are offered to existing shareholders',
+      'The theoretical share price after the rights issue, calculated as the weighted average of pre-rights shares and new shares at the offer price',
+      'The maximum price existing shareholders can pay to exercise their rights',
+      'The price at which rights trade in the secondary market before the exercise date'
+    ],
+    correct: 1,
+    explanation: '<strong>TERP is the theoretical equilibrium share price after a rights issue.</strong> When a company issues new shares at a discount to raise capital, the price of existing shares must theoretically adjust downward to reflect the dilution from cheaper new shares entering the capital structure. TERP = (Pre-rights market cap + Proceeds from new shares) / Total shares post-issue. TERP is always below the pre-rights share price (because new shares are issued at a discount) but above the offer price (which is typically 20-40% discount to pre-rights price).'
+  },
+  {
+    question: 'What is the "bookbuild" in a capital markets transaction?',
+    options: [
+      'The process of drafting and finalising the prospectus or offering document',
+      'The price discovery process in which the bookrunner collects orders from institutional investors — including the price they are willing to pay and the quantity — to set the final issue price and allocation',
+      'The bank\'s internal process of building a financial model to value the issuance',
+      'The legal process of registering the securities with the relevant regulatory authority'
+    ],
+    correct: 1,
+    explanation: '<strong>The bookbuild is real-time market price discovery through order collection.</strong> During the roadshow period, institutional investors submit orders to the bookrunner — "I will buy X shares at price Y" or "I will buy X shares at any price within the range." The bookrunner aggregates all orders into the order book, sees at what price the full deal is "covered" (i.e., total demand equals or exceeds supply), and sets the final price accordingly. A heavily oversubscribed book gives the issuer pricing power; an undersubscribed book requires price reduction or deal withdrawal.'
+  },
+  {
+    question: 'What is the difference between a "coupon" and a "yield" on a bond?',
+    options: [
+      'The coupon is the annual payment; the yield accounts for the time value of money and any premium or discount in the market price',
+      'Coupon is fixed; yield floats with the benchmark rate',
+      'They are the same thing expressed as a percentage of different base values',
+      'Coupon applies to bonds; yield applies to loans'
+    ],
+    correct: 0,
+    explanation: '<strong>Coupon is the fixed contractual payment; yield is the actual return given the current market price.</strong> Coupon rate: set at issuance, calculated on face value. A 5% coupon on £1,000 bond = £50/year, regardless of market price. Yield to maturity (YTM): the annualised return an investor earns buying the bond at today\'s market price and holding to maturity — accounts for coupon payments AND any price difference from par. If the bond trades at £950 (below par), the YTM exceeds the 5% coupon because the investor also gains £50 at maturity when they receive £1,000 face value.'
+  },
+  {
+    question: 'What is a "block trade" in equity capital markets?',
+    options: [
+      'A large M&A transaction structured as a share-for-share merger',
+      'The rapid sale of a large block of existing shares by a major shareholder — typically executed overnight by the bank at a small discount to the prevailing market price, without a public prospectus',
+      'A bulk purchase of bonds by a single institutional investor in the primary market',
+      'The simultaneous listing of the same company\'s shares on multiple exchanges'
+    ],
+    correct: 1,
+    explanation: '<strong>A block trade (or ABB — Accelerated Book Build) is an overnight equity sale for a large shareholder.</strong> A PE sponsor, founding family, or institutional investor wants to sell a large stake quickly without the full IPO process. The investment bank buys or intermediates the block — typically marketing it overnight to institutions at a 2–5% discount to the market close price. The entire process completes in 12–24 hours. Risk: the bank may underwrite the block (buying it outright, taking price risk overnight) or best-efforts (marketing only, not guaranteeing placement). Block trades are the primary secondary market liquidity tool for post-IPO PE exits.'
+  },
+  {
+    question: 'In DCM, what is the role of a "lead manager" vs. a "bookrunner" vs. a "co-manager"?',
+    options: [
+      'These are interchangeable titles for the same role, used in different markets',
+      'Lead manager / bookrunner runs the primary relationship and pricing process; co-managers assist in distribution and receive a smaller economics share but take no underwriting risk',
+      'Lead manager underwrites the deal; bookrunner only provides research; co-managers handle legal documentation',
+      'Bookrunner arranges the deal; lead manager runs the roadshow; co-managers manage the post-deal secondary market'
+    ],
+    correct: 1,
+    explanation: '<strong>The syndicate structure reflects economics, risk, and relationship hierarchy.</strong> <em>Global coordinator / bookrunner:</em> leads pricing, runs the order book, takes the majority of underwriting risk and fee income (typically 60–80% of gross fees). <em>Joint bookrunner:</em> shares bookrunning duties and economics — common on larger deals where multiple banks have competing relationships. <em>Co-manager:</em> assists in distribution to their investor base, receives a smaller fee share (typically 5–10% of gross), takes limited or no underwriting risk. League table credit is typically allocated based on bookrunner designation — critical for ECM/DCM bank rankings.'
+  },
+  {
+    question: 'What is "duration" in the context of fixed income, and why does it matter for investors?',
+    options: [
+      'Duration is simply the time remaining until a bond matures — identical to the years to maturity',
+      'Duration (modified or Macaulay) measures a bond\'s price sensitivity to interest rate changes — a bond with 7 years duration loses approximately 7% in price for every 1% rise in yields',
+      'Duration measures the credit quality of a bond issuer — higher duration = higher credit risk',
+      'Duration is the average time between coupon payment dates'
+    ],
+    correct: 1,
+    explanation: '<strong>Duration measures interest rate sensitivity — the key risk metric for bond investors.</strong> Macaulay duration: weighted average time to receive cash flows. Modified duration: % price change per 1% change in yield. A bond with 7 years modified duration falls approximately 7% in price if yields rise 1%. Zero-coupon bonds have the highest duration (equal to maturity) because all cash flows come at maturity. High-coupon bonds have lower duration because more value is received earlier. Investors with long-term liabilities (pension funds) match asset duration to liability duration — "liability-driven investment" (LDI).'
+  },
+  {
+    question: 'What happens to a company\'s borrowing costs if it is downgraded from investment grade (BBB-) to high yield (BB+)?',
+    options: [
+      'Nothing material — ratings changes only affect new issuances, not existing debt',
+      'Borrowing costs increase significantly — IG companies borrow at Gilt + 100–200bps; HY companies borrow at 7–12%+ fixed. The downgrade also triggers forced selling by IG-mandated investors, widening spreads further.',
+      'Borrowing costs decrease because HY bonds pay higher coupons, making the company more attractive to yield investors',
+      'The company cannot issue any new debt until it returns to investment grade'
+    ],
+    correct: 1,
+    explanation: '<strong>An IG-to-HY downgrade (a "fallen angel") is a significant credit event with serious consequences.</strong> (1) Cost: IG spreads typically 80–200bps over Gilts; HY bonds trade at 400–800bps over (or 7–12%+ absolute yield). The cost of new debt roughly doubles. (2) Forced selling: pension funds, insurance companies, and IG bond indices must sell — creating a sharp immediate price decline and spread widening even before the company borrows a new penny. (3) Covenant implications: many bank loan facilities include ratings-linked covenants that can trigger margin step-ups or accelerated repayment on a downgrade. (4) M&A impact: acquirer\'s own IG rating protects their cost of capital — losing it materially changes the economics of debt-funded acquisitions.'
+  },
+  {
+    question: 'What is a convertible bond and what makes it attractive to issuers and investors respectively?',
+    options: [
+      'A bond that converts its coupon from fixed to floating at a specified date',
+      'A bond that gives the holder the right to convert into equity at a preset price — giving the issuer lower coupon cost in exchange for giving up some upside via the embedded call option on the stock',
+      'A bond issued in one currency that can be repaid in another currency at the holder\'s option',
+      'A bond issued by one company but guaranteed by a related entity'
+    ],
+    correct: 1,
+    explanation: '<strong>A convertible bond is a hybrid instrument — part debt, part embedded equity option.</strong> <em>For issuers:</em> the conversion option has value to investors, so the issuer pays a lower coupon than on straight debt (typically 150–250bps less). The issuer is effectively selling a call option on their equity at a premium, in exchange for a lower interest rate. <em>For investors:</em> downside protection (if the stock falls, they hold a bond and receive coupons and principal), plus upside participation (if the stock rises above the conversion price, they can convert to equity and benefit). Convertibles are popular with growth companies whose debt markets would otherwise be expensive and with investors seeking equity-like returns with bond-like protection.'
+  },
+  {
+    question: 'In a bond issuance, what is the "spread" and what does it reflect?',
+    options: [
+      'The difference between the bid and ask price of the bond in the secondary market',
+      'The additional yield above the risk-free rate (government bond) that the issuer must pay — compensating investors for taking on credit risk, liquidity risk, and other non-sovereign risks',
+      'The bank\'s fee for arranging and underwriting the bond issuance, expressed as a percentage of face value',
+      'The difference between the fixed coupon rate and the floating SOFR/SONIA rate'
+    ],
+    correct: 1,
+    explanation: '<strong>The spread is the risk premium above the risk-free rate.</strong> A UK corporate bond yielding 5.5% when 10-year Gilts yield 4.2% has a credit spread of 130 basis points (1.30%). This 130bps compensates investors for: credit risk (probability the issuer defaults), liquidity risk (corporate bonds trade less freely than Gilts), and any structural subordination. Wider spreads = higher perceived risk. Investment grade spreads: 50–250bps. High yield spreads: 300–800bps+. Distressed: 1,000bps+. Spread movements are the primary driver of bond price changes for credit instruments (rather than changes in the risk-free rate).'
+  },
+  {
+    question: 'What is the "greenshoe option" in an IPO and how does it work?',
+    options: [
+      'An option granted to management to purchase additional shares at the IPO price after listing',
+      'An overallotment option allowing bookrunners to sell up to 15% more shares than originally offered — used to support the post-IPO share price by covering a short position created at pricing',
+      'A tax relief mechanism allowing retail investors to purchase IPO shares free of stamp duty',
+      'A mechanism enabling the issuer to increase the offer size if demand significantly exceeds expectations'
+    ],
+    correct: 1,
+    explanation: '<strong>The greenshoe is a stabilisation mechanism — a legally permitted form of price support.</strong> At IPO pricing, bookrunners overallocate by up to 15% (selling 115 shares for every 100 issued). This creates a short position. If the stock falls below IPO price: bookrunners buy shares in the open market, supporting the price, and use the purchases to close the short position. If the stock rises: bookrunners exercise the greenshoe option, acquiring the additional shares from the company at the IPO price and delivering them to close the short. The company receives proceeds either way; investors get price support in weak markets.'
+  },
+  {
+    question: 'What distinguishes a "syndicated loan" from a bilateral bank loan?',
+    options: [
+      'Syndicated loans are always floating rate; bilateral loans are always fixed rate',
+      'A syndicated loan is arranged by a lead bank (the arranger) but funded by a group of lenders (the syndicate), distributing credit risk across multiple institutions — enabling larger facilities than any single bank could or would provide alone',
+      'Syndicated loans are publicly traded on exchanges; bilateral loans are private arrangements',
+      'Syndicated loans require a credit rating; bilateral loans do not'
+    ],
+    correct: 1,
+    explanation: '<strong>Syndication distributes both credit risk and funding obligation across multiple lenders.</strong> One bank (the lead arranger/bookrunner) structures and negotiates the loan with the borrower, then syndicates portions to other lenders — typically banks, credit funds, and CLOs. Each lender takes a pro-rata share of the exposure. Benefits: enables large facilities (£500m+) that no single bank could fund alone; diversifies credit risk; creates a secondary trading market for loan participations. The lead arranger earns an arrangement fee (typically 50–150bps of facility size) plus ongoing agency fees for administering the facility.'
+  }
+];
+
+function initQuiz() { new QuizEngine(quizQuestions, 'quiz-container'); }
+
+/* ═══════════════════ SOLVERS — 4 problems ═══════════════════ */
+const problems = [
+  /* P1 — IPO Valuation & Pricing */
+  {
+    problem: {
+      title: 'Value a company for its IPO and determine the offer price range.',
+      given: 'Company: B2B software company seeking to list on the London Stock Exchange\n\nFinancials (LTM):\n  Revenue: £180m, growing 22% per year\n  EBITDA: £54m (30% margin)\n  Net Income: £32m\n  Net Debt: £40m (to be repaid with IPO proceeds)\n  Shares outstanding (pre-IPO): 120m\n  New shares to be issued (primary): 25m\n  Shares being sold by existing holders (secondary): 15m\n  Total shares post-IPO: 145m\n\nPeer group (median multiples):\n  EV/Revenue (NTM): 6.5x  |  EV/EBITDA (NTM): 18x  |  P/E (NTM): 28x\n\nNTM forecasts: Revenue £220m, EBITDA £68m, Net Income £41m\nQuestion: Build the IPO valuation and determine the offer price range.'
+    },
+    steps: [
+      {
+        title: 'Apply EV/Revenue multiple to derive EV range',
+        body: 'Use NTM revenue (next twelve months) as the base — IPO investors are buying the future, not the past. Apply the peer group median EV/Revenue multiple.',
+        formula: 'EV/Revenue approach:\n  NTM Revenue: £220m\n  Peer median EV/Revenue: 6.5x\n  Implied EV: £220m × 6.5x = £1,430m\n\nSensitivity (5.5x – 7.5x range):\n  Low:  £220m × 5.5x = £1,210m\n  Mid:  £220m × 6.5x = £1,430m\n  High: £220m × 7.5x = £1,650m'
+      },
+      {
+        title: 'Apply EV/EBITDA multiple',
+        body: 'Cross-check using EV/EBITDA on NTM EBITDA. Compare the two methods — tight convergence suggests robust valuation.',
+        formula: 'EV/EBITDA approach:\n  NTM EBITDA: £68m\n  Peer median EV/EBITDA: 18x\n  Implied EV: £68m × 18x = £1,224m\n\nSensitivity (15x – 21x range):\n  Low:  £68m × 15x = £1,020m\n  Mid:  £68m × 18x = £1,224m\n  High: £68m × 21x = £1,428m'
+      },
+      {
+        title: 'Apply P/E multiple (equity-level cross-check)',
+        body: 'P/E provides an equity-level sanity check. Calculate implied equity value directly from NTM Net Income.',
+        formula: 'P/E approach:\n  NTM Net Income: £41m\n  Peer median P/E: 28x\n  Implied Equity Value: £41m × 28x = £1,148m\n\n  Note: Equity Value is directly derived here — no EV bridge needed\n  (P/E is an equity multiple, already below-the-line)\n\nSensitivity (22x – 34x):\n  Low:  £41m × 22x = £902m\n  High: £41m × 34x = £1,394m'
+      },
+      {
+        title: 'Build the EV-to-equity bridge and derive offer price',
+        body: 'For the EV-based methods, bridge from EV to equity value using the post-IPO balance sheet (net debt repaid with IPO proceeds).',
+        formula: 'Post-IPO balance sheet:\n  Net Debt at IPO: £40m\n  Primary proceeds (new shares): 25m × offer price\n  If offer price = £10: primary proceeds = £250m → repays £40m debt\n  Post-IPO Net Debt: £0 (remaining £210m for corporate use)\n\nUsing mid-point EV (blending EV/Rev and EV/EBITDA):\n  Blended EV: avg(£1,430m, £1,224m) = £1,327m\n  Less: Post-IPO Net Debt: £0 (debt repaid)\n  Implied Equity Value: £1,327m\n\nTotal post-IPO shares: 145m\nImplied offer price: £1,327m / 145m = £9.15 per share\n\nOffer price range (including discount for IPO):\n  IPOs typically price at 10-15% discount to peer trading multiples\n  Indicative range: £8.00 – £10.50 per share\n  Mid-point: £9.15/share → market cap at IPO: £1,327m'
+      },
+      {
+        title: 'Assess deal metrics and size',
+        body: 'Calculate total deal size, proceeds split, and implied multiples at various price points.',
+        formula: 'At £9.15 offer price:\n  Primary proceeds (25m new shares): 25m × £9.15 = £228.75m\n  Secondary proceeds (15m existing):  15m × £9.15 = £137.25m\n  Total deal size:                    £366m\n\n  Of which to company:    £228.75m (used to repay £40m debt; £188.75m on balance sheet)\n  Of which to sellers:    £137.25m\n\nFree float at IPO (40m total shares sold out of 145m total): 27.6%\nTypically need 20-25%+ free float for meaningful institutional liquidity\n\nImplied NTM EV/EBITDA at £9.15:\n  Market cap: £1,327m + Net Debt £0 = EV £1,327m\n  EV/EBITDA: £1,327m / £68m = 19.5x — slight premium to peers\n  Justified by 22% revenue growth vs. peer median (assume ~15%)'
+      }
+    ],
+    answer: {
+      value: 'Indicative offer price: £8.00 – £10.50 | Mid: £9.15 | Market cap: £1,327m',
+      note: 'The 10-15% IPO discount to peer trading multiples is standard — it compensates investors for the additional risk of a newly listed company (no secondary market track record, lock-up restrictions on insiders, limited analyst coverage) and creates the "IPO pop" that rewards early investors and builds post-IPO momentum. Price too aggressively above this range and the stock declines on day one — damaging the company\'s credibility and the bank\'s reputation.'
+    }
+  },
+
+  /* P2 — Bond Price & Yield */
+  {
+    problem: {
+      title: 'Calculate the price and yield metrics of a corporate bond.',
+      given: 'Bond details:\n  Face value (par): £1,000\n  Coupon rate: 6% per year (paid semi-annually)\n  Years to maturity: 5 years\n  Current market yield (YTM): 8% per year\n\nQuestion: Calculate the bond price, annual income, and verify the yield-price relationship.'
+    },
+    steps: [
+      {
+        title: 'Identify the cash flows',
+        body: 'A semi-annual coupon bond pays coupon twice per year. Convert annual figures to semi-annual for the calculation.',
+        formula: 'Semi-annual coupon: (6% × £1,000) / 2 = £30 per period\nSemi-annual yield:  8% / 2 = 4% per period\nNumber of periods:  5 years × 2 = 10 periods\nFace value at maturity: £1,000\n\nCash flow stream:\n  Periods 1-10: £30 coupon each period\n  Period 10:    £1,000 face value (in addition to coupon)'
+      },
+      {
+        title: 'Calculate PV of coupon payments (annuity)',
+        body: 'The coupon stream is an annuity — a fixed payment for a fixed number of periods. Use the annuity PV formula.',
+        formula: 'PV of coupons = C × [1 − 1/(1+r)^n] / r\n\nWhere:\n  C = £30 (semi-annual coupon)\n  r = 4% (semi-annual yield)\n  n = 10 (periods)\n\nPV = £30 × [1 − 1/(1.04)^10] / 0.04\n   = £30 × [1 − 1/1.4802] / 0.04\n   = £30 × [1 − 0.6756] / 0.04\n   = £30 × 0.3244 / 0.04\n   = £30 × 8.111\n   = £243.33'
+      },
+      {
+        title: 'Calculate PV of face value (lump sum)',
+        body: 'The face value of £1,000 is received at maturity (period 10). Discount it at the semi-annual yield for 10 periods.',
+        formula: 'PV of face value = £1,000 / (1 + r)^n\n               = £1,000 / (1.04)^10\n               = £1,000 / 1.4802\n               = £675.56'
+      },
+      {
+        title: 'Sum to get bond price and interpret',
+        body: 'Add the PV of coupons and PV of face value to get the total bond price. Verify it is below par (expected, since yield > coupon).',
+        formula: 'Bond Price = PV(coupons) + PV(face value)\n           = £243.33 + £675.56\n           = £918.89\n\nThe bond trades at a DISCOUNT to par (£918.89 < £1,000)\n→ Confirmed: yield (8%) > coupon (6%) means price < par\n\nAnnual income from the bond:\n  Coupon income:   6% × £1,000 = £60/year\n  Capital gain:    (£1,000 − £918.89) / 5 years = £16.22/year (amortised)\n  Total return:    £60 + £16.22 = £76.22/year ≈ 8.3% of £918.89 ≈ YTM of 8% ✓\n\nCurrent yield (simple): £60 / £918.89 = 6.53% (higher than coupon rate)'
+      }
+    ],
+    answer: {
+      value: 'Bond price: £918.89 | Current yield: 6.53% | YTM: 8.0%',
+      note: 'Three yield concepts to know: (1) Coupon rate = 6% — fixed, calculated on face value. (2) Current yield = 6.53% — annual coupon / market price. (3) YTM = 8.0% — total annualised return if held to maturity, accounting for coupons AND the £81.11 capital gain as price moves to par. YTM is the most complete measure and the one used for bond comparison.'
+    }
+  },
+
+  /* P3 — Rights Issue */
+  {
+    problem: {
+      title: 'Analyse a rights issue — calculate TERP, rights value, and dilution.',
+      given: 'Company: listed company seeking to raise equity capital\n\nPre-rights details:\n  Current share price: £12.00\n  Shares outstanding: 80 million\n  Market capitalisation: £960m\n\nRights issue terms:\n  1 new share for every 4 existing shares (1-for-4 rights issue)\n  Offer price: £8.00 per new share (33.3% discount to current price)\n\nQuestion: Calculate TERP, value of a right, and percentage dilution for non-subscribing shareholders.'
+    },
+    steps: [
+      {
+        title: 'Calculate the number of new shares and proceeds',
+        body: 'A 1-for-4 rights issue means shareholders receive 1 right for every 4 shares held. Each right entitles them to buy 1 new share at the offer price.',
+        formula: 'Existing shares:      80m\nNew shares issued:    80m / 4 = 20m (1 new for every 4 existing)\nTotal shares post-rights: 80m + 20m = 100m\n\nProceeds raised:\n  20m new shares × £8.00 = £160m'
+      },
+      {
+        title: 'Calculate Theoretical Ex-Rights Price (TERP)',
+        body: 'TERP is the theoretical price at which the shares should trade after the rights issue — reflecting the dilution from new shares issued at a discount.',
+        formula: 'TERP = (Pre-rights market cap + Rights issue proceeds) / Total post-rights shares\n\nPre-rights market cap:  80m × £12.00 = £960m\nProceeds:               20m × £8.00  = £160m\nTotal value:            £960m + £160m = £1,120m\n\nTotal shares post-rights: 100m\n\nTERP = £1,120m / 100m = £11.20 per share\n\nThe share price should theoretically fall from £12.00 to £11.20\nafter the rights issue (a decline of £0.80 per share)'
+      },
+      {
+        title: 'Calculate the value of a right',
+        body: 'A right has intrinsic value — the right to buy a share at £8.00 when it is theoretically worth £11.20. Shareholders who do not want to subscribe can sell their rights in the market.',
+        formula: 'Value of 1 right = TERP − Offer Price\n               = £11.20 − £8.00 = £3.20\n\nAlternatively:\nValue of right = (Pre-rights price − Offer price) / (N + 1)\nWhere N = number of existing shares per right = 4\n\n= (£12.00 − £8.00) / (4 + 1) = £4.00 / 5 = £0.80 per right\n\n→ A shareholder with 4 existing shares has 4 rights\n   Total right value: 4 × £0.80 = £3.20\n   This exactly offsets the dilution: 4 shares fell from £12 to £11.20\n   = loss of £0.80 per share × 4 shares = £3.20 ✓\n   Shareholders are economically neutral whether they subscribe or sell rights.'
+      },
+      {
+        title: 'Calculate dilution for a non-subscribing shareholder',
+        body: 'A shareholder who neither subscribes nor sells their rights is diluted — their percentage ownership falls and they suffer an economic loss.',
+        formula: 'Shareholder holds: 4,000 shares at £12.00 = £48,000\n\nIf they SUBSCRIBE (buys 1,000 new shares at £8.00):\n  Cash paid:          £8,000\n  New holding:        5,000 shares at TERP £11.20 = £56,000\n  Total wealth:       £56,000 − £8,000 cash = £48,000\n  Wealth change:      £0 — economically neutral ✓\n\nIf they SELL RIGHTS (sells 4,000 rights at £0.80 each):\n  Rights proceeds:    4,000 × £0.80 = £3,200\n  Existing shares:    4,000 at TERP £11.20 = £44,800\n  Total wealth:       £44,800 + £3,200 = £48,000\n  Wealth change:      £0 — economically neutral ✓\n\nIf they DO NOTHING (neither subscribe nor sell rights):\n  Shares:             4,000 at TERP £11.20 = £44,800\n  Rights expired:     £0\n  Total wealth:       £44,800\n  Loss:               £48,000 − £44,800 = £3,200 (-6.7%)\n  → The only economically harmful outcome is doing nothing'
+      }
+    ],
+    answer: {
+      value: 'TERP: £11.20 | Right value: £0.80 | Non-subscriber loss: 6.7%',
+      note: 'Rights issues are designed to be economically neutral for subscribing shareholders and for those who sell their rights. The discount is necessary to ensure the rights are valuable (so they trade) and to ensure the deal is fully subscribed even in a falling market. A deeper discount = more valuable rights = less risk of the deal failing = more certain proceeds for the company. Typically 20-40% discount in the UK market.'
+    }
+  },
+
+  /* P4 — Credit Spread Analysis */
+  {
+    problem: {
+      title: 'Analyse credit spreads and assess whether a bond represents fair value.',
+      given: 'A BBB-rated manufacturing company is issuing a 7-year bond.\n\nMarket data:\n  7-year UK Gilt yield:           4.40%\n  7-year BBB industrial spread:   175 bps (current market average)\n  Comparable bonds trading at:\n    Peer A (BBB+, same sector, 7yr): Gilt + 145bps = 5.85%\n    Peer B (BBB, same sector, 7yr):  Gilt + 185bps = 6.25%\n    Peer C (BBB-, same sector, 7yr): Gilt + 225bps = 6.65%\n\nCompany financial metrics:\n  Net Leverage (Net Debt/EBITDA): 3.2x\n  Interest Cover (EBITDA/Interest): 3.8x\n  FCF Conversion: 65%\n  Revenue: £1.2bn, stable sector\n\nProposed new issue spread: Gilt + 165bps\nQuestion: Is Gilt + 165bps fair value for this credit?'
+    },
+    steps: [
+      {
+        title: 'Establish the benchmark: where should BBB industrials trade?',
+        body: 'The sector average spread for BBB industrials is 175bps. This is the starting point — any deviation must be justified.',
+        formula: 'BBB industrial sector average:  Gilt + 175bps = 6.15% yield\n\nPeer matrix:\n  BBB+  Peer A:  Gilt + 145bps  (30bps tighter than average)\n  BBB   Peer B:  Gilt + 185bps  (10bps wider than average)\n  BBB-  Peer C:  Gilt + 225bps  (50bps wider than average)\n\nThe issuer is rated BBB (same as Peer B)\n→ Peer B at Gilt + 185bps is the most directly comparable benchmark\n→ Proposed spread of Gilt + 165bps is 20bps TIGHTER than the closest peer'
+      },
+      {
+        title: 'Assess financial metrics vs. BBB median',
+        body: 'Justify any spread differential by comparing the issuer\'s credit metrics to BBB sector medians. Better metrics → tighter spread justified.',
+        formula: 'Typical BBB industrial metrics vs. this issuer:\n\n  Metric           BBB Median    This Issuer    Assessment\n  Net Leverage     3.5x          3.2x           Better — supports tighter spread\n  Interest Cover   3.0x          3.8x           Better — good coverage headroom\n  FCF Conversion   70%           65%            Slightly weaker — small negative\n  Revenue size     £500m+        £1.2bn         Positive — scale lowers risk\n  Sector           Varies        Manufacturing  Cyclical — mild negative\n\nOverall credit assessment:\n  The issuer\'s leverage is below BBB median and cover is strong\n  FCF conversion is slightly below median — one flag\n  Large revenue scale is a positive\n  Net assessment: marginally better than median BBB → slight tightening justifiable'
+      },
+      {
+        title: 'Determine fair value spread',
+        body: 'Triangulate from the sector average, the direct peer, and the credit quality assessment to arrive at a fair value spread range.',
+        formula: 'Fair value triangulation:\n\n  Sector average BBB:     Gilt + 175bps\n  Direct peer (Peer B):   Gilt + 185bps\n  Slight credit premium   → -10 to -15bps adjustment for better metrics\n\n  Fair value estimate:    Gilt + 165bps to Gilt + 175bps\n\n  Proposed new issue:     Gilt + 165bps\n  → At the tight end of fair value, but defensible\n  → Would offer investors minimal new issue concession'
+      },
+      {
+        title: 'Provide investment recommendation',
+        body: 'Assess whether the proposed spread offers adequate compensation for the risk — and what new issue concession investors would typically expect.',
+        formula: 'New issue concession analysis:\n  Standard new issue concession: 5-10bps wider than secondary\n  Fair value secondary:          Gilt + 165-175bps\n  Expected new issue spread:     Gilt + 170-185bps\n\n  Proposed: Gilt + 165bps → TIGHT vs. new issue convention\n\nRecommendation:\n  For investors: The bond appears fairly valued to slightly tight.\n    Recommend participating only if size allocation is attractive\n    or if the company is strategically important to the portfolio.\n    Request at least Gilt + 170bps for a new issue.\n\n  For the issuer: The proposed spread is achievable if demand is\n    strong, but builds in minimal pricing premium. Consider offering\n    Gilt + 170bps to ensure full subscription and positive aftermarket\n    — a tighter deal that struggles in secondary damages future access.\n\n  JaceyTrayd view: At 3.2x leverage with 3.8x interest cover,\n    this credit has adequate headroom. We would participate at\n    Gilt + 170-175bps as a direct lending alternative to public market.'
+      }
+    ],
+    answer: {
+      value: 'Fair value: Gilt + 165–175bps | Proposed Gilt + 165bps is at the tight end',
+      note: 'New issue concession (NIC) is the spread premium investors expect for participating in a primary issuance vs. buying in the secondary market. A deal with zero NIC risks poor aftermarket performance if investors do not make money on the first trade. Strong credits with high investor demand can price with minimal NIC; weaker credits or large deal sizes require 10–20bps+ NIC to ensure full subscription and a clean aftermarket.'
+    }
+  }
+];
+
+function loadProblem(idx) {
+  new SolverEngine(problems[idx].problem, problems[idx].steps, problems[idx].answer, 'solver-container');
+  document.querySelectorAll('#solver-btns .btn').forEach((b,i) => {
+    b.className = i===idx ? 'btn btn-gold' : 'btn btn-outline';
+  });
+}
+
+/* ═══════════════════ INTERVIEW — 12 questions ═══════════════════ */
+const interviewItems = [
+  {
+    type: 'tech',
+    question: 'Walk me through the IPO process from mandate to first day of trading.',
+    answer: `<strong>Structure your answer in six stages — most interviewers expect the full timeline.</strong><br><br>
+<em>1. Preparation (3–12 months):</em> Company commissions three years of audited accounts, restructures corporate governance (independent board, audit committee), and selects advisors — legal counsel, reporting accountants, and investment banks (global coordinators and bookrunners).<br><br>
+<em>2. Pilot fishing (2–4 weeks):</em> Senior management meets confidentially with 10–20 key institutional investors to test the equity story and valuation. Non-deal — no commitment made. Feedback shapes the final offering approach.<br><br>
+<em>3. Intention to Float (ITF):</em> Public announcement. Pathfinder (preliminary) prospectus filed. Research published by syndicate banks (must be separated from corporate finance by information barriers).<br><br>
+<em>4. Roadshow (10–14 days):</em> Management presents to 50–100+ institutional investors across London, Edinburgh, New York, and key European cities. Bookrunners collect informal order indications.<br><br>
+<em>5. Bookbuild and pricing (2–5 days):</em> Formal orders collected. Price discovered at the level where demand covers supply. Final prospectus filed with updated price. Allocation decisions made.<br><br>
+<em>6. Admission and stabilisation:</em> Shares admitted to trading. Stabilisation agent supports the price in weak conditions using the greenshoe mechanism for up to 30 days post-listing.`,
+    tip: 'Always mention the greenshoe if asked about IPO mechanics — it shows you understand post-deal dynamics, not just the pre-deal process. And mention lock-up periods (typically 90–180 days for insiders) as a key post-IPO technical factor.'
+  },
+  {
+    type: 'tech',
+    question: 'What is the relationship between bond prices and interest rates?',
+    answer: `<strong>They are inversely related — one of the most fundamental relationships in fixed income.</strong><br><br>
+When interest rates rise, existing bonds become less attractive because they pay a fixed coupon that is now below what new bonds offer. To compensate, the market price of existing bonds must fall until their effective yield (YTM) matches the new market rate.<br><br>
+When interest rates fall, existing bonds with higher fixed coupons become more attractive. Their prices rise to bring the YTM in line with the lower market rate.<br><br>
+<strong>The quantification — duration:</strong> Modified duration measures the % price change per 1% change in yield. A bond with 7 years modified duration loses approximately 7% in price for every 1% rise in yields.<br><br>
+<strong>Why duration matters:</strong> Zero-coupon bonds have the highest duration (all value is at maturity — maximum sensitivity). High-coupon bonds have lower duration (more value received early — less sensitivity). Long-dated bonds have higher duration than short-dated bonds (more future cash flows to discount).<br><br>
+<strong>Convexity:</strong> The price-yield relationship is not linear — it is convex. Prices rise more for a 1% fall in yields than they fall for a 1% rise. Convexity is an advantage for bondholders.`,
+    tip: '"Why did bond prices fall so sharply in 2022?" Perfect real-world application: central banks raised rates 400–500bps in 12 months. A 10-year government bond with duration of ~9 years lost approximately 35-40% of its value. The fastest bond bear market in decades — driven entirely by the duration mechanism.'
+  },
+  {
+    type: 'tech',
+    question: 'What is the difference between investment grade and high yield debt, and why does the distinction matter?',
+    answer: `<strong>The IG/HY divide is one of the most consequential distinctions in debt capital markets.</strong><br><br>
+<strong>Investment Grade (BBB-/Baa3 and above):</strong><br>
+• Low default probability — large, stable businesses with strong FCF<br>
+• Tight spreads: typically Gilt + 80–250bps<br>
+• Eligible for purchase by most institutional mandates (pension funds, insurance companies, IG bond indices)<br>
+• Floating vs. fixed: typically fixed-rate bullet bonds; longer tenors (5–30 years)<br><br>
+<strong>High Yield (BB+/Ba1 and below):</strong><br>
+• Higher default probability — smaller companies, more leverage, more cyclicality<br>
+• Wide spreads: typically 400–800bps+ or absolute yield 7–12%+<br>
+• Not eligible for IG mandates — smaller, more specialised investor base<br>
+• Often callable (issuer can redeem early); shorter tenors (5–8 years)<br>
+• Common in LBO financing — PE-backed companies cannot achieve IG<br><br>
+<strong>Why it matters:</strong> The IG/HY line determines: cost of capital, investor base, covenants, maturity profile, and whether institutional investors can hold the bond. A "fallen angel" (IG to HY downgrade) causes forced selling by IG funds — a highly disruptive capital event.`,
+    tip: '"What is a fallen angel?" A company downgraded from IG to HY. Forced selling by IG mandate investors creates sharp spread widening even before any operational deterioration. Notable examples: Ford Motor (2020), Carnival Cruises (2020 Covid), Marks & Spencer (2020). The spread jump at the IG/HY line can mean a 200–300bps widening overnight.'
+  },
+  {
+    type: 'deal',
+    question: 'A company wants to raise £500m. Walk me through how you would advise between a bond issuance and a syndicated loan.',
+    answer: `<strong>The choice depends on five key factors — work through each systematically.</strong><br><br>
+<em>1. Pricing:</em> Investment grade bonds typically price at tighter all-in costs than loans for large, creditworthy issuers. But for sub-IG companies, leveraged loans (floating SOFR+) may be cheaper depending on rate environment.<br><br>
+<em>2. Flexibility:</em> Loans are more flexible — typically can be prepaid without penalty (par call). Bonds have call schedules with premiums in early years (typically callable at par+coupon/2 in early years). If the company wants optionality to refinance early, loans win.<br><br>
+<em>3. Covenants:</em> IG bonds are typically covenant-lite (incurrence-based only — no maintenance tests). Loans (especially leveraged) have maintenance covenants (tested quarterly). A company wanting covenant-lite structure prefers bonds.<br><br>
+<em>4. Investor diversification:</em> Bonds access the global fixed income market — thousands of investors. Loans are held by banks and CLOs — smaller, more concentrated. Bonds reduce reliance on any single lender relationship.<br><br>
+<em>5. Tenor:</em> Bonds can be issued at 10, 20, even 30 years. Loans typically mature in 5–7 years. For long-duration financing (infrastructure, property), bonds are the natural choice.<br><br>
+<strong>Recommendation framework:</strong> IG, long-dated, covenant-sensitive → bonds. Sub-IG, LBO, needs flexibility to refinance → loans. Large PE-backed deal → leveraged loan + HY bonds (split package).`,
+    tip: 'The real answer in practice: most large companies use both. The investment grade corporate bond market funds long-term capex and structural funding needs. The revolving credit facility (bank loan) handles short-term liquidity and seasonal working capital. They are complementary, not competitive.'
+  },
+  {
+    type: 'tech',
+    question: 'What is a convertible bond and when would a company choose to issue one?',
+    answer: `<strong>A convertible is a bond with an embedded equity call option — a hybrid instrument sitting between straight debt and equity.</strong><br><br>
+<strong>Mechanics:</strong> The holder can convert the bond into equity at a preset conversion price if the share price exceeds it. Example: £1,000 bond convertible into shares at £25 = 40 shares per bond. If the stock reaches £30, conversion is worth £1,200 — the holder converts and profits.<br><br>
+<strong>Why issuers choose convertibles:</strong><br>
+1. <em>Lower coupon:</em> The conversion option has value — investors accept a 1.5–2.5% lower coupon vs. straight debt in exchange for the upside option. Cheap financing for equity-linked issuers.<br>
+2. <em>Deferred dilution:</em> No immediate share issuance — only if and when conversion occurs (and only if the stock has performed well, meaning the dilution comes at a higher price).<br>
+3. <em>Broad investor base:</em> Convertible investors include equity hedge funds, balanced funds, and credit-oriented buyers who cannot own straight equity — broader distribution than either pure equity or debt.<br>
+4. <em>Growth company financing:</em> Companies whose debt markets would be expensive (because they are early-stage or sub-IG) can access cheaper capital via convertibles by offering the equity upside.<br><br>
+<strong>When NOT to use them:</strong> When the stock is at a low and conversion would dilute at a very cheap price. Convertibles should be issued when the stock is at or near fair value.`,
+    tip: '"What is a convertible bond\'s delta?" A sophisticated follow-up. Delta measures how much the convertible\'s price moves with the underlying equity — ranges from 0 (deeply out of the money, behaves like a straight bond) to 100% (deeply in the money, behaves like equity). Most convertibles trade with delta 30–70% — the "balanced" range where both debt and equity characteristics are relevant.'
+  },
+  {
+    type: 'tech',
+    question: 'What is the greenshoe option in an IPO and how does it work?',
+    answer: `<strong>The greenshoe (overallotment option) is a stabilisation mechanism that protects the post-IPO share price.</strong><br><br>
+<strong>The mechanism:</strong><br>
+At pricing, the bookrunners overallocate — they sell investors 115 shares for every 100 the company actually issues. This creates a short position equal to 15% of the offer (the maximum greenshoe).<br><br>
+<strong>Scenario A — Stock falls below IPO price:</strong> The stabilisation agent buys shares in the open market, using the short position to support the price. This buying demand provides a price floor. Once the short is covered, stabilisation ends.<br><br>
+<strong>Scenario B — Stock rises above IPO price:</strong> No market buying needed. The bookrunners exercise the greenshoe option — acquiring the additional 15% of shares from the company at the IPO price and delivering them to close the short position. The company receives additional proceeds.<br><br>
+<strong>Why it works:</strong> The stabilisation agent always profits: in Scenario A, they buy at market (below IPO price, making money on the short); in Scenario B, they exercise at IPO price (stock is higher, option has value). The company only benefits — either the stock price is supported or they issue additional shares at the IPO price.`,
+    tip: 'Named after Green Shoe Manufacturing Company — the first company to use it in the 1960s. Legally permitted under MAR (Market Abuse Regulation) in Europe and SEC rules in the US, because it is disclosed in the prospectus. The name is still used even though it has nothing to do with shoes.'
+  },
+  {
+    type: 'beh',
+    question: 'Why do some companies choose not to go public even when they could raise significant capital through an IPO?',
+    answer: `<strong>The IPO decision is not purely about access to capital — it involves accepting permanent structural changes that many companies rationally choose to avoid.</strong><br><br>
+<strong>The costs of being public:</strong><br>
+1. <em>Disclosure and regulatory burden:</em> Quarterly earnings, annual reports, regulatory filings, investor relations function. Significant management time and cost — estimated at £2–5m per year for a mid-cap UK company.<br>
+2. <em>Short-termism:</em> Public markets reward quarterly earnings consistency. Strategies requiring 3–5 year investment horizons (major R&D programmes, long-term platform building) are punished by markets that cannot see beyond the next quarter.<br>
+3. <em>Loss of control:</em> Activist shareholders, proxy advisors, governance requirements. Founders lose the ability to make decisions unilaterally.<br>
+4. <em>Talent signals:</em> Equity compensation in private companies (with a defined future liquidity event) can be more attractive to entrepreneurial talent than listed share options.<br>
+5. <em>Competitive intelligence:</em> Public companies must disclose financial detail that competitors can read — margin by segment, capex plans, strategic priorities. Private companies guard these advantages.<br><br>
+<strong>The "go private" trend:</strong> The number of listed companies has fallen significantly in developed markets since 2000 — PE's growth, SPACs, and the availability of large private capital markets have reduced the advantages of public status for many companies.`,
+    tip: 'Know the counterargument too: public companies have access to permanent capital, listed shares as acquisition currency, employee liquidity for equity compensation, and brand and credibility benefits that private companies cannot fully replicate. The decision is company-specific — not obviously one-sided.'
+  },
+  {
+    type: 'tech',
+    question: 'How does a credit rating agency assess a company and assign a rating?',
+    answer: `<strong>Rating agencies assess the probability and severity of default — not the absolute level of financial metrics.</strong><br><br>
+<strong>The rating process has four components:</strong><br><br>
+<em>1. Business risk assessment:</em> Industry risk (stability, competitive dynamics, regulatory environment), company positioning (market share, pricing power, diversification), and management quality.<br><br>
+<em>2. Financial risk assessment:</em> Leverage (Net Debt/EBITDA), coverage (EBITDA/Interest, FFO/Debt), FCF generation, liquidity (cash + committed facilities vs. near-term maturities).<br><br>
+<em>3. Financial policy assessment:</em> Management's stated leverage tolerance, acquisition history, shareholder return policy (dividends, buybacks). A company whose management targets "2-3x leverage" has better rating prospects than one with no stated policy.<br><br>
+<em>4. Structural factors:</em> Parent/subsidiary relationships, country risk, currency risk, covenant structure.<br><br>
+<strong>The rating committee:</strong> Not one person — a committee vote. The company presents to the committee, provides a management interview, and responds to questions. The rating is issued with a "stable/positive/negative" outlook indicating direction.<br><br>
+<strong>Typical investment grade thresholds (varies by sector):</strong><br>
+BBB-: Net Debt/EBITDA ~3.5–4.0x, Interest Cover ~3.0x<br>
+A-: Net Debt/EBITDA ~2.0–2.5x, Interest Cover ~5.0x<br>
+AA: Net Debt/EBITDA ~1.0–1.5x, Interest Cover ~8.0x+`,
+    tip: 'Agencies model "through the cycle" — they do not just look at current metrics. They assess what leverage looks like at the trough of the business cycle. A company at 3.5x leverage in a good year might be at 5.0x at the trough — which the agency uses for its IG assessment. This is why companies target headline leverage well below the IG threshold: they need the buffer to survive the next downturn without being downgraded.'
+  },
+  {
+    type: 'deal',
+    question: 'A PE firm wants to sell its portfolio company. Should it pursue a trade sale, a secondary buyout, or an IPO?',
+    answer: `<strong>The exit route decision depends on five factors — work through each systematically.</strong><br><br>
+<em>1. Value maximisation:</em> Trade sales typically achieve the highest price because strategic buyers pay synergy premiums (20–40% above standalone). Secondary buyouts cap at financial buyer value. IPOs can achieve premium valuations for high-growth businesses but are subject to market conditions.<br><br>
+<em>2. Certainty of close:</em> Trade sales have highest certainty — bilateral negotiation with a committed buyer. IPOs carry market risk (market can fall between pricing and listing). Secondaries are fast but subject to financing markets.<br><br>
+<em>3. Business readiness:</em> IPOs require 3 years of audited accounts, strong governance, and a repeatable, scalable business that public investors can model. Businesses in rapidly changing sectors or with complex structures may not be "listable."<br><br>
+<em>4. Market environment:</em> IPO windows open and close with equity market sentiment. ECM volumes collapsed in 2022 as rates rose and markets fell. PE firms held assets longer rather than accept depressed IPO valuations.<br><br>
+<em>5. Partial vs. full exit:</em> An IPO is typically a partial exit (PE retains 50-60% post-IPO, with lock-up). A trade sale is typically a full exit. Secondary buyout is a full exit at a financial buyer price.<br><br>
+<strong>Typical decision:</strong> Trade sale first choice if strategic buyers are available. IPO if the business has high-growth, strong narrative, and equity markets are receptive. Secondary if neither is available or if speed of exit matters.`,
+    tip: '"What is a dual-track process?" Running a trade sale and IPO preparation simultaneously — forcing potential buyers to compete with the public market alternative. Highly effective at maximising price but expensive and management-intensive. Used for premium assets where the seller wants maximum negotiating leverage.'
+  },
+  {
+    type: 'tech',
+    question: 'What is the difference between a "rights issue" and a "placing" as equity capital raising methods?',
+    answer: `<strong>The key difference is whether existing shareholders have the right to participate proportionally.</strong><br><br>
+<strong>Rights issue:</strong><br>
+• Existing shareholders are offered new shares in proportion to their existing holdings (e.g., 1-for-5)<br>
+• Shareholder rights are pre-emptive — they must be offered first before new investors<br>
+• Shares offered at a significant discount (20–40%) to the current price<br>
+• Time-consuming: requires a prospectus, EGM shareholder vote, and a 3-4 week offer period<br>
+• Large amounts can be raised (£500m+)<br>
+• Shareholders who do not subscribe can sell their rights — protecting against unwanted dilution<br>
+• Required by law for listed UK companies under the Pre-Emption Group guidelines unless shareholders vote to disapply pre-emption rights<br><br>
+<strong>Placing (or Accelerated Book Build):</strong><br>
+• New shares issued directly to institutional investors, bypassing existing shareholders<br>
+• Fast — completed overnight (12–24 hours)<br>
+• Smaller discounts (3–5% to market price)<br>
+• Pre-emption rights must be disapplied (requires annual shareholder authority — typically limits to 5-10% of share capital per year)<br>
+• Smaller amounts — constrained by pre-emption authority<br>
+• No rights to existing shareholders — pure dilution at a smaller discount<br><br>
+<strong>When each is used:</strong> Large capital raising → rights issue (legally certain, any amount). Small, urgent capital need or opportunistic equity tap → placing (fast, cheap to execute).`,
+    tip: 'UK listed companies receive annual "disapplication of pre-emption rights" authority at their AGM — typically limited to 5-10% of share capital for non-pre-emptive issues. This is why large capital raises always use rights issues — exceeding 10% requires a rights issue structure regardless of shareholder preferences.'
+  },
+  {
+    type: 'tech',
+    question: 'How is a high yield bond different from an investment grade bond in terms of structure and covenants?',
+    answer: `<strong>HY bonds are structurally more complex and more protective for bondholders than IG bonds — because the credit risk is materially higher.</strong><br><br>
+<strong>Coupon and tenor:</strong><br>
+• IG: lower coupons (3–6% typically), longer tenors (7–30 years), bullet repayment<br>
+• HY: higher coupons (7–13%+), shorter tenors (5–8 years), often with call options<br><br>
+<strong>Callability:</strong><br>
+• IG bonds: typically non-call or callable at par after a long non-call period<br>
+• HY bonds: always callable — typically non-call for 3 years, then callable at par+half coupon, stepping to par by year 5. The issuer pays a premium to call early, which compensates bondholders for losing their high coupon<br><br>
+<strong>Covenants:</strong><br>
+• IG bonds: incurrence-based only — covenants triggered only if the company takes a specific action (e.g., cannot issue more debt above a leverage ratio if doing so would breach the test)<br>
+• HY bonds: more restrictive incurrence covenants including: debt incurrence test, restricted payments (limits dividends and share buybacks to protect cash for bondholders), asset sale proceeds carve-outs (must use sale proceeds to repay HY debt or reinvest)<br>
+• Note: HY bonds do NOT have maintenance covenants (unlike loans). Maintenance covenants are tested even if no action is taken — HY investors gave this up for the higher yield<br><br>
+<strong>Security:</strong><br>
+• IG: unsecured (senior unsecured bonds)<br>
+• HY: often unsecured as well, but may be senior secured or second lien in complex LBO structures`,
+    tip: 'The "covenant package" is often negotiated between the issuer\'s lawyers and bondholders\' advisors during the roadshow. The tighter the covenants, the more bondholder protection — but also the more restriction on management flexibility. In a bull market, issuers negotiate loose ("covenant-lite") HY bonds. Post-2022, rising rates and market volatility pushed covenants tighter as investors demanded more protection.'
+  },
+  {
+    type: 'deal',
+    question: 'You are advising a company on its first bond issuance. What process do you follow and what are the key decisions?',
+    answer: `<strong>A first-time bond issuance (debut issuance) requires more preparation than a repeat issuer — the market needs to be educated on the credit.</strong><br><br>
+<strong>Phase 1 — Preparation (4–8 weeks):</strong><br>
+• Appoint legal counsel (issuer and trustee counsel), credit rating agencies (S&P, Moody's — typically two ratings for IG, one may suffice for HY)<br>
+• Rating agency process: management presentation, Q&A, rating committee — 3–4 weeks<br>
+• Draft the bond documentation: indenture/trust deed, offering memorandum<br>
+• Decide structure: fixed vs. floating rate, maturity (5yr, 7yr, 10yr), size, optional call features, governing law<br><br>
+<strong>Phase 2 — Investor engagement:</strong><br>
+• Investor roadshow: 2–5 days for IG (shorter); 1–2 weeks for HY (longer — more complex story)<br>
+• Key cities: London, Edinburgh, Paris, Frankfurt, Amsterdam (European IG); plus New York for HY<br>
+• Purpose: educate investors on the business, present the financial case, gauge demand and price sensitivity<br><br>
+<strong>Phase 3 — Bookbuild and pricing:</strong><br>
+• Launch with an initial price thoughts range (e.g., "around Gilts + 200bps area")<br>
+• Collect orders over 1–4 hours (IG) or 1–3 days (HY)<br>
+• "Tighten" the spread as orders build — final price set when book is covered 3–5x<br>
+• Allocate to target investors (prioritise long-term holders over fast-money accounts)<br><br>
+<strong>Phase 4 — Settlement:</strong> Typically T+5 (5 business days after pricing). Bond listed on an exchange (Luxembourg Stock Exchange is common for Eurobonds).`,
+    tip: 'New issue premium for a debut: 20–30bps wider than where the comparable secondary bonds of similar credits trade. First-time issuers carry more execution risk and information asymmetry — investors demand extra compensation. As a company builds a track record in bond markets, this new issue premium compresses on subsequent issuances.'
+  }
+];
+
+function initInterview() {
+  document.getElementById('interview-container').innerHTML =
+    interviewItems.map((item,i) => buildInterviewItem(item,i)).join('');
+}
 </script>
 </body>
 </html>

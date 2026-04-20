@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>L4.05 — Modelling Working Capital | Ask Jacey</title>
+<title>L4.05 — Modelling Working Capital & Capex | Ask Jacey</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,79 +11,80 @@
 <div class="breadcrumb">
   <a href="index.html">Home</a><span class="sep">&#8250;</span>
   <a href="level-4.html">Level 04</a><span class="sep">&#8250;</span>
-  <span class="current">L4.05 — Modelling Working Capital</span>
+  <span class="current">L4.05 — Modelling Working Capital & Capex</span>
 </div>
 <div class="lesson-page">
-<div class="deal-badge">&#128204; Level 04 &middot; Modelling &middot; L4.05 — Modelling Working Capital</div>
-<p class="lesson-intro">Working capital modelling is where many financial models are weakest. Getting the days-based mechanics right, and understanding how WC changes flow through the cash flow statement, is the difference between a model that correctly projects cash and one that systematically misrepresents liquidity.</p>
+<div class="deal-badge">&#128204; Level 04 &middot; Modelling &middot; L4.05 — Modelling Working Capital & Capex</div>
+<p class="lesson-intro">Working capital and capex are the two components of FCF most commonly modelled incorrectly by junior analysts. Getting them right separates a "good enough" model from a professional one — and directly affects the debt capacity and returns calculation.</p>
 
-<h2>The Days-Based <em>Framework</em></h2>
-<div class="formula-block">Accounts Receivable:
-  AR = Revenue × DSO / 365
-  DSO = Days Sales Outstanding (how many days to collect from customers)
+<h2>Working Capital — <em>the days-based approach</em></h2>
+<div class="formula-block">Input assumptions (all blue, in Inputs tab):
+  DSO: Days Sales Outstanding  (e.g., 45 days)
+  DIO: Days Inventory Outstanding (e.g., 30 days)
+  DPO: Days Payable Outstanding  (e.g., 55 days)
 
-Inventory:
-  Inventory = COGS × DIO / 365
-  DIO = Days Inventory Outstanding (how many days to sell stock)
+Balance sheet calculations:
+  Accounts Receivable  = (Revenue / 365) × DSO
+  Inventory            = (COGS / 365) × DIO
+  Accounts Payable     = (COGS / 365) × DPO
 
-Accounts Payable:
-  AP = COGS × DPO / 365
-  DPO = Days Payable Outstanding (how many days to pay suppliers)
+Year-on-year changes flow to CFS:
+  ΔNWC = ΔAP - ΔAR - ΔInventory
+  (positive ΔNWC = source of cash; negative = use of cash)
 
-Why these drivers?
-  AR is driven by Revenue → customers owe you for sales made
-  Inventory is driven by COGS → stock is valued at cost
-  AP is driven by COGS → you owe suppliers for stock purchased
+Note: ΔNWC is SUBTRACTED from FCF in the CFS:
+  FCF = CFO - Capex
+  CFO = Net Income + D&A - ΔNWC
+  (increase in WC = use of cash = reduces FCF)</div>
 
-DO NOT use Revenue as the driver for AP — this is a common error.
-AP should reference COGS, not Revenue.</div>
+<h2>Common Working Capital <em>Modelling Errors</em></h2>
+<table class="lesson-table">
+<thead><tr><th>Error</th><th>What happens</th><th>Correct approach</th></tr></thead>
+<tbody>
+<tr><td>Using the same COGS figure for both AR and AP</td><td>AR should use Revenue; AP should use COGS. Mixing them creates wrong balances.</td><td>AR = (Revenue / 365) × DSO. AP = (COGS / 365) × DPO.</td></tr>
+<tr><td>Not modelling deferred revenue</td><td>SaaS and subscription businesses collect cash before recognising revenue. Ignoring this understates cash and overstates WC.</td><td>Deferred revenue = Prepaid customer cash not yet earned. Rising deferred revenue = source of cash (model like AP — a liability).</td></tr>
+<tr><td>Assuming flat WC as % of revenue</td><td>Misses the cash impact of changing payment terms, growing AR books, inventory build in expansion.</td><td>Model each WC line independently via days. Let the model calculate the WC balance dynamically.</td></tr>
+<tr><td>Forgetting the Year 0 → Year 1 WC change</td><td>The first year of the forecast period must compare against the last year of history — not against zero. Missing this creates a phantom WC movement in Year 1.</td><td>Always include the prior year (Year 0 / LTM) WC balance as the starting point in the WC schedule.</td></tr>
+</tbody>
+</table>
 
-<h2>WC Changes in the <em>Cash Flow Statement</em></h2>
-<div class="formula-block">CFS Working Capital Adjustments:
-  − Increase in AR      = −(AR_end − AR_start)
-  − Increase in Inventory = −(Inv_end − Inv_start)
-  + Increase in AP      = +(AP_end − AP_start)
-  + Increase in Accruals = +(Accr_end − Accr_start)
+<h2>Capex — <em>the PP&amp;E roll</em></h2>
+<div class="formula-block">PP&E Roll (Gross):
+  Opening Gross PP&E
+  + Capex additions
+  - Disposals (at gross cost)
+  = Closing Gross PP&E
 
-Shorthand:
-  Current Operating Asset increases → subtract from CFO (use of cash)
-  Current Operating Liability increases → add to CFO (source of cash)
+Accumulated Depreciation Roll:
+  Opening Accumulated D&A
+  + D&A charge for the year     ← feeds to P&L as an expense
+  - Accumulated D&A on disposals
+  = Closing Accumulated D&A
 
-Excel formula example for AR adjustment:
-  = −(BS_AR_end − BS_AR_start)
-  If AR goes from £40m to £52m: −(52−40) = −£12m (cash outflow)</div>
+Net PP&E = Closing Gross PP&E - Closing Accumulated D&A
 
-<h2>Modelling <em>Seasonality</em></h2>
-<p>Annual models smooth over seasonal patterns that can be material. A retailer that builds inventory in Q3 (for Christmas) and collects cash in Q4 has very different monthly cash flows than an annual model suggests. For businesses with significant seasonality:</p>
-<ul style="font-family:var(--slab);font-size:0.82rem;color:var(--ash-light);line-height:1.85;padding-left:1.5rem;margin-bottom:1rem">
-<li>Build a monthly model, or at minimum a quarterly model</li>
-<li>Model DSO and DIO at their peak (Q3 inventory build) and trough (Q1 after Christmas sell-through)</li>
-<li>Show peak cash requirement (which determines revolver sizing)</li>
-<li>Show minimum cash balance (which determines covenant compliance)</li>
-</ul>
+D&A Calculation (straight-line, simplified):
+  D&A = Opening Gross PP&E / Useful Life
+  New capex D&A = Capex / Useful Life (pro-rated in year of acquisition)
 
-<h2>The <em>WC Normalisation</em> Problem in M&A</h2>
-<p>Working capital at a deal closing is rarely "normal." The seller may have drawn down receivables aggressively before close (to look more cash-generative), deferred supplier payments (to inflate short-term cash), or built excessive inventory (which the buyer inherits). Normalised working capital is the WC the business needs to operate sustainably, not what it happens to have on the closing date.</p>
-<div class="formula-block">Normalised WC = calculated from long-run DSO, DIO, DPO assumptions
-  applied to LTM Revenue and COGS
+  More precise: build a waterfall of each vintage of capex
+  with its own useful life and depreciation schedule</div>
 
-WC peg = Normalised WC agreed between buyer and seller
-WC at closing is compared to the peg:
-  WC at close > Peg → Seller gets extra payment
-  WC at close < Peg → Buyer deducts from purchase price
+<h2>Capex as a <em>Forecast Driver</em></h2>
+<p>Capex is typically modelled as a percentage of revenue (e.g., 8% of revenue per year) or as a fixed management-guided amount. Split into maintenance (≈D&A) and growth (balance). In a downside scenario, growth capex is the first item to cut — model this explicitly with a scenario toggle that reduces capex to maintenance-only under stress.</p>
 
-Typical WC negotiation:
-  Seller incentivised to show high WC at close (collect AR, defer AP)
-  Buyer wants normalised WC — will scrutinise the last 3 months of BS</div>
-
-<div class="bank-box">
-<div class="b-label">In a Real Bank</div>
-<p>WC adjustments are one of the most contested elements of deal completion. The buyer's accountants and seller's accountants often disagree on what constitutes "normal" versus "managed" WC. Post-close WC disputes are common — the credit agreement will specify a mechanism (typically completion accounts or a locked-box approach) for resolving them. An analyst who models WC correctly — with proper days-based drivers and normalisation — helps the deal team negotiate from a position of knowledge rather than assumption.</p>
+<div class="callout">
+<div class="c-label">The Cash Conversion Cycle in Your Model</div>
+<p>The Cash Conversion Cycle (CCC = DSO + DIO − DPO) tells you how many days elapse between spending cash (on inventory, labour) and receiving cash (from customers). A falling CCC means the business is converting to cash faster — beneficial for FCF. A rising CCC means cash is being consumed by the working capital cycle. Model the CCC trend explicitly: if a fast-growing company has a rising CCC (common — growth requires more WC investment), this is a significant FCF drag that many analysts miss.</p>
+</div>
+<div class="lender-box">
+<div class="l-label">🔑 Lender's Perspective — JaceyTrayd</div>
+<p>We separately model maintenance capex (unavoidable) and growth capex (discretionary). In a distressed scenario, we assume growth capex falls to zero — the company cuts all expansion investment to preserve cash for debt service. If even maintenance-only capex (equal to D&A) plus mandatory debt service exceeds CFO, the company cannot sustain its asset base AND service its debt simultaneously. This is the threshold at which we are looking at a restructuring rather than a covenant waiver.</p>
 </div>
 
 <div class="page-nav">
   <a href="l4-debt-schedule.html" class="btn btn-ghost">&larr; Previous</a>
-  <div class="pn-context">Level <span>04</span> &middot; Financial Modelling</div>
+  <div class="pn-context">Level <span>04</span> &middot; Modelling</div>
   <a href="l4-scenarios.html" class="btn btn-gold">Next &rarr;</a>
 </div>
 </div>

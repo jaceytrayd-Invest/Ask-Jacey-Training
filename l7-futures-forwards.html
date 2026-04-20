@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L7.03 — Futures & Forwards | Ask Jacey</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="eco-hdr"></div><div id="hdr"></div>
+<div id="app"><div id="sb"></div><div id="content">
+<div class="breadcrumb">
+  <a href="index.html">Home</a><span class="sep">&#8250;</span>
+  <a href="level-7.html">Level 07</a><span class="sep">&#8250;</span>
+  <span class="current">L7.03 — Futures & Forwards</span>
+</div>
+<div class="lesson-page">
+<div class="deal-badge">&#128204; Level 07 &middot; Derivatives &middot; L7.03 — Futures & Forwards</div>
+<p class="lesson-intro">Futures and forwards are the simplest derivatives — they create an obligation to transact at a predetermined price at a future date. Unlike options, neither party has a choice. This certainty is what makes them the most widely used hedging tool for FX, commodities, and interest rate exposures in corporate transactions.</p>
+
+<h2>Forwards — <em>mechanics</em></h2>
+<div class="formula-block">Forward contract:
+  Buyer agrees to purchase [underlying] at [forward price F]
+  on [settlement date T] from the seller.
+  
+No money changes hands at inception (zero upfront cost)
+Profit/Loss at settlement:
+  Long forward (buyer): Profit = S_T - F
+  Short forward (seller): Profit = F - S_T
+  Where S_T = spot price at settlement date T
+
+Forward price (cost of carry model):
+  F = S × (1 + r_domestic - r_foreign)^T   [for FX forward]
+  F = S × e^(r-q)T                         [continuous compounding]
+  
+  Intuition: the forward price reflects the cost of:
+    - Buying the asset today at spot S
+    - Financing the purchase at rate r for period T
+    - Less any income received from holding the asset (dividends, yield)</div>
+
+<h2>Futures vs. Forwards — <em>key differences</em></h2>
+<table class="lesson-table">
+<thead><tr><th></th><th>Forward</th><th>Futures</th></tr></thead>
+<tbody>
+<tr><td><strong>Trading venue</strong></td><td>OTC — directly between parties</td><td>Exchange-traded (CME, ICE, Euronext)</td></tr>
+<tr><td><strong>Customisation</strong></td><td>Fully customisable — any size, date, terms</td><td>Standardised contracts — fixed size and delivery dates</td></tr>
+<tr><td><strong>Counterparty risk</strong></td><td>Direct bilateral credit risk — manage via ISDA/CSA</td><td>Exchange clearinghouse (CCP) — virtually no counterparty risk</td></tr>
+<tr><td><strong>Settlement</strong></td><td>At maturity only</td><td>Daily mark-to-market (variation margin) + final settlement</td></tr>
+<tr><td><strong>Margin</strong></td><td>Collateral posted per CSA terms</td><td>Initial margin + daily variation margin</td></tr>
+<tr><td><strong>Liquidity</strong></td><td>Depends on counterparty — can be illiquid</td><td>High — standardised contracts with active secondary market</td></tr>
+<tr><td><strong>Typical use</strong></td><td>Corporate FX hedging (precise amounts, dates)</td><td>Financial hedging, speculation, index exposure</td></tr>
+</tbody>
+</table>
+
+<h2>FX Forwards in <em>Cross-Border M&A</em></h2>
+<p>FX transaction risk is one of the most common uses of forward contracts in IB. When a UK company agrees to pay €500m for a European target in 6 months, it faces the risk that EUR strengthens vs GBP before closing — increasing the sterling cost of the acquisition.</p>
+<div class="formula-block">Hedge structure:
+  Today: Buy €500m forward at GBPEUR 1.1800 (lock in sterling cost)
+  In 6 months: Receive €500m at the locked rate (pay sterling)
+  Pay the seller €500m for the target company
+
+If EUR strengthens to 1.0500 at close (unhedged):
+  Cost without hedge: €500m / 1.0500 = £476.2m (£53.8m MORE expensive)
+  Cost with hedge: €500m / 1.1800 = £423.7m (locked in at today's rate)
+  Hedge saving: £53.8m
+
+If EUR weakens to 1.3000 at close (unhedged):
+  Cost without hedge: €500m / 1.3000 = £384.6m (£39.1m cheaper)
+  Cost with hedge: £423.7m (locked in — missed the saving)
+  Opportunity cost: £39.1m</div>
+
+<div class="callout">
+<div class="c-label">Basis Risk — When the Hedge is Imperfect</div>
+<p>Basis risk is the risk that the hedge instrument does not perfectly offset the underlying exposure. For a standardised futures contract hedging a customised exposure: the contract size, delivery date, or underlying specification may not perfectly match. Example: an airline hedging jet fuel using crude oil futures has basis risk because jet fuel and crude oil prices do not move in perfect lockstep. In corporate FX hedging, basis risk is low if the forward currency pair and settlement date match the underlying exposure exactly — which is why companies use OTC forwards (fully customisable) rather than exchange-traded FX futures for M&A hedging.</p>
+</div>
+<div class="bank-box">
+<div class="b-label">In a Real Bank</div>
+<p>FX hedge decisions in M&A are typically made by the corporate treasury department in consultation with the bank's FX desk — not the IBD team. But IBD analysts must understand the FX exposure the deal creates and be able to explain it to the board: "If the deal closes in 4 months and USD strengthens 10% vs GBP, the acquisition costs an additional £X. We recommend hedging [amount] via forward to eliminate this uncertainty." The quantification of FX exposure and its impact on deal economics is a standard component of the M&A pitch analysis.</p>
+</div>
+
+<div class="page-nav">
+  <a href="l7-options.html" class="btn btn-ghost">&larr; Previous</a>
+  <div class="pn-context">Level <span>07</span> &middot; Derivatives</div>
+  <a href="l7-swaps.html" class="btn btn-gold">Next &rarr;</a>
+</div>
+</div>
+</div></div>
+<script src="shared.js"></script>
+<script>
+document.getElementById('eco-hdr').outerHTML=buildEcoHeader();
+document.getElementById('hdr').outerHTML=buildHeader();
+document.getElementById('sb').outerHTML=buildSidebar(7);
+</script>
+</body></html>

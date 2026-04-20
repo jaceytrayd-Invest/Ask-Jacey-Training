@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L7.01 — Derivatives — Purpose & Taxonomy | Ask Jacey</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="eco-hdr"></div><div id="hdr"></div>
+<div id="app"><div id="sb"></div><div id="content">
+<div class="breadcrumb">
+  <a href="index.html">Home</a><span class="sep">&#8250;</span>
+  <a href="level-7.html">Level 07</a><span class="sep">&#8250;</span>
+  <span class="current">L7.01 — Derivatives — Purpose & Taxonomy</span>
+</div>
+<div class="lesson-page">
+<div class="deal-badge">&#128204; Level 07 &middot; Derivatives &middot; L7.01 — Derivatives — Purpose & Taxonomy</div>
+<p class="lesson-intro">Derivatives exist to solve a fundamental problem in financial markets: risk misallocation. Companies, investors, and institutions constantly find themselves exposed to risks they cannot bear or do not want. Derivatives allow those risks to be transferred — at a price — to those willing to take them. Understanding this core logic before any mathematics is the right starting point.</p>
+
+<h2>The Core <em>Purpose</em> of Derivatives</h2>
+<table class="lesson-table">
+<thead><tr><th>Use case</th><th>Who uses it</th><th>What risk is transferred</th><th>Derivative used</th></tr></thead>
+<tbody>
+<tr><td><strong>Hedging</strong></td><td>Corporates, banks, investors</td><td>Unwanted exposure (FX, rates, commodities) transferred to a counterparty</td><td>Forwards, futures, options, swaps</td></tr>
+<tr><td><strong>Speculation</strong></td><td>Hedge funds, proprietary traders</td><td>Risk is taken ON — seeking profit from price movements</td><td>All derivatives — typically leveraged</td></tr>
+<tr><td><strong>Arbitrage</strong></td><td>Market makers, quant funds</td><td>Exploits mispricings between related instruments with near-zero net risk</td><td>Any — typically options + underlying</td></tr>
+<tr><td><strong>Income enhancement</strong></td><td>Asset managers, long-term investors</td><td>Gives up some upside (sells options) to generate premium income</td><td>Covered calls, cash-secured puts</td></tr>
+</tbody>
+</table>
+
+<h2>The Four <em>Derivative Families</em></h2>
+<table class="lesson-table">
+<thead><tr><th>Family</th><th>Definition</th><th>Obligation?</th><th>When settled</th><th>Key instrument</th></tr></thead>
+<tbody>
+<tr><td><strong>Forwards</strong></td><td>Private bilateral agreement to transact at a fixed price on a future date</td><td>Both parties obligated</td><td>At maturity</td><td>FX forward, commodity forward</td></tr>
+<tr><td><strong>Futures</strong></td><td>Standardised, exchange-traded forward contract with daily margin settlement</td><td>Both parties obligated</td><td>Daily (variation margin) + final settlement</td><td>Eurodollar futures, equity index futures</td></tr>
+<tr><td><strong>Options</strong></td><td>Right (not obligation) to transact at a fixed price — buyer pays premium to seller</td><td>Seller obligated; buyer has a right</td><td>At or before expiry (if exercised)</td><td>Calls, puts, caps, floors</td></tr>
+<tr><td><strong>Swaps</strong></td><td>Agreement to exchange a stream of cash flows — typically a fixed vs. floating or one currency vs. another</td><td>Both parties obligated (to exchange)</td><td>Periodically over the swap term</td><td>Interest rate swap, cross-currency swap, total return swap, CDS</td></tr>
+</tbody>
+</table>
+
+<h2>Exchange-Traded vs. <em>OTC</em></h2>
+<table class="lesson-table">
+<thead><tr><th></th><th>Exchange-Traded (ETD)</th><th>Over-the-Counter (OTC)</th></tr></thead>
+<tbody>
+<tr><td><strong>Standardisation</strong></td><td>Fixed contract sizes, expiry dates, terms</td><td>Fully customisable — any size, any tenor</td></tr>
+<tr><td><strong>Counterparty risk</strong></td><td>Cleared by central counterparty (CCP) — no bilateral credit risk</td><td>Bilateral — each party bears the other's credit risk</td></tr>
+<tr><td><strong>Margin</strong></td><td>Daily variation margin + initial margin</td><td>ISDA master agreement; collateral via CSA (Credit Support Annex)</td></tr>
+<tr><td><strong>Transparency</strong></td><td>Prices public; positions reportable</td><td>Prices negotiated; reported to trade repositories post-2008</td></tr>
+<tr><td><strong>Liquidity</strong></td><td>High (standardised contracts)</td><td>Variable — highly liquid for common instruments (FX, vanilla IRS), illiquid for exotic structures</td></tr>
+<tr><td><strong>Examples</strong></td><td>Equity index futures, exchange-traded options, interest rate futures</td><td>FX forwards, IRS, CDS, caps/floors, convertible bonds</td></tr>
+</tbody>
+</table>
+
+<div class="callout">
+<div class="c-label">The ISDA Master Agreement</div>
+<p>Almost all OTC derivative transactions between financial institutions are governed by an ISDA (International Swaps and Derivatives Association) Master Agreement. This is the bilateral contract that establishes netting provisions (if both parties have offsetting positions, only the net exposure is settled), default provisions, and eligible collateral. The Credit Support Annex (CSA) specifies collateral posting requirements — a key tool for managing counterparty risk in the absence of a central clearinghouse.</p>
+</div>
+<div class="lender-box">
+<div class="l-label">&#128273; Lender's Perspective — JaceyTrayd</div>
+<p>We use derivatives primarily to manage our own portfolio risk — specifically interest rate risk. When we make a floating-rate loan, our return varies with SOFR. We sometimes enter into an interest rate swap to convert some of our floating-rate asset returns into fixed — matching the duration of our fixed obligations (if we have fixed-rate borrowings ourselves). We also use credit derivatives (CDS) to hedge specific credit concentrations in our portfolio — though we prefer structural protections (covenants, collateral) as our primary credit risk tool over derivative hedges, which carry their own counterparty risk.</p>
+</div>
+
+<div class="page-nav">
+  <a href="level-7.html" class="btn btn-ghost">&larr; Previous</a>
+  <div class="pn-context">Level <span>07</span> &middot; Derivatives</div>
+  <a href="l7-options.html" class="btn btn-gold">Next &rarr;</a>
+</div>
+</div>
+</div></div>
+<script src="shared.js"></script>
+<script>
+document.getElementById('eco-hdr').outerHTML=buildEcoHeader();
+document.getElementById('hdr').outerHTML=buildHeader();
+document.getElementById('sb').outerHTML=buildSidebar(7);
+</script>
+</body></html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L7.02 — Options — Calls, Puts & Payoff Profiles | Ask Jacey</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="eco-hdr"></div><div id="hdr"></div>
+<div id="app"><div id="sb"></div><div id="content">
+<div class="breadcrumb">
+  <a href="index.html">Home</a><span class="sep">&#8250;</span>
+  <a href="level-7.html">Level 07</a><span class="sep">&#8250;</span>
+  <span class="current">L7.02 — Options — Calls, Puts & Payoff Profiles</span>
+</div>
+<div class="lesson-page">
+<div class="deal-badge">&#128204; Level 07 &middot; Derivatives &middot; L7.02 — Options — Calls, Puts & Payoff Profiles</div>
+<p class="lesson-intro">Options are the most versatile derivative. The asymmetry between buyer and seller — the buyer's limited downside, the seller's capped upside — creates unique risk management and investment possibilities unavailable with any other instrument. Master the four basic payoffs before anything else.</p>
+
+<h2>The Asymmetry — <em>why options are unique</em></h2>
+<p>Every derivative except an option creates a symmetric obligation — both parties must transact regardless of where the market moves. An option buyer pays a premium to acquire a right: the ability to decide whether to transact based on how the market moves. This optional nature creates the defining asymmetry:</p>
+<table class="lesson-table">
+<thead><tr><th></th><th>Option Buyer</th><th>Option Seller</th></tr></thead>
+<tbody>
+<tr><td><strong>Maximum loss</strong></td><td>Premium paid — nothing more</td><td>Theoretically unlimited (call) or very large (put)</td></tr>
+<tr><td><strong>Maximum gain</strong></td><td>Theoretically unlimited (call) or capped at strike (put)</td><td>Premium received — nothing more</td></tr>
+<tr><td><strong>Decision power</strong></td><td>Chooses whether to exercise</td><td>No choice — must perform if buyer exercises</td></tr>
+<tr><td><strong>Position on volatility</strong></td><td>Long volatility (benefits from large moves)</td><td>Short volatility (benefits from small moves)</td></tr>
+</tbody>
+</table>
+
+<h2>Option Value <em>Components</em></h2>
+<div class="formula-block">Option Value = Intrinsic Value + Time Value
+
+Intrinsic Value:
+  Call: max(S − K, 0)   (value if exercised immediately)
+  Put:  max(K − S, 0)
+
+Time Value:
+  = Option Market Price − Intrinsic Value
+  Always positive while time remains
+  Reflects probability of becoming more profitable before expiry
+  Driven by: volatility, time to expiry, interest rates
+
+At expiry:
+  Time value → zero (theta decay accelerates near expiry)
+  Option price = Intrinsic value only</div>
+
+<h2>The Black-Scholes <em>Inputs</em> — intuition only</h2>
+<table class="lesson-table">
+<thead><tr><th>Input</th><th>Effect on call price</th><th>Effect on put price</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td>Underlying price (S) rises</td><td>↑ Increases</td><td>↓ Decreases</td><td>Call more likely ITM; put less likely ITM</td></tr>
+<tr><td>Strike price (K) rises</td><td>↓ Decreases</td><td>↑ Increases</td><td>Call harder to reach ITM; put easier to reach ITM</td></tr>
+<tr><td>Time to expiry (T) rises</td><td>↑ Increases</td><td>↑ Increases</td><td>More time = more chance of reaching ITM</td></tr>
+<tr><td>Volatility (σ) rises</td><td>↑ Increases</td><td>↑ Increases</td><td>More volatility = wider outcome range = more chance of deep ITM</td></tr>
+<tr><td>Risk-free rate (r) rises</td><td>↑ Increases (slightly)</td><td>↓ Decreases (slightly)</td><td>Higher rates reduce PV of strike; complex effect</td></tr>
+<tr><td>Dividends paid</td><td>↓ Decreases</td><td>↑ Increases</td><td>Dividends reduce stock price on ex-date; affects call vs. put value</td></tr>
+</tbody>
+</table>
+
+<div class="callout">
+<div class="c-label">Options in M&A — Practical Appearances</div>
+<p><strong>Convertible bonds:</strong> Embedded long call on equity. Bondholder has the right to convert at the conversion price — a call on the issuer's shares.<br><br>
+<strong>Employee stock options (ESOs):</strong> Long calls on company equity granted at-the-money. Employees profit only if the stock rises above the grant-date price.<br><br>
+<strong>Break fees:</strong> In M&A, a reverse break fee (paid by the buyer if the deal falls through due to financing failure) is economically like a put option — the seller's protection against deal failure.<br><br>
+<strong>CVRs (Contingent Value Rights):</strong> Rights that pay out if a specific event occurs (e.g., drug approval, litigation outcome). Economically similar to binary options on a specific event.</p>
+</div>
+<div class="bank-box">
+<div class="b-label">In a Real Bank</div>
+<p>IBD analysts rarely need to price options using Black-Scholes — that is the equity derivatives desk's job. But understanding option pricing inputs is essential for: (1) convertible bond analysis (the embedded option value drives the coupon discount); (2) IFRS 2 expense calculations for employee share schemes; (3) structuring M&A deal protection mechanisms; (4) understanding why companies issue warrants alongside debt in stressed situations. The question is never "can you derive Black-Scholes" — it is "do you understand what drives the value of the option embedded in this structure?"</p>
+</div>
+
+<div class="page-nav">
+  <a href="l7-intro.html" class="btn btn-ghost">&larr; Previous</a>
+  <div class="pn-context">Level <span>07</span> &middot; Derivatives</div>
+  <a href="l7-futures-forwards.html" class="btn btn-gold">Next &rarr;</a>
+</div>
+</div>
+</div></div>
+<script src="shared.js"></script>
+<script>
+document.getElementById('eco-hdr').outerHTML=buildEcoHeader();
+document.getElementById('hdr').outerHTML=buildHeader();
+document.getElementById('sb').outerHTML=buildSidebar(7);
+</script>
+</body></html>

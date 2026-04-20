@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L4.03 — Forecasting Revenue & Margins | Ask Jacey</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="eco-hdr"></div><div id="hdr"></div>
+<div id="app"><div id="sb"></div><div id="content">
+<div class="breadcrumb">
+  <a href="index.html">Home</a><span class="sep">&#8250;</span>
+  <a href="level-4.html">Level 04</a><span class="sep">&#8250;</span>
+  <span class="current">L4.03 — Forecasting Revenue & Margins</span>
+</div>
+<div class="lesson-page">
+<div class="deal-badge">&#128204; Level 04 &middot; Modelling &middot; L4.03 — Forecasting Revenue & Margins</div>
+<p class="lesson-intro">Forecasting is the most judgemental part of financial modelling. The numbers you project determine the valuation, the debt capacity, and the returns. Credible forecasts are built on specific, documentable logic — not on what makes the deal look attractive.</p>
+
+<h2>Revenue Forecasting — <em>the hierarchy of approaches</em></h2>
+<table class="lesson-table">
+<thead><tr><th>Method</th><th>How it works</th><th>Best for</th><th>Limitation</th></tr></thead>
+<tbody>
+<tr><td><strong>Historical CAGR</strong></td><td>Project revenue at the historical compound growth rate</td><td>Quick sanity check; mature, stable businesses</td><td>Past does not predict future; misses structural change</td></tr>
+<tr><td><strong>Bottom-up</strong></td><td>Sum of individual products, customers, geographies, or contracts</td><td>B2B SaaS, contract businesses, project-based revenue</td><td>Requires granular data; time-intensive to build</td></tr>
+<tr><td><strong>Top-down</strong></td><td>TAM × market share penetration</td><td>New markets, early-stage businesses, sanity check</td><td>TAM estimates are highly uncertain; share assumptions speculative</td></tr>
+<tr><td><strong>Consensus estimates</strong></td><td>Use analyst consensus NTM/NTM+1 estimates from Bloomberg</td><td>Public company models where consensus is available</td><td>Consensus can be wrong or stale; no insight beyond the market's view</td></tr>
+<tr><td><strong>Management guidance</strong></td><td>Take management's own forward projections as a starting point</td><td>All deal models — then stress-test the guidance</td><td>Management is always optimistic; must be independently assessed</td></tr>
+</tbody>
+</table>
+
+<h2>The Revenue <em>Drivers Framework</em></h2>
+<p>Break revenue into its constituent drivers. This makes the model transparent and directly stress-testable:</p>
+<div class="formula-block">For a SaaS business:
+  Revenue = (Opening ARR × NRR) + New Customer ARR
+  Where NRR = Net Revenue Retention (expansions - churn)
+
+For a retail business:
+  Revenue = Number of stores × Average revenue per store
+  Average revenue per store = Avg. transaction size × Transactions per store
+
+For a services business:
+  Revenue = Number of billable staff × Utilisation rate × Billing rate
+  (or: Number of projects × Average project value)
+
+For a manufacturer:
+  Revenue = Volume (units) × Average selling price
+  Volume driven by: capacity utilisation, new capacity additions, market growth
+  Price driven by: inflation pass-through, competitive dynamics, mix shift</div>
+
+<h2>Margin Forecasting — <em>the operating leverage lens</em></h2>
+<p>Never project margins as a flat percentage unless you have a specific reason to believe the cost structure is perfectly variable. Instead, explicitly model the fixed and variable cost components:</p>
+<div class="formula-block">EBITDA = Revenue - Variable Costs - Fixed Costs
+
+Variable Costs = Revenue × Variable Cost %
+  (e.g., COGS, sales commissions, usage-based hosting costs)
+
+Fixed Costs = £ amount per year (not % of revenue)
+  (e.g., rent, base salaries, insurance, corporate overhead)
+
+EBITDA Margin = (Revenue - Var. Costs - Fixed Costs) / Revenue
+
+As revenue grows: margin expands (fixed costs diluted across more revenue)
+As revenue contracts: margin compresses (fixed costs consume larger share)</div>
+
+<div class="callout">
+<div class="c-label">Management Guidance vs. Model Reality</div>
+<p>Management always presents an optimistic case. In a sell-side process, management guidance is the starting point — but your model is not management's model. Your job as the analyst is to independently assess the credibility of each assumption: How does the guided growth rate compare to historical performance? How does it compare to peers? What operational changes need to occur for margins to reach the guided level? Document your reasoning for every deviation from management guidance — you will be asked to justify it.</p>
+</div>
+<div class="mistake-box">
+<div class="m-label">The Most Dangerous Forecasting Assumptions</div>
+<p><strong>Hockey stick revenue inflection.</strong> Revenue is flat for 3 years then suddenly accelerates in years 4–5 of the forecast. These inflections almost never materialise on schedule. Scrutinise the specific catalyst and its probability.<br><br>
+<strong>Margin expansion without operational change.</strong> "EBITDA margins will improve from 18% to 28% over 5 years" — but no specific action (headcount efficiency, pricing initiatives, procurement savings) is cited. Expansion must be earned; it does not happen automatically.<br><br>
+<strong>Ignoring churn in subscription models.</strong> Projecting 20% ARR growth without explicitly modelling churn creates optimistic forecasts. Always model gross additions and gross churn separately — the net figure hides a lot.</p>
+</div>
+<div class="lender-box">
+<div class="l-label">🔑 Lender's Perspective — JaceyTrayd</div>
+<p>We always build our own independent revenue and margin forecast — not just review the sponsor's. We look at 5–7 years of historical financials, plot the trajectory, and ask: what specific change would need to happen for the management forecast to be achieved? We then assign a probability to each driver. If the aggregate requires 3–4 separate things to go right simultaneously, we haircut the EBITDA aggressively and size our debt against the haircut number — not the sponsor's base case.</p>
+</div>
+
+<div class="page-nav">
+  <a href="l4-three-statement.html" class="btn btn-ghost">&larr; Previous</a>
+  <div class="pn-context">Level <span>04</span> &middot; Modelling</div>
+  <a href="l4-debt-schedule.html" class="btn btn-gold">Next &rarr;</a>
+</div>
+</div>
+</div></div>
+<script src="shared.js"></script>
+<script>
+document.getElementById('eco-hdr').outerHTML=buildEcoHeader();
+document.getElementById('hdr').outerHTML=buildHeader();
+document.getElementById('sb').outerHTML=buildSidebar(4);
+</script>
+</body></html>

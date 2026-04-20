@@ -53,12 +53,12 @@ const LEVELS = [
   { id:2,  label:'Accounting',           file:'level-2.html',  live:true  },
   { id:3,  label:'Valuation',            file:'level-3.html',  live:true  },
   { id:4,  label:'Modelling',            file:'level-4.html',  live:true  },
-  { id:5,  label:'M&A',                  file:'level-5.html',  live:false },
-  { id:6,  label:'Capital Markets',      file:'level-6.html',  live:false },
-  { id:7,  label:'Derivatives',          file:'level-7.html',  live:false },
-  { id:8,  label:'Private Markets',      file:'level-8.html',  live:false },
-  { id:9,  label:'Deal Execution',       file:'level-9.html',  live:false },
-  { id:10, label:'Careers',             file:'level-10.html', live:false },
+  { id:5,  label:'M&A',                  file:'level-5.html',  live:true  },
+  { id:6,  label:'Capital Markets',      file:'level-6.html',  live:true  },
+  { id:7,  label:'Derivatives',          file:'level-7.html',  live:true  },
+  { id:8,  label:'Private Markets',      file:'level-8.html',  live:true  },
+  { id:9,  label:'Deal Execution',       file:'level-9.html',  live:true  },
+  { id:10, label:'Careers',             file:'level-10.html', live:true  },
   { id:11, label:'Advanced',            file:'level-11.html', live:false },
 ];
 

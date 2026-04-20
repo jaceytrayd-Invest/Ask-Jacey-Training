@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>L4.04 — Debt Schedule & Interest | Ask Jacey</title>
+<title>L4.04 — Debt & Interest Schedule | Ask Jacey</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,83 +11,78 @@
 <div class="breadcrumb">
   <a href="index.html">Home</a><span class="sep">&#8250;</span>
   <a href="level-4.html">Level 04</a><span class="sep">&#8250;</span>
-  <span class="current">L4.04 — Debt Schedule & Interest</span>
+  <span class="current">L4.04 — Debt & Interest Schedule</span>
 </div>
 <div class="lesson-page">
-<div class="deal-badge">&#128204; Level 04 &middot; Modelling &middot; L4.04 — Debt Schedule & Interest</div>
-<p class="lesson-intro">The debt schedule is one of the most technically demanding components of any financial model. It tracks every debt tranche, calculates interest, models amortisation and sweeps, and handles the circularity with the income statement. Get this right and the rest of the model follows.</p>
+<div class="deal-badge">&#128204; Level 04 &middot; Modelling &middot; L4.04 — Debt & Interest Schedule</div>
+<p class="lesson-intro">The debt schedule is the technical heart of an LBO model. It tracks every tranche of debt, calculates interest, applies mandatory amortisation, executes cash sweeps, and feeds back into the income statement and balance sheet. Get it wrong and every downstream output is wrong.</p>
 
-<h2>Debt Schedule <em>Architecture</em></h2>
-<p>Build a separate section for each debt tranche. For each tranche, you need: opening balance, interest rate, interest expense, mandatory amortisation, voluntary repayments (cash sweep), PIK accruals (if applicable), and closing balance.</p>
-<div class="formula-block">For each tranche:
+<h2>The Anatomy of a <em>Debt Schedule</em></h2>
+<div class="formula-block">For each tranche (TLB, TLA, HY Notes, RCF, Mezzanine):
 
-Opening Balance        = Prior year closing balance
-Interest Rate          = hardcoded assumption (SOFR + spread, fixed rate)
-Interest Expense       = Opening balance × rate  (or avg balance × rate)
-Mandatory Amortisation = fixed % of original principal (e.g., 1% TLB)
-Cash Sweep             = Excess FCF × sweep% (see calculation below)
-PIK Accrual            = Opening balance × PIK rate (adds to principal)
-Closing Balance        = Opening − Mandatory Amort − Cash Sweep + PIK
+Opening Balance
++ New drawdowns (at close or during RCF usage)
++ PIK interest accrued (if applicable)
+- Mandatory amortisation (fixed % of original principal)
+- Cash sweep (% of excess FCF after mandatory amort)
+= Closing Balance
 
-Revolver:
-  Opening balance
-  Drawdown / Repayment  = plug (draws if cash below minimum; repays if above)
-  Interest              = Average drawn balance × RCF rate
-  Closing balance       = Opening + Drawdown − Repayment</div>
+Interest Calculation:
+  Cash Interest = Opening Balance × Interest Rate
+  PIK Interest  = Opening Balance × PIK Rate (adds to principal)
+  Total Interest = Cash Interest + PIK Interest
 
-<h2>Cash Sweep <em>Calculation</em></h2>
-<div class="formula-block">Step 1: Calculate available FCF
-  Operating FCF = CFO − Capex (from CFS, before debt service)
+Commitment Fee (RCF undrawn):
+  = (RCF Limit - RCF Drawn) × Commitment Fee Rate</div>
 
-Step 2: Subtract mandatory obligations
-  Available FCF = Operating FCF − Mandatory Amortisation (all tranches) − Cash Interest
+<h2>Order of Operations — <em>critical to get right</em></h2>
+<p>The debt repayment waterfall must follow the seniority of claims. Cash is applied in this order:</p>
+<table class="lesson-table">
+<thead><tr><th>Priority</th><th>Payment</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Operating costs and taxes</td><td>Before any debt service</td></tr>
+<tr><td>2</td><td>Cash interest on RCF (if drawn)</td><td>RCF is typically super-senior</td></tr>
+<tr><td>3</td><td>Cash interest on TLB (1st lien)</td><td>Senior secured</td></tr>
+<tr><td>4</td><td>Cash interest on 2nd lien / HY bonds</td><td>Junior to TLB</td></tr>
+<tr><td>5</td><td>Cash interest on mezzanine (if cash-pay)</td><td>Most junior debt</td></tr>
+<tr><td>6</td><td>Mandatory TLB amortisation</td><td>Contractually required</td></tr>
+<tr><td>7</td><td>RCF repayment (if drawn, cash sweep to zero first)</td><td>RCF has first call on excess cash</td></tr>
+<tr><td>8</td><td>TLB cash sweep (50–75% of remaining excess FCF)</td><td>Optional but contractually specified</td></tr>
+<tr><td>9</td><td>Residual cash retained or distributed to equity</td><td>Last in the waterfall</td></tr>
+</tbody>
+</table>
 
-Step 3: Apply sweep percentage
-  Cash Sweep Amount = MAX(0, Available FCF) × Sweep % (e.g., 75%)
-  MAX(0, ...) ensures no negative sweep if FCF is insufficient
+<h2>PIK Interest — <em>the compounding debt problem</em></h2>
+<p>PIK (Payment in Kind) interest is not paid in cash — it is added to the principal balance. This creates compound growth in the debt balance, which creates compound growth in future interest accruals. A £50m mezzanine tranche at 15% PIK (fully PIK) grows to:</p>
+<div class="formula-block">PIK debt balance year by year:
+  Y0: £50.0m
+  Y1: £50.0m × (1 + 15%) = £57.5m
+  Y2: £57.5m × (1 + 15%) = £66.1m
+  Y3: £66.1m × (1 + 15%) = £76.0m
+  Y4: £76.0m × (1 + 15%) = £87.5m
+  Y5: £87.5m × (1 + 15%) = £100.6m
 
-Step 4: Apply to debt (usually TLB first, then other tranches)
-  TLB Closing = TLB Opening − Mandatory − Sweep
-
-Step 5: Residual cash
-  Residual = Available FCF × (1 − Sweep %)
-  If Residual + Opening Cash > Minimum Cash: repay revolver
-  If Residual + Opening Cash < Minimum Cash: draw revolver</div>
-
-<h2>Handling <em>PIK Interest</em></h2>
-<div class="formula-block">PIK = Payment In Kind — interest accrues as additional principal
-
-IS treatment: PIK interest IS an income statement expense
-  (it appears as interest expense — increases the debt liability)
-
-CFS treatment: PIK is a non-cash item — add BACK in CFO
-  (like D&A, no actual cash leaves in the period)
-
-Balance Sheet: PIK accrual ADDS to the debt balance each period
-  Closing PIK debt = Opening PIK debt + PIK interest accrued
-
-Example:
-  PIK debt: £50m at 15% PIK rate
-  Year 1 PIK accrual: £50m × 15% = £7.5m (added to principal)
-  Year 2 opening PIK balance: £57.5m (£50m + £7.5m)
-  Year 2 PIK accrual: £57.5m × 15% = £8.6m (compounding!)</div>
+The original £50m has doubled in 5 years.
+In the model: PIK accrual each year = Opening Balance × PIK Rate
+This amount is ADDED to the balance (not paid to the income statement's cash interest line)
+PIK does NOT reduce FCF — but the compounding burden hits at exit or maturity</div>
 
 <div class="callout">
-<div class="c-label">The Circularity — And How to Resolve It</div>
-<p>Interest expense in the IS reduces net income. Lower net income reduces FCF. Less FCF means less cash sweep. Less sweep means higher debt balance. Higher debt balance means more interest. The loop is: interest → FCF → debt → interest.<br><br>
-Resolution 1 (professional): Enable iterative calculation in Excel. Model converges after 100 iterations.<br>
-Resolution 2 (simple): Calculate interest on beginning-of-period balance only. No circularity; slight imprecision.<br>
-Always confirm which method your firm uses before building a deal model.</p>
+<div class="c-label">The Debt Schedule and the Circularity</div>
+<p>The debt schedule creates the model's circularity. Interest expense (from the debt schedule) feeds into the P&L → affects net income → affects CFO → affects how much cash is available for sweeps → affects the closing debt balance → feeds back into next year's interest. Handle this with a circularity switch as described in L4.02 — build the schedule without the switch first, verify it works, then enable the circular reference.</p>
 </div>
-
+<div class="bank-box">
+<div class="b-label">In a Real Bank</div>
+<p>In a leveraged finance deal, the debt schedule in the model is reviewed by the bank's credit committee before the bank commits to underwriting. The credit team will run the schedule at base and downside, check that covenants are met, and verify that the mandatory amortisation is achievable from FCF without drawing on the RCF. If the model shows the RCF being drawn in the base case (instead of acting as a contingency), the deal structure is likely too aggressive.</p>
+</div>
 <div class="lender-box">
-<div class="l-label">&#128273; Lender's Perspective — JaceyTrayd</div>
-<p>When we review a borrower's model, we rebuild the debt schedule from scratch using our own assumptions. We check: are their interest rates consistent with current market levels? Are they modelling the correct amortisation profile as per the credit agreement? Are cash sweeps applied correctly (borrowers often understate the sweep to show higher cash balances)? Are PIK instruments treated correctly — both the P&L expense and the balance sheet compounding? A debt schedule that doesn't match the credit agreement exactly is a red flag that requires explanation.</p>
+<div class="l-label">🔑 Lender's Perspective — JaceyTrayd</div>
+<p>The first thing we audit in any received model is the debt schedule. We check: (1) is the interest rate correct — are they using the right benchmark (SOFR, not LIBOR)? (2) is the mandatory amortisation rate consistent with the term sheet? (3) is the cash sweep properly computed — are they netting interest correctly before the sweep? (4) does the ending balance reconcile to the balance sheet? Four checks, five minutes. If any fail, we send it back before reading anything else.</p>
 </div>
 
 <div class="page-nav">
-  <a href="l4-three-statement.html" class="btn btn-ghost">&larr; Previous</a>
-  <div class="pn-context">Level <span>04</span> &middot; Financial Modelling</div>
+  <a href="l4-forecasting.html" class="btn btn-ghost">&larr; Previous</a>
+  <div class="pn-context">Level <span>04</span> &middot; Modelling</div>
   <a href="l4-working-capital-model.html" class="btn btn-gold">Next &rarr;</a>
 </div>
 </div>

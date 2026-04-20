@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L6.04 — Bond Mechanics & Pricing | Ask Jacey</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="eco-hdr"></div><div id="hdr"></div>
+<div id="app"><div id="sb"></div><div id="content">
+<div class="breadcrumb">
+  <a href="index.html">Home</a><span class="sep">&#8250;</span>
+  <a href="level-6.html">Level 06</a><span class="sep">&#8250;</span>
+  <span class="current">L6.04 — Bond Mechanics & Pricing</span>
+</div>
+<div class="lesson-page">
+<div class="deal-badge">&#128204; Level 06 &middot; Capital Markets &middot; L6.04 — Bond Mechanics & Pricing</div>
+<p class="lesson-intro">Bond mechanics are the technical foundation of all fixed income work. Understanding how bonds are priced, how yields move with prices, and what duration tells you about interest rate sensitivity is essential for DCM, credit analysis, and any role involving debt markets.</p>
+
+<h2>Bond <em>Anatomy</em></h2>
+<div class="formula-block">Bond terms:
+  Face value (par): The principal amount — typically £1,000 or $1,000
+  Coupon rate:      Annual interest rate paid on face value (e.g., 5%)
+  Coupon payment:   Coupon rate × Face value (e.g., 5% × £1,000 = £50/year)
+  Frequency:        Semi-annual (most common) or annual
+  Maturity:         Date on which principal is repaid
+  Issue price:      Price at issuance — may be at, above, or below par
+  Market price:     Current trading price (expressed as % of par)
+
+Bond price example:
+  "Bond trading at 95.50" = market price of 95.50% of face value
+  = £955 for a £1,000 face value bond (trading at a discount)</div>
+
+<h2>Price and Yield — <em>the inverse relationship</em></h2>
+<div class="formula-block">Bond Price = PV(Coupons) + PV(Face Value)
+
+= [C × (1 − (1+y)^-n) / y] + [F / (1+y)^n]
+
+Where:
+  C = periodic coupon payment
+  y = periodic yield (YTM / periods per year)
+  n = total number of periods
+  F = face value
+
+Key relationship:
+  Price ↑ when yield ↓ (bond becomes more valuable)
+  Price ↓ when yield ↑ (bond becomes less valuable)
+
+  At par:     Coupon rate = YTM
+  Discount:   Coupon rate < YTM (market price below par)
+  Premium:    Coupon rate > YTM (market price above par)</div>
+
+<h2>Duration — <em>measuring interest rate sensitivity</em></h2>
+<table class="lesson-table">
+<thead><tr><th>Concept</th><th>Definition</th><th>Formula (simplified)</th><th>Practical use</th></tr></thead>
+<tbody>
+<tr><td><strong>Macaulay Duration</strong></td><td>Weighted average time to receive all cash flows</td><td>Σ [t × PV(CFt)] / Bond Price</td><td>Matches asset/liability timing (pension funds)</td></tr>
+<tr><td><strong>Modified Duration</strong></td><td>% price change per 1% change in yield</td><td>Macaulay Duration / (1 + y)</td><td>Hedging; risk measurement; portfolio management</td></tr>
+<tr><td><strong>DV01 (Dollar Value of 01)</strong></td><td>£ price change per 1 basis point (0.01%) change in yield</td><td>Modified Duration × Price × 0.0001</td><td>Bond traders' primary risk metric</td></tr>
+</tbody>
+</table>
+<div class="formula-block">Duration rules of thumb:
+  Zero-coupon bond: Duration = Maturity (all cash flow at end → maximum sensitivity)
+  High-coupon bond: Duration < Maturity (cash flows received earlier)
+  Longer maturity: Higher duration (further into future → more sensitive)
+  Higher yield: Lower duration (higher discount rate → cash flows weighted toward near term)
+
+Example:
+  10-year, 5% coupon bond, YTM 5% (at par):
+  Modified duration ≈ 7.7 years
+  → If yields rise 1%: price falls approximately 7.7%
+  → If yields fall 1%: price rises approximately 8.0% (convexity makes this asymmetric)</div>
+
+<h2>Convexity — <em>why duration is an approximation</em></h2>
+<p>Duration gives a linear approximation of the price-yield relationship. In reality, the relationship is curved (convex). For a given yield change, the actual price change is slightly better than duration predicts for a rise in yields and slightly better than duration predicts for a fall in yields. Positive convexity is a desirable property — it means bonds perform better than the linear approximation under both rising and falling rate scenarios.</p>
+
+<div class="callout">
+<div class="c-label">Yield Measures — Three You Must Know</div>
+<p><strong>Current yield:</strong> Annual coupon / Market price. Simple but ignores price appreciation/depreciation at maturity.<br><br>
+<strong>Yield to maturity (YTM):</strong> The internal rate of return assuming all coupons are reinvested at the YTM and the bond is held to maturity. The most complete single yield measure — standard for comparison.<br><br>
+<strong>Yield to worst (YTW):</strong> The lowest possible yield the bondholder could receive — assuming the issuer exercises the most unfavourable call option at the earliest available date. The most conservative yield measure — standard for callable bonds (high yield). Always used by HY investors.</p>
+</div>
+<div class="lender-box">
+<div class="l-label">&#128273; Lender's Perspective — JaceyTrayd</div>
+<p>In private credit, we do not use yield to maturity in the same way public bond markets do — our loans are floating rate (SOFR/SONIA plus margin), not fixed rate bonds. Our return metric is the effective yield: the all-in floating rate plus any OID (original issue discount — a fee paid upfront that functions like additional yield). For a loan at SOFR + 500bps with 2% OID on a 5-year term: all-in yield ≈ 5.5% + 0.4% OID amortisation = 5.9% after-SOFR return before credit losses. We target 8-12%+ gross returns depending on the risk profile of the credit.</p>
+</div>
+
+<div class="page-nav">
+  <a href="l6-dcm-overview.html" class="btn btn-ghost">&larr; Previous</a>
+  <div class="pn-context">Level <span>06</span> &middot; Capital Markets</div>
+  <a href="l6-credit-ratings.html" class="btn btn-gold">Next &rarr;</a>
+</div>
+</div>
+</div></div>
+<script src="shared.js"></script>
+<script>
+document.getElementById('eco-hdr').outerHTML=buildEcoHeader();
+document.getElementById('hdr').outerHTML=buildHeader();
+document.getElementById('sb').outerHTML=buildSidebar(6);
+</script>
+</body></html>

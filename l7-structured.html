@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L7.06 — Structured Products & Convertibles | Ask Jacey</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="eco-hdr"></div><div id="hdr"></div>
+<div id="app"><div id="sb"></div><div id="content">
+<div class="breadcrumb">
+  <a href="index.html">Home</a><span class="sep">&#8250;</span>
+  <a href="level-7.html">Level 07</a><span class="sep">&#8250;</span>
+  <span class="current">L7.06 — Structured Products & Convertibles</span>
+</div>
+<div class="lesson-page">
+<div class="deal-badge">&#128204; Level 07 &middot; Derivatives &middot; L7.06 — Structured Products & Convertibles</div>
+<p class="lesson-intro">Structured products combine conventional instruments (bonds, loans, equities) with derivatives to create custom risk-return profiles unavailable from either component alone. Convertible bonds are the most common structured product in IB — but warrants, collars, CVRs, and CPPI structures also appear regularly in deal contexts.</p>
+
+<h2>Structured Products — <em>the building block concept</em></h2>
+<p>Any structured product can be decomposed into conventional instruments plus derivatives. The key questions are always: what does the investor own? What have they given up? And what risk-return trade-off has been created?</p>
+<table class="lesson-table">
+<thead><tr><th>Product</th><th>Components</th><th>What it achieves</th></tr></thead>
+<tbody>
+<tr><td><strong>Convertible bond</strong></td><td>Straight bond + long call option on equity</td><td>Bond protection + equity upside; lower coupon for issuer</td></tr>
+<tr><td><strong>Callable bond</strong></td><td>Straight bond + short call option (issuer can redeem early)</td><td>Issuer gets refinancing flexibility; investor accepts higher coupon as compensation</td></tr>
+<tr><td><strong>Warrant</strong></td><td>Standalone long call option on equity</td><td>Attached to debt/equity to sweeten terms; dilutive to existing shareholders on exercise</td></tr>
+<tr><td><strong>Reverse convertible</strong></td><td>High-coupon bond + short put on equity (investor bears equity downside)</td><td>High yield with capped upside; investor bears downside if stock falls below strike</td></tr>
+<tr><td><strong>Collar (equity)</strong></td><td>Long put + short call on existing equity holding</td><td>Downside protection + income from cap; founder monetisation without immediate sale</td></tr>
+<tr><td><strong>CVR (Contingent Value Right)</strong></td><td>Binary option on a specific outcome (drug approval, litigation)</td><td>M&A bridge instrument — pays if a specified post-close event occurs</td></tr>
+</tbody>
+</table>
+
+<h2>Convertible Bond — <em>deep dive</em></h2>
+<div class="formula-block">Convertible bond value = Bond floor + Conversion option value
+
+Bond floor = PV of coupons + PV of principal at straight debt yield
+  (The minimum value — if conversion is never exercised)
+
+Conversion option value = f(S, K, σ, T, r)
+  Black-Scholes on the embedded call option
+  Where K = conversion price, S = current stock price
+
+Conversion parity = (Face value / Conversion price) × Stock price
+  The immediate conversion value — what you get if you convert now
+
+Conversion premium = (Convertible price − Parity) / Parity
+  How much above immediate conversion value the bond trades
+  Typically 20-40% at issuance; falls as stock approaches conversion price
+
+Delta (equity sensitivity):
+  Low delta (stock far below K): behaves like a bond
+  High delta (stock above K): behaves like equity
+  "Balanced" convertible: delta 30-60% — classic convertible investor territory</div>
+
+<h2>Warrants — <em>how they differ from options</em></h2>
+<p>A warrant is similar to a call option — but with two key differences. First, warrants are issued by the company itself (not by a third party), so when exercised, the company issues new shares — causing dilution. Second, warrants have longer tenors (3–10 years) versus exchange-listed options (typically under 2 years).</p>
+<p>Warrants appear in IB in two main contexts: attached to high yield bonds or mezzanine debt to sweeten the yield-to-risk trade-off for lenders (the equity kicker), and in SPAC structures where sponsor warrants are a core component of the SPAC economics.</p>
+
+<div class="callout">
+<div class="c-label">Contingent Value Rights (CVRs) in M&A</div>
+<p>A CVR is an M&A bridge instrument — it pays the target's shareholders an additional amount if a specified post-close event occurs. Common in pharmaceutical M&A: an acquirer buys a biotech and issues CVRs that pay $X per share if the lead drug receives FDA approval within 3 years. This bridges the valuation gap between a buyer who discounts the drug's approval probability and a seller who is more optimistic. Economically, a CVR is a binary option on the approval event. CVRs can be listed and tradeable, giving sellers liquidity on their contingent claim.</p>
+</div>
+<div class="bank-box">
+<div class="b-label">In a Real Bank</div>
+<p>Convertible bond analysis sits at the intersection of ECM (equity characteristics) and DCM (bond characteristics) and the derivatives desk (option valuation). The IB analyst typically works with: the equity capital markets team (for the equity story and conversion premium target), the debt capital markets team (for the bond floor calculation and credit assessment), and the equity derivatives desk (for the Black-Scholes option valuation). Getting all three teams aligned on the terms of a new convertible is one of the more complex multi-team coordination challenges in IB deal execution.</p>
+</div>
+<div class="lender-box">
+<div class="l-label">&#128273; Lender's Perspective — JaceyTrayd</div>
+<p>We sometimes receive warrants as part of our private credit deal economics — particularly in higher-risk or growth-stage situations where the interest rate alone does not adequately compensate for the risk. A warrant giving us the right to buy 5% of the company's equity at today's valuation provides additional upside if the company succeeds. We value warrants separately from the debt in our portfolio reporting — they are equity instruments and carry equity risk. We use Black-Scholes for valuation at each reporting period, with volatility derived from either listed comparable companies or implied from secondary transaction activity in the borrower's sector.</p>
+</div>
+
+<div class="page-nav">
+  <a href="l7-hedging.html" class="btn btn-ghost">&larr; Previous</a>
+  <div class="pn-context">Level <span>07</span> &middot; Derivatives</div>
+  <a href="level-8.html" class="btn btn-gold">Next &rarr;</a>
+</div>
+</div>
+</div></div>
+<script src="shared.js"></script>
+<script>
+document.getElementById('eco-hdr').outerHTML=buildEcoHeader();
+document.getElementById('hdr').outerHTML=buildHeader();
+document.getElementById('sb').outerHTML=buildSidebar(7);
+</script>
+</body></html>

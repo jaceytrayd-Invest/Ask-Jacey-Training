@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L7.05 — Hedging Strategies in Deal Context | Ask Jacey</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="eco-hdr"></div><div id="hdr"></div>
+<div id="app"><div id="sb"></div><div id="content">
+<div class="breadcrumb">
+  <a href="index.html">Home</a><span class="sep">&#8250;</span>
+  <a href="level-7.html">Level 07</a><span class="sep">&#8250;</span>
+  <span class="current">L7.05 — Hedging Strategies in Deal Context</span>
+</div>
+<div class="lesson-page">
+<div class="deal-badge">&#128204; Level 07 &middot; Derivatives &middot; L7.05 — Hedging Strategies in Deal Context</div>
+<p class="lesson-intro">Hedging is not about eliminating all risk — it is about choosing which risks to keep and which to transfer. In a deal context, companies face FX risk, interest rate risk, commodity risk, and equity risk. Each requires a different instrument and a different strategy. This lesson covers how hedging decisions are made in practice.</p>
+
+<h2>FX Risk — <em>three types</em></h2>
+<table class="lesson-table">
+<thead><tr><th>Risk type</th><th>What it is</th><th>Hedging approach</th></tr></thead>
+<tbody>
+<tr><td><strong>Transaction risk</strong></td><td>Known future FX cash flow — a receivable, payable, or acquisition price in a foreign currency</td><td>Forward or option — lock in or cap the rate for the specific transaction date and amount</td></tr>
+<tr><td><strong>Translation risk</strong></td><td>The accounting impact of consolidating foreign subsidiaries — their balance sheets and P&L translated at the closing FX rate</td><td>Natural hedge (match foreign assets with foreign liabilities) or forward on the balance sheet exposure. Harder to hedge precisely.</td></tr>
+<tr><td><strong>Economic risk</strong></td><td>The long-term impact of FX on competitive position — a stronger domestic currency makes exports less competitive</td><td>Operational hedges (produce in the export market, invoice in local currency). Cannot be hedged with derivatives alone.</td></tr>
+</tbody>
+</table>
+
+<h2>Interest Rate Risk — <em>four tools</em></h2>
+<table class="lesson-table">
+<thead><tr><th>Tool</th><th>How it works</th><th>Best used when</th></tr></thead>
+<tbody>
+<tr><td><strong>Interest rate swap</strong></td><td>Convert floating to fixed (or vice versa). Zero upfront premium. Obligates both parties.</td><td>Large notional; long tenor; deal is certain; certainty of rate is the priority</td></tr>
+<tr><td><strong>Interest rate cap</strong></td><td>Call option on rates. Borrower pays premium; receives payment if floating rate exceeds cap strike.</td><td>Want protection against rise but retain benefit if rates fall; deal timing uncertain</td></tr>
+<tr><td><strong>Interest rate floor</strong></td><td>Put option on rates. Holder receives payment if floating rate falls below floor strike.</td><td>Investor or lender protecting minimum return from floating rate assets</td></tr>
+<tr><td><strong>Interest rate collar</strong></td><td>Buy a cap, sell a floor — bounds the rate in a range. Often zero-premium.</td><td>Want cap protection; willing to give up benefit below the floor to reduce/eliminate premium cost</td></tr>
+</tbody>
+</table>
+
+<h2>Commodity Risk — <em>in deal analysis</em></h2>
+<p>Commodity price risk is a key analytical consideration in M&A for commodity-exposed businesses. A manufacturer with oil as a major cost, or a food company dependent on wheat prices, has operating performance that varies significantly with commodity price moves. In deal analysis, the bank stress-tests EBITDA under different commodity price scenarios and recommends hedging strategies as part of the post-acquisition plan.</p>
+<div class="formula-block">Commodity hedge example — airline fuel cost:
+  Annual fuel spend: £200m (at current Brent crude £75/barrel)
+  Hedging strategy: buy 6-month forward on 70% of expected consumption
+    → 70% × £200m = £140m hedged at £75/bbl
+    → 30% × £200m = £60m unhedged (floating)
+
+  If Brent rises to £95/bbl (26.7% increase):
+    Without hedge: fuel cost £253m (+£53m vs. budget)
+    With hedge: Hedged portion locked at £75 (cost £140m)
+                Unhedged portion at £95 (cost £60m × 1.267 = £76m)
+                Total: £216m vs. unhedged £253m
+    Hedge saving: £37m (offsets 70% of the cost increase)</div>
+
+<div class="callout">
+<div class="c-label">Over-Hedging and Speculative Positions</div>
+<p>Hedging should match the underlying exposure. If a company hedges more than 100% of its exposure, the excess is a speculative position — not a hedge. Example: a company expecting $100m of USD revenue hedges $150m of USD forward. The first $100m is a hedge (mirrors the underlying). The extra $50m is a speculative short on USD — if USD weakens, the company loses on the excess forward position with no offsetting gain from underlying revenues. This speculative element should be disclosed as trading activity under IFRS, not hedging. Many corporate hedging disasters (e.g., Metallgesellschaft, 1993) resulted from positions that were too large relative to the underlying exposure.</p>
+</div>
+<div class="bank-box">
+<div class="b-label">In a Real Bank</div>
+<p>Hedging advice for M&A transactions is typically provided by the bank's Markets or Treasury Solutions team in collaboration with the IBD deal team. The IBD analyst provides the underlying exposure data (deal size, currency, timing); the Markets team structures the hedge and prices it. The bank earns a bid-ask spread on the derivative transaction in addition to the M&A advisory fee — which is why banks are motivated to recommend hedging strategies. Clients should always compare pricing from multiple banks for the derivative component.</p>
+</div>
+
+<div class="page-nav">
+  <a href="l7-swaps.html" class="btn btn-ghost">&larr; Previous</a>
+  <div class="pn-context">Level <span>07</span> &middot; Derivatives</div>
+  <a href="l7-structured.html" class="btn btn-gold">Next &rarr;</a>
+</div>
+</div>
+</div></div>
+<script src="shared.js"></script>
+<script>
+document.getElementById('eco-hdr').outerHTML=buildEcoHeader();
+document.getElementById('hdr').outerHTML=buildHeader();
+document.getElementById('sb').outerHTML=buildSidebar(7);
+</script>
+</body></html>

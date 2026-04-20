@@ -3,15 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Coming Soon | Ask Jacey IB Masterclass</title>
+<title>Level 8 — Private Markets | Ask Jacey IB Masterclass</title>
 <link rel="stylesheet" href="style.css">
-<style>
-.coming-wrap{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:60vh;text-align:center;padding:3rem 2rem}
-.coming-num{font-family:var(--serif);font-size:8rem;font-weight:700;color:rgba(201,168,76,0.08);line-height:1;margin-bottom:1rem}
-.coming-wrap h2{font-family:var(--serif);font-size:2rem;font-weight:300;color:var(--white);margin-bottom:0.8rem}
-.coming-wrap h2 em{color:var(--gold-light);font-style:italic}
-.coming-wrap p{font-family:var(--slab);font-size:0.84rem;color:var(--ash);line-height:1.75;max-width:440px;margin-bottom:1.5rem}
-</style>
 </head>
 <body>
 <div id="eco-hdr"></div>
@@ -19,28 +12,700 @@
 <div id="app">
 <div id="sb"></div>
 <div id="content">
-<div class="breadcrumb"><a href="index.html">Home</a><span class="sep">›</span><span class="current" id="bc-title">Level — Coming Soon</span></div>
-<div class="coming-wrap">
-<div class="coming-num" id="cn-num">—</div>
-<h2 id="cn-title">Coming <em>Soon</em></h2>
-<p>This level is in the build queue. Complete Levels 00 and 01 first — the foundations carry through every module above.</p>
-<div style="display:flex;gap:0.8rem;flex-wrap:wrap;justify-content:center">
-<a href="level-1.html" class="btn btn-gold">← Back to Level 01</a>
-<a href="index.html" class="btn btn-outline">Home</a>
+
+<div class="breadcrumb">
+  <a href="index.html">Home</a><span class="sep">›</span>
+  <a href="level-7.html">Level 07</a><span class="sep">›</span>
+  <span class="current">Level 08 — Private Markets</span>
 </div>
+
+<div class="level-banner" data-level-num="8">
+  <div class="level-tag">Level 08 · Private Markets</div>
+  <h1>Private Equity &amp; <em>Private Credit</em></h1>
+  <p>Private markets now rival public markets in scale and sophistication. This level covers LBO mechanics from both the equity and debt perspective, IRR and MOIC returns analysis, direct lending, unitranche structures, covenant design, and how JaceyTrayd approaches every credit decision — the lender's view from the inside.</p>
+  <div class="level-meta">
+    <span><i>📚</i> 6 Lessons</span>
+    <span><i>🧪</i> 15 Quiz Questions</span>
+    <span><i>⚙</i> 4 Solvers</span>
+    <span><i>🎯</i> 12 Interview Q&A</span>
+    <span><i>⏱</i> ~2.5 hrs</span>
+  </div>
 </div>
+
+<div class="hub-tabs">
+  <button class="hub-tab active" onclick="switchTab('learn')">📘 Learn</button>
+  <button class="hub-tab" onclick="switchTab('practice')">🧪 Practice</button>
+  <button class="hub-tab" onclick="switchTab('solver')">⚙ Problem Solver</button>
+  <button class="hub-tab" onclick="switchTab('interview')">🎯 Interview Prep</button>
+</div>
+
+<!-- ═══ LEARN ═══ -->
+<div class="tab-panel active" id="tab-learn">
+  <div class="sec-head"><h2>Lessons — <em>Private Markets</em></h2><div class="sec-line"></div></div>
+  <div class="lesson-grid">
+    <a href="l8-pe-overview.html" class="lesson-card">
+      <div class="lc-num">L8.01</div>
+      <div class="lc-title">Private Equity — Structure &amp; Economics</div>
+      <div class="lc-desc">How PE funds are structured, how they raise capital, GP/LP economics, the carried interest waterfall, and how the PE industry generates returns across the cycle.</div>
+      <div class="lc-meta"><span class="lc-tag core">Core</span><span class="lc-tag int">~10 min</span></div>
+    </a>
+    <a href="l8-lbo.html" class="lesson-card">
+      <div class="lc-num">L8.02</div>
+      <div class="lc-title">The LBO — Mechanics &amp; Value Creation</div>
+      <div class="lc-desc">Entry, hold, exit — the full LBO lifecycle. Debt structuring, the three return drivers (EBITDA growth, multiple expansion, debt paydown), and what makes an ideal LBO candidate.</div>
+      <div class="lc-meta"><span class="lc-tag core">Core</span><span class="lc-tag int">~14 min</span></div>
+    </a>
+    <a href="l8-returns.html" class="lesson-card">
+      <div class="lc-num">L8.03</div>
+      <div class="lc-title">IRR, MOIC &amp; Return Attribution</div>
+      <div class="lc-desc">How PE funds measure and report returns. IRR vs. MOIC — when each matters and why they diverge. Return attribution: decomposing gains into their sources.</div>
+      <div class="lc-meta"><span class="lc-tag core">Core</span><span class="lc-tag int">~12 min</span></div>
+    </a>
+    <a href="l8-private-credit.html" class="lesson-card">
+      <div class="lc-num">L8.04</div>
+      <div class="lc-title">Private Credit — Direct Lending</div>
+      <div class="lc-desc">How direct lending works, why it has displaced syndicated lending for mid-market companies, unitranche structures, the lender's credit process, and JaceyTrayd's approach.</div>
+      <div class="lc-meta"><span class="lc-tag prac">JaceyTrayd</span><span class="lc-tag int">~14 min</span></div>
+    </a>
+    <a href="l8-covenants.html" class="lesson-card">
+      <div class="lc-num">L8.05</div>
+      <div class="lc-title">Covenants — Design &amp; Enforcement</div>
+      <div class="lc-desc">Maintenance vs. incurrence covenants, the covenant package in private credit, how breaches are handled, equity cures, covenant resets, and what lenders actually do when a borrower struggles.</div>
+      <div class="lc-meta"><span class="lc-tag prac">JaceyTrayd</span><span class="lc-tag int">~12 min</span></div>
+    </a>
+    <a href="l8-exits.html" class="lesson-card">
+      <div class="lc-num">L8.06</div>
+      <div class="lc-title">PE Exit Strategies &amp; Secondaries</div>
+      <div class="lc-desc">Trade sale, IPO, secondary buyout, dividend recapitalisation — the four PE exits. GP-led secondaries and continuation funds. How exit timing affects IRR.</div>
+      <div class="lc-meta"><span class="lc-tag adv">Advanced</span><span class="lc-tag int">~10 min</span></div>
+    </a>
+  </div>
+
+  <!-- FEATURED LESSON: PRIVATE CREDIT -->
+  <div class="sec-head" style="margin-top:2rem">
+    <h2>Featured Lesson — <em>Private Credit: Direct Lending</em></h2><div class="sec-line"></div>
+  </div>
+  <div class="lesson-page" style="padding:0;max-width:none">
+    <div class="deal-badge">📍 Private Markets · Private Credit · L8.04 · JaceyTrayd</div>
+    <p class="lesson-intro">Private credit has grown from a niche corner of finance into a $1.7 trillion asset class that now rivals the syndicated loan market for mid-market transactions. Understanding how direct lenders think, underwrite, and structure is essential for any IB professional working on leveraged transactions — and is the core operating model of JaceyTrayd.</p>
+
+    <h2>Why Private Credit <em>Displaced</em> Syndicated Lending</h2>
+    <table class="lesson-table">
+      <thead><tr><th></th><th>Syndicated Loan</th><th>Direct Lending (Private Credit)</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Execution</strong></td><td>4–8 weeks (syndication process)</td><td>3–6 weeks (bilateral negotiation)</td></tr>
+        <tr><td><strong>Certainty</strong></td><td>Risk of syndication failure in volatile markets</td><td>Single lender — committed capital, no syndication risk</td></tr>
+        <tr><td><strong>Flexibility</strong></td><td>Standardised terms; hard to customise</td><td>Fully customisable: bespoke covenants, PIK toggle, deferred amortisation</td></tr>
+        <tr><td><strong>Confidentiality</strong></td><td>Widely marketed; terms become market knowledge</td><td>Bilateral — terms remain confidential</td></tr>
+        <tr><td><strong>Size</strong></td><td>Better for large deals (£500m+)</td><td>Best for mid-market (£20m–£500m)</td></tr>
+        <tr><td><strong>Pricing</strong></td><td>Tighter spreads (more competition, liquid secondary)</td><td>Higher spreads — illiquidity and complexity premium</td></tr>
+        <tr><td><strong>Covenants</strong></td><td>Covenant-lite becoming standard post-2015</td><td>Maintenance covenants standard — lender requires ongoing control</td></tr>
+      </tbody>
+    </table>
+
+    <h2>The Unitranche — <em>private credit's flagship product</em></h2>
+    <p>The unitranche is a single blended facility combining first-lien and second-lien characteristics into one instrument at one blended rate. It replaces the traditional syndicated loan stack (TLB + HY bonds + RCF) with a single lender relationship.</p>
+    <div class="formula-block">Traditional syndicated LBO stack (£400m deal):
+  TLB (£240m):    SOFR + 425bps
+  2nd Lien (£80m): SOFR + 775bps
+  HY Notes (£40m): Fixed 9.5%
+  RCF (£40m):     SOFR + 375bps (undrawn)
+  
+  Weighted average cost: ~8.5% | Timeline: 6-8 weeks | 15+ lenders
+
+Unitranche equivalent (£360m):
+  Single facility at SOFR + 600bps
+  RCF: SOFR + 450bps (same lender)
+  
+  All-in cost: ~11.5% (higher) | Timeline: 3-4 weeks | 1-2 lenders
+  
+The borrower pays MORE for the unitranche — in exchange for:
+  - Speed and certainty of execution
+  - Single relationship (one lender to negotiate with)
+  - Confidentiality
+  - Covenant flexibility
+  - No syndication risk
+For PE sponsors on mid-market deals, this trade-off is almost always worth it.</div>
+
+    <h2>The JaceyTrayd <em>Credit Process</em></h2>
+    <p>Every credit begins with the same discipline: understand the downside before quantifying the upside. Our five-stage underwriting process is designed to answer one question with increasing certainty: in a stressed scenario, can we get our money back?</p>
+    <table class="lesson-table">
+      <thead><tr><th>Stage</th><th>What we assess</th><th>Key output</th></tr></thead>
+      <tbody>
+        <tr><td><strong>1. Initial screen</strong></td><td>Industry, leverage, interest cover, FCF — 30-minute filter</td><td>Pass/fail on basic credit criteria</td></tr>
+        <tr><td><strong>2. Information request</strong></td><td>3 years financials, management accounts, budget, cap table, key contracts</td><td>Initial credit memo — preliminary view</td></tr>
+        <tr><td><strong>3. Management meeting</strong></td><td>Business model, competitive moat, management quality, key risks</td><td>Qualitative assessment; management calibration</td></tr>
+        <tr><td><strong>4. Full underwriting</strong></td><td>Financial model (base/downside), covenant analysis, collateral assessment, legal due diligence</td><td>Full credit paper — presented to Investment Committee</td></tr>
+        <tr><td><strong>5. Documentation</strong></td><td>Loan agreement, covenant package, security package, representations and warranties</td><td>Signed credit agreement; drawdown conditions satisfied</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout">
+      <div class="c-label">The JaceyTrayd Credit Philosophy</div>
+      <p><strong>We lend against FCF, not EBITDA.</strong> EBITDA is an accounting construct — FCF is what actually services debt. Our primary covenant is EBITDA/Interest, but our internal underwriting is FCF/Total Debt Service (including amortisation). If FCF does not cover total debt service in the downside scenario, we do not lend — regardless of how healthy EBITDA looks.<br><br>
+      <strong>We never lend on synergies.</strong> Management synergies are aspirational. We underwrite the business as it exists today — not as it might be after a transformation plan that requires 24 months and significant execution risk. We model zero synergies as our base case and haircut management projections by 15–25% before beginning our credit analysis.</p>
+    </div>
+
+    <div class="mistake-box">
+      <div class="m-label">The Private Credit Mistakes That Create Losses</div>
+      <p><strong>Lending on pro forma EBITDA without verification.</strong> A management-adjusted EBITDA of £50m that includes £15m of "synergies not yet achieved" is really £35m. Lenders who accept pro forma figures without independent quality-of-earnings verification have overstated the borrower's debt capacity by 43%.<br><br>
+      <strong>Under-pricing the complexity premium.</strong> A unitranche for a complex, covenant-heavy business requires significantly more ongoing monitoring than a plain-vanilla credit. If the spread does not reflect the monitoring burden and the illiquidity of the position, the risk-adjusted return is below target even if the credit performs.</p>
+    </div>
+
+    <div class="bank-box">
+      <div class="b-label">In a Real Bank — Leveraged Finance Perspective</div>
+      <p>The leveraged finance team at a bank is the sell-side equivalent of the private credit function. They structure and arrange leveraged loans and HY bonds for PE-backed companies, then syndicate them to institutional investors (including direct lenders like JaceyTrayd). The IB leveraged finance analyst must understand the credit from both perspectives simultaneously: the borrower's ability to service debt (the lender's lens) and the attractiveness of the yield to investors who will buy the paper (the capital markets lens). Bridging these two perspectives is the core technical skill of leveraged finance.</p>
+    </div>
+    <a href="l8-private-credit.html" class="btn btn-gold" style="margin-top:1.2rem">Read Full Lesson → Private Credit: Direct Lending</a>
+  </div>
+</div>
+
+<!-- ═══ PRACTICE ═══ -->
+<div class="tab-panel" id="tab-practice">
+  <div class="sec-head"><h2>Quiz — <em>Private Markets</em></h2><div class="sec-line"></div></div>
+  <p style="font-family:var(--slab);font-size:0.8rem;color:var(--ash);margin-bottom:1.5rem;line-height:1.7">15 questions across PE fund structure, LBO mechanics, IRR/MOIC, direct lending, covenants, and exit strategies. These cover the private markets knowledge essential for leveraged finance and PE-facing roles.</p>
+  <div id="quiz-container"></div>
+</div>
+
+<!-- ═══ SOLVER ═══ -->
+<div class="tab-panel" id="tab-solver">
+  <div class="sec-head"><h2>Problem Solver — <em>Private Markets</em></h2><div class="sec-line"></div></div>
+  <p style="font-family:var(--slab);font-size:0.8rem;color:var(--ash);margin-bottom:1.5rem;line-height:1.7">Four worked problems: full LBO model returns, IRR vs. MOIC comparison, private credit covenant compliance analysis, and return attribution. Reveal each step in sequence.</p>
+  <div style="display:flex;gap:0.6rem;margin-bottom:1.5rem;flex-wrap:wrap" id="solver-btns">
+    <button class="btn btn-gold"    onclick="loadProblem(0)">P1: LBO Returns Model</button>
+    <button class="btn btn-outline" onclick="loadProblem(1)">P2: IRR vs. MOIC</button>
+    <button class="btn btn-outline" onclick="loadProblem(2)">P3: Covenant Analysis</button>
+    <button class="btn btn-outline" onclick="loadProblem(3)">P4: Return Attribution</button>
+  </div>
+  <div id="solver-container"></div>
+</div>
+
+<!-- ═══ INTERVIEW ═══ -->
+<div class="tab-panel" id="tab-interview">
+  <div class="sec-head"><h2>Interview Prep — <em>Private Markets Q&amp;A</em></h2><div class="sec-line"></div></div>
+  <p style="font-family:var(--slab);font-size:0.8rem;color:var(--ash);margin-bottom:1.2rem;line-height:1.7">12 private markets questions with model answers. Essential for leveraged finance, private equity, and private credit roles — and relevant for any M&A role that involves PE sponsors.</p>
+  <div class="iq-filter">
+    <button class="iq-filter-btn active" onclick="filterIQ('all')">All</button>
+    <button class="iq-filter-btn" onclick="filterIQ('tech')">Technical</button>
+    <button class="iq-filter-btn" onclick="filterIQ('deal')">Deal Context</button>
+    <button class="iq-filter-btn" onclick="filterIQ('beh')">Conceptual</button>
+  </div>
+  <div class="interview-wrapper" id="interview-container"></div>
+</div>
+
+<div class="page-nav">
+  <a href="level-7.html" class="btn btn-ghost">← Level 07: Derivatives</a>
+  <div class="pn-context">Level <span>08</span> of 11 · Private Markets</div>
+  <a href="level-9.html" class="btn btn-gold">Next: Level 09 — Deal Execution →</a>
+</div>
+
 </div>
 </div>
 <script src="shared.js"></script>
 <script>
-var lvl = parseInt(window.location.pathname.match(/level-(\d+)/)?.[1] || '0');
 document.getElementById('eco-hdr').outerHTML = buildEcoHeader();
 document.getElementById('hdr').outerHTML = buildHeader();
-document.getElementById('sb').outerHTML = buildSidebar(lvl);
-var names = ['','','','Valuation','Modelling','M&A','Capital Markets','Derivatives','Private Markets','Deal Execution','Careers','Advanced'];
-document.getElementById('cn-num').textContent = String(lvl).padStart(2,'0');
-document.getElementById('cn-title').innerHTML = (names[lvl]||'Level '+lvl) + ' <em>— Coming Soon</em>';
-document.getElementById('bc-title').textContent = 'Level ' + String(lvl).padStart(2,'0') + ' — ' + (names[lvl]||'');
+document.getElementById('sb').outerHTML = buildSidebar(8);
+
+function switchTab(name) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.hub-tab').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + name).classList.add('active');
+  event.target.classList.add('active');
+  if (name==='practice' && !window._qL) { initQuiz();      window._qL=true; }
+  if (name==='solver'   && !window._sL) { loadProblem(0);  window._sL=true; }
+  if (name==='interview'&& !window._iL) { initInterview(); window._iL=true; }
+}
+
+/* ══════════════ QUIZ — 15 questions ══════════════ */
+const quizQuestions = [
+  {
+    question: 'In a PE fund structure, what is the difference between the General Partner (GP) and the Limited Partners (LPs)?',
+    options: [
+      'GP provides the majority of the capital; LPs provide advisory services',
+      'GP manages the fund and makes investment decisions; LPs provide the capital and receive returns but have no role in investment decisions',
+      'GPs are institutional investors; LPs are individual investors',
+      'GP and LP are interchangeable terms used in different jurisdictions'
+    ],
+    correct: 1,
+    explanation: '<strong>The GP/LP split defines the PE fund structure.</strong> GP (General Partner): the PE firm — contributes 1–3% of capital (skin in the game), makes all investment decisions, manages the portfolio, and earns management fees plus carried interest. LPs (Limited Partners): institutional investors (pension funds, endowments, sovereign wealth funds, insurance companies, family offices) — provide 97–99% of capital, earn returns net of fees, and have NO role in investment decisions. LPs\' liability is limited to their capital commitment; the GP has unlimited liability.'
+  },
+  {
+    question: 'What is "carried interest" and what does the "2 and 20" fee structure mean?',
+    options: [
+      '2% is the annual management fee on committed capital; 20% is the GP\'s share of profits above the hurdle rate — the primary performance incentive',
+      '2% is the transaction fee on each deal; 20% is the return guaranteed to LPs',
+      '2% is the carry percentage; 20% is the management fee as a percentage of deployed capital',
+      '2% is the annual interest on the GP\'s capital commitment; 20% is the minimum return required before fees'
+    ],
+    correct: 0,
+    explanation: '<strong>"2 and 20" is the standard PE fee structure.</strong> Management fee (2%): annual fee on committed (or invested) capital — covers the GP\'s operating costs (salaries, offices, due diligence). Carried interest (20%): the GP\'s share of profits above the hurdle rate (typically 8% preferred return). If the fund returns 25% IRR, the LP first receives an 8% preferred return; then the GP "catches up" to 20% of profits; then profits split 80% LP / 20% GP. The carry is the primary wealth-creation mechanism for PE professionals — a $5bn fund earning 20% carry on $2bn of profits = $400m carry pool.'
+  },
+  {
+    question: 'What are the three primary value creation levers in an LBO?',
+    options: [
+      'Revenue growth, cost reduction, and market share expansion',
+      'EBITDA growth, multiple expansion, and debt paydown',
+      'Operational improvement, financial engineering, and management replacement',
+      'Acquisition, integration, and exit timing'
+    ],
+    correct: 1,
+    explanation: '<strong>The three LBO return drivers are EBITDA growth, multiple expansion, and debt paydown.</strong> EBITDA growth: organic growth + operational improvement + bolt-on acquisitions → exit EBITDA higher than entry EBITDA. Multiple expansion: exit at a higher EV/EBITDA multiple than entry → each unit of EBITDA is valued more highly at exit (market re-rating, improved business quality). Debt paydown: FCF generated during the hold period repays debt → equity value increases mechanically as debt falls. All three simultaneously drive equity returns from the initial equity cheque to the exit proceeds.'
+  },
+  {
+    question: 'A PE firm enters an LBO at 7.0x EV/EBITDA with 5.0x Net Debt/EBITDA. What is the implied equity contribution as a percentage of EV?',
+    options: ['28.6%', '71.4%', '42.9%', '35.0%'],
+    correct: 0,
+    explanation: '<strong>Equity = EV − Debt = 7.0x − 5.0x = 2.0x EBITDA. Equity % of EV = 2.0x / 7.0x = 28.6%.</strong> This means the PE firm funded approximately 71.4% of the purchase price with debt and only 28.6% with equity. The high leverage ratio (5.0x debt / 7.0x EV) is typical of a mid-market LBO in a benign credit environment. In more conservative markets or for cyclical businesses, leverage is lower — typically 4.0–5.5x EBITDA — requiring a higher equity contribution and reducing the leverage amplification of returns.'
+  },
+  {
+    question: 'IRR is 25% and MOIC is 2.0x for Investment A; IRR is 18% and MOIC is 4.0x for Investment B. Which is better?',
+    options: [
+      'Investment A — higher IRR always indicates better performance',
+      'Investment B — higher MOIC always indicates better performance',
+      'It depends on the investment horizon and the opportunity cost of capital — IRR favours quick returns; MOIC favours absolute wealth creation',
+      'They are equivalent — IRR and MOIC always agree on relative performance'
+    ],
+    correct: 2,
+    explanation: '<strong>IRR and MOIC measure different things and can legitimately disagree on which investment is "better."</strong> Investment A (25% IRR, 2.0x MOIC): returned capital quickly — probably a 3-year hold. Investment B (18% IRR, 4.0x MOIC): returned more absolute money — probably a 7-8 year hold. Which is better depends on: (1) LP preference — some prioritise DPI (distributed capital) which favours B; (2) reinvestment opportunity — if A\'s capital can be redeployed at 25% for 3 more years, A is better; (3) absolute wealth — B created 4x the starting value, which matters for long-term endowments. Most PE firms report both — neither alone is sufficient.'
+  },
+  {
+    question: 'What is a unitranche loan and what is its main advantage over a traditional syndicated debt stack?',
+    options: [
+      'A unitranche is a floating-to-fixed rate conversion mechanism that blends multiple rate types into one payment',
+      'A unitranche is a single, blended facility combining first and second lien characteristics provided by one (or a small club of) direct lender(s) — offering simplicity, speed, and certainty versus a multi-tranche syndicated structure',
+      'A unitranche is a government-guaranteed lending facility for companies with high credit quality',
+      'A unitranche is a bond structure that combines senior and junior notes into one security with a blended coupon'
+    ],
+    correct: 1,
+    explanation: '<strong>The unitranche replaces a complex multi-tranche capital structure with a single facility from a single lender relationship.</strong> Traditional LBO stack: TLB + 2nd lien + HY bonds + RCF = 4 instruments, 20+ lenders, 6–8 week syndication process, risk of market disruption. Unitranche: one facility, one lender (or small club), 3–4 weeks, committed capital. The borrower pays a higher all-in rate (typically 75–150bps wider than the blended syndicated cost) in exchange for speed, certainty, confidentiality, and flexibility. For PE sponsors doing mid-market deals (£50–500m), this trade-off is almost always attractive.'
+  },
+  {
+    question: 'What is the difference between a maintenance covenant and an incurrence covenant?',
+    options: [
+      'Maintenance covenants apply to secured debt; incurrence covenants apply to unsecured debt',
+      'A maintenance covenant is tested periodically (quarterly) regardless of borrower actions; an incurrence covenant is only triggered when the borrower takes a specific action (e.g., issuing new debt)',
+      'Maintenance covenants govern operating metrics; incurrence covenants govern capital structure changes',
+      'They are alternative names for the same protective mechanism used in different markets'
+    ],
+    correct: 1,
+    explanation: '<strong>The testing trigger is the critical difference.</strong> Maintenance covenant: tested every quarter against the actual financial metrics — the borrower can breach even if they do nothing wrong (just by underperforming). Typical: Net Leverage ≤ 5.5x tested quarterly. Incurrence covenant: only triggered when the borrower takes a specific action — if the borrower stays quiet (no new debt, no dividends, no acquisitions), it never triggers. IG bonds are incurrence-only (lighter protection). Private credit / leveraged loans have maintenance covenants (stronger protection — gives lenders earlier warning of deterioration).'
+  },
+  {
+    question: 'A PE firm buys a company at 8.0x EBITDA. During the hold period, EBITDA grows from £50m to £70m. The company is sold at 9.0x EBITDA. What is the exit EV?',
+    options: ['£400m', '£560m', '£630m', '£700m'],
+    correct: 2,
+    explanation: '<strong>Exit EV = Exit Multiple × Exit EBITDA = 9.0x × £70m = £630m.</strong> Entry EV was 8.0x × £50m = £400m. The £230m increase in EV (£630m − £400m) reflects both EBITDA growth and multiple expansion. EBITDA contribution: EBITDA grew £20m → at exit multiple of 9.0x, that is worth £180m additional EV. Multiple expansion contribution: same £50m entry EBITDA now valued at 9.0x vs 8.0x → 1.0x × £50m = £50m additional EV. Total: £180m + £50m = £230m EV increase from entry.'
+  },
+  {
+    question: 'What is the "J-curve" in private equity fund performance?',
+    options: [
+      'The characteristic investment return curve showing accelerating returns as leverage compounds over the hold period',
+      'The typical pattern of negative early returns followed by positive later returns — early years show negative IRR due to management fees, early-stage investments, and write-downs before value is recognised',
+      'The relationship between leverage and equity returns — shaped like a J as returns accelerate above a certain leverage level',
+      'The required return curve showing how IRR targets change at different stages of the economic cycle'
+    ],
+    correct: 1,
+    explanation: '<strong>The J-curve describes the timing pattern of PE fund cash flows.</strong> In years 1–3: LPs pay management fees and make capital contributions for early investments, many of which are marked at cost or slightly below — fund shows negative returns. In years 4–7: portfolio companies are developed, some early exits generate realised gains, IRR begins to turn positive. In years 7–10: major exits, distributions to LPs, strong positive IRR. The "J" shape reflects: down first (fees, early markdowns), then sharply up (realised gains). Newer funds always look worse than mature funds — the J-curve makes early IRR comparison misleading.'
+  },
+  {
+    question: 'What is a "dividend recapitalisation" and why do PE firms use it?',
+    options: [
+      'A recapitalisation where the company issues new equity and uses proceeds to pay a special dividend to all shareholders',
+      'The PE firm borrows additional debt at the portfolio company level and uses proceeds to pay a dividend to itself — extracting capital before the final exit',
+      'A mechanism allowing PE firms to reinvest dividends received from portfolio companies into new investments',
+      'The conversion of dividend-paying preferred equity into common equity at the time of a company refinancing'
+    ],
+    correct: 1,
+    explanation: '<strong>A dividend recap is a partial monetisation before full exit.</strong> If a portfolio company has performed well and has significant debt capacity, the PE firm arranges additional debt and uses the proceeds to pay itself a dividend. This returns capital to LPs without requiring a full exit — improving the fund\'s DPI (distributions to paid-in capital) and the IRR (capital returned early). The trade-off: the company now carries more debt, increasing its risk profile and reducing FCF for growth investment. Dividend recaps are controversial — aggressive sponsors may over-lever companies that subsequently struggle to service the increased debt burden.'
+  },
+  {
+    question: 'In private credit, what does "OID" stand for and how does it affect lender returns?',
+    options: [
+      'Ongoing Interest Differential — the extra spread above SOFR charged to higher-risk borrowers',
+      'Original Issue Discount — the loan is funded at a discount to par (e.g., 97 cents on the dollar); the borrower receives less than face value but repays the full face value at maturity, creating additional yield',
+      'Operating Income to Debt — a credit ratio measuring the borrower\'s ability to service debt from operating income',
+      'Overallotment Investment Directive — the portion of a syndicated loan retained by the arranging bank'
+    ],
+    correct: 1,
+    explanation: '<strong>OID (Original Issue Discount) is an upfront fee that enhances lender yield.</strong> If a £100m loan is issued at 98 OID, the borrower receives £98m but must repay £100m at maturity. The £2m discount is additional lender return, amortised over the loan life. OID on a 5-year loan = approximately 40bps of additional annual yield (£2m / £100m / 5 years). Lenders quote returns as: SOFR + margin + OID-equivalent. In private credit, OID of 1–3% is standard for leveraged transactions. Combined with the coupon spread, this materially enhances the all-in return.'
+  },
+  {
+    question: 'What is an "equity cure" provision in a loan agreement and when is it used?',
+    options: [
+      'A mechanism allowing the borrower to convert debt to equity to cure a default',
+      'A provision allowing the PE sponsor to inject fresh equity into the borrower to cure a financial covenant breach — the injected equity is added to EBITDA or deducted from net debt for covenant calculation purposes',
+      'A clause requiring the lender to provide additional equity-like capital if the borrower\'s credit metrics deteriorate below a specified threshold',
+      'A term permitting existing equity holders to purchase additional shares at a discounted price if the company breaches its financial covenants'
+    ],
+    correct: 1,
+    explanation: '<strong>An equity cure allows the PE sponsor to prevent a technical default by injecting cash.</strong> If Net Leverage breaches 5.5x covenant, the sponsor can inject, say, £10m of equity into the company. This £10m reduces net debt (improving the leverage ratio) or may be treated as EBITDA for covenant purposes (if structured as an "EBITDA cure"). The injection must typically occur within 10–20 business days of the breach being identified. Equity cures are limited (typically 2 cures per 4 quarters, and a maximum number over the loan life) to prevent sponsors from perpetually papering over structural deterioration.'
+  },
+  {
+    question: 'What is the "preferred return" (or "hurdle rate") in a PE fund and how does it protect LPs?',
+    options: [
+      'The guaranteed annual return the GP promises to LPs regardless of fund performance',
+      'The minimum annual return (typically 8%) that LPs must receive before the GP participates in profits — ensuring LPs are adequately compensated before the GP earns carry',
+      'The return level above which the LP\'s investment converts from debt to equity in the fund structure',
+      'The benchmark index return that the GP must beat before management fees are charged'
+    ],
+    correct: 1,
+    explanation: '<strong>The preferred return protects LPs by ensuring the GP doesn\'t earn carry unless LPs have first achieved a minimum return.</strong> Mechanics: LPs receive 100% of distributions until they have achieved an 8% annual return on invested capital. Then the "catch-up" provision: GP receives 100% (or 80%) of further distributions until it has received 20% of total profits (catching up to its carry entitlement). Then: 80% LP / 20% GP for all remaining distributions. This waterfall ensures the GP is incentivised to maximise returns above 8% — any underperformance to that hurdle means zero carry, no matter how well-intentioned.'
+  },
+  {
+    question: 'What is a "continuation fund" (or "GP-led secondary") and why has the market grown?',
+    options: [
+      'A new fund raised by the GP immediately after the previous fund closes — continuing the same investment strategy',
+      'A transaction where the GP moves one or more portfolio companies from a maturing fund into a new vehicle — giving existing LPs liquidity while allowing the GP to hold assets longer with new patient capital',
+      'A refinancing structure where the portfolio company\'s debt is extended beyond its original maturity date',
+      'A regulatory mechanism allowing PE funds to operate beyond their standard 10-year term without winding down'
+    ],
+    correct: 1,
+    explanation: '<strong>GP-led secondaries allow GPs to continue holding high-conviction assets beyond the fund\'s normal term.</strong> Problem: a 10-year fund must exit all investments by year 10 — even if the best assets have more value to unlock. Solution: the GP creates a new "continuation vehicle," buys the assets from the old fund at a negotiated price, and brings in new LPs (often specialist secondary funds). Existing LPs can either roll into the continuation fund (staying invested) or take liquidity (selling their stake to the continuation fund). Growth drivers: more assets worth holding longer, the rise of specialist secondary buyers, and LP demand for liquidity options in the secondary market.'
+  },
+  {
+    question: 'In private credit underwriting, why is FCF/Debt Service considered more reliable than EBITDA/Interest as the primary credit metric?',
+    options: [
+      'FCF/Debt Service is regulated by banking authorities; EBITDA/Interest is an internal management metric',
+      'FCF captures capex, working capital, and principal repayment — giving a complete picture of the cash required to sustain operations AND service all debt obligations; EBITDA/Interest ignores capex requirements and scheduled amortisation',
+      'FCF is always larger than EBITDA, making it a more conservative measure',
+      'EBITDA/Interest is only applicable to public companies; FCF/Debt Service is used for private companies'
+    ],
+    correct: 1,
+    explanation: '<strong>FCF/Debt Service is the comprehensive test; EBITDA/Interest is a simplified proxy.</strong> EBITDA/Interest ignores: (1) maintenance capex — required cash investment just to keep the business running; (2) working capital changes — growing businesses tie up cash in receivables and inventory; (3) scheduled principal amortisation — mandatory debt repayment that must be funded from cash, not just EBITDA. FCF/Debt Service = (CFO − Maintenance Capex) / (Interest + Principal) addresses all of these. In JaceyTrayd\'s underwriting: if FCF/Debt Service falls below 1.2x in the base case or below 1.0x in the downside scenario, we do not lend regardless of EBITDA/Interest coverage.'
+  }
+];
+
+function initQuiz() { new QuizEngine(quizQuestions, 'quiz-container'); }
+
+/* ══════════════ SOLVERS — 4 problems ══════════════ */
+const problems = [
+  /* P1 — Full LBO returns model */
+  {
+    problem: {
+      title: 'Build a complete LBO returns model from entry to exit.',
+      given: 'Entry:\n  Purchase price: £420m (7.0x LTM EBITDA of £60m)\n  Debt financing: £294m (5-yr TLB at 9.5% all-in; 1% annual amortisation)\n  Equity contributed: £126m (PE firm)\n\nHold period: 5 years\nEBITDA growth: 8% per year (organic + operational improvement)\nDebt paydown: mandatory amortisation only (no cash sweep for simplicity)\nExit: 5 years later at 8.0x EV/EBITDA\n\nQuestion: Calculate equity proceeds, MoM, and IRR at exit.'
+    },
+    steps: [
+      {
+        title: 'Confirm entry metrics',
+        body: 'Verify the entry capital structure and key ratios to establish the baseline.',
+        formula: 'Entry EV:           7.0x × £60m EBITDA = £420m\nEntry debt:         £294m (70% of EV)\nEntry equity:       £126m (30% of EV)\nEntry leverage:     £294m / £60m = 4.9x Net Debt/EBITDA\nEntry interest:     £294m × 9.5% = £27.93m/year\nEntry cover:        £60m / £27.93m = 2.15x EBITDA/Interest'
+      },
+      {
+        title: 'Project EBITDA over 5-year hold',
+        body: 'Apply 8% compound annual EBITDA growth. This reflects organic revenue growth, margin expansion from operational improvement, and contribution from bolt-on acquisitions.',
+        formula: 'Year 1: £60m × 1.08¹ = £64.80m\nYear 2: £60m × 1.08² = £69.98m\nYear 3: £60m × 1.08³ = £75.58m\nYear 4: £60m × 1.08⁴ = £81.63m\nYear 5: £60m × 1.08⁵ = £88.16m\n\nExit year EBITDA: £88.16m\nEBITDA growth over 5 years: +47%'
+      },
+      {
+        title: 'Calculate remaining debt at exit',
+        body: 'Apply mandatory amortisation of 1% of original principal per year. Only mandatory repayments — no cash sweep modelled for simplicity.',
+        formula: 'Annual mandatory amortisation: £294m × 1% = £2.94m/year\nTotal amortised over 5 years: £2.94m × 5 = £14.70m\n\nRemaining debt at exit:\n  £294.00m − £14.70m = £279.30m\n\nExit leverage:\n  £279.30m / £88.16m = 3.17x Net Debt/EBITDA\n  (down from 4.9x at entry — meaningful deleveraging)'
+      },
+      {
+        title: 'Calculate exit EV and equity proceeds',
+        body: 'Apply the exit multiple to exit EBITDA to get exit EV. Subtract remaining debt to get equity proceeds — the cash returned to the PE firm.',
+        formula: 'Exit EV: 8.0x × £88.16m = £705.28m\n\nEquity proceeds:\n  Exit EV:          £705.28m\n  − Remaining debt: (£279.30m)\n  = Equity proceeds: £425.98m\n\nVs. equity invested: £126.00m'
+      },
+      {
+        title: 'Calculate MoM and IRR',
+        body: 'Calculate Money-on-Money multiple and convert to approximate IRR using the compound growth formula.',
+        formula: 'MoM (Multiple on Money):\n  = Equity proceeds / Equity invested\n  = £425.98m / £126.00m\n  = 3.38x\n\nIRR approximation:\n  IRR = MoM^(1/years) − 1\n  = (3.38)^(1/5) − 1\n  = (3.38)^0.20 − 1\n  = 1.2748 − 1\n  = 27.5% IRR\n\nContext:\n  Top quartile PE: IRR > 25% → This deal is top quartile\n  Median PE fund: IRR 15-20%\n  Entry leverage: 4.9x → reasonable, not aggressive\n  Key driver: combination of all three levers worked'
+      }
+    ],
+    answer: {
+      value: 'MoM: 3.38x | IRR: ~27.5% | Equity: £126m → £426m',
+      note: 'This strong return was driven by all three value creation levers: EBITDA grew 47% (£60m → £88m), the exit multiple expanded 1.0x (7.0x entry → 8.0x exit adding ~£88m of EV), and debt was repaid by £14.7m. The multiple expansion alone added £88m × 1.0x = £88m of EV. Return attribution: EBITDA growth ~50%, multiple expansion ~30%, debt paydown ~20%. A deal that hits on all three levers simultaneously is exceptional — most real deals see headwinds on at least one.'
+    }
+  },
+
+  /* P2 — IRR vs. MOIC comparison */
+  {
+    problem: {
+      title: 'Compare two PE investments on IRR and MOIC and explain which is superior.',
+      given: 'Investment Alpha:\n  Equity invested: £50m at Year 0\n  Returns: £10m at Year 1, £15m at Year 2, £120m at Year 3\n  (liquidated in Year 3)\n\nInvestment Beta:\n  Equity invested: £50m at Year 0\n  Returns: £5m at Year 6, £10m at Year 7, £185m at Year 8\n  (liquidated in Year 8)\n\nQuestion: Calculate IRR and MOIC for both. Which investment is better and for whom?'
+    },
+    steps: [
+      {
+        title: 'Calculate MOIC for both investments',
+        body: 'MOIC is simple: total cash returned divided by total cash invested. It measures absolute wealth creation regardless of timing.',
+        formula: 'Investment Alpha:\n  Total returned: £10m + £15m + £120m = £145m\n  Invested: £50m\n  MOIC: £145m / £50m = 2.90x\n\nInvestment Beta:\n  Total returned: £5m + £10m + £185m = £200m\n  Invested: £50m\n  MOIC: £200m / £50m = 4.00x\n\nBeta wins on MOIC — returned 38% more absolute money than Alpha.'
+      },
+      {
+        title: 'Calculate IRR for Investment Alpha',
+        body: 'IRR is the discount rate that makes the NPV of all cash flows equal to zero. For Alpha with early returns over 3 years, we solve iteratively.',
+        formula: 'Alpha cash flows:\n  Year 0: −£50m\n  Year 1: +£10m\n  Year 2: +£15m\n  Year 3: +£120m\n\nSolve: −50 + 10/(1+r) + 15/(1+r)² + 120/(1+r)³ = 0\n\nTest r = 40%:\n  10/1.40 + 15/1.96 + 120/2.744\n  = 7.14 + 7.65 + 43.73 = 58.52 ≠ 50\n\nTest r = 55%:\n  10/1.55 + 15/2.4025 + 120/3.724\n  = 6.45 + 6.24 + 32.23 = 44.92 < 50\n\nInterpolating: Alpha IRR ≈ 48-50% (precise calculation: ~49%)'
+      },
+      {
+        title: 'Calculate IRR for Investment Beta',
+        body: 'Beta has a longer hold period and most value comes at Year 8. Later cash flows are heavily discounted — lower IRR despite higher MOIC.',
+        formula: 'Beta cash flows:\n  Year 0: −£50m\n  Years 1-5: £0 (no distributions)\n  Year 6: +£5m\n  Year 7: +£10m\n  Year 8: +£185m\n\nSolve: −50 + 5/(1+r)⁶ + 10/(1+r)⁷ + 185/(1+r)⁸ = 0\n\nTest r = 20%:\n  5/2.986 + 10/3.583 + 185/4.300\n  = 1.67 + 2.79 + 43.02 = 47.48 < 50\n\nTest r = 19%:\n  5/2.700 + 10/3.213 + 185/3.823\n  = 1.85 + 3.11 + 48.39 = 53.35 > 50\n\nBeta IRR ≈ 19.5%'
+      },
+      {
+        title: 'Reconcile and recommend for different investor types',
+        body: 'Summarise the trade-off and explain which investment suits which investor profile.',
+        formula: 'SUMMARY:\n             Alpha       Beta\n  MOIC:      2.90x       4.00x\n  IRR:       ~49%        ~19.5%\n  Hold:      3 years     8 years\n  Total £:   £145m       £200m\n\nFor PENSION FUNDS (long-term, need absolute returns):\n  → Beta is better: returns £55m more absolute value\n  Long-duration liabilities match long-duration investment\n  IRR less important than total return (DPI)\n\nFor PE FUND (closed-end, 10-yr term, LP liquidity needs):\n  → Alpha is better: 49% IRR is exceptional\n  Released capital can be redeployed quickly (3 vs. 8 years)\n  If Alpha proceeds reinvested at even 20% IRR for 5 more years:\n  £145m × (1.20)^5 = £361m > Beta\'s £200m\n\nFor LP who CANNOT recycle capital quickly:\n  → Beta is better on absolute wealth creation\n\nConclusion: IRR favours early returns; MOIC favours absolute\nwealth. The "right" answer depends on reinvestment opportunity cost.'
+      }
+    ],
+    answer: {
+      value: 'Alpha: 2.90x MOIC, ~49% IRR | Beta: 4.00x MOIC, ~19.5% IRR',
+      note: 'This comparison illustrates why PE firms report both metrics: IRR rewards speed and compounding; MOIC rewards patience and absolute value creation. LPs who care about long-term wealth (endowments, sovereign wealth funds) weight MOIC more heavily. LP consultants assessing manager skill use IRR (adjusted for time-value). The best PE managers optimise for both — quick winners that also generate meaningful absolute returns.'
+    }
+  },
+
+  /* P3 — Covenant compliance analysis */
+  {
+    problem: {
+      title: 'Analyse a borrower\'s covenant compliance and recommend lender action.',
+      given: 'JaceyTrayd loan: £120m unitranche at SOFR + 575bps\nCovenants (tested quarterly):\n  Net Leverage: ≤ 5.00x (steps to 4.50x at Year 2)\n  Interest Cover: ≥ 2.50x\n  Minimum Liquidity: Cash + undrawn RCF ≥ £8m\n\nRCF: £15m limit, £5m drawn at Q4\n\nActual Q4 financial results:\n  EBITDA (LTM): £18.5m (vs. £22m budget — 16% miss)\n  Total gross debt: £120m TL + £5m RCF drawn = £125m\n  Cash on balance sheet: £4.2m\n  Annual cash interest: £120m × (5.25% SOFR + 5.75%) = £13.2m\n    (RCF interest on £5m: £0.5m)\n  Total annual interest: £13.7m\n\nQuestion: Test all three covenants. Identify breaches and recommend action.'
+    },
+    steps: [
+      {
+        title: 'Test Covenant 1: Net Leverage',
+        body: 'Net Debt = Gross Debt minus Cash. Net Leverage = Net Debt / LTM EBITDA. Compare to the covenant limit.',
+        formula: 'Net Debt:\n  Gross debt: £125.0m (£120m TL + £5m RCF)\n  Cash:        (£4.2m)\n  Net Debt:    £120.8m\n\nNet Leverage = £120.8m / £18.5m = 6.53x\n\nCovenant limit: 5.00x (Year 1)\nActual: 6.53x\n\n⚠ BREACH — 6.53x > 5.00x limit\nBreach severity: 1.53 turns over covenant (30.6% above limit)\n\nNote: Even the Year 2 covenant of 4.50x is far from compliance.\nThis is a material breach, not a technical one.'
+      },
+      {
+        title: 'Test Covenant 2: Interest Cover',
+        body: 'Interest Cover = LTM EBITDA / Cash Interest Expense. Compare to the 2.50x minimum.',
+        formula: 'LTM EBITDA: £18.5m\nTotal annual interest: £13.7m\n\nInterest Cover = £18.5m / £13.7m = 1.35x\n\nCovenant limit: ≥ 2.50x\nActual: 1.35x\n\n⚠ BREACH — 1.35x < 2.50x minimum\nBreach severity: 1.15x below minimum (46% below)\n\nCritical finding: at 1.35x interest cover, the company\nis generating only 35% more EBITDA than its interest bill.\nA further 26% EBITDA decline would result in inability\nto cover interest from operations.'
+      },
+      {
+        title: 'Test Covenant 3: Minimum Liquidity',
+        body: 'Liquidity = Cash on balance sheet + Undrawn RCF capacity.',
+        formula: 'Cash on balance sheet: £4.2m\nRCF limit: £15.0m\nRCF drawn: (£5.0m)\nRCF available: £10.0m\n\nTotal liquidity = £4.2m + £10.0m = £14.2m\n\nCovenant minimum: £8.0m\nActual: £14.2m\n\n✓ NO BREACH — £14.2m > £8.0m minimum\nHeadroom: £6.2m above minimum\n\nNote: Liquidity is adequate — the company has access to\ncapital. The problem is earnings, not immediate cash crisis.'
+      },
+      {
+        title: 'Summarise findings and recommend lender action',
+        body: 'Two covenants breached. Formulate the JaceyTrayd response — immediate steps and negotiating position.',
+        formula: 'COVENANT BREACH SUMMARY:\n  Net Leverage:    BREACHED  (6.53x vs 5.00x limit) ✗\n  Interest Cover:  BREACHED  (1.35x vs 2.50x min)   ✗\n  Min Liquidity:   COMPLIANT (£14.2m vs £8.0m min)  ✓\n\nJACEYTRAYD RECOMMENDED ACTIONS:\n\n1. Formal notice (within 5 business days):\n   Issue covenant breach notification per loan agreement\n   Commence standstill period (no new drawdowns, no distributions)\n\n2. Request for information:\n   Updated 12-month trading forecast + recovery plan\n   Management explanation of £3.5m EBITDA shortfall vs. budget\n   Cash flow forecast for next 6 months\n\n3. Negotiate waiver and reset:\n   Waiver of Q4 breach in exchange for:\n   (a) Margin step-up: +100-150bps (current SOFR+575bps → SOFR+700bps)\n   (b) Covenant reset: 7.50x for Q1/Q2, stepping back to 5.00x by Q4\n   (c) Additional reporting: monthly management accounts\n   (d) Equity cure: request PE sponsor inject £8-10m to reduce net debt\n\n4. If sponsor unwilling to cure: activate security, appoint receiver'
+      }
+    ],
+    answer: {
+      value: '2 of 3 covenants breached | Net Leverage 6.53x | Interest Cover 1.35x',
+      note: 'This is a material multi-covenant breach requiring immediate lender response. Crucially, liquidity remains adequate — this is not an imminent cash default, but a structural earnings problem. The lender has leverage: the borrower needs a waiver to avoid technical default, which gives JaceyTrayd the opportunity to improve terms, require additional information, and potentially accelerate repayment if the recovery plan is unconvincing. Two covenant breaches simultaneously suggest a business in genuine difficulty — not a technical anomaly.'
+    }
+  },
+
+  /* P4 — Return attribution */
+  {
+    problem: {
+      title: 'Decompose PE investment returns into their three constituent drivers.',
+      given: 'Entry (Year 0):\n  Entry EV/EBITDA: 7.5x\n  Entry EBITDA: £40m\n  Entry EV: £300m\n  Entry debt: £210m (70% LTV)\n  Entry equity: £90m\n\nExit (Year 5):\n  Exit EV/EBITDA: 9.0x\n  Exit EBITDA: £58m\n  Exit EV: £522m\n  Exit debt (after paydown): £175m\n  Exit equity proceeds: £347m\n\nQuestion: Attribute the £257m equity gain to its three sources:\nEBITDA growth, multiple expansion, and debt paydown.'
+    },
+    steps: [
+      {
+        title: 'Calculate total equity gain',
+        body: 'Start by confirming the total equity return to attribute.',
+        formula: 'Entry equity:          £90m\nExit equity proceeds:  £347m\nTotal equity gain:     £347m − £90m = £257m\n\nMoM: £347m / £90m = 3.86x\nIRR (approximate): 3.86^(1/5) − 1 = 31.1%\n\nNow attribute £257m across three sources.'
+      },
+      {
+        title: 'Attribute EBITDA growth contribution',
+        body: 'EBITDA grew from £40m to £58m. Value the EBITDA growth at the ENTRY multiple — isolating only the earnings improvement.',
+        formula: 'EBITDA growth in value terms:\n  EBITDA increase: £58m − £40m = £18m\n  Valued at ENTRY multiple: £18m × 7.5x = £135m of EV\n\nEquity benefit from EBITDA growth:\n  EV increase of £135m → same leverage ratio reduces net debt\n  Simplified: equity captures ~100% of this EV gain\n  (debt is fixed; all EBITDA-driven EV gain goes to equity)\n\nEBITDA growth equity contribution: +£135m'
+      },
+      {
+        title: 'Attribute multiple expansion contribution',
+        body: 'The exit multiple (9.0x) exceeds the entry multiple (7.5x) by 1.5 turns. Value this at the EXIT EBITDA — isolating the re-rating effect.',
+        formula: 'Multiple expansion in value terms:\n  Multiple expansion: 9.0x − 7.5x = 1.5x\n  Applied to EXIT EBITDA: 1.5x × £58m = £87m of EV\n\nEquity benefit from multiple expansion:\n  Again, fixed debt means equity captures this EV gain fully\n\nMultiple expansion equity contribution: +£87m\n\nCross-check so far:\n  Entry equity: £90m\n  + EBITDA growth: £135m → equity value = £225m\n  + Multiple expansion: £87m → equity value = £312m'
+      },
+      {
+        title: 'Attribute debt paydown contribution and reconcile',
+        body: 'Debt repaid during the hold period directly increases equity value — cash that could have gone to equity holders instead reduced the debt burden, creating a clean equity gain at exit.',
+        formula: 'Debt paydown:\n  Entry debt: £210m\n  Exit debt:  £175m\n  Debt repaid: £35m\n\nDebt paydown equity contribution: +£35m\n  (Each £1 of debt repaid → £1 more equity proceeds at exit)\n\nFULL RECONCILIATION:\n  Entry equity:          £ 90m\n  + EBITDA growth:       £135m  (52.5% of gain)\n  + Multiple expansion:  £ 87m  (33.9% of gain)\n  + Debt paydown:        £ 35m  (13.6% of gain)\n  = Exit equity:         £347m  ✓\n\nTotal gain: £257m\nEBITDA growth: 52.5% of the gain\nMultiple expansion: 33.9% of the gain\nDebt paydown: 13.6% of the gain'
+      }
+    ],
+    answer: {
+      value: 'EBITDA growth: £135m (53%) | Multiple expansion: £87m (34%) | Debt paydown: £35m (13%)',
+      note: 'This attribution is how PE firms explain their returns to LPs and how IB analysts evaluate the quality of a PE sponsor\'s track record. EBITDA growth dominates here — 53% of the gain came from genuine operational value creation. Multiple expansion (34%) reflects either genuine business quality improvement or a fortunate market environment. Debt paydown (13%) is the mechanical leverage benefit. A deal where 70%+ of returns come from multiple expansion (market timing) is less impressive than one where operational improvement drives the majority — and LPs know the difference.'
+    }
+  }
+];
+
+function loadProblem(idx) {
+  new SolverEngine(problems[idx].problem, problems[idx].steps, problems[idx].answer, 'solver-container');
+  document.querySelectorAll('#solver-btns .btn').forEach((b,i) => {
+    b.className = i===idx ? 'btn btn-gold' : 'btn btn-outline';
+  });
+}
+
+/* ══════════════ INTERVIEW — 12 questions ══════════════ */
+const interviewItems = [
+  {
+    type: 'tech',
+    question: 'Walk me through how an LBO creates returns for the PE firm.',
+    answer: `<strong>LBO returns come from three sources — understand all three, the mechanics, and the interdependencies.</strong><br><br>
+<em>1. EBITDA growth:</em> During the hold period (typically 3–7 years), the PE firm works to grow the business — organically through market expansion and operational improvement, and inorganically through bolt-on acquisitions. Higher EBITDA at exit means a higher EV at the same multiple, or the same EV at a lower multiple. Most value creation in high-quality PE comes from here.<br><br>
+<em>2. Multiple expansion:</em> If the business is sold at a higher EV/EBITDA multiple than it was acquired at, the same EBITDA creates more EV. This can reflect genuine business quality improvement (a service company transformed into a technology company), favourable market conditions (M&A multiples rising over the hold period), or the "small-cap to mid-cap premium" (acquiring a small company at a discount and selling it to a larger strategic buyer at a premium).<br><br>
+<em>3. Debt paydown:</em> The company's FCF during the hold period repays debt — mechanically increasing equity value. At acquisition, equity = EV − Debt. If EV stays constant and debt falls by £20m, equity rises by £20m. Leverage amplifies this: a £20m debt reduction on a £100m equity cheque is a 20% gain on the equity.<br><br>
+<strong>The interaction:</strong> Leverage amplifies all three. A small EBITDA improvement generates a large equity gain because debt is fixed. This amplification is both the attraction of LBOs and their primary risk — if EBITDA falls, equity is wiped out disproportionately.`,
+    tip: 'Return attribution is a key LPs\' analytical tool. They will ask "how much of your return came from multiple expansion vs. operational improvement?" A fund where 60%+ of historical returns came from multiple expansion looks riskier than one where operational improvement dominates — because multiple expansion depends on market conditions, not management skill.'
+  },
+  {
+    type: 'tech',
+    question: 'What makes a good LBO candidate?',
+    answer: `<strong>The ideal LBO candidate has characteristics that maximise debt capacity, FCF generation, and value creation potential.</strong><br><br>
+<em>1. Strong, stable FCF:</em> The debt must be serviced from the company's own cash generation. Businesses with predictable, recurring revenues (SaaS, business services, consumer staples) can carry more debt than cyclical businesses (mining, construction, advertising) where FCF swings dramatically through the cycle.<br><br>
+<em>2. Asset-light model:</em> Low capex relative to EBITDA means more FCF available for debt service. A business spending 5% of revenue on capex vs. 20% generates dramatically more FCF — critical for an LBO.<br><br>
+<em>3. Market leadership:</em> A defensible #1 or #2 position in a niche market provides pricing power, customer retention, and barriers to entry — protecting EBITDA through the hold period.<br><br>
+<em>4. Identifiable value creation thesis:</em> The PE firm must have a specific plan for how it will improve the business — not just hope that market growth will carry it. Buy-and-build (bolt-on acquisitions), operational efficiency, geographic expansion, or business model transformation.<br><br>
+<em>5. Management quality:</em> The team must execute the value creation plan. PE firms typically assess management in depth — sometimes replacing the CEO or CFO at acquisition.<br><br>
+<em>6. Clean balance sheet entry:</em> Limited existing debt, no pension deficits, no major litigation — maximises the debt capacity available for the acquisition financing.`,
+    tip: '"What makes a bad LBO candidate?" Highly cyclical businesses (revenues move dramatically with the economy), capital-intensive businesses (steel, airlines — high maintenance capex, low FCF), customer-concentrated businesses (if the top customer represents 30%+ of revenue, that is a concentration risk lenders and buyers discount heavily), and businesses with high working capital intensity (retail, manufacturing — growing the business requires significant WC investment that absorbs cash).'
+  },
+  {
+    type: 'tech',
+    question: 'What is carried interest and how does the waterfall work?',
+    answer: `<strong>Carried interest is the PE GP\'s share of investment profits — the primary wealth creation mechanism for senior PE professionals.</strong><br><br>
+<strong>Standard structure (American waterfall):</strong><br><br>
+<em>Step 1 — Return of capital:</em> LPs receive 100% of distributions until they have recovered all invested capital (£1 returned for every £1 invested).<br><br>
+<em>Step 2 — Preferred return (hurdle):</em> LPs receive 100% of distributions until they have achieved an 8% annual return on invested capital. Only after this is satisfied does the GP begin to participate.<br><br>
+<em>Step 3 — GP catch-up:</em> The GP receives 80–100% of all further distributions until it has received 20% of total profits (catching up to its carry percentage).<br><br>
+<em>Step 4 — Carried interest split:</em> Remaining distributions split 80% LP / 20% GP indefinitely.<br><br>
+<strong>Example:</strong> £100m fund, 15% net IRR return → total returns £200m. LPs get back £100m capital + £8m preferred (8% on £100m) = £108m. Remaining £92m split: GP catch-up ≈ £23m (to reach 20% of profits), then 80/20 split on remaining £69m = GP £14m, LP £55m. Total GP carry = ~£37m on a £100m fund.<br><br>
+<strong>European waterfall:</strong> More LP-friendly — GP only receives carry after ALL investments in the fund have been realised, not deal-by-deal. Prevents the GP from collecting carry on early winners before later losses are known.`,
+    tip: '"Who pays the management fee?" LPs — 2% annually on committed or invested capital. This covers GP operating costs. Management fees are typically credited against carry (i.e., reduce the carry pool) in LP-friendly structures. The management fee is paid regardless of performance; carry is only earned if the fund clears the hurdle.'
+  },
+  {
+    type: 'deal',
+    question: 'You are a direct lender evaluating a £80m unitranche loan to support a PE acquisition. What are your first three analytical questions?',
+    answer: `<strong>The first three questions determine whether the credit merits full underwriting.</strong><br><br>
+<em>Question 1 — What is the leverage?</em> Net Debt / EBITDA at close. For a unitranche lender at the mid-market level, we typically lend up to 5.5–6.0x for high-quality credits. If the sponsor is asking for 7.0x on a cyclical business, we pass at the screen stage. We also want to know how leverage evolves — does it step down to 4.0x by Year 3 under the base case?<br><br>
+<em>Question 2 — What is the FCF/Debt Service coverage?</em> Not EBITDA/Interest (that is a simplified proxy). We want: (CFO − Maintenance Capex) / (Interest + Mandatory Amortisation). Below 1.2x in the base case is a disqualifier. Below 1.0x means the business cannot service debt from operations — we need to know what else is in the structure before we consider lending.<br><br>
+<em>Question 3 — What is the equity cushion below us?</em> If the PE firm paid 7.0x EV/EBITDA and we are lending 5.0x, there is 2.0x of EBITDA (roughly £20m on £10m EBITDA = £200m of EV delta) protecting us before we take losses. In a distressed sale, could the business be sold for more than our £80m loan? If yes, we have adequate asset coverage. We calculate loan-to-value: £80m / (EV at a conservative exit multiple) — must be well below 100%.`,
+    tip: 'Private credit lenders always think "what happens if everything goes wrong?" before thinking "what returns do I get if it goes right?" This downside-first mentality is structurally different from how PE equity investors think. Understanding this inversion is the key insight for anyone moving between PE and private credit roles.'
+  },
+  {
+    type: 'tech',
+    question: 'What is the difference between a maintenance and incurrence covenant? Which is stronger lender protection?',
+    answer: `<strong>Maintenance covenants provide much stronger lender protection — they create early warning regardless of borrower behaviour.</strong><br><br>
+<strong>Maintenance covenant:</strong> Tested every quarter against actual financial results. If Net Leverage exceeds 5.5x at any quarterly test date — even if the borrower has done nothing extraordinary — it is a breach. The borrower\'s deteriorating performance itself triggers the covenant, giving lenders control before the situation becomes critical. Standard in private credit / direct lending.<br><br>
+<strong>Incurrence covenant:</strong> Only triggered by a specific affirmative action by the borrower — issuing new debt, paying a dividend, making an acquisition. If the borrower does none of these things, the covenant is never tested. A borrower can deteriorate from strong to nearly insolvent without ever triggering an incurrence covenant. Standard in high yield bonds (the issuer resisted maintenance covenants; investors accepted weaker protection for higher yield).<br><br>
+<strong>Why maintenance wins:</strong> In 2020 (Covid) and 2022 (rate shock), companies with maintenance covenant packages entered discussions with lenders at 4–5x leverage. Companies with incurrence-only (covenant-lite) packages had to wait until they actually defaulted — at which point the business was worth much less and recovery was lower.<br><br>
+<strong>The direct lender's position:</strong> All JaceyTrayd loan agreements include maintenance covenants — typically Net Leverage and Interest Cover, tested quarterly against agreed definitions. This is non-negotiable for us. The borrower gets certainty (we will not call the loan if they miss by 10bps) in exchange for early transparency into operational trends.`,
+    tip: 'The "covenant-lite" phenomenon dominated the 2012–2022 leveraged loan market — sponsors used competitive pressure to strip maintenance covenants from syndicated deals. The 2022 rate shock and subsequent default cycle demonstrated the cost of this: lenders had no early warning, no renegotiation leverage, and worse recoveries than in previous cycles. Private credit funds that insisted on maintenance covenants outperformed during this period.'
+  },
+  {
+    type: 'beh',
+    question: 'Why do PE-backed companies sometimes fail to deliver the promised synergies and returns projected at deal entry?',
+    answer: `<strong>There are systematic reasons PE deals underperform projections — understanding them is the mark of a sophisticated analyst.</strong><br><br>
+<em>1. Overpayment in competitive auctions:</em> The auction process is specifically designed to extract maximum price. The winner of an auction is often the most optimistic bidder. "Winner\'s curse" — the PE firm that wins paid more than every other bidder thought was rational.<br><br>
+<em>2. Projection optimism:</em> Management and sponsor projections submitted in the auction are often aggressive. The due diligence period is too short to stress-test every assumption. Revenue synergies (cross-selling, geographic expansion) rarely arrive as fast or as large as projected.<br><br>
+<em>3. Leverage constrains flexibility:</em> A company with 5.5x Net Debt/EBITDA has very limited room to invest in growth, weather economic downturns, or make defensive acquisitions. The very leverage that amplifies returns also amplifies sensitivity to revenue declines and prevents the company from responding opportunistically to market changes.<br><br>
+<em>4. Management disruption:</em> Acquisitions are disruptive. Key talent leaves; customers become anxious; management attention is diverted from running the business to integration and PE reporting. The first 12 months of PE ownership often see slight operational deterioration before the value creation begins.<br><br>
+<em>5. Market timing dependency:</em> Multiple expansion at exit requires M&A markets to be as strong or stronger at exit than at entry. In a market contraction, even a well-run company exits at lower multiples — erasing multiple expansion as a return driver entirely.`,
+    tip: 'The empirical data: Cambridge Associates research shows that approximately 30% of PE deals lose money or return less than 1x invested capital. The median deal generates 2.0–2.5x MOIC. The distribution is positively skewed — a few exceptional deals (5.0x+) pull up the average. Understanding why the distribution is so wide — and what characterises the winners vs. losers — is the analytical foundation of PE due diligence.'
+  },
+  {
+    type: 'tech',
+    question: 'How does a direct lender\'s return compare to a public high yield bond for the same borrower?',
+    answer: `<strong>Direct lending commands a meaningful premium over public HY bonds for the same credit — and the premium must be justified by the additional risks and costs.</strong><br><br>
+<strong>Typical all-in yields (illustrative, mid-market LBO credit, BB- equivalent):</strong><br>
+• Public HY bond: 9.5–10.5% (fixed rate; liquid secondary market)<br>
+• Direct lending unitranche: 11.5–13.5% (SOFR + 575–800bps; illiquid)<br>
+• Spread premium: 150–300bps<br><br>
+<strong>Why direct lending commands a premium:</strong><br>
+1. <em>Illiquidity premium:</em> Direct loans cannot be sold easily — the lender commits capital for 5+ years. This illiquidity requires additional return.<br>
+2. <em>Complexity premium:</em> Unitranche loans require significantly more underwriting effort, legal documentation, and ongoing monitoring than buying a publicly traded bond.<br>
+3. <em>Information asymmetry:</em> Public HY bonds are issued by rated companies with public disclosure. Direct lending is typically to private, unrated companies with less information availability.<br>
+4. <em>Smaller deal size:</em> Mid-market loans (£20–200m) cannot achieve the scale efficiencies of large syndicated deals — per-unit costs are higher.<br><br>
+<strong>What direct lenders give up:</strong> Liquidity (cannot sell easily), secondary market price transparency, ability to quickly exit deteriorating credits.`,
+    tip: 'The direct lending premium has compressed as more capital has entered the market. In 2015, direct lenders commanded 250–350bps over equivalent syndicated deals. By 2023–24, competition compressed this to 100–200bps for high-quality mid-market credits. The premium is largest for complex, covenant-heavy, or smaller transactions where large funds cannot deploy at scale.'
+  },
+  {
+    type: 'deal',
+    question: 'A PE firm is deciding between exiting via a trade sale to a strategic buyer or a secondary buyout (sale to another PE firm). Walk through the key considerations.',
+    answer: `<strong>Exit route selection is one of the most consequential decisions in a PE fund\'s lifecycle — it directly determines the multiple at which returns are realised.</strong><br><br>
+<strong>Trade sale considerations:</strong><br>
+• Strategic buyers can pay synergy premiums — typically 20–40% above PE comparable pricing<br>
+• Usually achieves the highest exit multiple — ideal for maximising MOIC and IRR<br>
+• Full exit for all shareholders — clean, immediate liquidity<br>
+• Requires a motivated strategic acquirer — not always available in every sector/timing<br>
+• Longer process — strategic diligence more comprehensive than PE DD<br><br>
+<strong>Secondary buyout considerations:</strong><br>
+• Financial buyers pay without synergies — pricing limited to what the business can support at normal PE leverage<br>
+• Typically 10–25% lower multiple than a well-competed trade sale<br>
+• Faster execution — PE buyers know the process, have pre-approved financing<br>
+• Useful when no strategic buyer is available or willing<br>
+• Management retention risk — management team may be fatigued after first PE ownership<br>
+• The "secondary buyout discount" question: is there genuine value creation left for the next buyer?<br><br>
+<strong>How to choose:</strong> Run a dual-track process — prepare for both simultaneously, let the two buyer types bid against each other. If a strong strategic emerges, prioritise. If strategic bids are disappointing, fall back to PE. The dual-track creates competition and maximises price.`,
+    tip: 'Lender perspective: secondary buyouts sometimes concern lenders because the original PE sponsor\'s value creation thesis has been fully exploited, leaving the new buyer with a higher entry price and a business with less obvious operational improvement potential. JaceyTrayd applies extra scrutiny to secondary buyouts — we want to understand specifically what the new sponsor plans to do that the prior sponsor did not.'
+  },
+  {
+    type: 'tech',
+    question: 'What is OID in the context of a leveraged loan and how does it affect the all-in lender return?',
+    answer: `<strong>OID (Original Issue Discount) is an upfront fee that materially enhances the lender\'s effective yield — often overlooked in simplified analyses.</strong><br><br>
+<strong>Mechanics:</strong> A loan with 2% OID on £100m is funded at £98m — the borrower receives £98m but must repay £100m at maturity. The £2m discount is additional compensation to the lender, amortised over the loan life.<br><br>
+<strong>Impact on all-in yield:</strong><br>
+Loan: £100m at SOFR + 500bps, 2% OID, 5-year tenor.<br>
+SOFR: 5.25% → gross coupon = 10.25%<br>
+OID annualisation: £2m / £100m / 5 years = 0.40% per year<br>
+All-in yield: 10.25% + 0.40% = <strong>10.65%</strong><br><br>
+<strong>For the borrower:</strong> OID is an upfront cash cost — they receive less than the face amount at closing (affects day-one leverage if calculating net debt). It is often quoted alongside margin in term sheets: "SOFR + 500, 97 OID" (meaning 3% OID).<br><br>
+<strong>In private credit:</strong> OID of 1–3% is standard for leveraged transactions. Combined with commitment fees, arrangement fees, and monitoring fees, the total lender economics significantly exceed the headline coupon rate. When comparing private credit returns to public bond yields, analysts must include all fee income to make the comparison meaningful.`,
+    tip: '"What is an arrangement fee vs. OID?" An arrangement fee is paid at close for structuring and arranging the deal — may be shared with co-lenders; typically 0.5–2.0% of facility. OID is a pricing mechanism (discount to par) that effectively increases yield without raising the stated interest rate — sometimes used to stay within interest rate ceiling agreements or regulatory constraints.'
+  },
+  {
+    type: 'beh',
+    question: 'How do private credit lenders think differently from PE equity investors when looking at the same business?',
+    answer: `<strong>The same company looks completely different through the equity lens versus the credit lens — the frameworks are almost inverted.</strong><br><br>
+<strong>PE equity investor:</strong><br>
+• Primary question: "What is the best case scenario?" — upside drives returns<br>
+• Focused on growth, market opportunity, EBITDA margin expansion<br>
+• Values management's optimism about the future — it\'s their plan<br>
+• Leverages the balance sheet aggressively — leverage amplifies equity returns<br>
+• Holds for 3–7 years; can wait for value to be realised<br>
+• Maximum loss = equity cheque (typically 30% of EV) → limited downside vs. upside<br><br>
+<strong>Private credit lender (JaceyTrayd):</strong><br>
+• Primary question: "What is the worst realistic scenario?" — downside defines risk<br>
+• Focused on FCF stability, EBITDA floor, asset coverage<br>
+• Suspicious of management optimism — haircuts every projection by 15–25%<br>
+• Concerned about leverage — every additional turn of debt reduces safety margin<br>
+• Committed for the full tenor (5–7 years) with no easy exit — cannot wait out deterioration<br>
+• Maximum gain = interest income + fees (capped); maximum loss = full principal (uncapped)<br><br>
+<strong>The shared interest:</strong> Both want the company to succeed. But the lender wants to ensure they get paid even if it partially fails; the equity investor is betting it substantially succeeds. These different perspectives produce very different due diligence questions — and very different reactions to the same set of financial projections.`,
+    tip: 'This distinction is critical for anyone considering a move from IB (advisory, relatively neutral) to either PE (equity upside focus) or private credit (credit preservation focus). The mental model you develop in the role shapes how you read financials, ask management questions, and assess risk — very different skills for very different outcomes.'
+  },
+  {
+    type: 'tech',
+    question: 'What is a "dividend recapitalisation" and what are the risks to the lender?',
+    answer: `<strong>A dividend recap is the PE sponsor borrowing additional debt at the portfolio company level and using proceeds to pay itself a dividend — extracting capital before the final exit.</strong><br><br>
+<strong>Mechanics:</strong> Portfolio company has £200m debt on £60m EBITDA (3.3x leverage). After 2 years of operational improvement, EBITDA has grown to £75m — leverage has fallen to 2.7x. The PE sponsor refinances and adds £60m of new debt (back to 4.3x leverage), paying the £60m as a dividend to its fund. The PE firm has recovered part of its equity without selling the company.<br><br>
+<strong>Lender risks from a dividend recap:</strong><br>
+1. <em>Leverage re-rates higher:</em> The carefully underwritten credit at 3.3x is now at 4.3x — closer to covenant thresholds<br>
+2. <em>FCF/Debt Service deteriorates:</em> More debt = more interest = less FCF cushion<br>
+3. <em>Sponsor commitment reduced:</em> With £60m of capital returned, the sponsor has less skin in the game — if the company struggles, the sponsor\'s incentive to support it financially is weakened<br>
+4. <em>Original investment thesis disrupted:</em> Deleveraging creates value for existing lenders; re-levering transfers value back to equity<br><br>
+<strong>JaceyTrayd response:</strong> Our loan agreements include a restricted payments covenant that prevents dividend payments above a defined threshold without lender consent. Any dividend recap above the threshold requires our approval — giving us the ability to demand improved pricing or additional security as a condition of consent.`,
+    tip: 'In covenant-lite syndicated loans, restricted payment covenants are often highly permissive — allowing dividend recaps as long as leverage stays below a high threshold (e.g., 5.5x). This is one of the most significant differences between private credit (tight restricted payments, lender consent required) and broadly syndicated loans (permissive, sponsor-friendly terms).'
+  },
+  {
+    type: 'deal',
+    question: 'A borrower approaches you to refinance their existing bank loan with a private credit unitranche. Why might they choose this and what terms would you offer?',
+    answer: `<strong>Refinancing motivations and the negotiation framework — think from both sides simultaneously.</strong><br><br>
+<strong>Why the borrower might choose private credit over their existing bank:</strong><br>
+1. <em>More debt:</em> Banks are becoming more conservative (Basel III/IV capital requirements) — private credit can lend at higher leverage than regulated banks<br>
+2. <em>Better terms:</em> No maintenance covenants on a bank revolving credit → private credit\'s maintenance covenants are actually standard, but the bank may now want to impose them on a previously covenant-lite facility<br>
+3. <em>Speed:</em> If the borrower is doing an acquisition and needs certainty of financing within 3 weeks, the bank\'s credit committee cannot always move that fast<br>
+4. <em>Flexibility:</em> PIK toggle, deferred amortisation, bespoke covenant package — things banks typically cannot offer<br>
+5. <em>Relationship preference:</em> A single lender who understands the business is preferable to 15 banks in a syndicate who may react inconsistently to performance challenges<br><br>
+<strong>Terms JaceyTrayd would offer (illustrative):</strong><br>
+• Size: £120m unitranche (senior secured, first lien)<br>
+• Pricing: SOFR + 600bps + 2% OID<br>
+• Maturity: 5 years (bullet, with some amortisation)<br>
+• Covenants: Net Leverage ≤ 5.0x; Interest Cover ≥ 2.5x; tested quarterly<br>
+• Security: First-ranking fixed and floating charge over all assets<br>
+• Restricted payments: Dividends only if leverage below 3.5x<br>
+• Information: Monthly management accounts + quarterly compliance certificates`,
+    tip: 'The pricing premium for a unitranche over the bank loan (say SOFR+600 vs. SOFR+350 from the bank) must be worth it to the borrower. It is worth it when: they need more debt than the bank will provide, they need faster execution, or the bank is requiring covenants so tight that they cannot operate. The unitranche pricing premium is the cost of those three benefits — and for PE-backed companies in growth mode, it is frequently worth paying.'
+  }
+];
+
+function initInterview() {
+  document.getElementById('interview-container').innerHTML =
+    interviewItems.map((item,i) => buildInterviewItem(item,i)).join('');
+}
 </script>
 </body>
 </html>

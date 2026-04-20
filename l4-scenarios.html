@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>L4.06 — Scenarios, Sensitivities & Stress Tests | Ask Jacey</title>
+<title>L4.06 — Scenarios, Sensitivities & Model Output | Ask Jacey</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,87 +11,83 @@
 <div class="breadcrumb">
   <a href="index.html">Home</a><span class="sep">&#8250;</span>
   <a href="level-4.html">Level 04</a><span class="sep">&#8250;</span>
-  <span class="current">L4.06 — Scenarios, Sensitivities & Stress Tests</span>
+  <span class="current">L4.06 — Scenarios, Sensitivities & Model Output</span>
 </div>
 <div class="lesson-page">
-<div class="deal-badge">&#128204; Level 04 &middot; Modelling &middot; L4.06 — Scenarios, Sensitivities & Stress Tests</div>
-<p class="lesson-intro">A financial model with one set of assumptions is a point estimate — it gives a single answer to a question that has an infinite number of possible answers. Scenarios and sensitivities transform a single output into a range, and stress tests reveal where the investment thesis breaks. These are not optional features — they are mandatory for any model presented to clients or used in credit decisions.</p>
+<div class="deal-badge">&#128204; Level 04 &middot; Modelling &middot; L4.06 — Scenarios, Sensitivities & Model Output</div>
+<p class="lesson-intro">A model without scenarios is an opinion. A model with scenarios is a tool. Scenario analysis converts a single-point estimate into an honest range of outcomes — and gives clients, lenders, and investors the information they need to make decisions under uncertainty.</p>
 
-<h2>Three Levels of <em>Analysis</em></h2>
+<h2>Three Types of <em>Analysis</em></h2>
 <table class="lesson-table">
-<thead><tr><th>Tool</th><th>What it shows</th><th>How to build it</th><th>Output</th></tr></thead>
+<thead><tr><th>Type</th><th>What it does</th><th>Typical use</th></tr></thead>
 <tbody>
-<tr><td><strong>Scenario analysis</strong></td><td>How the model performs under different coherent sets of assumptions (Base, Upside, Downside)</td><td>Scenario toggle with IF statements or INDEX/MATCH referencing a scenario assumptions table</td><td>Three columns of results side-by-side</td></tr>
-<tr><td><strong>Sensitivity analysis</strong></td><td>How one output (EV, IRR, share price) changes as one or two inputs vary across a range</td><td>Excel Data Table (Data → What-If Analysis → Data Table)</td><td>Matrix of outputs across input ranges</td></tr>
-<tr><td><strong>Stress testing</strong></td><td>At what input level does the investment thesis break? When does FCF go negative? When is a covenant breached?</td><td>Goal Seek or manual iteration to find the break-even level</td><td>Single threshold values — the "breakeven" inputs</td></tr>
+<tr><td><strong>Scenario analysis</strong></td><td>Re-runs the entire model under a different set of coherent assumptions (e.g., Base, Downside, Severe Downside)</td><td>LBO returns analysis; credit stress testing; strategic planning</td></tr>
+<tr><td><strong>Sensitivity analysis</strong></td><td>Isolates the impact of changing one or two variables, holding everything else constant</td><td>DCF WACC vs. terminal growth; LBO entry vs. exit multiple; margin vs. revenue growth</td></tr>
+<tr><td><strong>Tornado chart</strong></td><td>Ranks all key assumptions by their impact on a single output (e.g., IRR), showing which variables matter most</td><td>Identifying the key value drivers; prioritising management focus; risk communication</td></tr>
 </tbody>
 </table>
 
-<h2>Building a Scenario <em>Toggle</em></h2>
-<div class="formula-block">Step 1: Create a Scenarios tab with three columns:
-  Assumption         Base    Upside   Downside
-  Revenue growth Y1  10%     14%       5%
-  Revenue growth Y2   9%     12%       3%
-  EBITDA margin      32%     35%      27%
-  Churn rate          8%      6%      14%
+<h2>Building a <em>Scenario Toggle</em></h2>
+<div class="formula-block">In the Inputs tab, create a single cell: SCENARIO (dropdown: 1=Base, 2=Downside, 3=Severe)
 
-Step 2: Add a dropdown in the Assumptions tab:
-  Cell A1: [dropdown] Base / Upside / Downside
+For each assumption, use IF or CHOOSE to switch values:
 
-Step 3: Reference with CHOOSE or INDEX/MATCH:
-  Revenue growth Y1 = CHOOSE(scenario_num, 10%, 14%, 5%)
-  Or: = INDEX(scenarios_table, row, MATCH(A1, scenario_names, 0))
+Revenue Growth Year 1:
+  =CHOOSE(SCENARIO, Base_rev_growth, Down_rev_growth, Severe_rev_growth)
+  e.g., =CHOOSE(SCENARIO, 8%, 3%, -5%)
 
-Step 4: All model forecasts auto-update when dropdown changes</div>
+EBITDA Margin:
+  =CHOOSE(SCENARIO, 35%, 31%, 26%)
 
-<h2>Building a Sensitivity <em>Data Table</em></h2>
-<div class="formula-block">Example: EV/EBITDA valuation vs. EBITDA margin and Revenue growth
+Capex % of Revenue:
+  =CHOOSE(SCENARIO, 6%, 6%, 8%)  ← stress capex higher in severe
 
-Setup:
-  Row inputs:  Revenue growth (8%, 10%, 12%, 14%, 16%) — one per row
-  Column inputs: EBITDA margin (28%, 30%, 32%, 34%, 36%) — one per col
-  Output cell: the EV formula (references IS and BS which reference assumptions)
+This means the entire model re-runs when you change SCENARIO cell from 1 to 2.
+No manual overrides. No risk of forgetting to update a cell.
+All scenarios always consistent.</div>
 
-Steps:
-  1. Build the table shell with row inputs in column A and column inputs in row 1
-  2. In cell B1 (top-left of the table), enter: =EV_formula_cell
-  3. Select entire table (A1:F6 in this example)
-  4. Data → What-If Analysis → Data Table
-  5. Row input cell: revenue growth assumption cell
-  6. Column input cell: EBITDA margin assumption cell
-  7. Press OK — Excel auto-populates each cell
+<h2>The Two-Way <em>Data Table</em> (Sensitivity Grid)</h2>
+<div class="formula-block">Example: LBO IRR sensitivity (Entry EV/EBITDA vs Exit EV/EBITDA)
 
-Result: 25-cell matrix showing EV under all combinations</div>
+                    Exit Multiple
+Entry       6.0x    7.0x    8.0x    9.0x   10.0x
+Multiple
+6.0x:      22.1%   26.8%   31.2%   35.3%   39.1%
+7.0x:      16.4%   20.8%   24.9%   28.7%   32.2%
+8.0x:      11.4%   15.5%   19.3%   22.9%   26.2%
+9.0x:       7.0%   10.8%   14.4%   17.8%   20.9%
+10.0x:      3.0%    6.6%   10.0%   13.2%   16.3%
 
-<h2>Stress Test — Finding the <em>Break-Even</em></h2>
-<div class="formula-block">For a lender: "At what EBITDA level does interest cover breach 2.0x?"
-  Interest Cover = EBITDA / Interest Expense
-  Set IC = 2.0x, solve for EBITDA:
-  Break-even EBITDA = 2.0 × Interest Expense
+Row input cell: Entry multiple assumption in model
+Column input cell: Exit multiple assumption in model
+Output cell: IRR formula
 
-  If current EBITDA = £60m and interest = £20m:
-  Current IC = 3.0x
-  Break-even EBITDA = 2.0 × £20m = £40m
-  Headroom = (£60m − £40m) / £60m = 33% EBITDA decline before breach
+Built using Excel: Data → What-If Analysis → Data Table
+Row input cell = [cell containing entry multiple assumption]
+Column input cell = [cell containing exit multiple assumption]</div>
 
-For PE: "What exit multiple generates at least 20% IRR?"
-  Goal Seek: set IRR cell = 20%, by changing exit multiple cell
-  Result: minimum exit multiple required for target return</div>
+<h2>The Summary Output Page — <em>what MDs actually read</em></h2>
+<p>The output tab (or summary tab) is the first thing a senior banker reads. It should contain: the valuation summary (football field), key financial metrics in all three scenarios, leverage and cover ratios, the IRR and MoM matrix, and the sensitivity tables. Everything else in the model supports this page.</p>
+<p>Design principles for the output page: no formulas visible, only values; no blue input cells; professional formatting that could be copied directly into a pitch book; all three scenarios visible on one screen without scrolling.</p>
 
 <div class="callout">
-<div class="c-label">Present Ranges, Not Point Estimates</div>
-<p>No client presentation should show a single EV or IRR number without a sensitivity range. The sensitivity table is the honesty mechanism — it shows the reader that the "base case" is one point in a wide possible range. A DCF with WACC sensitivity showing EV of £380m–£620m is far more informative and defensible than a single EV of £500m. Clients who understand finance expect the range. Clients who don't are better served by seeing it.</p>
+<div class="c-label">Communicating Uncertainty to Clients</div>
+<p>Clients often want a single number: "What is it worth?" The honest answer is a range, with a central estimate and a clear explanation of what drives the spread. Never present a DCF output without a sensitivity table. Never present an LBO IRR without an entry vs. exit multiple matrix. The range is the answer — the base case is just the anchor point within it. A banker who says "the company is worth exactly £450m" without a range is either lying or has not tested their own assumptions.</p>
 </div>
-
-<div class="lender-box">
-<div class="l-label">&#128273; Lender's Perspective — JaceyTrayd</div>
-<p>We run three mandatory scenarios on every credit: Base, Downside (EBITDA −20%), and Severe (EBITDA −35%). We set covenants based on the Downside scenario — the company must be able to service debt even under material deterioration. We check: in the Severe scenario, does the company still avoid insolvency? Does it breach covenants before we can take action? The Severe scenario determines whether we are comfortable with the risk — not the Base. We never lend based on Base alone.</p>
+<div class="mistake-box">
+<div class="m-label">Scenario Design Mistakes</div>
+<p><strong>Scenarios that are not internally consistent.</strong> A downside case where revenue falls 20% but margins stay flat ignores operating leverage. Revenue declines compress margins because fixed costs consume a larger share of lower revenue. If your downside margin assumption is identical to base, the scenario is not credible.<br><br>
+<strong>Cherry-picking sensitivity ranges.</strong> Running a WACC sensitivity from 9.0% to 10.0% instead of 8.0% to 12.0% artificially narrows the apparent range. Use realistic assumption bounds — the full range that an informed person might defensibly argue for, not just the range that makes the numbers comfortable.</p>
+</div>
+<div class="bank-box">
+<div class="b-label">In a Real Bank</div>
+<p>Pitch book pages often feature two exhibits from the model: the football field (valuation range across methodologies) and an IRR sensitivity matrix (entry vs. exit multiple). These two pages summarise everything the senior client needs to make a decision. As an analyst, your job is to ensure these two pages are unimpeachable — every range is supported by the model, every assumption is documented, and the formatting is spotless. If the MD has to explain a number in the client meeting, you have failed. If every number on those two pages is self-explanatory, you have succeeded.</p>
 </div>
 
 <div class="page-nav">
   <a href="l4-working-capital-model.html" class="btn btn-ghost">&larr; Previous</a>
-  <div class="pn-context">Level <span>04</span> &middot; Financial Modelling</div>
-  <a href="l4-model-audit.html" class="btn btn-gold">Next &rarr;</a>
+  <div class="pn-context">Level <span>04</span> &middot; Modelling</div>
+  <a href="level-5.html" class="btn btn-gold">Next &rarr;</a>
 </div>
 </div>
 </div></div>

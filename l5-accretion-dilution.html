@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L5.03 — Accretion / Dilution Analysis | Ask Jacey</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="eco-hdr"></div><div id="hdr"></div>
+<div id="app"><div id="sb"></div><div id="content">
+<div class="breadcrumb">
+  <a href="index.html">Home</a><span class="sep">&#8250;</span>
+  <a href="level-5.html">Level 05</a><span class="sep">&#8250;</span>
+  <span class="current">L5.03 — Accretion / Dilution Analysis</span>
+</div>
+<div class="lesson-page">
+<div class="deal-badge">&#128204; Level 05 &middot; M&amp;A &middot; L5.03 — Accretion / Dilution Analysis</div>
+<p class="lesson-intro">Accretion/dilution analysis is the first financial test a corporate acquirer applies to any deal: does it increase or decrease our earnings per share? It is also the most commonly misunderstood M&A concept — confusing accretion for value creation is one of the most expensive mistakes in corporate finance.</p>
+
+<h2>The <em>Mechanics</em></h2>
+<div class="formula-block">Pro Forma EPS = Pro Forma Net Income / Pro Forma Shares
+
+Pro Forma Net Income = Acquirer NI + Target NI + Synergies (after-tax)
+                      − After-tax interest (cash deals)
+                      − PPA amortisation (after-tax)
+
+Pro Forma Shares = Acquirer shares + New shares issued (stock deals only)
+
+Accretion / (Dilution) % = (Pro Forma EPS − Standalone EPS) / Standalone EPS</div>
+
+<h2>Cash Deal — <em>the accretion rule</em></h2>
+<div class="formula-block">Cash deal is accretive when:
+  After-tax acquisition return > After-tax cost of debt
+
+  After-tax return = Target NI / Purchase Price
+  After-tax debt cost = Interest Rate × (1 − Tax Rate)
+
+Key insight: as interest rates rise, after-tax cost of debt rises
+→ the accretion threshold becomes harder to clear
+→ this is why M&A volumes fall in rising rate environments</div>
+
+<h2>Stock Deal — <em>the accretion rule</em></h2>
+<div class="formula-block">Stock deal is accretive when:
+  Acquirer P/E > Target P/E (calculated on offer price)
+
+  Acquirer P/E = Acquirer Share Price / Acquirer EPS
+  Target P/E   = Offer Price Per Share / Target EPS
+
+If Acquirer P/E is 15x and Target P/E (on offer) is 10x:
+  Each new share issued "brings in" more earnings than the P/E cost
+  → Accretive
+
+If Acquirer P/E is 15x and Target P/E (on offer) is 20x:
+  The acquirer is "giving away" more earnings per share than it receives
+  → Dilutive (very common in premium acquisitions)</div>
+
+<h2>Mixed Consideration — <em>blending both</em></h2>
+<p>Most large public deals use a mix of cash and stock. The analysis blends both components: the cash portion generates interest cost; the stock portion generates share dilution. The optimal mix depends on the acquirer's current share price (high P/E = more stock is cheaper), cost of debt, and balance sheet capacity.</p>
+
+<h2>PPA Amortisation — <em>the hidden EPS drag</em></h2>
+<p>After a deal closes, PPA (Purchase Price Allocation) creates intangible assets — customer relationships, technology, brand — that must be amortised. This amortisation reduces reported net income and is frequently larger than expected. A deal that appears 2% accretive before PPA may be flat or dilutive after it.</p>
+<div class="formula-block">PPA Amortisation example:
+  Purchase price: £400m
+  Fair value of net assets: £200m
+  Excess: £200m allocated as:
+    Customer relationships: £80m (amortised over 10 years = £8m/year)
+    Technology:             £50m (amortised over 5 years = £10m/year)
+    Brand:                  £20m (amortised over 15 years = £1.3m/year)
+    Goodwill:               £50m (NOT amortised — tested for impairment)
+
+  Annual PPA amortisation charge: £8m + £10m + £1.3m = £19.3m/year
+  After-tax (25%):                £19.3m × 0.75 = £14.5m/year EPS drag</div>
+
+<div class="callout">
+<div class="c-label">Accretion ≠ Value Creation</div>
+<p>This is the single most important concept in M&A analytics. A deal is accretive if the financing cost is below the acquisition earnings yield — regardless of whether the price is intrinsically justified. Low interest rates made almost any cash acquisition accretive in 2010–2021, leading to massive M&A waves that often destroyed long-run shareholder value. The correct test is: does the IRR on the acquisition exceed WACC? If yes, value is created. If no, value is destroyed — regardless of EPS accretion.</p>
+</div>
+<div class="bank-box">
+<div class="b-label">In a Real Bank</div>
+<p>In a strategic advisory engagement, the banker presents three tests to the acquirer board: (1) Is the deal accretive to EPS and by when? (2) Does the IRR on the acquisition exceed WACC? (3) Is the price within the range of comparable transactions? Boards need all three confirmations to approve a deal confidently. An accretion/dilution analysis presented without the accompanying DCF and comps is incomplete — and a sophisticated board will ask for the missing pieces.</p>
+</div>
+
+<div class="page-nav">
+  <a href="l5-process.html" class="btn btn-ghost">&larr; Previous</a>
+  <div class="pn-context">Level <span>05</span> &middot; M&amp;A</div>
+  <a href="l5-synergies.html" class="btn btn-gold">Next &rarr;</a>
+</div>
+</div>
+</div></div>
+<script src="shared.js"></script>
+<script>
+document.getElementById('eco-hdr').outerHTML=buildEcoHeader();
+document.getElementById('hdr').outerHTML=buildHeader();
+document.getElementById('sb').outerHTML=buildSidebar(5);
+</script>
+</body></html>

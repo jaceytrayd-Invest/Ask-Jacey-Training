@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L6.06 — Bookbuilding & Syndication | Ask Jacey</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="eco-hdr"></div><div id="hdr"></div>
+<div id="app"><div id="sb"></div><div id="content">
+<div class="breadcrumb">
+  <a href="index.html">Home</a><span class="sep">&#8250;</span>
+  <a href="level-6.html">Level 06</a><span class="sep">&#8250;</span>
+  <span class="current">L6.06 — Bookbuilding & Syndication</span>
+</div>
+<div class="lesson-page">
+<div class="deal-badge">&#128204; Level 06 &middot; Capital Markets &middot; L6.06 — Bookbuilding & Syndication</div>
+<p class="lesson-intro">Bookbuilding is the price discovery mechanism for capital markets transactions. It converts investor appetite into a price — and a set of allocations. Understanding the mechanics of order collection, pricing decisions, and allocation strategy is the operational core of ECM and DCM execution.</p>
+
+<h2>The Bookbuilding <em>Process</em></h2>
+<div class="formula-block">Equity bookbuild (IPO or follow-on):
+  1. Initial Price Range set (e.g., £8.00 – £10.00 per share)
+  2. Roadshow: management presents; investors build conviction
+  3. Order submission: investors submit orders:
+     - "Price-sensitive": willing to buy X shares at prices within the range
+     - "Strike": willing to buy X shares at whatever the final price is
+     - "Limit": only willing to buy X shares if priced at or below £Y
+  4. Book builds: bookrunner tracks covered and uncovered portions
+  5. Pricing decision: once book is covered 3–5x at the top of range,
+     bookrunner recommends pricing at or near the top of the range
+  6. Allocation: shares distributed to investors (see allocation principles below)
+  7. Grey market: bonds/shares trade informally before formal listing</div>
+
+<div class="formula-block">Debt bookbuild (bond issuance):
+  1. Initial Price Thoughts (IPT): "around Gilts + 200bps area"
+  2. Investor sounding: bookrunner calls key accounts for informal indication
+  3. Formal launch: marketing period opens; orders flow to bookrunner
+  4. Order book update: "Guidance: Gilts + 185-190bps, book covered 2x"
+  5. Final Guidance / Books Close: "Gilts + 180bps, books closed"
+  6. Pricing: spread set; size confirmed; allocation confirmed
+  7. Settlement: typically T+5 for bonds (5 business days after pricing)</div>
+
+<h2>Allocation Strategy — <em>who gets what</em></h2>
+<p>Allocation is one of the most judgement-intensive decisions in ECM. It is also one of the most commercially important — how you allocate in one deal determines which investors participate in the next deal.</p>
+<table class="lesson-table">
+<thead><tr><th>Investor type</th><th>Preference in allocation</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td><strong>Long-only asset managers</strong></td><td>Preferred — allocated larger %</td><td>Hold for months/years; provide stability; buy more in follow-ons</td></tr>
+<tr><td><strong>Hedge funds (long-only position)</strong></td><td>Moderate allocation</td><td>Buy and hold for weeks to months; provide liquidity but can sell quickly</td></tr>
+<tr><td><strong>Hedge funds (short sellers)</strong></td><td>Minimal allocation</td><td>May immediately short the stock; bad for aftermarket performance</td></tr>
+<tr><td><strong>Index funds / passives</strong></td><td>Limited (they buy at listing automatically)</td><td>Will buy as part of index replication post-admission; do not need allocation</td></tr>
+<tr><td><strong>Retail investors</strong></td><td>Variable — typically small %</td><td>Political/PR considerations; some IPOs reserve a retail tranche</td></tr>
+</tbody>
+</table>
+
+<h2>The Greenshoe — <em>stabilisation mechanics</em></h2>
+<div class="formula-block">Standard greenshoe structure:
+  Over-allocation: Bookrunners sell 15% more shares than actually issued
+    → Creates a short position (they have committed more than they have)
+  
+  If stock trades BELOW IPO price after listing:
+    Stabilisation agent buys shares in the open market
+    → Supports price; covers the short position as shares are bought
+    → No loss to bookrunner (they buy at market price, below the IPO price)
+  
+  If stock trades ABOVE IPO price after listing:
+    No market buying needed — stock is performing
+    Bookrunner exercises the greenshoe option:
+    → Company issues the additional 15% at the IPO price
+    → Bookrunner uses these to close the short position
+    → Company receives additional proceeds at IPO price
+  
+  Net result:
+    Down market → price supported by open market purchases
+    Up market → company issues more shares at IPO price (additional proceeds)
+    Bookrunner never loses money on stabilisation (by design)</div>
+
+<div class="callout">
+<div class="c-label">Price Tension in the Bookbuild</div>
+<p>Two competing forces in every bookbuild: the issuer wants the highest possible price (maximum proceeds); the lead investor wants a discount (to make money on the first trade). The bank navigates between these interests. A deal priced too high (no "pop" on day one) damages investor relationships for future deals. A deal priced too low (massive pop) leaves money on the table for the issuer and makes the bank look like it underpriced. The standard target: 5–15% first-day price performance — enough to reward investors, not so much that the issuer feels underpriced.</p>
+</div>
+<div class="bank-box">
+<div class="b-label">In a Real Bank</div>
+<p>The pricing and allocation calls are the most senior conversations in any ECM transaction. The CEO of the issuer, the lead ECM banker (MD-level), and the global coordinator's head of syndicate are all on the call when the book is covered and the price is being set. The analyst tracks the order book in real time — typically on a Bloomberg function or a proprietary bank system — feeding the MD live data on which investors have submitted orders, at what levels, and for what quantities. "We are 4.2x covered at £9.50 and 2.8x covered at £10.00" — this information, translated instantly into pricing recommendations, is the highest-value work the analyst does in the entire deal process.</p>
+</div>
+
+<div class="page-nav">
+  <a href="l6-credit-ratings.html" class="btn btn-ghost">&larr; Previous</a>
+  <div class="pn-context">Level <span>06</span> &middot; Capital Markets</div>
+  <a href="level-7.html" class="btn btn-gold">Next &rarr;</a>
+</div>
+</div>
+</div></div>
+<script src="shared.js"></script>
+<script>
+document.getElementById('eco-hdr').outerHTML=buildEcoHeader();
+document.getElementById('hdr').outerHTML=buildHeader();
+document.getElementById('sb').outerHTML=buildSidebar(6);
+</script>
+</body></html>
