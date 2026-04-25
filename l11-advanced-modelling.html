@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L11.03 — Advanced Modelling Techniques | Ask Jacey</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="eco-hdr"></div><div id="hdr"></div>
+<div id="app"><div id="sb"></div><div id="content">
+<div class="breadcrumb">
+  <a href="index.html">Home</a><span class="sep">&#8250;</span>
+  <a href="level-11.html">Level 11</a><span class="sep">&#8250;</span>
+  <span class="current">L11.03 — Advanced Modelling Techniques</span>
+</div>
+<div class="lesson-page">
+<div class="deal-badge">&#128204; Level 11 &middot; Advanced &middot; L11.03 — Advanced Modelling Techniques</div>
+<p class="lesson-intro">Advanced modelling is not about complexity for its own sake — it is about choosing the right tool for each analytical question. Sum-of-the-parts, full merger models, Monte Carlo simulation, and real options represent the techniques that senior analysts use when standard approaches are insufficient.</p>
+
+<h2>Sum-of-the-Parts — <em>the conglomerate lens</em></h2>
+<div class="formula-block">When to use: multi-division company where a blended multiple misrepresents value
+
+Build steps:
+  1. Identify segments from company reporting
+  2. Select the right methodology per segment:
+       High-growth SaaS:       EV/NTM Revenue (e.g., 7.5x)
+       Mature industrial:      EV/EBITDA (e.g., 9.0x)
+       Financial services:     Price/Book
+       Property/infrastructure: NAV or yield-based
+  3. Value each segment independently with its own peer set
+  4. Capitalise corporate overhead: Annual overhead / EBITDA multiple
+  5. Sum: Σ(segment EVs) − Capitalised overhead = SOTP EV
+  6. Bridge: SOTP EV − Net Debt = SOTP Equity Value
+  7. Compare to market value: gap = conglomerate discount or premium
+
+Conglomerate discount: SOTP > Market Value
+  → Implies value unlock opportunity from separation (spin-off catalyst)
+  → Typical discount: 10-20% for large diversified conglomerates</div>
+
+<h2>The Full Merger Model</h2>
+<div class="formula-block">A merger model combines two companies' financials and computes pro forma EPS.
+More complex than the simplified A/D analysis — it models the full combined P&L.
+
+Structure:
+  Tab 1: Acquirer standalone (3-year forecast)
+  Tab 2: Target standalone (3-year forecast)
+  Tab 3: Deal mechanics (price, consideration split, financing)
+  Tab 4: PPA (purchase price allocation — intangibles, goodwill)
+  Tab 5: Synergies (phased cost and revenue synergies)
+  Tab 6: Combined P&L (merging all above)
+  Tab 7: A/D output (pro forma EPS vs standalone)
+
+Key mechanics unique to the merger model:
+  PPA amortisation: intangibles created at acquisition amortise, reducing NI
+  Interest on acquisition debt: after-tax cost on cash consideration
+  New shares issued: for stock consideration — dilutes share count
+  Synergy timing: phase-in over 2-3 years with integration costs in Year 1</div>
+
+<h2>Monte Carlo Simulation — <em>when ranges matter</em></h2>
+<p>A DCF produces a point estimate. But inputs like revenue growth rate and WACC are not points — they are distributions. Monte Carlo simulation runs the model thousands of times with random draws from each input distribution, producing a probability distribution of outcomes rather than a single value.</p>
+<div class="formula-block">Application: DCF with uncertain inputs
+
+Inputs defined as distributions (not point estimates):
+  Revenue growth Y1-Y5: Normal distribution, mean 8%, std dev 3%
+  EBITDA margin: Normal distribution, mean 22%, std dev 2.5%
+  WACC: Uniform distribution between 9% and 12%
+  Terminal growth: Normal distribution, mean 2.5%, std dev 0.5%
+
+Monte Carlo output (after 10,000 simulations):
+  Mean EV:     £485m
+  Median EV:   £471m
+  5th pct:     £312m (downside scenario probability)
+  95th pct:    £698m (upside scenario probability)
+  P(EV &gt; £400m): 72%
+
+This output answers a different — and more honest — question:
+"What is the probability that this business is worth more than
+the proposed offer price of £450m?" Answer: 63%.</div>
+
+<div class="callout">
+<div class="c-label">Real Options Valuation</div>
+<p>Standard DCF assumes management will execute the business plan as projected. In reality, management has options: to expand (invest more if the business succeeds), to delay (wait for better conditions), to abandon (exit if the business fails). These options have real value — but DCF ignores them. Real options analysis applies option pricing theory (Black-Scholes or binomial) to value managerial flexibility. It is most valuable in: (1) natural resource extraction (the option to mine or not mine based on commodity prices); (2) pharma R&D (the option to proceed to Phase II only if Phase I succeeds); (3) staged infrastructure investment. In IB, understanding that a company with embedded real options is worth more than its DCF suggests is conceptually important even when formal real options pricing is not used.</p>
+</div>
+<div class="bank-box">
+<div class="b-label">In a Real Bank</div>
+<p>The most valuable modelling skill at the senior analyst / associate level is not knowing exotic techniques — it is building models that are flexible, auditable, and stable under stress testing. A merger model that crashes when the deal consideration changes from cash to stock is worse than useless. A Monte Carlo simulation that a client cannot understand or interrogate adds no value. Advanced techniques earn their place when they provide genuinely better insight than simpler approaches — not when they signal technical sophistication to the analyst's own satisfaction.</p>
+</div>
+
+<div class="page-nav">
+  <a href="l11-regulatory.html" class="btn btn-ghost">&larr; Previous</a>
+  <div class="pn-context">Level <span>11</span> &middot; Advanced</div>
+  <a href="l11-esg.html" class="btn btn-gold">Next &rarr;</a>
+</div>
+</div>
+</div></div>
+<script src="shared.js"></script>
+<script>
+document.getElementById('eco-hdr').outerHTML=buildEcoHeader();
+document.getElementById('hdr').outerHTML=buildHeader();
+document.getElementById('sb').outerHTML=buildSidebar(11);
+</script>
+</body></html>

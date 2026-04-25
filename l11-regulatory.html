@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L11.02 — Regulatory Capital & Basel Framework | Ask Jacey</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="eco-hdr"></div><div id="hdr"></div>
+<div id="app"><div id="sb"></div><div id="content">
+<div class="breadcrumb">
+  <a href="index.html">Home</a><span class="sep">&#8250;</span>
+  <a href="level-11.html">Level 11</a><span class="sep">&#8250;</span>
+  <span class="current">L11.02 — Regulatory Capital & Basel Framework</span>
+</div>
+<div class="lesson-page">
+<div class="deal-badge">&#128204; Level 11 &middot; Advanced &middot; L11.02 — Regulatory Capital & Basel Framework</div>
+<p class="lesson-intro">Bank regulation — specifically capital requirements — shapes everything in IB: how deals are priced, how much risk banks can underwrite, how syndication economics work, and why certain products exist at all. Understanding the Basel framework is essential for any analyst who wants to understand the business they are in.</p>
+
+<h2>The Basel Capital <em>Framework</em></h2>
+<table class="lesson-table">
+<thead><tr><th>Capital tier</th><th>What it is</th><th>Loss absorption</th><th>Min. ratio</th></tr></thead>
+<tbody>
+<tr><td><strong>CET1 (Common Equity Tier 1)</strong></td><td>Ordinary shares + retained earnings + other comprehensive income. Highest quality capital.</td><td>Going-concern — absorbs losses while bank continues operating</td><td>4.5% of RWA (plus buffers: typically 8–12% effective minimum)</td></tr>
+<tr><td><strong>AT1 (Additional Tier 1)</strong></td><td>Perpetual instruments (CoCo bonds) that convert to equity or are written down when CET1 falls below trigger level</td><td>Going-concern — absorbs losses before bank fails</td><td>1.5% of RWA</td></tr>
+<tr><td><strong>Tier 2</strong></td><td>Subordinated debt with minimum 5-year maturity. Absorbs losses in gone-concern (liquidation)</td><td>Gone-concern — absorbs losses in wind-down</td><td>2.0% of RWA</td></tr>
+</tbody>
+</table>
+
+<h2>Risk-Weighted Assets — <em>why they shape IB economics</em></h2>
+<div class="formula-block">Capital Ratio = Tier 1 Capital / Risk-Weighted Assets (RWA)
+
+Risk weight by asset type (standardised approach):
+  Government bonds (AAA sovereign):    0%   → zero capital required
+  IG corporate loans (BBB):            100% → £1 of loan = £1 of RWA
+  Sub-IG leveraged loans:              150% → £1 of loan = £1.50 of RWA
+  Unrated retail mortgages:            35-75% depending on LTV
+  Equity exposures:                    100-250%
+
+Capital consumed by a £100m leveraged loan:
+  RWA: £100m × 150% = £150m
+  CET1 required (at 10% effective minimum): £150m × 10% = £15m
+
+This £15m of CET1 earns no direct return — it is locked up to support
+the loan. The loan must therefore generate sufficient spread to:
+  Cover the funding cost
+  Cover operating expenses (origination, monitoring, admin)
+  Provide an acceptable ROE on the £15m of capital tied up
+
+This is why leveraged loans must price significantly above IG loans —
+they consume 50% more capital (150% vs 100% risk weight).</div>
+
+<h2>Regulatory Impact on <em>IB Business Models</em></h2>
+<p>Basel III/IV has fundamentally changed how banks operate in leveraged finance. Holding leveraged loans on the balance sheet consumes expensive capital. The solution: originate-and-distribute — underwrite the loan, then sell it to investors (CLOs, direct lenders, insurance companies) who are not subject to bank capital rules. This is why the syndicated loan market exists: it allows banks to earn arrangement fees without permanently consuming capital.</p>
+<div class="callout">
+<div class="c-label">The Credit Suisse AT1 Event — 2023</div>
+<p>In March 2023, Swiss regulators wrote down Credit Suisse's CHF16bn of AT1 bonds to zero as part of its emergency UBS acquisition — while equity shareholders received some consideration. This violated the conventional understanding that equity absorbs losses before AT1. The event demonstrated that AT1 instruments can be written down in ways that defy the expected waterfall when regulators intervene with emergency powers. It caused a temporary global AT1 market dislocation and reminded every IB analyst that regulatory capital instruments are more complex than they appear in a simple priority diagram.</p>
+</div>
+<div class="bank-box">
+<div class="b-label">In a Real Bank</div>
+<p>Every major IB deal has a capital desk review — assessing the RWA impact of the transaction and whether the bank's return on capital is acceptable. A leveraged loan that earns 350bps spread but consumes 150% RWA may generate a lower ROE than an IG bond earning 150bps at 100% RWA — depending on the bank's marginal cost of capital. Understanding these trade-offs is essential for understanding why banks sometimes decline apparently profitable deals: the capital cost makes them economically unattractive.</p>
+</div>
+
+<div class="page-nav">
+  <a href="l11-restructuring.html" class="btn btn-ghost">&larr; Previous</a>
+  <div class="pn-context">Level <span>11</span> &middot; Advanced</div>
+  <a href="l11-advanced-modelling.html" class="btn btn-gold">Next &rarr;</a>
+</div>
+</div>
+</div></div>
+<script src="shared.js"></script>
+<script>
+document.getElementById('eco-hdr').outerHTML=buildEcoHeader();
+document.getElementById('hdr').outerHTML=buildHeader();
+document.getElementById('sb').outerHTML=buildSidebar(11);
+</script>
+</body></html>

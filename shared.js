@@ -59,7 +59,7 @@ const LEVELS = [
   { id:8,  label:'Private Markets',      file:'level-8.html',  live:true  },
   { id:9,  label:'Deal Execution',       file:'level-9.html',  live:true  },
   { id:10, label:'Careers',             file:'level-10.html', live:true  },
-  { id:11, label:'Advanced',            file:'level-11.html', live:false },
+  { id:11, label:'Advanced',            file:'level-11.html', live:true  },
 ];
 
 function buildSidebar(activeLevelId) {
