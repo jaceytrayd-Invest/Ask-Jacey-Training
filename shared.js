@@ -22,9 +22,9 @@ function buildEcoHeader() {
   return `<div id="eco-header">
     <span class="eco-label">Jacey Ecosystem</span>
     <div class="eco-brands">
-      <span class="eco-brand"><strong>JaceyTrayd</strong> · Private Credit · Debt Strategies · Capital Management</span>
-      <span class="eco-brand"><strong>Ask Jacey</strong> · Personal Finance Q&A · Investment Banking Training</span>
-      <span class="eco-brand"><strong>JaceyLang</strong> · Thinking · Communication · Learning Systems</span>
+      <span class="eco-brand"><strong>JaceyTrayd</strong> · </span>
+      <span class="eco-brand"><strong>Ask Jacey</strong> · </span>
+      <span class="eco-brand"><strong>JaceyLang</strong> · </span>
     </div>
   </div>`;
 }
