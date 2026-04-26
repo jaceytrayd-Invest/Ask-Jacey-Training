@@ -3,20 +3,18 @@
    ================================================================ */
 
 /* ── LOGO ── */
-const LOGO_SM = `<svg width="88" height="26" viewBox="0 0 88 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect x="1" y="13" width="14" height="10" rx="2" fill="none" stroke="#C9A84C" stroke-width="1.2"/>
-  <path d="M3 13 L3 8 Q3 4 8 4 Q13 4 13 8" stroke="#C9A84C" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-  <circle cx="8" cy="18.5" r="2" stroke="#C9A84C" stroke-width="1" fill="none"/>
-  <line x1="8" y1="20.5" x2="8" y2="22.5" stroke="#C9A84C" stroke-width="1.2" stroke-linecap="round"/>
-  <path d="M19 7 Q19 4 22 4 Q25 4 25 7 Q25 9.5 22 10.5 L22 12" stroke="#C9A84C" stroke-width="1.3" fill="none" stroke-linecap="round"/>
-  <circle cx="22" cy="14" r="0.8" fill="#C9A84C"/>
-  <circle cx="30" cy="19" r="3.5" fill="none" stroke="#C9A84C" stroke-width="1.1"/>
-  <line x1="33.5" y1="19" x2="41" y2="19" stroke="#C9A84C" stroke-width="1.1" stroke-linecap="round"/>
-  <line x1="39" y1="19" x2="39" y2="21" stroke="#C9A84C" stroke-width="1" stroke-linecap="round"/>
-  <line x1="37" y1="19" x2="37" y2="20.5" stroke="#C9A84C" stroke-width="1" stroke-linecap="round"/>
-  <text x="48" y="11" font-family="'Cormorant Garamond',serif" font-size="10" fill="#C9A84C" letter-spacing="0.1em" font-weight="500">ASK</text>
-  <text x="48" y="22" font-family="'Cormorant Garamond',serif" font-size="10" fill="#F5F4F0" letter-spacing="0.06em" font-weight="300">JACEY</text>
-  <line x1="47" y1="14.5" x2="87" y2="14.5" stroke="#C9A84C" stroke-width="0.5" opacity="0.4"/>
+const LOGO_SM = `<svg width="110" height="28" viewBox="0 0 110 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Keyhole-in-circle mark -->
+  <circle cx="14" cy="14" r="12" stroke="#C9A84C" stroke-width="1.4" fill="none"/>
+  <circle cx="14" cy="11" r="3.5" fill="#C9A84C" opacity="0.9"/>
+  <path d="M11.5 13.5 L11.5 18 L16.5 18 L16.5 13.5 Z" fill="#C9A84C" opacity="0.9"/>
+  <path d="M12.5 16 L12.5 18 L15.5 18 L15.5 16 Z" fill="#0a0a0a"/>
+  <!-- Key below circle -->
+  <circle cx="14" cy="22.5" r="2.2" stroke="#C9A84C" stroke-width="1" fill="none"/>
+  <!-- Wordmark -->
+  <text x="32" y="11" font-family="'Libre Baskerville',Georgia,serif" font-size="9.5" fill="#C9A84C" letter-spacing="0.16em" font-weight="700">ASK</text>
+  <line x1="31" y1="14" x2="108" y2="14" stroke="#C9A84C" stroke-width="0.4" opacity="0.35"/>
+  <text x="32" y="23" font-family="'Libre Baskerville',Georgia,serif" font-size="9.5" fill="#F5F4F0" letter-spacing="0.12em" font-weight="700">JACEY</text>
 </svg>`;
 
 /* ── SHARED HEADER HTML ── */

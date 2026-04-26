@@ -6,83 +6,178 @@
 <title>Ask Jacey — IB Masterclass</title>
 <link rel="stylesheet" href="style.css">
 <style>
-/* ── HOME-SPECIFIC STYLES ── */
+/* ── HOME HERO — Ask Jacey brand ── */
 .home-hero {
-  background: var(--ink);
-  padding: 4rem 3rem 3rem;
+  background: #080808;
+  padding: 4rem 2rem 3rem;
   position: relative;
   overflow: hidden;
   border-bottom: 1px solid rgba(201,168,76,0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
+/* Dual radial glow */
 .home-hero::before {
   content: '';
   position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(201,168,76,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(201,168,76,0.03) 1px, transparent 1px);
-  background-size: 50px 50px;
+  top: -60px; left: 50%;
+  transform: translateX(-50%);
+  width: 560px; height: 480px;
+  background: radial-gradient(ellipse at 50% 25%, rgba(212,175,55,0.10) 0%, rgba(201,168,76,0.04) 40%, transparent 70%);
+  pointer-events: none;
 }
 .home-hero::after {
   content: '';
   position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse 60% 50% at 30% 60%, rgba(201,168,76,0.06) 0%, transparent 70%);
+  bottom: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 300px; height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(201,168,76,0.25), transparent);
+  pointer-events: none;
 }
-.hero-inner { position: relative; z-index: 2; max-width: 740px; }
-.hero-tag {
-  font-family: var(--mono);
-  font-size: 0.6rem;
-  letter-spacing: 0.2em;
+
+/* ── Logo mark ── */
+.hero-logo-wrap {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 1.8rem;
+}
+/* Subtle halo behind the SVG */
+.hero-logo-halo {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -52%);
+  width: 130px; height: 130px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,233,154,0.14) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-logo-svg { display: block; position: relative; }
+
+/* ── Wordmark ── */
+.hero-wordmark {
+  position: relative; z-index: 2;
+  line-height: 1; margin-bottom: 0.25rem;
+}
+.hero-ask {
+  display: block;
+  font-family: var(--slab);
+  font-size: 1.9rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  color: #ffffff;
   text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 1rem;
+}
+.hero-jacey {
+  display: block;
+  font-family: var(--slab);
+  font-size: 2.7rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: #c9a84c;
+  text-transform: uppercase;
+  line-height: 1.05;
+}
+
+/* ── Gold separator ── */
+.hero-sep {
   display: flex;
   align-items: center;
-  gap: 0.7rem;
+  justify-content: center;
+  gap: 10px;
+  margin: 1.1rem 0 0.9rem;
+  position: relative; z-index: 2;
 }
-.hero-tag::before { content: ''; width: 24px; height: 1px; background: var(--gold); }
-.home-hero h1 {
-  font-family: var(--serif);
-  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
-  font-weight: 300;
-  line-height: 1.1;
-  color: var(--white);
-  margin-bottom: 1.2rem;
-  letter-spacing: -0.02em;
-}
-.home-hero h1 em { font-style: italic; color: var(--gold-light); }
-.home-hero p {
+.hero-sep-line { width: 50px; height: 1px; background: linear-gradient(90deg, transparent, #c9a84c); opacity: 0.5; }
+.hero-sep-line.r { transform: scaleX(-1); }
+.hero-sep-dot { width: 4px; height: 4px; border-radius: 50%; background: #c9a84c; opacity: 0.85; }
+.hero-sep-dot-sm { width: 2.5px; height: 2.5px; border-radius: 50%; background: #c9a84c; opacity: 0.4; }
+
+/* ── Tagline ── */
+.hero-tagline {
   font-family: var(--slab);
-  font-size: 0.92rem;
-  color: var(--ash);
-  line-height: 1.75;
-  max-width: 560px;
-  margin-bottom: 1.8rem;
-}
-.hero-stats {
-  display: flex;
-  gap: 2.5rem;
-  flex-wrap: wrap;
-  margin-bottom: 1.8rem;
-}
-.hero-stat { display: flex; flex-direction: column; }
-.hs-num {
-  font-family: var(--serif);
-  font-size: 2rem;
-  font-weight: 600;
-  color: var(--gold-light);
-  line-height: 1;
-}
-.hs-label {
-  font-family: var(--mono);
-  font-size: 0.56rem;
-  letter-spacing: 0.12em;
+  font-size: 0.63rem;
+  letter-spacing: 0.3em;
+  color: #a08848;
   text-transform: uppercase;
-  color: var(--ash);
-  margin-top: 0.2rem;
+  margin-bottom: 2.2rem;
+  position: relative; z-index: 2;
 }
-.hero-cta { display: flex; gap: 0.9rem; flex-wrap: wrap; }
+
+/* ── Divider ── */
+.hero-divider {
+  width: 100%; max-width: 440px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201,168,76,0.22), transparent);
+  margin: 0 auto 2rem;
+  position: relative; z-index: 2;
+}
+
+/* ── CTAs ── */
+.hero-cta {
+  display: flex;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative; z-index: 2;
+}
+.hero-cta .btn-gold {
+  background: #c9a84c;
+  color: #080808;
+  border-color: #c9a84c;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0.65rem 1.8rem;
+}
+.hero-cta .btn-gold:hover { background: #e0bd6b; border-color: #e0bd6b; }
+
+/* ── Three pillars ── */
+.hero-pillars {
+  display: flex;
+  gap: 0;
+  justify-content: center;
+  max-width: 540px;
+  width: 100%;
+  margin: 2.6rem auto 0;
+  padding-top: 1.8rem;
+  border-top: 1px solid rgba(201,168,76,0.13);
+  position: relative; z-index: 2;
+  flex-wrap: wrap;
+}
+.hero-pillar {
+  flex: 1;
+  min-width: 130px;
+  text-align: center;
+  padding: 0 1rem;
+  position: relative;
+}
+.hero-pillar + .hero-pillar::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 10%;
+  height: 80%; width: 1px;
+  background: rgba(201,168,76,0.15);
+}
+.hp-icon { font-size: 0.85rem; color: #c9a84c; display: block; margin-bottom: 0.4rem; opacity: 0.8; }
+.hp-title {
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  display: block;
+  margin-bottom: 0.18rem;
+}
+.hp-label {
+  font-family: var(--mono);
+  font-size: 0.57rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: #6a6458;
+  display: block;
+  line-height: 1.55;
+}
 
 /* LEVELS GRID */
 .levels-section { padding: 2.5rem 2.5rem; }
@@ -111,10 +206,7 @@
   transform: translateY(-2px);
 }
 .level-card.available:hover .lv-arrow { color: var(--gold-light); transform: translateX(3px); }
-.level-card.coming {
-  opacity: 0.55;
-  cursor: default;
-}
+.level-card.coming { opacity: 0.55; cursor: default; }
 .lv-num {
   font-family: var(--mono);
   font-size: 0.56rem;
@@ -166,11 +258,7 @@
   gap: 1.2rem;
   margin-top: 1.5rem;
 }
-.how-item {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
+.how-item { display: flex; flex-direction: column; gap: 0.5rem; }
 .how-num {
   font-family: var(--serif);
   font-size: 2rem;
@@ -178,18 +266,8 @@
   color: rgba(201,168,76,0.3);
   line-height: 1;
 }
-.how-item h4 {
-  font-family: var(--slab);
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: var(--white);
-}
-.how-item p {
-  font-family: var(--slab);
-  font-size: 0.74rem;
-  color: var(--ash);
-  line-height: 1.65;
-}
+.how-item h4 { font-family: var(--slab); font-size: 0.82rem; font-weight: 700; color: var(--white); }
+.how-item p { font-family: var(--slab); font-size: 0.74rem; color: var(--ash); line-height: 1.65; }
 
 /* PEDAGOGY PROMISE */
 .promise-section {
@@ -211,22 +289,15 @@
   color: var(--gold);
   margin-bottom: 0.6rem;
 }
-.promise-card h3 {
-  font-family: var(--serif);
-  font-size: 1.1rem;
-  font-weight: 400;
-  color: var(--white);
-  margin-bottom: 0.5rem;
-}
-.promise-card p {
-  font-family: var(--slab);
-  font-size: 0.76rem;
-  color: var(--ash);
-  line-height: 1.7;
-}
+.promise-card h3 { font-family: var(--serif); font-size: 1.1rem; font-weight: 400; color: var(--white); margin-bottom: 0.5rem; }
+.promise-card p { font-family: var(--slab); font-size: 0.76rem; color: var(--ash); line-height: 1.7; }
 
 @media (max-width: 760px) {
-  .home-hero { padding: 2.5rem 1.2rem 2rem; }
+  .home-hero { padding: 3rem 1.2rem 2.2rem; }
+  .hero-ask { font-size: 1.55rem; }
+  .hero-jacey { font-size: 2.1rem; }
+  .hero-pillars { gap: 0.5rem; }
+  .hero-pillar { min-width: 100px; padding: 0 0.5rem; }
   .levels-section, .how-section, .promise-section { padding: 2rem 1.2rem; }
   .promise-section { grid-template-columns: 1fr; }
 }
@@ -241,21 +312,118 @@
 
     <!-- HERO -->
     <section class="home-hero">
-      <div class="hero-inner">
-        <div class="hero-tag">Ask Jacey · IB Training Division · Bengaluru</div>
-        <h1>The <em>Investment Banking</em><br>Masterclass</h1>
-        <p>A structured, end-to-end training system covering investment banking, capital markets, deal execution, and private credit — taught from the perspective of someone who will use it at a bank tomorrow.</p>
-        <div class="hero-stats">
-          <div class="hero-stat"><span class="hs-num">12</span><span class="hs-label">Levels</span></div>
-          <div class="hero-stat"><span class="hs-num">60+</span><span class="hs-label">Lessons</span></div>
-          <div class="hero-stat"><span class="hs-num">200+</span><span class="hs-label">Practice Questions</span></div>
-          <div class="hero-stat"><span class="hs-num">∞</span><span class="hs-label">Interview Q&A</span></div>
+
+      <!-- Logo mark with halo -->
+      <div class="hero-logo-wrap">
+        <div class="hero-logo-halo"></div>
+        <svg class="hero-logo-svg" width="100" height="124" viewBox="0 0 88 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="hgCircle" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#ffe99a"/>
+              <stop offset="45%" stop-color="#d4af37"/>
+              <stop offset="100%" stop-color="#7a5a10"/>
+            </radialGradient>
+            <radialGradient id="hgHole" cx="45%" cy="35%" r="65%">
+              <stop offset="0%" stop-color="#fffde8"/>
+              <stop offset="40%" stop-color="#f8e96a"/>
+              <stop offset="100%" stop-color="#c9a84c"/>
+            </radialGradient>
+            <radialGradient id="hgKey" cx="30%" cy="25%" r="70%">
+              <stop offset="0%" stop-color="#fff4b8"/>
+              <stop offset="45%" stop-color="#c9a84c"/>
+              <stop offset="100%" stop-color="#6b4c0e"/>
+            </radialGradient>
+            <radialGradient id="hgBeam" cx="50%" cy="0%" r="100%">
+              <stop offset="0%" stop-color="#fff8a0" stop-opacity="0.55"/>
+              <stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/>
+            </radialGradient>
+            <filter id="hgGlow" x="-80%" y="-80%" width="260%" height="260%">
+              <feGaussianBlur stdDeviation="4" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <filter id="hgGlowSoft" x="-40%" y="-40%" width="180%" height="180%">
+              <feGaussianBlur stdDeviation="1.5" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+
+          <!-- Outer decorative ring — double stroke -->
+          <circle cx="44" cy="38" r="35.5" stroke="#c9a84c" stroke-width="0.5" fill="none" opacity="0.3"/>
+          <circle cx="44" cy="38" r="33.5" stroke="url(#hgCircle)" stroke-width="2.5" fill="none"/>
+
+          <!-- Dark interior -->
+          <circle cx="44" cy="38" r="30.5" fill="#0a0a0a"/>
+
+          <!-- Keyhole: circular aperture with glow -->
+          <circle cx="44" cy="31" r="9.5" fill="url(#hgHole)" filter="url(#hgGlow)"/>
+
+          <!-- Keyhole shaft -->
+          <path d="M37.5 38.5 L37.5 53 L50.5 53 L50.5 38.5 Z" fill="url(#hgHole)" filter="url(#hgGlowSoft)"/>
+
+          <!-- Keyhole interior cutout (dark notch) -->
+          <path d="M40 45 L40 53 L48 53 L48 45 Z" fill="#0a0a0a"/>
+
+          <!-- Light beam emanating downward -->
+          <path d="M40.5 52 L29 87 L59 87 L47.5 52 Z" fill="url(#hgBeam)"/>
+
+          <!-- Key ring -->
+          <circle cx="44" cy="73.5" r="8.5" stroke="url(#hgKey)" stroke-width="2.5" fill="none" filter="url(#hgGlowSoft)"/>
+
+          <!-- Key shaft -->
+          <rect x="42.5" y="81" width="3" height="19" rx="1.2" fill="url(#hgKey)"/>
+
+          <!-- Key teeth — 2 cuts -->
+          <rect x="45.5" y="90" width="5.5" height="2.8" rx="0.6" fill="url(#hgKey)"/>
+          <rect x="45.5" y="95.5" width="4" height="2.8" rx="0.6" fill="url(#hgKey)"/>
+        </svg>
+      </div>
+
+      <!-- Wordmark -->
+      <div class="hero-wordmark">
+        <span class="hero-ask">Ask</span>
+        <span class="hero-jacey">Jacey</span>
+      </div>
+
+      <!-- Ornamental separator -->
+      <div class="hero-sep">
+        <div class="hero-sep-line"></div>
+        <div class="hero-sep-dot-sm"></div>
+        <div class="hero-sep-dot"></div>
+        <div class="hero-sep-dot-sm"></div>
+        <div class="hero-sep-line r"></div>
+      </div>
+
+      <!-- Tagline -->
+      <div class="hero-tagline">Unlock Knowledge &nbsp;·&nbsp; Empower Your Future</div>
+
+      <!-- Hairline divider -->
+      <div class="hero-divider"></div>
+
+      <!-- CTAs -->
+      <div class="hero-cta">
+        <a href="level-0.html" class="btn btn-gold">Start from Level 0 →</a>
+        <a href="level-1.html" class="btn btn-outline">Jump to Foundations</a>
+      </div>
+
+      <!-- Three pillars -->
+      <div class="hero-pillars">
+        <div class="hero-pillar">
+          <span class="hp-icon">◈</span>
+          <span class="hp-title">12 Levels</span>
+          <span class="hp-label">Orientation to Advanced</span>
         </div>
-        <div class="hero-cta">
-          <a href="level-0.html" class="btn btn-gold">Start from Level 0 →</a>
-          <a href="level-1.html" class="btn btn-outline">Jump to Foundations</a>
+        <div class="hero-pillar">
+          <span class="hp-icon">◈</span>
+          <span class="hp-title">Live Solvers</span>
+          <span class="hp-label">Step-by-step problems</span>
+        </div>
+        <div class="hero-pillar">
+          <span class="hp-icon">◈</span>
+          <span class="hp-title">Interview Prep</span>
+          <span class="hp-label">Technical &amp; behavioural</span>
         </div>
       </div>
+
     </section>
 
     <!-- HOW IT WORKS -->
